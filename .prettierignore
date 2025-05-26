@@ -1,0 +1,20 @@
+# Ignore artifacts:
+build
+coverage
+
+# dependencies
+**/node_modules
+**/package-lock.json
+
+#images
+**/.git
+**/.svn
+**/.hg
+**/public/
+
+# next.js
+**/.next/
+**/out/
+
+# husky
+**/.husky/
