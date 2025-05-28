@@ -1,4 +1,5 @@
-import Header from '@/features/home/components/organism/Header'
+import Header from '@/features/home/components/organisms/Header'
+import Prueba from '@/features/home/components/molecules/Prueba'
 import clsx from 'clsx'
 import sd from '@/utils/data/Static'
 
@@ -9,12 +10,20 @@ import sd from '@/utils/data/Static'
  */
 export default function Home() {
   return (
-    <div className={clsx(`w-full h-full`)}>
-      <header className={clsx(`w-full h-auto`)}>
-        <Header {...{ stickys: sd.home.header.stickys, videoUrls: sd.home.header.slider.quickLookCars }} />
+    <div className={clsx(`h-full w-full`)}>
+      <header className={clsx(`h-auto w-full`)}>
+        <Header
+          {...{
+            stickys: sd.home.header.stickys,
+            videoUrls: sd.home.header.sliders.quickLookCars,
+            imageUrls: sd.home.header.sliders.speedPeekCars,
+          }}
+        />
       </header>
-      <main className={clsx(`w-full horizontal`)}> Aqui el main...... </main>
-      <footer className={clsx(`w-full horizontal`)}> Aqui el footer..... </footer>
+      <main className={clsx(`horizontal w-full`)}>
+        <Prueba />
+      </main>
+      <footer className={clsx(`horizontal w-full`)}> Aqui el footer..... </footer>
     </div>
   )
 }
