@@ -1,5 +1,5 @@
 import Header from '@/features/home/components/organisms/Header'
-import Prueba from '@/features/home/components/molecules/Prueba'
+//import Avatars from '@/common/gcomponents/navbar/components/molecules/Avatar'
 import clsx from 'clsx'
 import sd from '@/utils/data/Static'
 
@@ -14,14 +14,19 @@ export default function Home() {
       <header className={clsx(`h-auto w-full`)}>
         <Header
           {...{
-            stickys: sd.home.header.stickys,
-            videoUrls: sd.home.header.sliders.quickLookCars,
             imageUrls: sd.home.header.sliders.speedPeekCars,
+            mainTitle: sd.home.header.mainTitle,
+            multipleLinkButtons: sd.home.header.multipleLinkButtons,
+            avatar: sd.navbar.avatar,
+            logo: sd.navbar.logo,
           }}
         />
       </header>
-      <main className={clsx(`horizontal w-full`)}>
-        <Prueba />
+      <main className={clsx(`horizontal mt-4 w-full pl-24`)}>
+        {/*<Avatars
+          {...{ imageUrl: sd.avatar.imageUrl, content: sd.avatar.content, items: sd.avatar.items }}
+        /> */}
+        Aqui el main......
       </main>
       <footer className={clsx(`horizontal w-full`)}> Aqui el footer..... </footer>
     </div>

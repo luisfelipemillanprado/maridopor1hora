@@ -1,5 +1,5 @@
 import './globals.css'
-import { Inter, Roboto } from 'next/font/google'
+import { Inter /*, Roboto */ } from 'next/font/google'
 import Provider from '@/app/providers'
 import { Metadata } from 'next'
 import clsx from 'clsx'
@@ -7,16 +7,17 @@ import clsx from 'clsx'
 const inter = Inter({
   variable: '--font-inter',
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  style: ['normal', 'italic'],
   subsets: ['latin'],
   display: 'swap',
 })
 
-const roboto = Roboto({
+/* const roboto = Roboto({
   variable: '--font-roboto',
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
   subsets: ['latin'],
   display: 'swap',
-})
+}) */
 
 export const metadata: Metadata = {
   title: 'Remiux - Next level cars | Transform your road.',
@@ -35,10 +36,14 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html suppressHydrationWarning lang="en-US">
-      <body className={clsx(`${inter.variable} ${roboto.variable} antialiased`)}>
+    <html suppressHydrationWarning className={clsx(`${inter.className} antialiased`)} lang="en-US">
+      <body className={clsx(``)}>
         <Provider
-          themeProps={{ attribute: 'class', defaultTheme: 'light', themes: ['dark', 'light', 'modern'] }}
+          themeProps={{
+            attribute: 'class',
+            defaultTheme: 'light',
+            themes: ['dark', 'light', 'modern'],
+          }}
         >
           {children}
         </Provider>
