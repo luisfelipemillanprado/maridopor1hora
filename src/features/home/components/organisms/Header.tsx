@@ -1,29 +1,40 @@
-import QuickLookCars from '@/features/home/components/molecules/QuickLookCars'
-// import Sticky from '@/features/home/components/atoms/Sticky'
-import SpeedPeekCars from '@/features/home/components/molecules/SpeedPeekCars'
-import Logo from '@/common/components/logo/Logo'
+import SpeedPeekServices from '@/features/home/components/molecules/SpeedPeekServices'
+import MainTitle from '@/features/home/components/atoms/MainTitle'
+import MultipleLinkButtons from '@/features/home/components/molecules/MultipleLinkButtons'
+import NavBar from '@/features/home/components/molecules/NavBar'
 import clsx from 'clsx'
 
-/**
- * @description - HomeHeader component displays the header section for the home page.
- * @param props - The properties for the HomeHeader component.
- * @param props.stickys - An array of sticky items to display.
- * @param props.videoUrls - An array of video URLs to display in the QuickLookCars component.
- */
+// --
 export default function Header(props: {
-  videoUrls: { videoUrl: string; key: number }[]
   imageUrls: { imageUrl: string; key: number }[]
+  mainTitle: { first: string; second: string; third: string }
+  multipleLinkButtons: {
+    variants: {
+      color: string
+      key: number
+    }
+    texts: string[]
+  }
+  avatar: {
+    imageUrl: string
+    content: string
+    items: { title: string; key: string; description: string; shortcut: string }[]
+  }
+  logo: { iconUrl: string }
 }) {
-  const { imageUrls, videoUrls } = props
+  const { imageUrls, mainTitle, multipleLinkButtons, avatar, logo } = props
   return (
     <div className={clsx(`horizontal h-auto w-full p-1`)}>
-      <div className={clsx(`relative h-auto w-full`)}>
-        <QuickLookCars {...{ videoUrls }} />
-        <div className={clsx(`horizontal absolute right-3 bottom-3 left-3 z-10 h-auto w-auto`)}>
-          <SpeedPeekCars {...{ imageUrls }} />
+      <div className={clsx(`relative h-auto w-full overflow-hidden`)}>
+        <SpeedPeekServices {...{ imageUrls }} />
+        <div className={clsx(`horizontal absolute top-0 right-0 left-0 z-10 h-auto w-full`)}>
+          <NavBar {...{ avatar, logo }} />
         </div>
-        <div className={clsx(`horizontal absolute top-4 left-4 z-10 h-auto w-auto`)}>
-          <Logo />
+        <div className={clsx(`horizontal absolute top-[32%] z-10 h-auto w-full justify-center`)}>
+          <MainTitle {...{ mainTitle }} />
+        </div>
+        <div className={clsx(`horizontal absolute top-[60%] z-10 h-auto w-full justify-center`)}>
+          <MultipleLinkButtons {...{ multipleLinkButtons }} />
         </div>
       </div>
     </div>

@@ -2,64 +2,47 @@
 const sd = {
   home: {
     header: {
-      stickys: [
-        { icon: 'bolt', change: true, key: Math.random() },
-        { icon: 'adjustement', change: false, key: Math.random() },
-        { icon: 'automatic', change: false, key: Math.random() },
-        { icon: 'wifi', change: false, key: Math.random() },
-      ],
+      mainTitle: {
+        first: `Husband For An Hour`,
+        second: `& Repair Solutions.`,
+        third: `Quality Work.`,
+      },
       sliders: {
-        quickLookCars: [
-          {
-            videoUrl:
-              'https://storage.googleapis.com/rent-cars-now-bcket/homepage/header/mainslider/mainSlider01.mp4',
-            key: Math.random(),
-          },
-          {
-            videoUrl:
-              'https://storage.googleapis.com/rent-cars-now-bcket/homepage/header/mainslider/mainSlider02.mp4',
-            key: Math.random(),
-          },
-          {
-            videoUrl:
-              'https://storage.googleapis.com/rent-cars-now-bcket/homepage/header/mainslider/mainSlider03.mp4',
-            key: Math.random(),
-          },
-        ],
         speedPeekCars: [
           {
-            imageUrl:
-              'https://storage.googleapis.com/rent-cars-now-bcket/dashboard/allcars/teslas/cybertruck2024/imagegallery/cybertruck032024.webp',
+            imageUrl: '/images/header/plumber/headermedium-1.webp',
             key: Math.random(),
           },
           {
-            imageUrl:
-              'https://storage.googleapis.com/rent-cars-now-bcket/dashboard/allcars/mercedesbenz/mercedesbenz2020/imagegallery/mercedesbenz012020.webp',
+            imageUrl: '/images/header/carpentry/headermedium-3.webp',
             key: Math.random(),
           },
           {
-            imageUrl:
-              'https://storage.googleapis.com/rent-cars-now-bcket/dashboard/allcars/mercedesbenz/mercedesbenz2020/imagegallery/mercedesbenz102020.webp',
-            key: Math.random(),
-          },
-          {
-            imageUrl:
-              'https://storage.googleapis.com/rent-cars-now-bcket/dashboard/allcars/teslas/teslaRoadster2021/imagegallery/teslaRoadster042021.webp',
-            key: Math.random(),
-          },
-          {
-            imageUrl:
-              'https://storage.googleapis.com/rent-cars-now-bcket/dashboard/allcars/bmw/bmw4series30i2025/imagegallery/bmw4series30i022025.webp',
-            key: Math.random(),
-          },
-          {
-            imageUrl:
-              'https://storage.googleapis.com/rent-cars-now-bcket/dashboard/allcars/bmw/bmw4series30i2025/imagegallery/bmw4series30i072025.webp',
+            imageUrl: '/images/header/maintenance/headermedium-2.webp',
             key: Math.random(),
           },
         ],
       },
+      multipleLinkButtons: {
+        variants: { color: `warning`, key: Math.random() },
+        texts: [`Location`, `Services`, `Search`],
+      },
     },
+  },
+  navbar: {
+    avatar: {
+      imageUrl: '/images/avatar/Lisachen.webp',
+      content: ``,
+      items: [
+        { title: `Information`, key: 'info', description: `User information`, shortcut: '⌘' },
+        { title: `Notifications`, key: 'alert', description: `All notifications`, shortcut: '⌘' },
+        { title: `Settings`, key: 'setting', description: `All settings`, shortcut: '⌘' },
+        { title: `Share`, key: 'link', description: `Share with others`, shortcut: '⌘' },
+        { title: `Upload photo`, key: 'upload', description: `Upload new photo`, shortcut: '⌘' },
+        { title: `Log out`, key: 'logout', description: `Log out account`, shortcut: '⌘' },
+      ],
+    },
+    logo: { iconUrl: `/icon/logo.webp` },
   },
 }
 export default sd
