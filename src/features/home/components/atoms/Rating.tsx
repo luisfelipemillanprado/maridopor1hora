@@ -2,9 +2,10 @@ import { StarIcon } from '@heroicons/react/24/solid'
 import clsx from 'clsx'
 
 /**
- *
- * @param props
- * @returns
+ * @description - Displays a rating value with a row of star icons and the number of reviews.
+ * @param props - The component props.
+ * @param props.rating - The rating value to display (e.g., "4.5").
+ * @param props.reviews - The number of reviews to display (e.g., "123 reviews").
  */
 export default function Rating(props: { rating: string; reviews: string }) {
   const { rating, reviews } = props
@@ -12,7 +13,7 @@ export default function Rating(props: { rating: string; reviews: string }) {
     <div className={clsx(`vertical relative h-auto w-auto gap-y-0.5`)}>
       <div className={clsx(`horizontal relative h-auto w-auto gap-x-1.5`)}>
         <div className={clsx(`horizontal h-auto w-auto`)}>
-          <span className={clsx(``)}>{rating}</span>
+          <span className={clsx(`text-medium text-default-900 font-semibold`)}>{rating}</span>
         </div>
         <div className={clsx(`horizontal relative h-auto w-auto gap-x-0.5`)}>
           <span className={clsx(`bg-content1 h-auto w-auto`)}>

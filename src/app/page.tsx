@@ -14,9 +14,9 @@ export default function Home() {
       <header className={clsx(`h-auto w-full`)}>
         <Header
           {...{
-            imageUrls: sd.home.header.sliders.speedPeekCars,
+            peekServices: sd.home.header.sliders.peekServices,
             mainTitle: sd.home.header.mainTitle,
-            multipleLinkButtons: sd.home.header.multipleLinkButtons,
+            linksButtons: sd.home.header.linksButtons,
             avatar: sd.navbar.avatar,
             logo: sd.navbar.logo,
             signUpButton: sd.navbar.signUpButton,
@@ -25,7 +25,13 @@ export default function Home() {
         />
       </header>
       <main className={clsx(`mt-3 h-auto w-full`)}>
-        <Main {...{ trustBadge: sd.home.main.trustBadge }} />
+        <Main
+          {...{
+            trustBadge: sd.home.main.trustBadge,
+            secondaryTitles: sd.home.main.secondaryTitles,
+            finishedWorks: sd.home.main.finishedWorks,
+          }}
+        />
       </main>
       <footer className={clsx(`horizontal w-full`)}> Aqui el footer..... </footer>
     </div>

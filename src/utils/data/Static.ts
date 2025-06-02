@@ -12,7 +12,7 @@ const sd = {
         third: `Quality Work.`,
       },
       sliders: {
-        speedPeekCars: [
+        peekServices: [
           {
             imageUrl: '/images/header/plumber/headermedium-1.webp',
             key: Math.random(),
@@ -27,7 +27,7 @@ const sd = {
           },
         ],
       },
-      multipleLinkButtons: {
+      linksButtons: {
         variants: { color: `warning`, key: Math.random() },
         texts: [
           { text: `Location`, icon: `location`, key: Math.random() },
@@ -44,10 +44,22 @@ const sd = {
     main: {
       trustBadge: {
         slogan: `The confidence that supports you.`,
-        summary: `Our reputation is backed by thousands of customers around the world`,
-        rating: `4.5`,
-        reviews: `145.239 Reseñas`,
-        buttonText: `maridopor1hora`,
+        summary: `Our reputation is backed by thousands of customers around the world.`,
+        rating: `5.0`,
+        reviews: `145.239 • Excelent`,
+        buttonText: `MaridoPor1Hora`,
+      },
+      secondaryTitles: {
+        title: [`Featured completed works`],
+      },
+      finishedWorks: {
+        imageUrls: [
+          { imageUrl: `/images/main/finishedwork/finishedwork01.webp`, key: Math.random() },
+          { imageUrl: `/images/main/finishedwork/finishedwork02.webp`, key: Math.random() },
+          { imageUrl: `/images/main/finishedwork/finishedwork03.webp`, key: Math.random() },
+          { imageUrl: `/images/main/finishedwork/finishedwork04.webp`, key: Math.random() },
+        ],
+        texts: [`Electrical`, `Carpentry`, `Cleaning`, `Maintenance`],
       },
     },
   },

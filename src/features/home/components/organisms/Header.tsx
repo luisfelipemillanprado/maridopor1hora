@@ -1,6 +1,5 @@
-import SpeedPeekServices from '@/features/home/components/molecules/SpeedPeekServices'
-// import MainTitle from '@/features/home/components/atoms/MainTitle'
-import MultipleLinkButtons from '@/features/home/components/molecules/MultipleLinkButtons'
+import PeekServices from '@/features/home/components/molecules/PeekServices'
+import LinksButtons from '@/features/home/components/molecules/LinksButtons'
 import NavBar from '@/common/gcomponents/navbar/components/organisms/NavBar'
 import Metrics from '@/features/home/components/molecules/Metrics'
 import clsx from 'clsx'
@@ -18,9 +17,9 @@ import clsx from 'clsx'
  * @param props.signUpButton - Sign up button configuration with a `text` label.
  */
 export default function Header(props: {
-  imageUrls: { imageUrl: string; key: number }[]
+  peekServices: { imageUrl: string; key: number }[]
   mainTitle: { first: string; second: string; third: string }
-  multipleLinkButtons: {
+  linksButtons: {
     variants: {
       color: string
       key: number
@@ -36,7 +35,7 @@ export default function Header(props: {
   signUpButton: { text: string }
   metrics: { amount: string; text: string; change: boolean }[]
 }) {
-  const { imageUrls /* , mainTitle, */, multipleLinkButtons, avatar, logo, signUpButton, metrics } =
+  const { peekServices /* , mainTitle, */, linksButtons, avatar, logo, signUpButton, metrics } =
     props
   return (
     <div className={clsx(`horizontal h-auto w-full`)}>
@@ -50,12 +49,12 @@ export default function Header(props: {
           <NavBar {...{ avatar, logo, signUpButton }} />
         </div>
         <div className={clsx(`horizontal relative h-auto w-full p-2`)}>
-          <SpeedPeekServices {...{ imageUrls }} />
+          <PeekServices {...{ peekServices }} />
           <div className={clsx(`absolute right-0 -bottom-7 left-0 z-10`)}>
             <Metrics {...{ metrics }} />
           </div>
           <div className={clsx(`absolute top-1/2 right-0 left-0 z-10 h-auto w-full`)}>
-            <MultipleLinkButtons {...{ multipleLinkButtons }} />
+            <LinksButtons {...{ linksButtons }} />
           </div>
         </div>
       </div>

@@ -13,14 +13,9 @@ export default function MainTitle(props: {
 }) {
   const { first, second /*, third */ } = props.mainTitle
   return (
-    <h1
-      className={clsx(
-        `vertical h-auto w-auto text-2xl font-bold text-white text-shadow-lg/30`,
-        `$`
-      )}
-    >
-      <span className={clsx(``)}>{first}</span>
-      <span className={clsx(`ml-2.5`)}>{second}</span>
+    <h1 className={clsx(`vertical h-auto w-auto text-2xl font-bold text-white text-shadow-lg/30`)}>
+      <span className={clsx(`h-auto w-auto`)}>{first}</span>
+      <span className={clsx(`ml-2.5 h-auto w-auto`)}>{second}</span>
     </h1>
   )
 }
