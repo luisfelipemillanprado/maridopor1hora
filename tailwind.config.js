@@ -38,7 +38,9 @@ const config = {
       themes: {
         light: {
           layout: {}, // light theme layout tokens
-          colors: {}, // light theme colors
+          colors: {
+            warning: { DEFAULT: '#e2813f' },
+          }, // light theme colors
         },
         dark: {
           layout: {}, // dark theme layout tokens

@@ -1,6 +1,6 @@
 'use client'
 import { Tabs, Tab } from '@heroui/react'
-import { MapPinIcon, MagnifyingGlassIcon, WrenchScrewdriverIcon } from '@heroicons/react/24/outline'
+import LinkButtonIcons from '@/features/home/components/atoms/LinkButtonIcons'
 import clsx from 'clsx'
 
 /**
@@ -16,7 +16,7 @@ export default function MultipleLinkButtons(props: {
       color: string
       key: number
     }
-    texts: string[]
+    texts: { text: string; icon: string; key: number }[]
   }
 }) {
   const { multipleLinkButtons } = props
@@ -25,38 +25,23 @@ export default function MultipleLinkButtons(props: {
       <Tabs
         key={multipleLinkButtons.variants.key}
         aria-label={`Principal option`}
-        className={clsx(``)}
+        className={clsx(`drop-shadow-lg/30 [&>div]:gap-0 [&>div]:bg-[#fafbfd]`)}
         color={`${multipleLinkButtons.variants.color as 'default' | 'primary' | 'secondary' | 'success' | 'warning' | 'danger'}`}
-        radius={'full'}
-        size={'sm'}
+        variant={`solid`}
+        radius={`full`}
+        size={`sm`}
       >
-        <Tab
-          key={multipleLinkButtons.texts[0]}
-          title={
-            <div className={clsx(`flex items-center space-x-1.5`)}>
-              <MapPinIcon className={clsx(`h-4 w-4`)} />
-              <span>{multipleLinkButtons.texts[0]}</span>
-            </div>
-          }
-        />
-        <Tab
-          key={multipleLinkButtons.texts[1]}
-          title={
-            <div className={clsx(`flex items-center space-x-1.5`)}>
-              <WrenchScrewdriverIcon className={clsx(`h-4 w-4`)} />
-              <span>{multipleLinkButtons.texts[1]}</span>
-            </div>
-          }
-        />
-        <Tab
-          key={multipleLinkButtons.texts[2]}
-          title={
-            <div className={clsx(`flex items-center space-x-1.5`)}>
-              <MagnifyingGlassIcon className={clsx(`h-4 w-4`)} />
-              <span>{multipleLinkButtons.texts[2]}</span>
-            </div>
-          }
-        />
+        {multipleLinkButtons.texts.map((item /*, index */) => (
+          <Tab
+            key={item.key}
+            title={
+              <div className={clsx(`horizontal items-center space-x-1.5`)}>
+                <LinkButtonIcons {...{ icon: item.icon }} />
+                <span className={clsx(`text-small`)}>{item.text}</span>
+              </div>
+            }
+          />
+        ))}
       </Tabs>
     </div>
   )

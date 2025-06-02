@@ -37,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html suppressHydrationWarning className={clsx(`${inter.className} antialiased`)} lang="en-US">
-      <body className={clsx(``)}>
+      <body className={clsx(`bg-[#fafbfd]`)}>
         <Provider
           themeProps={{
             attribute: 'class',
