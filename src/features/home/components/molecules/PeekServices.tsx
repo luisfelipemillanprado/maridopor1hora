@@ -12,12 +12,12 @@ import clsx from 'clsx'
 /**
  * @description - Displays a carousel of images using Swiper with fade effect and autoplay.
  * @param props - The component props.
- * @param props.imageUrls - An array of image objects to display in the carousel.
- * @param props.imageUrls[].imageUrl - The URL of the image to display.
- * @param props.imageUrls[].key - A unique key for each image.
+ * @param props.peekServices - An array of image objects to display in the carousel.
+ * @param props.peekServices[].imageUrl - The URL of the image to display.
+ * @param props.peekServices[].key - A unique key for each image.
  */
-export default function SpeedPeekCars(props: { imageUrls: { imageUrl: string; key: number }[] }) {
-  const { imageUrls } = props
+export default function PeekServices(props: { peekServices: { imageUrl: string; key: number }[] }) {
+  const { peekServices } = props
   return (
     <Swiper
       slidesPerView={1}
@@ -36,7 +36,7 @@ export default function SpeedPeekCars(props: { imageUrls: { imageUrl: string; ke
         `outline-warning-200 shadow-md outline-1`
       )}
     >
-      {imageUrls.map((item, index) => (
+      {peekServices.map((item, index) => (
         <SwiperSlide className={clsx(``)} key={item.key}>
           <Image
             width={312}
