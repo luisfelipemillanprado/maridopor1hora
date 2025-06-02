@@ -1,5 +1,5 @@
 import Header from '@/features/home/components/organisms/Header'
-//import Avatars from '@/common/gcomponents/navbar/components/molecules/Avatar'
+import Main from '@/features/home/components/organisms/Main'
 import clsx from 'clsx'
 import sd from '@/utils/data/Static'
 
@@ -19,14 +19,13 @@ export default function Home() {
             multipleLinkButtons: sd.home.header.multipleLinkButtons,
             avatar: sd.navbar.avatar,
             logo: sd.navbar.logo,
+            signUpButton: sd.navbar.signUpButton,
+            metrics: sd.home.header.metrics,
           }}
         />
       </header>
-      <main className={clsx(`horizontal mt-4 w-full pl-24`)}>
-        {/*<Avatars
-          {...{ imageUrl: sd.avatar.imageUrl, content: sd.avatar.content, items: sd.avatar.items }}
-        /> */}
-        Aqui el main......
+      <main className={clsx(`mt-3 h-auto w-full`)}>
+        <Main {...{ trustBadge: sd.home.main.trustBadge }} />
       </main>
       <footer className={clsx(`horizontal w-full`)}> Aqui el footer..... </footer>
     </div>

@@ -1,3 +1,4 @@
+import clsx from 'clsx'
 import Image from 'next/image'
 
 /**
@@ -10,9 +11,11 @@ export default function Logo(props: { iconUrl: string }) {
   return (
     <div className={`horizontal h-auto w-auto justify-center backdrop-blur-lg`}>
       <Image
-        className={`horizontal h-[2.688rem] w-[2.688rem] justify-center`}
-        width={43}
-        height={43}
+        className={clsx(
+          `horizontal h-[2.5625rem] w-[2.5625rem] justify-center rounded-full border-3 border-solid border-amber-600`
+        )}
+        width={41}
+        height={41}
         src={iconUrl}
         alt={`Logo's team`}
       />

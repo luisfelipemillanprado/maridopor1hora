@@ -1,14 +1,14 @@
 import clsx from 'clsx'
 
 /**
- * @description - Renders a sticky main title composed of two parts.
+ * @description - Renders the main title for the home feature, displaying two parts of the title.
  * @param props - The component props.
- * @param props.mainTitle - An object containing the title parts.
- * @param props.mainTitle.first - The first part of the main title.
- * @param props.mainTitle.second - The second part of the main title.
- * @param props.mainTitle.third - The third part of the main title (currently unused).
+ * @param props.mainTitle - An object containing the parts of the main title.
+ * @param props.mainTitle.first - The first part of the title to display.
+ * @param props.mainTitle.second - The second part of the title to display.
+ * @param props.mainTitle.third - The third part of the title (currently unused).
  */
-export default function Sticky(props: {
+export default function MainTitle(props: {
   mainTitle: { first: string; second: string; third: string }
 }) {
   const { first, second /*, third */ } = props.mainTitle
@@ -19,8 +19,8 @@ export default function Sticky(props: {
         `$`
       )}
     >
-      <span>{first}</span>
-      <span>{second}</span>
+      <span className={clsx(``)}>{first}</span>
+      <span className={clsx(`ml-2.5`)}>{second}</span>
     </h1>
   )
 }

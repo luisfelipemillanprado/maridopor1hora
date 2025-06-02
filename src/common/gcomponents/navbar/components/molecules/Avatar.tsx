@@ -27,20 +27,26 @@ export default function Avatars(props: {
       <DropdownTrigger>
         <Button className={clsx(`vertical h-11 w-11 min-w-11 items-center p-2`)} variant={`light`}>
           <Badge
-            color={'success'}
+            color={`success`}
             content={content}
-            shape={'circle'}
-            variant={'solid'}
-            placement={'bottom-right'}
-            size={'sm'}
+            shape={`circle`}
+            variant={`solid`}
+            placement={`bottom-right`}
+            size={`sm`}
             showOutline={false}
           >
-            <Avatar isBordered size={`sm`} color={'warning'} src={imageUrl} />
+            <Avatar
+              className={clsx(`h-[2.1875rem] w-[2.1875rem]`)}
+              isBordered
+              size={`sm`}
+              color={`warning`}
+              src={imageUrl}
+            />
           </Badge>
         </Button>
       </DropdownTrigger>
-      <DropdownMenu aria-label={'dropdown-avatar-menu'} variant={'faded'}>
-        <DropdownSection showDivider title={'Actions'}>
+      <DropdownMenu aria-label={`dropdown-avatar-menu`} variant={`faded`}>
+        <DropdownSection showDivider title={`Actions`}>
           {items.map((item /* , index */) => (
             <DropdownItem
               key={item.key}

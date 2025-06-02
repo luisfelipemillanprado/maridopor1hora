@@ -8,7 +8,7 @@ import {
 } from '@heroicons/react/24/outline'
 import clsx from 'clsx'
 // --
-export default function Sticky(props: { icon: string }) {
+export default function MenuIcons(props: { icon: string }) {
   const { icon } = props
   const iconSwitch = (icon: string) => {
     switch (icon) {

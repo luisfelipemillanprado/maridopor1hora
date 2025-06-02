@@ -21,7 +21,7 @@ export default function SpeedPeekCars(props: { imageUrls: { imageUrl: string; ke
   return (
     <Swiper
       slidesPerView={1}
-      effect={'fade'}
+      effect={`fade`}
       loop={true}
       autoplay={{
         delay: 7000,
@@ -32,14 +32,15 @@ export default function SpeedPeekCars(props: { imageUrls: { imageUrl: string; ke
       }}
       modules={[Scrollbar, Autoplay, Pagination, EffectFade]}
       className={clsx(
-        `h-[19.375rem] w-full rounded-tl-[1.25rem] rounded-tr-[1.25rem] rounded-br-[1.25rem]`
+        `h-[18.75rem] w-full rounded-tl-[1.25rem] rounded-tr-[1.25rem] rounded-br-[1.25rem] rounded-bl-[1.25rem]`,
+        `outline-warning-200 shadow-md outline-1`
       )}
     >
       {imageUrls.map((item, index) => (
-        <SwiperSlide key={item.key}>
+        <SwiperSlide className={clsx(``)} key={item.key}>
           <Image
-            width={500}
-            height={600}
+            width={312}
+            height={310}
             className={clsx(`block h-full w-full object-cover`)}
             src={item.imageUrl}
             alt={`Service ${index + 1}`}

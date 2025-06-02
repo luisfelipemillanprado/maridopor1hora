@@ -1,10 +1,14 @@
-/* ------------------------------------------------------------------------- */
+/**
+ * @description - Static data object containing configuration and content for the application's UI.
+ * @property {object} home - Contains data for the home page.
+ * @property {object} navbar - Contains data for the navigation bar.
+ */
 const sd = {
   home: {
     header: {
       mainTitle: {
-        first: `Husband For An Hour`,
-        second: `& Repair Solutions.`,
+        first: `Husband for an Hour`,
+        second: `& Repair solutions.`,
         third: `Quality Work.`,
       },
       sliders: {
@@ -25,7 +29,25 @@ const sd = {
       },
       multipleLinkButtons: {
         variants: { color: `warning`, key: Math.random() },
-        texts: [`Location`, `Services`, `Search`],
+        texts: [
+          { text: `Location`, icon: `location`, key: Math.random() },
+          { text: `Services`, icon: `services`, key: Math.random() },
+          { text: `Search`, icon: `search`, key: Math.random() },
+        ],
+      },
+      metrics: [
+        { amount: `18`, text: `Years of experience`, change: false },
+        { amount: `4.3`, text: `Satisfied customers`, change: true },
+        { amount: `25`, text: `Qualified experts`, change: false },
+      ],
+    },
+    main: {
+      trustBadge: {
+        slogan: `The confidence that supports you.`,
+        summary: `Our reputation is backed by thousands of customers around the world`,
+        rating: `4.5`,
+        reviews: `145.239 Reseñas`,
+        buttonText: `maridopor1hora`,
       },
     },
   },
@@ -43,6 +65,7 @@ const sd = {
       ],
     },
     logo: { iconUrl: `/icon/logo.webp` },
+    signUpButton: { text: `Sign Up` },
   },
 }
 export default sd
