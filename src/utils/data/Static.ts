@@ -50,7 +50,7 @@ const sd = {
         buttonText: `MaridoPor1Hora`,
       },
       secondaryTitles: {
-        title: [`Featured completed works`],
+        title: [`Featured completed works`, `All our customer services`],
       },
       finishedWorks: {
         imageUrls: [
@@ -58,8 +58,29 @@ const sd = {
           { imageUrl: `/images/main/finishedwork/finishedwork02.webp`, key: Math.random() },
           { imageUrl: `/images/main/finishedwork/finishedwork03.webp`, key: Math.random() },
           { imageUrl: `/images/main/finishedwork/finishedwork04.webp`, key: Math.random() },
+          { imageUrl: `/images/main/finishedwork/finishedwork05.webp`, key: Math.random() },
+          { imageUrl: `/images/main/finishedwork/finishedwork06.webp`, key: Math.random() },
         ],
-        texts: [`Electrical`, `Carpentry`, `Cleaning`, `Maintenance`],
+        texts: [`Electrical`, `Carpentry`, `Cleaning`, `Maintenance`, `Furniture`, `Masonry`],
+      },
+      allOurServices: {
+        imageUrls: [
+          { imageUrl: `/images/main/services/serviceelectrical02.webp`, key: Math.random() },
+          { imageUrl: `/images/main/services/serviceplumbing03.webp`, key: Math.random() },
+          { imageUrl: `/images/main/services/servicefurniture04.webp`, key: Math.random() },
+          { imageUrl: `/images/main/services/servicemasonry05.webp`, key: Math.random() },
+          { imageUrl: `/images/main/services/servicecarpentry06.webp`, key: Math.random() },
+          { imageUrl: `/images/main/services/servicecleaning07.webp`, key: Math.random() },
+        ],
+        name: [`Electrical.`, `Plumbing.`, `Furniture.`, `Masonry.`, `Carpentry.`, `Cleaning.`],
+        description: [
+          `Professional electrical services for residential and commercial needs.`,
+          `All the best and most comprehensive plumbing services, installation and repair.`,
+          `Técnicos expertos que garantizan una instalación rápida, segura y precisa.`,
+          `Specialized masonry services for all types of home construction and repair projects.`,
+          `Expert carpentry services for your home or office and other facilities.`,
+          `Deep cleaning services to keep your space spotless and sparkling clean.`,
+        ],
       },
     },
   },

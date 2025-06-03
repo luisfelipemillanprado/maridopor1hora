@@ -30,6 +30,7 @@ export default function Home() {
             trustBadge: sd.home.main.trustBadge,
             secondaryTitles: sd.home.main.secondaryTitles,
             finishedWorks: sd.home.main.finishedWorks,
+            allOurServices: sd.home.main.allOurServices,
           }}
         />
       </main>

@@ -8,7 +8,11 @@ import clsx from 'clsx'
 export default function SecondaryTitle(props: { title: string }) {
   const { title } = props
   return (
-    <h2 className={clsx(`horizontal text-default-900 h-auto w-full text-[1.1875rem] font-bold`)}>
+    <h2
+      className={clsx(
+        `horizontal text-default-900 h-auto w-full justify-center text-[1.1875rem] font-bold`
+      )}
+    >
       <span className={clsx(`h-auto w-auto`)}>{title}</span>
     </h2>
   )
