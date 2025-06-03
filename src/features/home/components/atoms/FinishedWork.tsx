@@ -9,7 +9,7 @@ import clsx from 'clsx'
 export default function FinishedWork(props: { imageUrl: string; text: string }) {
   const { imageUrl, text } = props
   return (
-    <Card isFooterBlurred className={clsx(`col-span-6`)}>
+    <Card isFooterBlurred className={clsx(`col-span-6`)} shadow={`sm`}>
       <Image
         removeWrapper
         alt="Relaxing app background"

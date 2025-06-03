@@ -10,7 +10,7 @@ export default function FinishedWorks(props: {
 }) {
   const { finishedWorks } = props
   return (
-    <div className={clsx(`grid w-full grid-cols-12 grid-rows-2 gap-2`)}>
+    <div className={clsx(`grid w-full grid-cols-12 grid-rows-3 gap-2`)}>
       {finishedWorks.imageUrls.map((item, index) => (
         <FinishedWork
           key={item.key}
