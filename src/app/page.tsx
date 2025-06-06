@@ -1,5 +1,6 @@
 import Header from '@/features/home/components/organisms/Header'
 import Main from '@/features/home/components/organisms/Main'
+import Footer from '@/common/gcomponents/footer/components/organisms/Footer'
 import clsx from 'clsx'
 import sd from '@/utils/data/Static'
 
@@ -17,9 +18,7 @@ export default function Home() {
             peekServices: sd.home.header.sliders.peekServices,
             mainTitle: sd.home.header.mainTitle,
             linksButtons: sd.home.header.linksButtons,
-            avatar: sd.navbar.avatar,
-            logo: sd.navbar.logo,
-            signUpButton: sd.navbar.signUpButton,
+            navbar: sd.navbar,
             metrics: sd.home.header.metrics,
           }}
         />
@@ -34,7 +33,17 @@ export default function Home() {
           }}
         />
       </main>
-      <footer className={clsx(`horizontal w-full`)}> Aqui el footer..... </footer>
+      <footer className={clsx(`mt-9 h-auto w-full`)}>
+        <Footer
+          {...{
+            companyInformation: sd.footer.companyInformation,
+            ourTeam: sd.footer.ourTeam,
+            socialNetworks: sd.footer.socialNetworks,
+            fourthTitle: sd.footer.fourthTitle,
+            secondaryDescription: sd.footer.secondaryDescription,
+          }}
+        />
+      </footer>
     </div>
   )
 }

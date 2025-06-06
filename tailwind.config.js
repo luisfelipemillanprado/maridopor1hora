@@ -37,10 +37,13 @@ const config = {
     heroui({
       themes: {
         light: {
-          layout: {}, // light theme layout tokens
+          layout: {},
           colors: {
-            warning: { DEFAULT: '#e2813f' },
-          }, // light theme colors
+            warning: { DEFAULT: `#e2813f` },
+            content5: `#2d3035`,
+            /* content6: `#7f919f`,
+            content7: `#dedbd4`, */
+          },
         },
         dark: {
           layout: {}, // dark theme layout tokens

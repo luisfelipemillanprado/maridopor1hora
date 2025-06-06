@@ -2,6 +2,13 @@
 import FinishedWork from '@/features/home/components/atoms/FinishedWork'
 import clsx from 'clsx'
 
+/**
+ * @description - Displays a grid of finished works, each represented by an image and a corresponding text.
+ * @param props - The component props.
+ * @param props.finishedWorks - An object containing arrays of image URLs and texts for finished works.
+ * @param props.finishedWorks.imageUrls - Array of objects with `imageUrl` (string) and `key` (number) for each finished work image.
+ * @param props.finishedWorks.texts - Array of strings representing the description or text for each finished work.
+ */
 export default function FinishedWorks(props: {
   finishedWorks: {
     imageUrls: { imageUrl: string; key: number }[]

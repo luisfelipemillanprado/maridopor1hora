@@ -37,7 +37,7 @@ export default function LinksButtons(props: {
             title={
               <div className={clsx(`horizontal items-center space-x-1.5`)}>
                 <LinkButtonIcons {...{ icon: item.icon }} />
-                <span className={clsx(`text-small`)}>{item.text}</span>
+                <span className={clsx(`text-[0.8125rem]`)}>{item.text}</span>
               </div>
             }
           />
