@@ -1,6 +1,11 @@
 import { MapPinIcon, MagnifyingGlassIcon, WrenchScrewdriverIcon } from '@heroicons/react/24/outline'
 import clsx from 'clsx'
-// --
+
+/**
+ * @description - Renders an icon inside a span based on the provided `icon` prop.
+ * @param props - The component props.
+ * @param props.icon - The name of the icon to render. Supported values are `'location'`, `'services'`, and `'search'`.
+ */
 export default function LinkButtonIcons(props: { icon: string }) {
   const { icon } = props
   const iconSwitch = (icon: string) => {

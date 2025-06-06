@@ -50,7 +50,7 @@ const sd = {
         buttonText: `MaridoPor1Hora`,
       },
       secondaryTitles: {
-        title: [`Featured completed works`, `All our customer services`],
+        title: [`Featured Completed Works`, `All Our Customer Services`],
       },
       finishedWorks: {
         imageUrls: [
@@ -76,7 +76,7 @@ const sd = {
         description: [
           `Professional electrical services for residential and commercial needs.`,
           `All the best and most comprehensive plumbing services, installation and repair.`,
-          `Técnicos expertos que garantizan una instalación rápida, segura y precisa.`,
+          `Expert technicians guarantee fast, safe, and accurate installation of your furniture.`,
           `Specialized masonry services for all types of home construction and repair projects.`,
           `Expert carpentry services for your home or office and other facilities.`,
           `Deep cleaning services to keep your space spotless and sparkling clean.`,
@@ -87,7 +87,6 @@ const sd = {
   navbar: {
     avatar: {
       imageUrl: '/images/avatar/Lisachen.webp',
-      content: ``,
       items: [
         { title: `Information`, key: 'info', description: `User information`, shortcut: '⌘' },
         { title: `Notifications`, key: 'alert', description: `All notifications`, shortcut: '⌘' },
@@ -99,6 +98,116 @@ const sd = {
     },
     logo: { iconUrl: `/icon/logo.webp` },
     signUpButton: { text: `Sign Up` },
+    links: [
+      { text: `GoHome`, key: Math.random() },
+      { text: `Categories`, key: Math.random() },
+      { text: `Services`, key: Math.random() },
+      { text: `Blogs`, key: Math.random() },
+      { text: `Suppliers`, key: Math.random() },
+    ],
+  },
+  footer: {
+    companyInformation: {
+      links: [
+        { href: '#', text: 'BLOG', key: Math.random() },
+        { href: '#', text: 'TEAM', key: Math.random() },
+        { href: '#', text: 'ABOUT', key: Math.random() },
+        { href: '#', text: 'CONTACT', key: Math.random() },
+      ],
+    },
+    ourTeam: {
+      members: [
+        {
+          imageUrl: `/images/footer/team/ourteam01.webp`,
+          name: `John Doe`,
+          key: Math.random(),
+        },
+        {
+          imageUrl: `/images/footer/team/ourteam02.webp`,
+          name: `Jane Smith`,
+          key: Math.random(),
+        },
+        {
+          imageUrl: `/images/footer/team/ourteam03.webp`,
+          name: `Alice Johnson`,
+          key: Math.random(),
+        },
+        {
+          imageUrl: `/images/footer/team/ourteam04.webp`,
+          name: `Bob Brown`,
+          key: Math.random(),
+        },
+        {
+          imageUrl: `/images/footer/team/ourteam05.webp`,
+          name: `Charlie Davis`,
+          key: Math.random(),
+        },
+        {
+          imageUrl: `/images/footer/team/ourteam06.webp`,
+          name: `Alice Johnson`,
+          key: Math.random(),
+        },
+        {
+          imageUrl: `/images/footer/team/ourteam07.webp`,
+          name: `Bob Brown`,
+          key: Math.random(),
+        },
+        {
+          imageUrl: `/images/footer/team/ourteam08.webp`,
+          name: `Charlie Davis`,
+          key: Math.random(),
+        },
+        {
+          imageUrl: `/images/footer/team/ourteam09.webp`,
+          name: `Eve White`,
+          key: Math.random(),
+        },
+        {
+          imageUrl: `/images/footer/team/ourteam10.webp`,
+          name: `John Lee`,
+          key: Math.random(),
+        },
+      ],
+    },
+    socialNetworks: [
+      {
+        url: `https://facebook.com/MaridoPor1Hora`,
+        icon: `facebook`,
+        name: `Facebook`,
+        key: Math.random(),
+      },
+      {
+        url: `https://twitter.com/MaridoPor1Hora`,
+        icon: `twitter`,
+        name: `Twitter`,
+        key: Math.random(),
+      },
+      {
+        url: `https://instagram.com/MaridoPor1Hora`,
+        icon: `instagram`,
+        name: `Instagram`,
+        key: Math.random(),
+      },
+      {
+        url: `https://whatsapp.com/MaridoPor1Hora`,
+        icon: `whatsapp`,
+        name: `WhatsApp`,
+        key: Math.random(),
+      },
+      {
+        url: `https://youtube.com/MaridoPor1Hora`,
+        icon: `youtube`,
+        name: `YouTube`,
+        key: Math.random(),
+      },
+    ],
+    fourthTitle: [
+      { text1: `We're here for you. Trust us.`, text2: `MaridoPor1Hora.` },
+      { text1: `You can find us at.`, text2: `Social Networks.` },
+    ],
+    secondaryDescription: [
+      `We offer home maintenance, cleaning, repairs, and improvements with reliable professionals and fast solutions. Your home is in the best hands.`,
+    ],
   },
 }
 export default sd

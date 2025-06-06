@@ -34,7 +34,7 @@ export default function Rating(props: { rating: string; reviews: string }) {
         </div>
       </div>
       <div className={clsx(`horizontal h-auto w-auto`)}>
-        <span className={clsx(`text-small text-default-700`)}>{reviews}</span>
+        <span className={clsx(`text-default-700 text-[0.8125rem]`)}>{reviews}</span>
       </div>
     </div>
   )

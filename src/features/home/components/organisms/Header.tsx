@@ -26,17 +26,18 @@ export default function Header(props: {
     }
     texts: { text: string; icon: string; key: number }[]
   }
-  avatar: {
-    imageUrl: string
-    content: string
-    items: { title: string; key: string; description: string; shortcut: string }[]
+  navbar: {
+    avatar: {
+      imageUrl: string
+      items: { title: string; key: string; description: string; shortcut: string }[]
+    }
+    logo: { iconUrl: string }
+    signUpButton: { text: string }
+    links: { text: string; key: number }[]
   }
-  logo: { iconUrl: string }
-  signUpButton: { text: string }
   metrics: { amount: string; text: string; change: boolean }[]
 }) {
-  const { peekServices /* , mainTitle, */, linksButtons, avatar, logo, signUpButton, metrics } =
-    props
+  const { peekServices /* , mainTitle, */, linksButtons, navbar, metrics } = props
   return (
     <div className={clsx(`horizontal h-auto w-full`)}>
       <div
@@ -46,7 +47,7 @@ export default function Header(props: {
         )}
       >
         <div className={clsx(`horizontal relative h-auto w-full`)}>
-          <NavBar {...{ avatar, logo, signUpButton }} />
+          <NavBar {...{ navbar }} />
         </div>
         <div className={clsx(`horizontal relative h-auto w-full p-2`)}>
           <PeekServices {...{ peekServices }} />

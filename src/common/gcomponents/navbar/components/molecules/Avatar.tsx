@@ -11,6 +11,17 @@ import {
 import MenuIcons from '@/common/gcomponents/navbar/components/atoms/MenuIcons'
 import clsx from 'clsx'
 
+/**
+ * @description - Renders an avatar button with a dropdown menu for user actions.
+ * @param props - The component props.
+ * @param props.imageUrl - The URL of the avatar image.
+ * @param props.content - Optional badge content to display on the avatar.
+ * @param props.items - An array of menu items to display in the dropdown.
+ * @param props.items[].title - The display title of the menu item.
+ * @param props.items[].key - The unique key for the menu item, also used as the icon identifier.
+ * @param props.items[].description - A short description for the menu item.
+ * @param props.items[].shortcut - The keyboard shortcut for the menu item.
+ */
 export default function Avatars(props: {
   imageUrl: string
   content?: string
