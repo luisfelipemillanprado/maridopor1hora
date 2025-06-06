@@ -3,7 +3,13 @@ import InformationLink from '@/common/gcomponents/footer/components/atoms/Inform
 import clsx from 'clsx'
 
 /**
- * @returns
+ * @description - Displays a list of company information links in a horizontal layout.
+ * @param props - The component props.
+ * @param props.companyInformation - An object containing an array of link objects.
+ * @param props.companyInformation.links - The array of link objects to display.
+ * @param props.companyInformation.links[].href - The URL for the link.
+ * @param props.companyInformation.links[].text - The display text for the link.
+ * @param props.companyInformation.links[].key - A unique key for each link.
  */
 export default function CompanyInformation(props: {
   companyInformation: { links: { href: string; text: string; key: number }[] }
