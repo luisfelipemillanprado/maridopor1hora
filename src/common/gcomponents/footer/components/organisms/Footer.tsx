@@ -2,6 +2,8 @@ import CompanyInformation from '@/common/gcomponents/footer/components/molecules
 import OurTeam from '@/common/gcomponents/footer/components/molecules/OurTeam'
 import SocialNetworks from '@/common/gcomponents/footer/components/molecules/SocialNetworks'
 import SecondaryDescription from '@/common/gcomponents/footer/components/molecules/SecondaryDescription'
+import ContactUs from '@/common/gcomponents/footer/components/molecules/ContactUs'
+import TermsConditions from '@/common/gcomponents/footer/components/molecules/TermsConditions'
 import clsx from 'clsx'
 
 export default function Footer(props: {
@@ -10,8 +12,18 @@ export default function Footer(props: {
   socialNetworks: { url: string; icon: string; name: string; key: number }[]
   fourthTitle: { text1: string; text2: string }[]
   secondaryDescription: string[]
+  contactUs: { icon: string; name: string; href: string; key: number }[]
+  termsConditions: { text: string }
 }) {
-  const { companyInformation, ourTeam, fourthTitle, socialNetworks, secondaryDescription } = props
+  const {
+    companyInformation,
+    ourTeam,
+    fourthTitle,
+    socialNetworks,
+    secondaryDescription,
+    contactUs,
+    termsConditions,
+  } = props
   return (
     <div
       className={clsx(
@@ -37,9 +49,21 @@ export default function Footer(props: {
       </div>
       <section
         aria-label={`company-secondary-description`}
-        className={clsx(`horizontal h-auto w-full justify-center px-4`)}
+        className={clsx(`hidden h-auto w-full justify-center px-4`)}
       >
         <SecondaryDescription {...{ text: secondaryDescription[0] }} />
+      </section>
+      <section
+        aria-label={`company-contact-us`}
+        className={clsx(`horizontal h-auto w-full justify-center px-4`)}
+      >
+        <ContactUs {...{ contactUs }} />
+      </section>
+      <section
+        aria-label={`company-terms-conditions`}
+        className={clsx(`horizontal h-auto w-full justify-center border-t-1 border-[#585858] p-4`)}
+      >
+        <TermsConditions {...{ termsConditions }} />
       </section>
     </div>
   )

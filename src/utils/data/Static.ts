@@ -208,6 +208,11 @@ const sd = {
     secondaryDescription: [
       `We offer home maintenance, cleaning, repairs, and improvements with reliable professionals and fast solutions. Your home is in the best hands.`,
     ],
+    contactUs: [
+      { icon: `email`, name: `contacto@maridopor1hora.es`, href: `#`, key: Math.random() },
+      { icon: `phone`, name: `+34 675 01 23 32`, href: `#`, key: Math.random() },
+    ],
+    termsConditions: { text: `Copyright © 2020 Siatuweb. All rights reserved.` },
   },
 }
 export default sd

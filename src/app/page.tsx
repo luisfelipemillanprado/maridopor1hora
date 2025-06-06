@@ -41,6 +41,8 @@ export default function Home() {
             socialNetworks: sd.footer.socialNetworks,
             fourthTitle: sd.footer.fourthTitle,
             secondaryDescription: sd.footer.secondaryDescription,
+            contactUs: sd.footer.contactUs,
+            termsConditions: sd.footer.termsConditions,
           }}
         />
       </footer>
