@@ -1,5 +1,4 @@
 import { Card, CardFooter, Image } from '@heroui/react'
-import NextImage from 'next/image'
 import clsx from 'clsx'
 
 /**
@@ -11,12 +10,9 @@ import clsx from 'clsx'
 export default function FinishedWork(props: { imageUrl: string; text: string }) {
   const { imageUrl, text } = props
   return (
-    <Card isFooterBlurred className={clsx(`col-span-6`)} shadow={`md`}>
+    <Card isFooterBlurred isPressable className={clsx(`col-span-6`)} shadow={`md`}>
       <Image
         removeWrapper
-        as={NextImage}
-        width={166}
-        height={111}
         alt={`Work ${text} Completed Satisfactorily`}
         className={clsx(`z-0 h-full w-full object-cover`)}
         src={imageUrl}
