@@ -61,7 +61,9 @@ export default function Footer(props: {
       </section>
       <section
         aria-label={`company-terms-conditions`}
-        className={clsx(`horizontal h-auto w-full justify-center border-t-1 border-[#585858] p-4`)}
+        className={clsx(
+          `horizontal border-default-600 h-auto w-full justify-center border-t-1 p-4`
+        )}
       >
         <TermsConditions {...{ termsConditions }} />
       </section>

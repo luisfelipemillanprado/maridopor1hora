@@ -2,6 +2,7 @@ import SecondaryTitle from '@/features/home/components/atoms/SecondaryTitle'
 import FinishedWorks from '@/features/home/components/molecules/FinishedWorks'
 import TrustBadge from '@/features/home/components/molecules/TrustBadge'
 import AllOurServices from '@/features/home/components/molecules/AllOurServices'
+import FQAs from '@/features/home/components/molecules/FQAs'
 import clsx from 'clsx'
 
 export default function Main(props: {
@@ -24,8 +25,17 @@ export default function Main(props: {
     name: string[]
     description: string[]
   }
+  frequentlyAskedQuestions: {
+    questions: {
+      question: string
+      answer: string
+      key: number
+      icon: string
+    }[]
+  }
 }) {
-  const { trustBadge, secondaryTitles, finishedWorks, allOurServices } = props
+  const { trustBadge, secondaryTitles, finishedWorks, allOurServices, frequentlyAskedQuestions } =
+    props
   return (
     <div className={clsx(`vertical h-auto w-full gap-y-6`)}>
       <section aria-label={`trust-badge`} className={clsx(`w-full px-[1.125rem]`)}>
@@ -46,6 +56,18 @@ export default function Main(props: {
       >
         <SecondaryTitle {...{ title: secondaryTitles.title[1] }} />
         <AllOurServices {...{ allOurServices }} />
+      </section>
+      <section
+        aria-label={`here-are-your-answers`}
+        className={clsx(`vertical w-full gap-y-3.5 px-[1.125rem]`)}
+      >
+        <SecondaryTitle {...{ title: secondaryTitles.title[2] }} />
+        <FQAs {...{ questions: frequentlyAskedQuestions.questions }} />
+      </section>
+      <section aria-label={`join-our-team`} className={clsx(`vertical w-full px-[1.125rem]`)}>
+        <div className={clsx(`vertical bg-content3 w-full gap-y-3.5`)}>
+          <SecondaryTitle {...{ title: secondaryTitles.title[3] }} />
+        </div>
       </section>
     </div>
   )

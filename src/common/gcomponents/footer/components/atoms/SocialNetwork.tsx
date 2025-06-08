@@ -37,6 +37,7 @@ export default function SocialNetwork(props: { icon: string; href: string }) {
   return (
     <Button
       isIconOnly
+      isExternal
       className={clsx(`bg-content3`)}
       aria-label={`social-network-${icon}`}
       as={Link}

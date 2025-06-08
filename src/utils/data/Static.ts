@@ -50,7 +50,12 @@ const sd = {
         buttonText: `MaridoPor1Hora`,
       },
       secondaryTitles: {
-        title: [`Featured Completed Works`, `All Our Customer Services`],
+        title: [
+          `Featured Completed Works`,
+          `All Our Customer Services`,
+          `Here're, Your Answers`,
+          `Join Our Team`,
+        ],
       },
       finishedWorks: {
         imageUrls: [
@@ -82,6 +87,64 @@ const sd = {
           `Deep cleaning services to keep your space spotless and sparkling clean.`,
         ],
       },
+      frequentlyAskedQuestions: {
+        questions: [
+          {
+            question: `Are the materials included in the price or not?`,
+            answer: `It's your choice: you can provide the materials, or we can source them for you at an additional cost, subject to approval.`,
+            icon: `more`,
+            key: Math.random(),
+          },
+          {
+            question: `How can I schedule a service?`,
+            answer: `You can book by phone, WhatsApp, or using the form on our website. We'll assign a technician within 24 hours (or immediately if it's an emergency).`,
+            icon: `more`,
+            key: Math.random(),
+          },
+          {
+            question: `Do you serve on weekends and holidays?`,
+            answer: `Yes, we operate Monday through Sunday, including holidays, with a 15% surcharge (except for returning customers).`,
+            icon: `more`,
+            key: Math.random(),
+          },
+          {
+            question: `How much does the service cost?`,
+            answer: `Cost varies depending on the job and time required. We offer hourly rates (starting at $XX/hour) or fixed quotes for complex projects.`,
+            icon: `more`,
+            key: Math.random(),
+          },
+          {
+            question: `What payment methods do you accept?`,
+            answer: `We accept cash, transfers, cards (debit/credit), and payment apps like Bizum. Payment is made after the service is completed.`,
+            icon: `more`,
+            key: Math.random(),
+          },
+          {
+            question: `Do you offer a guarantee on the work?`,
+            answer: `Yes: 30 days for repairs and 15 days for assembly (does not apply for misuse or damage unrelated to the service).`,
+            icon: `more`,
+            key: Math.random(),
+          },
+          {
+            question: `Do you have promotions for frequent customers?`,
+            answer: `¡Yes! Our loyalty program includes a 10% discount on the third service and priority service.`,
+            icon: `more`,
+            key: Math.random(),
+          },
+          {
+            question: `How do I know my home is protected with you?`,
+            answer: `Our technicians are uniformed, identified, and you can see their credentials upon arrival. Plus, they're all insured.`,
+            icon: `more`,
+            key: Math.random(),
+          },
+          {
+            question: `Do you provide 24-hour emergency service?`,
+            answer: `Yes, for real emergencies (such as flooding or electrical hazards) we have 24/7 service with an additional charge.`,
+            icon: `more`,
+            key: Math.random(),
+          },
+        ],
+      },
     },
   },
   navbar: {
@@ -110,9 +173,9 @@ const sd = {
     companyInformation: {
       links: [
         { href: '#', text: 'BLOG', key: Math.random() },
+        { href: '#', text: 'TESTIMONIALS', key: Math.random() },
         { href: '#', text: 'TEAM', key: Math.random() },
         { href: '#', text: 'ABOUT', key: Math.random() },
-        { href: '#', text: 'CONTACT', key: Math.random() },
       ],
     },
     ourTeam: {
