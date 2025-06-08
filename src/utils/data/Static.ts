@@ -138,7 +138,7 @@ const sd = {
             key: Math.random(),
           },
           {
-            question: `Do you provide 24-hour emergency service?`,
+            question: `Do you provide full time emergency service?`,
             answer: `Yes, for real emergencies (such as flooding or electrical hazards) we have 24/7 service with an additional charge.`,
             icon: `more`,
             key: Math.random(),

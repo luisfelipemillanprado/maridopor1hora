@@ -18,15 +18,13 @@ export default function FQAs(props: {
         <AccordionItem
           key={item.key}
           className={clsx(
-            `border-default-200 bg-content2 border-1 pb-3.5`,
+            `border-default-200 bg-content3 border-1 pb-3.5`,
             `[&>h2>button]:py-0 [&>h2>button]:pt-3.5 [&>h2>button]:pb-0`
           )}
           aria-label={`FQAs ${index + 1}`}
           startContent={<FQAIcon {...{ icon: item.icon }} />}
           title={
-            <span className={clsx(`text-default-900 text-[1.0625rem] font-bold`)}>
-              {item.question}
-            </span>
+            <span className={clsx(`text-default-900 text-medium font-bold`)}>{item.question}</span>
           }
         >
           <span className={clsx(`text-default-700 text-[0.9375rem]`)}>{item.answer}</span>
