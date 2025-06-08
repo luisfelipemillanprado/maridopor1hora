@@ -24,7 +24,9 @@ export default function FQAs(props: {
           aria-label={`FQAs ${index + 1}`}
           startContent={<FQAIcon {...{ icon: item.icon }} />}
           title={
-            <span className={clsx(`text-default-900 text-medium font-bold`)}>{item.question}</span>
+            <span className={clsx(`text-default-900 text-[1.0625rem] font-bold`)}>
+              {item.question}
+            </span>
           }
         >
           <span className={clsx(`text-default-700 text-[0.9375rem]`)}>{item.answer}</span>
