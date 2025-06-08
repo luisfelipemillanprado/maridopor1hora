@@ -64,10 +64,12 @@ export default function Main(props: {
         <SecondaryTitle {...{ title: secondaryTitles.title[2] }} />
         <FQAs {...{ questions: frequentlyAskedQuestions.questions }} />
       </section>
-      <section aria-label={`join-our-team`} className={clsx(`vertical w-full px-[1.125rem]`)}>
-        <div className={clsx(`vertical bg-content3 w-full gap-y-3.5`)}>
-          <SecondaryTitle {...{ title: secondaryTitles.title[3] }} />
-        </div>
+      <section
+        aria-label={`join-our-team`}
+        className={clsx(`vertical w-full gap-y-3.5 px-[1.125rem]`)}
+      >
+        <SecondaryTitle {...{ title: secondaryTitles.title[3] }} />
+        <div className={clsx(`vertical bg-content3 w-full`)}>vdbfnthrhr</div>
       </section>
     </div>
   )
