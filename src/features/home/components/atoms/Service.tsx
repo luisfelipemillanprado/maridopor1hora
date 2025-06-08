@@ -24,9 +24,7 @@ export default function Service(props: { imageUrl: string; name: string; descrip
         />
       </CardHeader>
       <CardBody className={clsx(`px-3 py-0`)}>
-        <span className={clsx(`text-default-900 text-[1.0625rem] font-semibold text-shadow-sm`)}>
-          {name}
-        </span>
+        <span className={clsx(`text-default-900 text-[1.0625rem] font-bold`)}>{name}</span>
       </CardBody>
       <CardFooter className={clsx(`pt-0`)}>
         <p className={clsx(`text-default-700 truncate text-[0.9375rem]`)}>{description}</p>

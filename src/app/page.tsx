@@ -30,6 +30,7 @@ export default function Home() {
             secondaryTitles: sd.home.main.secondaryTitles,
             finishedWorks: sd.home.main.finishedWorks,
             allOurServices: sd.home.main.allOurServices,
+            frequentlyAskedQuestions: sd.home.main.frequentlyAskedQuestions,
           }}
         />
       </main>

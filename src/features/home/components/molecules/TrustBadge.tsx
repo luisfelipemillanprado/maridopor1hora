@@ -29,7 +29,7 @@ export default function TrustBadge(props: {
       <CardHeader className={clsx(`horizontal`)}>
         <div className={clsx(``)}></div>
         <div className={clsx(`vertical gap-y-1.5`)}>
-          <h4 className={clsx(`text-default-900 text-[1.1875rem] font-semibold text-shadow-md`)}>
+          <h4 className={clsx(`text-default-900 text-[1.1875rem] font-bold text-shadow-md`)}>
             {trustBadge.slogan}
           </h4>
           <p className={clsx(`text-default-800 text-[0.9375rem]`)}>{trustBadge.summary}</p>

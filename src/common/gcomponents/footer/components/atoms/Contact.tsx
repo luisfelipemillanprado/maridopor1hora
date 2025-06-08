@@ -29,6 +29,7 @@ export default function Contact(props: { icon: string; href: string; name: strin
   }
   return (
     <Button
+      isExternal
       as={Link}
       startContent={iconSwitch(icon)?.icon}
       color={`default`}
