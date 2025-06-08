@@ -145,6 +145,7 @@ const sd = {
           },
         ],
       },
+      joinOurTeam: {},
     },
   },
   navbar: {

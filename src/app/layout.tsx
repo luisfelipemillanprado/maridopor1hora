@@ -1,23 +1,23 @@
 import './globals.css'
-import { Inter /*, Roboto */ } from 'next/font/google'
+import { /* Inter, Roboto */ Nunito_Sans } from 'next/font/google'
 import Provider from '@/app/providers'
 import { Metadata } from 'next'
 import clsx from 'clsx'
 
-const inter = Inter({
+/* const inter = Inter({
   variable: '--font-inter',
   weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
   style: ['normal', 'italic'],
   subsets: ['latin'],
   display: 'swap',
-})
+}) */
 
-/* const roboto = Roboto({
-  variable: '--font-roboto',
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+const nunito_sans = Nunito_Sans({
+  variable: '--font-nunito',
+  weight: ['200', '300', '400', '500', '600', '700', '800', '900'],
   subsets: ['latin'],
   display: 'swap',
-}) */
+})
 
 export const metadata: Metadata = {
   title: 'Remiux - Next level cars | Transform your road.',
@@ -36,7 +36,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html suppressHydrationWarning className={clsx(`${inter.className} antialiased`)} lang="en-US">
+    <html
+      suppressHydrationWarning
+      className={clsx(`${nunito_sans.className} antialiased`)}
+      lang="en-US"
+    >
       <body className={clsx(`bg-[#fafbfd]`)}>
         <Provider
           themeProps={{
