@@ -36,7 +36,7 @@ const sd = {
         ],
       },
       metrics: [
-        { amount: `18`, text: `Years of experience`, change: false },
+        { amount: `400`, text: `Frequent customers`, change: false },
         { amount: `4.3`, text: `Satisfied customers`, change: true },
         { amount: `25`, text: `Qualified experts`, change: false },
       ],
@@ -164,11 +164,12 @@ const sd = {
             key: Math.random(),
           },
         ],
-        firstText: `MaridoPor1Hora`,
+        firstText: `MaridoPor1Hora.`,
         secondText: [
-          `At MaridoPor1Hora, we're dedicated to making life easier for families by offering quality home services: cleaning, maintenance, repairs, gardening, and personal care. Our commitment is to provide practical solutions with professionalism and warmth.`,
+          `At this company, we are dedicated to making life easier for families by offering quality home services: cleaning, maintenance, repairs, gardening, personal care and more. Our commitment is to provide practical solutions with professionalism and compassion.`,
           `If you're a responsible person with experience in home services and want to be part of a team that values ​​your work, we're looking for you!`,
         ],
+        joinOurTeamButton: {},
       },
     },
   },

@@ -1,6 +1,7 @@
 'use client'
 import Member from '@/features/home/components/atoms/Member'
 import AboutTeam from '@/features/home/components/atoms/AboutTeam'
+import JoinTeamButton from '@/features/home/components/atoms/JoinTeamButton'
 import clsx from 'clsx'
 
 /**
@@ -17,6 +18,7 @@ export default function JoinOurTeam(props: {
       imageUrl: string
       key: number
     }[]
+    firstText: string
     secondText: string[]
   }
 }) {
@@ -24,10 +26,13 @@ export default function JoinOurTeam(props: {
   return (
     <div
       className={clsx(
-        `vertical bg-content3 rounded-large shadow-medium h-auto w-full gap-y-7 px-3 pt-4 pb-0`
+        `vertical bg-content3 rounded-large shadow-medium border-content4 h-auto w-full gap-y-7 border-1 px-3 pt-4 pb-0`
       )}
     >
-      <AboutTeam {...{ secondText: joinOurTeam.secondText }} />
+      <AboutTeam {...{ firstText: joinOurTeam.firstText, secondText: joinOurTeam.secondText }} />
+      <div className={clsx(`horizontal mb-1 h-auto w-full justify-center`)}>
+        <JoinTeamButton {...{ text: `Join Our Team Here`, href: `#` }} />
+      </div>
       <div className={clsx(`horizontal ml-5 h-auto w-full justify-center`)}>
         <div className={clsx(`grid w-auto grid-cols-12 grid-rows-2 gap-3`)}>
           {joinOurTeam.team.map((item, index) => (

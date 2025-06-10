@@ -22,8 +22,8 @@ export default function Metric(props: {
       shadow={`sm`}
     >
       <CardHeader className={clsx(`horizontal justify-center gap-x-0.5 px-1 pt-2 pb-0`)}>
-        <span className={clsx(`text-[1.0625rem] text-amber-700`)}>{metric.amount}</span>
-        <span className={clsx(`text-[1.0625rem] text-amber-700`)}>
+        <span className={clsx(`text-warning text-[1.0625rem]`)}>{metric.amount}</span>
+        <span className={clsx(`text-warning text-[1.0625rem]`)}>
           {metric.change ? `k` : <PlusIcon className={clsx(`h-[1.125rem] w-[1.125rem]`)} />}
         </span>
       </CardHeader>
