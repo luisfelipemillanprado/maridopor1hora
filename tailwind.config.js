@@ -11,24 +11,19 @@ const config = {
   ],
   theme: {
     extend: {
-      extend: {
-        colors: {
-          white: '#FFFFFF',
-          black: '#000000',
-          blue: {
-            50: '#e6f1fe',
-            100: '#cce3fd',
-            200: '#99c7fb',
-            300: '#66aaf9',
-            400: '#338ef7',
-            500: '#006FEE',
-            600: '#005bc4',
-            700: '#004493',
-            800: '#002e62',
-            900: '#001731',
-          },
-          // .. rest of the colors
-        },
+      screens: {
+        xs: '20rem',
+        // => @media (min-width: 320px) { ... }
+        md: '22.5rem',
+        // => @media (min-width: 360px) { ... }
+        lg: '23.4375rem',
+        // => @media (min-width: 375px) { ... }
+        xl: '24.5rem',
+        // => @media (min-width: 392px) { ... }
+        '2xl': '25rem',
+        // => @media (min-width: 400px) { ... }
+        '3xl': '31.25rem',
+        // => @media (min-width: 500px) { ... }
       },
     },
   },

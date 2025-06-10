@@ -38,7 +38,7 @@ export default function RootLayout({
   return (
     <html
       suppressHydrationWarning
-      className={clsx(`${nunito_sans.className} antialiased`)}
+      className={clsx(`${nunito_sans.className} scroll-smooth antialiased`)}
       lang="en-US"
     >
       <body className={clsx(`bg-[#fafbfd]`)}>

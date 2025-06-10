@@ -169,7 +169,10 @@ const sd = {
           `At this company, we are dedicated to making life easier for families by offering quality home services: cleaning, maintenance, repairs, gardening, personal care and more. Our commitment is to provide practical solutions with professionalism and compassion.`,
           `If you're a responsible person with experience in home services and want to be part of a team that values ​​your work, we're looking for you!`,
         ],
-        joinOurTeamButton: {},
+        joinOurTeamButton: {
+          text: `Join Our Team Here`,
+          href: `#`,
+        },
       },
     },
   },
