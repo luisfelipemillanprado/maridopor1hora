@@ -3,6 +3,8 @@ import FinishedWorks from '@/features/home/components/molecules/FinishedWorks'
 import TrustBadge from '@/features/home/components/molecules/TrustBadge'
 import AllOurServices from '@/features/home/components/molecules/AllOurServices'
 import FQAs from '@/features/home/components/molecules/FQAs'
+import JoinOurTeam from '@/features/home/components/molecules/JoinOurTeam'
+
 import clsx from 'clsx'
 
 export default function Main(props: {
@@ -33,9 +35,23 @@ export default function Main(props: {
       icon: string
     }[]
   }
+  joinOurTeam: {
+    team: {
+      imageUrl: string
+      key: number
+    }[]
+    firstText: string
+    secondText: string[]
+  }
 }) {
-  const { trustBadge, secondaryTitles, finishedWorks, allOurServices, frequentlyAskedQuestions } =
-    props
+  const {
+    trustBadge,
+    secondaryTitles,
+    finishedWorks,
+    allOurServices,
+    frequentlyAskedQuestions,
+    joinOurTeam,
+  } = props
   return (
     <div className={clsx(`vertical h-auto w-full gap-y-6`)}>
       <section aria-label={`trust-badge`} className={clsx(`w-full px-[1.125rem]`)}>
@@ -66,10 +82,10 @@ export default function Main(props: {
       </section>
       <section
         aria-label={`join-our-team`}
-        className={clsx(`vertical w-full gap-y-3.5 px-[1.125rem]`)}
+        className={clsx(`vertical w-full gap-y-3.5 overflow-x-hidden px-[1.125rem]`)}
       >
         <SecondaryTitle {...{ title: secondaryTitles.title[3] }} />
-        <div className={clsx(`vertical bg-content3 w-full`)}>vdbfnthrhr</div>
+        <JoinOurTeam {...{ joinOurTeam }} />
       </section>
     </div>
   )

@@ -22,13 +22,13 @@ export default function Metric(props: {
       shadow={`sm`}
     >
       <CardHeader className={clsx(`horizontal justify-center gap-x-0.5 px-1 pt-2 pb-0`)}>
-        <span className={clsx(`text-medium text-amber-700`)}>{metric.amount}</span>
-        <span className={clsx(`text-medium text-amber-700`)}>
+        <span className={clsx(`text-[1.0625rem] text-amber-700`)}>{metric.amount}</span>
+        <span className={clsx(`text-[1.0625rem] text-amber-700`)}>
           {metric.change ? `k` : <PlusIcon className={clsx(`h-[1.125rem] w-[1.125rem]`)} />}
         </span>
       </CardHeader>
       <CardBody className={clsx(`vertical px-1 pt-0 pb-2.5`)}>
-        <span className={clsx(`text-center text-[0.8125rem]`)}>{metric.text}</span>
+        <span className={clsx(`text-small text-center`)}>{metric.text}</span>
       </CardBody>
     </Card>
   )

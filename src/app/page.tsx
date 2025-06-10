@@ -31,6 +31,7 @@ export default function Home() {
             finishedWorks: sd.home.main.finishedWorks,
             allOurServices: sd.home.main.allOurServices,
             frequentlyAskedQuestions: sd.home.main.frequentlyAskedQuestions,
+            joinOurTeam: sd.home.main.joinOurTeam,
           }}
         />
       </main>
