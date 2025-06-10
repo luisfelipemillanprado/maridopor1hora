@@ -11,7 +11,7 @@ export default function AboutTeam(props: { firstText: string; secondText: string
     <div className={clsx(`vertical h-auto w-full items-center gap-y-2.5`)}>
       <h4
         className={clsx(
-          `from-warning to-content5 via-content6 bg-gradient-to-tr bg-clip-text text-[1.3125rem] font-extrabold text-transparent`
+          `from-warning to-content5 via-content6 bg-gradient-to-tr bg-clip-text text-xl font-extrabold text-transparent`
         )}
       >
         {firstText}
