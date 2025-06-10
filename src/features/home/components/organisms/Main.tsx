@@ -82,7 +82,7 @@ export default function Main(props: {
       </section>
       <section
         aria-label={`join-our-team`}
-        className={clsx(`vertical w-full gap-y-3.5 overflow-x-hidden px-[1.125rem]`)}
+        className={clsx(`vertical w-full gap-y-3.5 overflow-hidden px-[1.125rem]`)}
       >
         <SecondaryTitle {...{ title: secondaryTitles.title[3] }} />
         <JoinOurTeam {...{ joinOurTeam }} />

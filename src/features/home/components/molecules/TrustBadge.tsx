@@ -25,7 +25,7 @@ export default function TrustBadge(props: {
 }) {
   const { trustBadge } = props
   return (
-    <Card className={clsx(`bg-content3 h-auto w-full`)} shadow={`md`}>
+    <Card className={clsx(`bg-content3 border-content4 h-auto w-full border-1`)} shadow={`md`}>
       <CardHeader className={clsx(`horizontal pb-2`)}>
         <div className={clsx(``)}></div>
         <div className={clsx(`vertical gap-y-2.5`)}>
@@ -38,15 +38,15 @@ export default function TrustBadge(props: {
       <CardBody className={clsx(`horizontal justify-between`)}>
         <div className={clsx(`horizontal h-auto w-auto`)}>
           <Button
-            className={clsx(`bg-content1 text-default-700`)}
-            startContent={
-              <BoltIcon className={clsx(`fill-warning-500 h-[0.8125rem] w-[0.8125rem]`)} />
-            }
+            className={clsx(`bg-content1`)}
+            startContent={<BoltIcon className={clsx(`fill-warning-500 h-4 w-4`)} />}
             variant={`flat`}
             radius={`full`}
             size={`sm`}
           >
-            {trustBadge.buttonText}
+            <span className={clsx(`text-small text-default-700 h-auto w-auto`)}>
+              {trustBadge.buttonText}
+            </span>
           </Button>
         </div>
         <div className={clsx(`horizontal h-auto w-auto`)}>

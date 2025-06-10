@@ -10,7 +10,7 @@ export default function TermsConditions(props: { termsConditions: { text: string
   const { termsConditions } = props
   return (
     <div className={clsx(`horizontal h-auto w-full justify-center`)}>
-      <span className={clsx(`text-default-50 text-center text-[0.9375rem]`)}>
+      <span className={clsx(`text-default-50 text-medium text-center`)}>
         {termsConditions.text}
       </span>
     </div>

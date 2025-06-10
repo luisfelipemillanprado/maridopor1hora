@@ -37,7 +37,7 @@ export default function Contact(props: { icon: string; href: string; name: strin
       variant={`light`}
       size={`sm`}
     >
-      <span className={clsx(`text-default-50 text-[1.0625rem]`)}>{name}</span>
+      <span className={clsx(`text-default-50 text-large`)}>{name}</span>
     </Button>
   )
 }

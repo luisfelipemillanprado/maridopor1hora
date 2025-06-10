@@ -12,7 +12,11 @@ import clsx from 'clsx'
 export default function Service(props: { imageUrl: string; name: string; description: string }) {
   const { imageUrl, name, description } = props
   return (
-    <Card isPressable className={clsx(`bg-content3 col-span-6 gap-y-2`)} shadow={`md`}>
+    <Card
+      isPressable
+      className={clsx(`bg-content3 border-content4 col-span-6 gap-y-2 border-1`)}
+      shadow={`md`}
+    >
       <CardHeader className={clsx(`justify-between pb-2`)}>
         <Avatar
           isBordered

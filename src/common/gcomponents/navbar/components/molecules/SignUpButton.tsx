@@ -10,7 +10,7 @@ export default function SignUpButton(props: { text: string }) {
   const { text } = props
   return (
     <Button
-      className={clsx(`bg-gradient-to-tr from-pink-500 to-yellow-500 text-white shadow-lg`)}
+      className={clsx(`text-default-50 text-small bg-warning shadow-lg`)}
       variant={`flat`}
       radius={`full`}
       size={`sm`}
