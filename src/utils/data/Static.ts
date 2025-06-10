@@ -145,7 +145,31 @@ const sd = {
           },
         ],
       },
-      joinOurTeam: {},
+      joinOurTeam: {
+        team: [
+          {
+            imageUrl: `/images/main/team/team01.webp`,
+            key: Math.random(),
+          },
+          {
+            imageUrl: `/images/main/team/team02.webp`,
+            key: Math.random(),
+          },
+          {
+            imageUrl: `/images/main/team/team03.webp`,
+            key: Math.random(),
+          },
+          {
+            imageUrl: `/images/main/team/team04.webp`,
+            key: Math.random(),
+          },
+        ],
+        firstText: `MaridoPor1Hora`,
+        secondText: [
+          `At MaridoPor1Hora, we're dedicated to making life easier for families by offering quality home services: cleaning, maintenance, repairs, gardening, and personal care. Our commitment is to provide practical solutions with professionalism and warmth.`,
+          `If you're a responsible person with experience in home services and want to be part of a team that values ​​your work, we're looking for you!`,
+        ],
+      },
     },
   },
   navbar: {

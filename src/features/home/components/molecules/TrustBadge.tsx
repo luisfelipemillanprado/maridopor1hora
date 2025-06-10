@@ -26,13 +26,13 @@ export default function TrustBadge(props: {
   const { trustBadge } = props
   return (
     <Card className={clsx(`bg-content3 h-auto w-full`)} shadow={`md`}>
-      <CardHeader className={clsx(`horizontal`)}>
+      <CardHeader className={clsx(`horizontal pb-2`)}>
         <div className={clsx(``)}></div>
-        <div className={clsx(`vertical gap-y-1.5`)}>
-          <h4 className={clsx(`text-default-900 text-[1.1875rem] font-bold text-shadow-md`)}>
+        <div className={clsx(`vertical gap-y-2.5`)}>
+          <h4 className={clsx(`text-default-900 text-xl font-bold text-shadow-md`)}>
             {trustBadge.slogan}
           </h4>
-          <p className={clsx(`text-default-800 text-[0.9375rem]`)}>{trustBadge.summary}</p>
+          <p className={clsx(`text-default-800 text-medium`)}>{trustBadge.summary}</p>
         </div>
       </CardHeader>
       <CardBody className={clsx(`horizontal justify-between`)}>
