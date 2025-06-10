@@ -42,6 +42,10 @@ export default function Main(props: {
     }[]
     firstText: string
     secondText: string[]
+    joinOurTeamButton: {
+      text: string
+      href: string
+    }
   }
 }) {
   const {

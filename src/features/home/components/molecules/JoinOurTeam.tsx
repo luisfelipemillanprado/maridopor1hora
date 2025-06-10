@@ -20,6 +20,10 @@ export default function JoinOurTeam(props: {
     }[]
     firstText: string
     secondText: string[]
+    joinOurTeamButton: {
+      text: string
+      href: string
+    }
   }
 }) {
   const { joinOurTeam } = props
@@ -31,7 +35,12 @@ export default function JoinOurTeam(props: {
     >
       <AboutTeam {...{ firstText: joinOurTeam.firstText, secondText: joinOurTeam.secondText }} />
       <div className={clsx(`horizontal mb-1 h-auto w-full justify-center`)}>
-        <JoinTeamButton {...{ text: `Join Our Team Here`, href: `#` }} />
+        <JoinTeamButton
+          {...{
+            text: joinOurTeam.joinOurTeamButton.text,
+            href: joinOurTeam.joinOurTeamButton.href,
+          }}
+        />
       </div>
       <div className={clsx(`horizontal ml-5 h-auto w-full justify-center`)}>
         <div className={clsx(`grid w-auto grid-cols-12 grid-rows-2 gap-3`)}>
