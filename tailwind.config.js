@@ -41,6 +41,7 @@ const config = {
           colors: {
             warning: { DEFAULT: `#e2813f` },
             content5: `#2d3035`,
+            content6: `#8e391c`,
           },
         },
         dark: {
