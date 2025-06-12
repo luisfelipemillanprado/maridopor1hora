@@ -5,12 +5,15 @@ import JoinTeamButton from '@/features/home/components/atoms/JoinTeamButton'
 import clsx from 'clsx'
 
 /**
- * @description - Renders a grid of team member images for the "Join Our Team" section.
+ * @description - Renders the "Join Our Team" section, displaying team member images, descriptive texts,
+ * and a call-to-action button. The component expects a `joinOurTeam` prop containing
+ * information about the team, display texts, and button configuration.
  * @param props - The component props.
- * @param props.joinOurTeam - Object containing the team array.
- * @param props.joinOurTeam.team - Array of team member objects.
- * @param props.joinOurTeam.team[].imageUrl - The URL of the team member's image.
- * @param props.joinOurTeam.team[].key - Unique key for each team member.
+ * @param props.joinOurTeam - Data for the "Join Our Team" section.
+ * @param props.joinOurTeam.team - Array of team member objects, each with an image URL and unique key.
+ * @param props.joinOurTeam.firstText - The main descriptive text for the section.
+ * @param props.joinOurTeam.secondText - An array of additional descriptive texts.
+ * @param props.joinOurTeam.joinOurTeamButton - Configuration for the join button, including text and link.
  */
 export default function JoinOurTeam(props: {
   joinOurTeam: {

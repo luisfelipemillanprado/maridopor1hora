@@ -1,9 +1,10 @@
 import clsx from 'clsx'
 
 /**
- * @description - Renders a section displaying information about the team.
+ * @description - Renders a team information section with a highlighted title and two lines of descriptive text.
  * @param props - The component props.
- * @param props.secondText - An array of strings to be displayed in separate spans.
+ * @param props.firstText - The main heading text to display with a gradient style.
+ * @param props.secondText - An array of two strings to display as separate lines below the heading.
  */
 export default function AboutTeam(props: { firstText: string; secondText: string[] }) {
   const { firstText, secondText } = props

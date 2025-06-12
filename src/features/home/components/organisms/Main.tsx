@@ -2,6 +2,7 @@ import SecondaryTitle from '@/features/home/components/atoms/SecondaryTitle'
 import FinishedWorks from '@/features/home/components/molecules/FinishedWorks'
 import TrustBadge from '@/features/home/components/molecules/TrustBadge'
 import AllOurServices from '@/features/home/components/molecules/AllOurServices'
+import NavigationLink from '@/features/home/components/molecules/NavigationLinks'
 import FQAs from '@/features/home/components/molecules/FQAs'
 import JoinOurTeam from '@/features/home/components/molecules/JoinOurTeam'
 
@@ -47,6 +48,11 @@ export default function Main(props: {
       href: string
     }
   }
+  navigationLinks: {
+    text: string[]
+    href: string[]
+    icon: string[]
+  }
 }) {
   const {
     trustBadge,
@@ -55,6 +61,7 @@ export default function Main(props: {
     allOurServices,
     frequentlyAskedQuestions,
     joinOurTeam,
+    navigationLinks,
   } = props
   return (
     <div className={clsx(`vertical h-auto w-full gap-y-6`)}>
@@ -69,6 +76,15 @@ export default function Main(props: {
       >
         <SecondaryTitle {...{ title: secondaryTitles.title[0] }} />
         <FinishedWorks {...{ finishedWorks }} />
+        <div className={clsx(`horizontal mt-2.5 h-auto w-full justify-center`)}>
+          <NavigationLink
+            {...{
+              text: navigationLinks.text[0],
+              href: navigationLinks.href[0],
+              icon: navigationLinks.icon[0],
+            }}
+          />
+        </div>
       </section>
       <section
         aria-label={`all-our-services`}
@@ -76,6 +92,15 @@ export default function Main(props: {
       >
         <SecondaryTitle {...{ title: secondaryTitles.title[1] }} />
         <AllOurServices {...{ allOurServices }} />
+        <div className={clsx(`horizontal mt-2.5 h-auto w-full justify-center`)}>
+          <NavigationLink
+            {...{
+              text: navigationLinks.text[1],
+              href: navigationLinks.href[1],
+              icon: navigationLinks.icon[1],
+            }}
+          />
+        </div>
       </section>
       <section
         aria-label={`here-are-your-answers`}

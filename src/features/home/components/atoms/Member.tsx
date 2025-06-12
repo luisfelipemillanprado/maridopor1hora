@@ -1,5 +1,6 @@
-import { Image } from '@heroui/react'
+import Image from 'next/image'
 import clsx from 'clsx'
+import blurEffects from '@/utils/blurs/Blurs'
 
 /**
  * @description - Renders a member's image with specific styles based on the index.
@@ -12,17 +13,17 @@ export default function Member(props: { imageUrl: string; index: number }) {
   return (
     <div className={clsx(`horizontal relative col-span-6`)}>
       <Image
-        isZoomed
-        removeWrapper
-        width={80}
-        height={80}
-        alt={`member-image`}
+        placeholder={`blur`}
+        width={151}
+        height={112}
+        alt={`Member Company Image`}
+        blurDataURL={blurEffects.blurUrl}
         className={clsx(
-          `rounded-medium h-full w-full object-cover`,
-          `${index == 0 ? 'border-default-50 shadow-small min-h-28 border-4' : ''}`,
-          `${index == 1 ? 'border-warning shadow-small absolute top-0 !h-[4.6875rem] w-[4.6875rem] rounded-full border-3' : ''}`,
-          `${index == 2 ? 'border-warning shadow-small absolute -top-1 right-10 !h-[4.6875rem] w-[4.6875rem] rounded-full border-3' : ''}`,
-          `${index == 3 ? 'border-default-50 shadow-medium absolute -top-10 -left-10 z-10 min-h-28 border-8' : ''}`
+          `object-cover`,
+          `${index == 0 ? 'border-default-50 shadow-small rounded-medium min-h-28 border-4' : ''}`,
+          `${index == 1 ? 'border-warning shadow-small absolute top-0 h-[4.6875rem] w-[4.6875rem] rounded-full border-3' : ''}`,
+          `${index == 2 ? 'border-warning shadow-small absolute -top-1 right-10 h-[4.6875rem] w-[4.6875rem] rounded-full border-3' : ''}`,
+          `${index == 3 ? 'border-default-50 shadow-medium rounded-medium absolute -top-10 -left-10 z-10 min-h-28 border-8' : ''}`
         )}
         src={imageUrl}
       />

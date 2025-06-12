@@ -6,6 +6,18 @@ import ContactUs from '@/common/gcomponents/footer/components/molecules/ContactU
 import TermsConditions from '@/common/gcomponents/footer/components/molecules/TermsConditions'
 import clsx from 'clsx'
 
+/**
+ * @description - Footer component that displays various sections such as company information, team members,
+ * social networks, secondary description, contact information, and terms & conditions.
+ * @param props - The properties for the Footer component.
+ * @param props.companyInformation - Contains an array of company links with `href`, `text`, and `key`.
+ * @param props.ourTeam - Contains an array of team members with `imageUrl`, `name`, and `key`.
+ * @param props.socialNetworks - Contains an array of social network objects with `url`, `icon`, `name`, and `key`.
+ * @param props.fourthTitle - Array of objects for section titles, each with `text1` and `text2`.
+ * @param props.secondaryDescription - Array of secondary description strings.
+ * @param props.contactUs - Array of contact information with `icon`, `name`, `href`, and `key`.
+ * @param props.termsConditions - Object containing the terms and conditions text.
+ */
 export default function Footer(props: {
   companyInformation: { links: { href: string; text: string; key: number }[] }
   ourTeam: { members: { imageUrl: string; name: string; key: number }[] }
