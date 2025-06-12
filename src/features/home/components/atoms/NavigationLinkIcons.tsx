@@ -16,7 +16,7 @@ export default function NavigationLinkIcons(props: { icon: string }) {
     }
   }
   return (
-    <span className={clsx(`horizontal bg-content1 h-9 w-9 justify-center rounded-full`)}>
+    <span className={clsx(`horizontal bg-content2 h-9 w-9 justify-center rounded-full`)}>
       {iconSwitch(icon)?.icon}
     </span>
   )

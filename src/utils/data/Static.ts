@@ -191,7 +191,7 @@ const sd = {
       navigationLinks: {
         text: [`Mas detalles...`, `Mas servicios...`],
         href: [`#`, `#`],
-        icon: [`plus`, `arrrowupright`],
+        icon: [`arrrowupright`, `arrrowupright`],
       },
     },
   },
