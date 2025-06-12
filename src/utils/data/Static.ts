@@ -189,9 +189,9 @@ const sd = {
         },
       },
       navigationLinks: {
-        text: [`Mas detalles...`, `Mas servicios...`],
-        href: [`#`, `#`],
-        icon: [`arrrowupright`, `arrrowupright`],
+        text: [`Mas servicios...`],
+        href: [`#`],
+        icon: [`arrrowupright`],
       },
     },
   },

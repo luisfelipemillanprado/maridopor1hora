@@ -76,15 +76,6 @@ export default function Main(props: {
       >
         <SecondaryTitle {...{ title: secondaryTitles.title[0] }} />
         <FinishedWorks {...{ finishedWorks }} />
-        <div className={clsx(`horizontal mt-2.5 h-auto w-full justify-center`)}>
-          <NavigationLink
-            {...{
-              text: navigationLinks.text[0],
-              href: navigationLinks.href[0],
-              icon: navigationLinks.icon[0],
-            }}
-          />
-        </div>
       </section>
       <section
         aria-label={`all-our-services`}
@@ -92,12 +83,12 @@ export default function Main(props: {
       >
         <SecondaryTitle {...{ title: secondaryTitles.title[1] }} />
         <AllOurServices {...{ allOurServices }} />
-        <div className={clsx(`horizontal mt-2.5 h-auto w-full justify-center`)}>
+        <div className={clsx(`horizontal mt-2.5 mb-0.5 h-auto w-full justify-center`)}>
           <NavigationLink
             {...{
-              text: navigationLinks.text[1],
-              href: navigationLinks.href[1],
-              icon: navigationLinks.icon[1],
+              text: navigationLinks.text[0],
+              href: navigationLinks.href[0],
+              icon: navigationLinks.icon[0],
             }}
           />
         </div>
