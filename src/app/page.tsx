@@ -32,6 +32,7 @@ export default function Home() {
             allOurServices: sd.home.main.allOurServices,
             frequentlyAskedQuestions: sd.home.main.frequentlyAskedQuestions,
             joinOurTeam: sd.home.main.joinOurTeam,
+            navigationLinks: sd.home.main.navigationLinks,
           }}
         />
       </main>

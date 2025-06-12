@@ -7,11 +7,15 @@ import NavLink from '@/common/gcomponents/navbar/components/atoms/NavLink'
 import clsx from 'clsx'
 
 /**
- * @description - NavBar component renders the main navigation bar for the application.
+ * @description - Renders the main navigation bar component.
  * @param props - The properties for the NavBar component.
- * @param props.navbar - The configuration object for the navbar.
- * @param props.navbar.avatar - Avatar section configuration.
- * @param props.navbar.logo - Logo section configuration.
+ * @param props.navbar - The navbar configuration object.
+ * @param props.navbar.avatar - Avatar configuration for the user profile.
+ * @param props.navbar.avatar.imageUrl - URL of the user's avatar image.
+ * @param props.navbar.avatar.items - List of menu items for the avatar dropdown.
+ * @param props.navbar.logo - Logo configuration.
+ * @param props.navbar.signUpButton - Sign up button configuration.
+ * @param props.navbar.links - Array of navigation links.
  */
 export default function NavBar(props: {
   navbar: {
