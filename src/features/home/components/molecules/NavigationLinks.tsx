@@ -15,13 +15,13 @@ export default function NavigationLink(props: { text: string; href: string; icon
   return (
     <div className={clsx(`horizontal h-auto w-auto`)}>
       <Button
-        className={clsx(`to-warning from-warning-300 bg-gradient-to-tr pr-0.5`)}
+        className={clsx(`to-warning from-warning-300 shadow-small bg-gradient-to-tr pr-0.5`)}
         endContent={<NavigationLinkIcons {...{ icon }} />}
         as={Link}
         href={href}
         color={`warning`}
         variant={`shadow`}
-        size={`sm`}
+        size={`md`}
         radius={`full`}
       >
         <span className={clsx(`text-default-50 text-medium pt-0.5`)}>{text}</span>
