@@ -15,7 +15,7 @@ export default function NavigationLink(props: { text: string; href: string; icon
   return (
     <div className={clsx(`horizontal h-auto w-auto`)}>
       <Button
-        className={clsx(`to-warning from-warning-300 shadow-small bg-gradient-to-tr pr-0.5`)}
+        className={clsx(`bg-warning pr-0.5`)}
         endContent={<NavigationLinkIcons {...{ icon }} />}
         as={Link}
         href={href}

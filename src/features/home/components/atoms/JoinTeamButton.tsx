@@ -13,7 +13,7 @@ export default function JoinTeamButton(props: { text: string; href: string }) {
   return (
     <div className={clsx(`horizontal h-auto w-auto`)}>
       <Button
-        className={clsx(`to-warning from-warning-300 bg-gradient-to-tr`)}
+        className={clsx(`bg-warning`)}
         endContent={<UserGroupIcon className={clsx(`fill-content5 h-6 w-6`)} />}
         as={Link}
         href={href}
