@@ -38,7 +38,7 @@ export default function FQAs(props: {
             </span>
           }
         >
-          <span className={clsx(`text-default-700 text-medium`)}>{item.answer}</span>
+          <span className={clsx(`text-default-800 text-medium`)}>{item.answer}</span>
         </AccordionItem>
       ))}
     </Accordion>

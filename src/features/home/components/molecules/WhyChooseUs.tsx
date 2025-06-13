@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/scrollbar'
-import { Scrollbar, Autoplay } from 'swiper/modules'
+import { Autoplay } from 'swiper/modules'
 import clsx from 'clsx'
 
 /**
@@ -35,17 +35,14 @@ export default function WhyChooseUs(props: {
       slidesPerView={`auto`}
       spaceBetween={20}
       loop={true}
-      /* autoplay={{
+      autoplay={{
         delay: 7000,
         disableOnInteraction: false,
-      }} */
-      scrollbar={{
-        hide: true,
       }}
-      modules={[Scrollbar, Autoplay]}
-      className={clsx(`h-auto w-full !pb-4.5 !pl-4.5`)}
+      modules={[Autoplay]}
+      className={clsx(`h-auto w-full !pb-4.5`)}
     >
-      {benefits.map((item /*, index */) => (
+      {benefits.map((item) => (
         <SwiperSlide key={item.key} className={clsx(`!h-auto !w-auto`)}>
           <Benefit
             {...{

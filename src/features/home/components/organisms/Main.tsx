@@ -90,22 +90,19 @@ export default function Main(props: {
   } = props
   return (
     <div className={clsx(`vertical h-auto w-full gap-y-6`)}>
-      <section aria-label={`trust-badge`} className={clsx(`w-full px-[1.125rem]`)}>
+      <section aria-label={`trust-badge`} className={clsx(`w-full px-4.5`)}>
         <div className={clsx(`horizontal h-auto w-full justify-start`)}>
           <TrustBadge {...{ trustBadge }} />
         </div>
       </section>
       <section
         aria-label={`featured-completed-works`}
-        className={clsx(`vertical w-full gap-y-3.5 px-[1.125rem]`)}
+        className={clsx(`vertical w-full gap-y-3.5 px-4.5`)}
       >
         <SecondaryTitle {...{ title: secondaryTitles.title[0] }} />
         <FinishedWorks {...{ finishedWorks }} />
       </section>
-      <section
-        aria-label={`all-our-services`}
-        className={clsx(`vertical w-full gap-y-3.5 px-[1.125rem]`)}
-      >
+      <section aria-label={`all-our-services`} className={clsx(`vertical w-full gap-y-3.5 px-4.5`)}>
         <SecondaryTitle {...{ title: secondaryTitles.title[1] }} />
         <AllOurServices {...{ allOurServices }} />
         <div className={clsx(`horizontal mt-2.5 mb-0.5 h-auto w-full justify-center`)}>
@@ -120,18 +117,18 @@ export default function Main(props: {
       </section>
       <section
         aria-label={`here-are-your-answers`}
-        className={clsx(`vertical w-full gap-y-3.5 px-[1.125rem]`)}
+        className={clsx(`vertical w-full gap-y-3.5 px-4.5`)}
       >
         <SecondaryTitle {...{ title: secondaryTitles.title[2] }} />
         <FQAs {...{ questions: frequentlyAskedQuestions.questions }} />
       </section>
-      <section aria-label={`why-choose-us`} className={clsx(`vertical w-full gap-y-3.5`)}>
+      <section aria-label={`why-choose-us`} className={clsx(`vertical w-full gap-y-3.5 pl-4.5`)}>
         <SecondaryTitle {...{ title: secondaryTitles.title[3] }} />
         <WhyChooseUs {...{ benefits }} />
       </section>
       <section
         aria-label={`join-our-team`}
-        className={clsx(`vertical w-full gap-y-3.5 overflow-hidden px-[1.125rem]`)}
+        className={clsx(`vertical w-full gap-y-3.5 overflow-hidden px-4.5`)}
       >
         <SecondaryTitle {...{ title: secondaryTitles.title[4] }} />
         <JoinOurTeam {...{ joinOurTeam }} />
