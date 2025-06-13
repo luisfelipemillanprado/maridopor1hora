@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardHeader, CardBody, CardFooter, Link, Button, ScrollShadow } from '@heroui/react'
+import { Card, CardHeader, CardBody, CardFooter, Link, Button } from '@heroui/react'
 import {
   TicketIcon,
   BanknotesIcon,
@@ -53,13 +53,14 @@ export default function Benefit(props: {
   return (
     <Card
       className={clsx(`bg-content2 border-content3 h-auto w-80 border-1 px-3 py-3.5`)}
-      isPressable
       shadow={`sm`}
     >
-      <CardHeader className={clsx(`horizontal pt-2`)}>
+      <CardHeader className={clsx(`horizontal pt-2 pb-2.5`)}>
         <div className={clsx(`vertical h-auto w-full items-start gap-3.5`)}>
           <div
-            className={clsx(`border-warning bg-warning h-auto w-auto rounded-full border-1 p-1.5`)}
+            className={clsx(
+              `border-warning bg-warning shadow-small h-auto w-auto rounded-full border-1 p-1.5`
+            )}
           >
             <span className={clsx(`h-auto w-auto`)}>{iconSwitch(icon)?.icon}</span>
           </div>
@@ -71,18 +72,16 @@ export default function Benefit(props: {
         </div>
       </CardHeader>
       <CardBody className={clsx(`px-3 py-0`)}>
-        <ScrollShadow hideScrollBar>
-          <p className={clsx(`text-default-800 text-medium text-left text-ellipsis`)}>
-            {description}
-          </p>
-        </ScrollShadow>
+        <p className={clsx(`text-default-800 text-medium text-left text-ellipsis`)}>
+          {description}
+        </p>
       </CardBody>
-      <CardFooter className={clsx(`vertical items-start pt-3.5 pb-0`)}>
+      <CardFooter className={clsx(`vertical items-start pt-3.5 pb-0 pl-2.5`)}>
         <Button
-          className={clsx(`bg-content1 border-content5 mb-2.5 border-1 shadow-md`)}
+          className={clsx(`bg-content1 border-content4 mb-2.5 border-1 shadow-sm`)}
           as={Link}
           href={href}
-          variant={`shadow`}
+          variant={`flat`}
           size={`sm`}
           radius={`full`}
         >
