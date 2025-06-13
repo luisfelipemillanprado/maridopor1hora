@@ -5,9 +5,25 @@ import AllOurServices from '@/features/home/components/molecules/AllOurServices'
 import NavigationLink from '@/features/home/components/molecules/NavigationLinks'
 import FQAs from '@/features/home/components/molecules/FQAs'
 import JoinOurTeam from '@/features/home/components/molecules/JoinOurTeam'
-
+import WhyChooseUs from '@/features/home/components/molecules/WhyChooseUs'
 import clsx from 'clsx'
 
+/**
+ * @description - Main component for the home page, responsible for rendering all major sections including:
+ * - Trust badge
+ * - Featured completed works
+ * - All our services
+ * - Frequently asked questions
+ * - Join our team
+ * @param props - The properties required to render the main sections of the home page.
+ * @param props.trustBadge - Information for the trust badge section, including slogan, summary, rating, reviews, and button text.
+ * @param props.secondaryTitles - Titles for each major section of the page.
+ * @param props.finishedWorks - Data for the featured completed works section, including image URLs and descriptive texts.
+ * @param props.allOurServices - Data for the services section, including images, names, and descriptions of services.
+ * @param props.frequentlyAskedQuestions - List of frequently asked questions, each with a question, answer, key, and icon.
+ * @param props.joinOurTeam - Information for the join our team section, including team images, texts, and a join button.
+ * @param props.navigationLinks - Navigation links for the services section, including text, href, and icon for each link.
+ */
 export default function Main(props: {
   trustBadge: {
     slogan: string
@@ -36,6 +52,14 @@ export default function Main(props: {
       icon: string
     }[]
   }
+  benefits: {
+    title: string
+    description: string
+    hrefText: string
+    href: string
+    icon: string
+    key: number
+  }[]
   joinOurTeam: {
     team: {
       imageUrl: string
@@ -60,6 +84,7 @@ export default function Main(props: {
     finishedWorks,
     allOurServices,
     frequentlyAskedQuestions,
+    benefits,
     joinOurTeam,
     navigationLinks,
   } = props
@@ -100,11 +125,15 @@ export default function Main(props: {
         <SecondaryTitle {...{ title: secondaryTitles.title[2] }} />
         <FQAs {...{ questions: frequentlyAskedQuestions.questions }} />
       </section>
+      <section aria-label={`why-choose-us`} className={clsx(`vertical w-full gap-y-3.5`)}>
+        <SecondaryTitle {...{ title: secondaryTitles.title[3] }} />
+        <WhyChooseUs {...{ benefits }} />
+      </section>
       <section
         aria-label={`join-our-team`}
         className={clsx(`vertical w-full gap-y-3.5 overflow-hidden px-[1.125rem]`)}
       >
-        <SecondaryTitle {...{ title: secondaryTitles.title[3] }} />
+        <SecondaryTitle {...{ title: secondaryTitles.title[4] }} />
         <JoinOurTeam {...{ joinOurTeam }} />
       </section>
     </div>
