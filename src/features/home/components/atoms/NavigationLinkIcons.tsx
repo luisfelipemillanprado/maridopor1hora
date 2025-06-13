@@ -1,6 +1,11 @@
 import { ArrowUpRightIcon, PlusIcon } from '@heroicons/react/24/solid'
 import clsx from 'clsx'
 
+/**
+ * @description - Renders an icon inside a styled span based on the provided icon name.
+ * @param props - The component props.
+ * @param props.icon - The name of the icon to render. Supported values: 'arrrowupright', 'plus'.
+ */
 export default function NavigationLinkIcons(props: { icon: string }) {
   const { icon } = props
   const iconSwitch = (icon: string) => {
