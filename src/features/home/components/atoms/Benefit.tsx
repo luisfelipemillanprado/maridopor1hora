@@ -72,16 +72,15 @@ export default function Benefit(props: {
       </CardHeader>
       <CardBody className={clsx(`px-3 py-0`)}>
         <ScrollShadow hideScrollBar>
-          <p className={clsx(`text-default-700 text-medium text-left text-ellipsis`)}>
+          <p className={clsx(`text-default-800 text-medium text-left text-ellipsis`)}>
             {description}
           </p>
         </ScrollShadow>
       </CardBody>
       <CardFooter className={clsx(`vertical items-start pt-3.5 pb-0`)}>
         <Button
-          className={clsx(`mb-2.5`)}
+          className={clsx(`bg-content1 border-content5 mb-2.5 border-1 shadow-md`)}
           as={Link}
-          color={`default`}
           href={href}
           variant={`shadow`}
           size={`sm`}
