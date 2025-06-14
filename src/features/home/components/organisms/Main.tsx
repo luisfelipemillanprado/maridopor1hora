@@ -7,6 +7,7 @@ import FQAs from '@/features/home/components/molecules/FQAs'
 import JoinOurTeam from '@/features/home/components/molecules/JoinOurTeam'
 import WhyChooseUs from '@/features/home/components/molecules/WhyChooseUs'
 import CustomerTestimonials from '@/features/home/components/molecules/CustomerTestimonials'
+import SomePromotions from '@/features/home/components/molecules/SomePromotions'
 import clsx from 'clsx'
 
 /**
@@ -87,6 +88,11 @@ export default function Main(props: {
     }[]
     score: { key: number }[]
   }
+  promotions: {
+    imageUrl: string
+    href: string
+    key: number
+  }[]
 }) {
   const {
     trustBadge,
@@ -98,10 +104,11 @@ export default function Main(props: {
     joinOurTeam,
     navigationLinks,
     customerTestimonials,
+    promotions,
   } = props
   return (
     <div className={clsx(`vertical h-auto w-full`)}>
-      <section aria-label={`trust-badge`} className={clsx(`mb-6 w-full px-4.5`)}>
+      <section aria-label={`trust-badge-card`} className={clsx(`mb-6 w-full px-4.5`)}>
         <div className={clsx(`horizontal h-auto w-full justify-start`)}>
           <TrustBadge {...{ trustBadge }} />
         </div>
@@ -150,9 +157,12 @@ export default function Main(props: {
         <SecondaryTitle {...{ title: secondaryTitles.title[4] }} />
         <JoinOurTeam {...{ joinOurTeam }} />
       </section>
+      <section aria-label={`some-promotion`} className={clsx(`horizontal mb-4 w-full pl-4.5`)}>
+        <SomePromotions {...{ promotions }} />
+      </section>
       <section
         aria-label={`customer-testimonials`}
-        className={clsx(`vertical mb-6 w-full gap-y-3.5 overflow-hidden px-4.5`)}
+        className={clsx(`vertical w-full gap-y-3.5 overflow-hidden px-4.5`)}
       >
         <SecondaryTitle {...{ title: secondaryTitles.title[5] }} />
         <CustomerTestimonials

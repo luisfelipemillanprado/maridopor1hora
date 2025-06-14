@@ -37,6 +37,8 @@ const config = {
             warning: { DEFAULT: `#e2813f` },
             default: { DEFAULT: `#ffffff` },
             content5: `#2d3035`,
+            content6: `#8e391c`,
+            content7: `#fafbfd`,
           },
         },
         dark: {

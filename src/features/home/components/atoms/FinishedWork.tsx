@@ -13,7 +13,7 @@ export default function FinishedWork(props: { imageUrl: string; text: string }) 
     <Card isFooterBlurred isPressable className={clsx(`col-span-6`)} shadow={`md`}>
       <Image
         removeWrapper
-        alt={`Work ${text} Completed Satisfactorily`}
+        alt={`Work ${text} completed satisfactorily`}
         className={clsx(`z-0 h-full w-full object-cover`)}
         src={imageUrl}
       />

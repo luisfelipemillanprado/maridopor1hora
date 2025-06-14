@@ -1,6 +1,6 @@
 import Header from '@/features/home/components/organisms/Header'
 import Main from '@/features/home/components/organisms/Main'
-import Footer from '@/common/gcomponents/footer/components/organisms/Footer'
+import Footer from '@/features/home/components/organisms/Footer'
 import clsx from 'clsx'
 import sd from '@/utils/data/Static'
 
@@ -35,10 +35,11 @@ export default function Home() {
             navigationLinks: sd.home.main.navigationLinks,
             benefits: sd.home.main.whyChooseUs.benefits,
             customerTestimonials: sd.home.main.customerTestimonials,
+            promotions: sd.home.main.somePromotions.promotions,
           }}
         />
       </main>
-      <footer className={clsx(`mt-9 h-auto w-full`)}>
+      <footer className={clsx(`mt-8 h-auto w-full`)}>
         <Footer
           {...{
             companyInformation: sd.footer.companyInformation,

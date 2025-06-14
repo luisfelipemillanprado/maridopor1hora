@@ -6,7 +6,18 @@ import 'swiper/css/effect-cards'
 import 'swiper/css/pagination'
 import { EffectCards, Navigation } from 'swiper/modules'
 import clsx from 'clsx'
-// --
+
+/**
+ * @description - Displays a swiper carousel of customer testimonials.
+ * @param props - The component props.
+ * @param props.testimonials - An array of testimonial objects, each containing:
+ *   - `name`: The customer's name.
+ *   - `text`: The testimonial text.
+ *   - `imageUrl`: The URL of the customer's image.
+ *   - `key`: A unique key for the testimonial.
+ * @param props.score - An array of score objects, each containing:
+ *   - `key`: A unique key for the score.
+ */
 export default function CustomerTestimonials(props: {
   testimonials: {
     name: string
