@@ -2,7 +2,15 @@ import Image from 'next/image'
 import clsx from 'clsx'
 import { StarIcon } from '@heroicons/react/20/solid'
 import blurEffects from '@/utils/blurs/Blurs'
-// --
+
+/**
+ * @description - Displays a testimonial card with a client's avatar, name, testimonial text, and a score represented by star icons.
+ * @param props - The properties for the Testimonial component.
+ * @param props.name - The name of the client giving the testimonial.
+ * @param props.text - The testimonial text provided by the client.
+ * @param props.imageUrl - The URL of the client's avatar image.
+ * @param props.score - An array representing the testimonial score, where each item corresponds to a star.
+ */
 export default function Testimonial(props: {
   name: string
   text: string
@@ -19,13 +27,13 @@ export default function Testimonial(props: {
           )}
         >
           <Image
-            width={55}
-            height={55}
-            className={clsx(`h-[3.4375rem] w-[3.4375rem] rounded-full shadow-md`)}
+            width={57}
+            height={57}
+            className={clsx(`h-[3.5625rem] w-[3.5625rem] rounded-full shadow-md`)}
             src={imageUrl}
             blurDataURL={blurEffects.blurUrl}
             placeholder={`blur`}
-            alt={`Client's avatar`}
+            alt={`Client's avatar ${name}`}
           />
         </div>
         <div className={clsx(`horizontal h-auto w-auto justify-between gap-1`)}>

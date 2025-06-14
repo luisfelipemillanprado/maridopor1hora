@@ -18,7 +18,7 @@ export default function Metric(props: {
     <Card
       className={clsx(
         `outline-warning-200 h-[5.125rem] w-[5.5rem] gap-y-0.5 outline-1 outline-solid`,
-        `bg-[#fafbfd]`
+        `bg-content7`
       )}
       shadow={`sm`}
     >

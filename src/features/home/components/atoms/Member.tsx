@@ -16,7 +16,7 @@ export default function Member(props: { imageUrl: string; index: number }) {
         placeholder={`blur`}
         width={151}
         height={112}
-        alt={`Member Company Image`}
+        alt={`Member company`}
         blurDataURL={blurEffects.blurUrl}
         className={clsx(
           `object-cover`,

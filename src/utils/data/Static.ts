@@ -267,20 +267,26 @@ const sd = {
         testimonials: [
           {
             name: `Adriana Espinosa.`,
-            text: `Solucionaron mi emergencia con rapidez e impecable precisión.`,
-            imageUrl: `/images/main/testimonials/danielaMendez.webp`,
+            text: `Solucionaron mi emergencia con rapidez, profesionalidad e impecable precisión.`,
+            imageUrl: `/images/main/testimonials/testimonial01.webp`,
             key: Math.random(),
           },
           {
-            name: `Sergio Ruiz.`,
-            text: `Dejaron mi hogar reluciente con atención excepcional y cuidado.`,
-            imageUrl: `/images/main/testimonials/javierRuiz.webp`,
+            name: `Sergio Javier P.`,
+            text: `Dejaron mi hogar reluciente, con atención, paciencia y cuidado excepcional.`,
+            imageUrl: `/images/main/testimonials/testimonial02.webp`,
             key: Math.random(),
           },
           {
             name: `Jorge Melendez.`,
-            text: `Al principio tenía mis dudas, pero todo salió bien y sin problemas.`,
-            imageUrl: `/images/main/testimonials/omarDiaz.webp`,
+            text: `Al principio tenía mis dudas e inseguridades, pero todo salió bien y sin problemas.`,
+            imageUrl: `/images/main/testimonials/testimonial03.webp`,
+            key: Math.random(),
+          },
+          {
+            name: `Juan Hernandez.`,
+            text: `Tenía reservas al contratar, pero el servicio superó todas mis expectativas claramente.`,
+            imageUrl: `/images/main/testimonials/testimonial04.webp`,
             key: Math.random(),
           },
         ],
@@ -290,6 +296,45 @@ const sd = {
           { key: Math.random() },
           { key: Math.random() },
           { key: Math.random() },
+        ],
+      },
+      somePromotions: {
+        promotions: [
+          {
+            imageUrl: `/images/main/promotions/promotion01.webp`,
+            href: `#`,
+            key: Math.random(),
+          },
+          {
+            imageUrl: `/images/main/promotions/promotion02.webp`,
+            href: `#`,
+            key: Math.random(),
+          },
+          {
+            imageUrl: `/images/main/promotions/promotion03.webp`,
+            href: `#`,
+            key: Math.random(),
+          },
+          {
+            imageUrl: `/images/main/promotions/promotion04.webp`,
+            href: `#`,
+            key: Math.random(),
+          },
+          {
+            imageUrl: `/images/main/promotions/promotion05.webp`,
+            href: `#`,
+            key: Math.random(),
+          },
+          {
+            imageUrl: `/images/main/promotions/promotion06.webp`,
+            href: `#`,
+            key: Math.random(),
+          },
+          {
+            imageUrl: `/images/main/promotions/promotion07.webp`,
+            href: `#`,
+            key: Math.random(),
+          },
         ],
       },
     },
@@ -395,7 +440,7 @@ const sd = {
     },
     socialNetworks: [
       {
-        url: `https://facebook.com/MaridoPor1Hora`,
+        url: `https://www.facebook.com/share/18v9vJp693/`,
         icon: `facebook`,
         name: `Facebook`,
         key: Math.random(),
@@ -407,13 +452,13 @@ const sd = {
         key: Math.random(),
       },
       {
-        url: `https://instagram.com/MaridoPor1Hora`,
+        url: `https://www.instagram.com/maridopor1hora`,
         icon: `instagram`,
         name: `Instagram`,
         key: Math.random(),
       },
       {
-        url: `https://whatsapp.com/MaridoPor1Hora`,
+        url: `https://api.whatsapp.com/send?phone=%2B34607088505&app=facebook&entry_point=page_cta&fbclid=IwY2xjawK6ZSRleHRuA2FlbQIxMABicmlkETFJZGpSY1NYUFRHVUpZcmJYAR6isiuK0Xkp5X60u0wiu0EAWwmEvor3lciKr9Os_Zy-FXA-fR86lamXzAn4gQ_aem_5yIeRp4q3qMelswNhf53MQ`,
         icon: `whatsapp`,
         name: `WhatsApp`,
         key: Math.random(),
@@ -434,7 +479,7 @@ const sd = {
     ],
     contactUs: [
       { icon: `email`, name: `contacto@maridopor1hora.com`, href: `#`, key: Math.random() },
-      { icon: `phone`, name: `+ 607 088 505`, href: `#`, key: Math.random() },
+      { icon: `phone`, name: `+34 607 088 505`, href: `#`, key: Math.random() },
     ],
     termsConditions: { text: `Copyright © 2025 Siatuweb. Todos los derechos reservados.` },
   },

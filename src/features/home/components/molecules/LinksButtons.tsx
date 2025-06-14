@@ -25,7 +25,7 @@ export default function LinksButtons(props: {
       <Tabs
         key={linksButtons.variants.key}
         aria-label={`principal-options`}
-        className={clsx(`drop-shadow-lg/30 [&>div]:gap-0 [&>div]:bg-[#fafbfd]`)}
+        className={clsx(`[&>div]:bg-content7] drop-shadow-lg/30 [&>div]:gap-0`)}
         color={`${linksButtons.variants.color as 'default' | 'primary' | 'secondary' | 'success' | 'warning' | 'danger'}`}
         variant={`solid`}
         radius={`full`}

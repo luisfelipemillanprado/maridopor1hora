@@ -47,13 +47,13 @@ export default function Footer(props: {
       </section>
       <div className={clsx(`vertical h-auto w-full !justify-start gap-y-9`)}>
         <section
-          aria-label={`our-team`}
+          aria-label={`company-team`}
           className={clsx(`horizontal h-auto w-full justify-center px-4`)}
         >
           <OurTeam {...{ ourTeam, text1: fourthTitle[0].text1, text2: fourthTitle[0].text2 }} />
         </section>
         <section
-          aria-label={`social-networks`}
+          aria-label={`company-social-networks`}
           className={clsx(`horizontal h-auto w-full justify-center px-4`)}
         >
           <SocialNetworks {...{ socialNetworks, text1: fourthTitle[1].text1 }} />
