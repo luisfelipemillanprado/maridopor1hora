@@ -1,4 +1,4 @@
-import { Image } from '@heroui/react'
+import { Card, CardHeader, CardFooter, Image, Button } from '@heroui/react'
 import Link from 'next/link'
 import clsx from 'clsx'
 // --
@@ -6,16 +6,31 @@ export default function Promotion(props: { imageUrl: string; href: string }) {
   const { imageUrl, href } = props
   return (
     <Link className={clsx(`horizontal relative h-auto w-auto justify-center`)} href={href}>
-      <Image
-        isZoomed
-        className={clsx(`border-content3 h-[13.875rem] w-80 border-1 !opacity-100`)}
-        alt={`Promotion`}
-        src={imageUrl}
-        width={320}
-        height={222}
-        shadow={`sm`}
-      />
-      <div className={clsx(`rounded-large bg-content5/20 absolute inset-0 z-10`)} />
+      <Card isFooterBlurred className={'h-[222px] w-80'} shadow={`sm`}>
+        <CardHeader className="absolute top-1 z-10 flex-col items-start"></CardHeader>
+        <Image
+          removeWrapper
+          alt="Relaxing app background"
+          className="z-0 h-full w-full object-cover"
+          src={imageUrl}
+        />
+        <CardFooter className="absolute bottom-0 z-10 bg-black/35">
+          <div className="flex flex-grow items-center gap-2">
+            <Image
+              alt="Breathing app icon"
+              className="h-8 w-8 rounded-full bg-black"
+              src="https://heroui.com/images/breathing-app-icon.jpeg"
+            />
+            <div className="flex flex-col">
+              <p className="text-tiny text-white/60">Breathing App</p>
+              <p className="text-tiny text-white/60">Get a good night&#39;s sleep.</p>
+            </div>
+          </div>
+          <Button radius="full" size="sm">
+            Get App
+          </Button>
+        </CardFooter>
+      </Card>
     </Link>
   )
 }
