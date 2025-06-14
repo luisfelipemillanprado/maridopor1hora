@@ -34,6 +34,7 @@ export default function Home() {
             joinOurTeam: sd.home.main.joinOurTeam,
             navigationLinks: sd.home.main.navigationLinks,
             benefits: sd.home.main.whyChooseUs.benefits,
+            customerTestimonials: sd.home.main.customerTestimonials,
           }}
         />
       </main>

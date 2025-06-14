@@ -59,7 +59,8 @@ export default function Benefit(props: {
         <div className={clsx(`vertical h-auto w-full items-start gap-3.5`)}>
           <div
             className={clsx(
-              `border-warning bg-warning shadow-small h-auto w-auto rounded-full border-1 p-1.5`
+              `bg-warning hrizontal h-auto w-auto justify-center rounded-full p-1.5`,
+              `border-warning shadow-small border-1`
             )}
           >
             <span className={clsx(`h-auto w-auto`)}>{iconSwitch(icon)?.icon}</span>
