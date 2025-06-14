@@ -22,10 +22,10 @@ export default function SomePromotions(props: {
       slidesPerView={`auto`}
       spaceBetween={20}
       loop={true}
-      /* autoplay={{
+      autoplay={{
         delay: 7000,
         disableOnInteraction: false,
-      }}*/
+      }}
       modules={[Autoplay]}
       className={clsx(`h-auto w-full !py-2`)}
     >

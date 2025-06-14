@@ -152,17 +152,14 @@ export default function Main(props: {
       </section>
       <section
         aria-label={`join-our-team`}
-        className={clsx(`vertical mb-[0.1875rem] w-full gap-y-3.5 overflow-hidden px-4.5`)}
+        className={clsx(`vertical mb-1 w-full gap-y-3.5 overflow-hidden px-4.5`)}
       >
         <SecondaryTitle {...{ title: secondaryTitles.title[4] }} />
         <JoinOurTeam {...{ joinOurTeam }} />
       </section>
-      <section aria-label={`some-promotion`} className={clsx(`horizontal mb-4 w-full pl-4.5`)}>
-        <SomePromotions {...{ promotions }} />
-      </section>
       <section
         aria-label={`customer-testimonials`}
-        className={clsx(`vertical w-full gap-y-3.5 overflow-hidden px-4.5`)}
+        className={clsx(`vertical mb-5 w-full gap-y-3.5 overflow-hidden px-4.5`)}
       >
         <SecondaryTitle {...{ title: secondaryTitles.title[5] }} />
         <CustomerTestimonials
@@ -171,6 +168,9 @@ export default function Main(props: {
             score: customerTestimonials.score,
           }}
         />
+      </section>
+      <section aria-label={`some-promotion`} className={clsx(`horizontal w-full pl-4.5`)}>
+        <SomePromotions {...{ promotions }} />
       </section>
     </div>
   )
