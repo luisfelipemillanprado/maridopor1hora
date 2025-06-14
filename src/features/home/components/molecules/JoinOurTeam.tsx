@@ -33,7 +33,8 @@ export default function JoinOurTeam(props: {
   return (
     <div
       className={clsx(
-        `vertical bg-content3 rounded-large shadow-medium border-content4 h-auto w-full gap-y-7 border-1 px-3 pt-4 pb-0`
+        `vertical bg-content3 rounded-large h-auto w-full gap-y-7 px-3 pt-4`,
+        `border-content4 shadow-medium mb-5 border-1`
       )}
     >
       <AboutTeam {...{ firstText: joinOurTeam.firstText, secondText: joinOurTeam.secondText }} />

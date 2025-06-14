@@ -54,8 +54,9 @@ const sd = {
           `Obras Completas Destacadas`,
           `Todos Nuestros Servicios`,
           `Aquí, Tus Respuestas`,
-          `Por Que Elegirnos?`,
+          `Somos Tu Mejor Elección`,
           `Unete A Nuestro Equipo`,
+          `Testimonios De Clientes`,
         ],
       },
       finishedWorks: {
@@ -261,6 +262,35 @@ const sd = {
         text: [`Mas servicios...`],
         href: [`#`],
         icon: [`arrrowupright`],
+      },
+      customerTestimonials: {
+        testimonials: [
+          {
+            name: `Adriana Espinosa.`,
+            text: `Solucionaron mi emergencia con rapidez e impecable precisión.`,
+            imageUrl: `/images/main/testimonials/danielaMendez.webp`,
+            key: Math.random(),
+          },
+          {
+            name: `Sergio Ruiz.`,
+            text: `Dejaron mi hogar reluciente con atención excepcional y cuidado.`,
+            imageUrl: `/images/main/testimonials/javierRuiz.webp`,
+            key: Math.random(),
+          },
+          {
+            name: `Jorge Melendez.`,
+            text: `Al principio tenía mis dudas, pero todo salió bien y sin problemas.`,
+            imageUrl: `/images/main/testimonials/omarDiaz.webp`,
+            key: Math.random(),
+          },
+        ],
+        score: [
+          { key: Math.random() },
+          { key: Math.random() },
+          { key: Math.random() },
+          { key: Math.random() },
+          { key: Math.random() },
+        ],
       },
     },
   },

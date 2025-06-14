@@ -6,6 +6,7 @@ import NavigationLink from '@/features/home/components/molecules/NavigationLinks
 import FQAs from '@/features/home/components/molecules/FQAs'
 import JoinOurTeam from '@/features/home/components/molecules/JoinOurTeam'
 import WhyChooseUs from '@/features/home/components/molecules/WhyChooseUs'
+import CustomerTestimonials from '@/features/home/components/molecules/CustomerTestimonials'
 import clsx from 'clsx'
 
 /**
@@ -77,6 +78,15 @@ export default function Main(props: {
     href: string[]
     icon: string[]
   }
+  customerTestimonials: {
+    testimonials: {
+      name: string
+      text: string
+      imageUrl: string
+      key: number
+    }[]
+    score: { key: number }[]
+  }
 }) {
   const {
     trustBadge,
@@ -87,22 +97,26 @@ export default function Main(props: {
     benefits,
     joinOurTeam,
     navigationLinks,
+    customerTestimonials,
   } = props
   return (
-    <div className={clsx(`vertical h-auto w-full gap-y-6`)}>
-      <section aria-label={`trust-badge`} className={clsx(`w-full px-4.5`)}>
+    <div className={clsx(`vertical h-auto w-full`)}>
+      <section aria-label={`trust-badge`} className={clsx(`mb-6 w-full px-4.5`)}>
         <div className={clsx(`horizontal h-auto w-full justify-start`)}>
           <TrustBadge {...{ trustBadge }} />
         </div>
       </section>
       <section
         aria-label={`featured-completed-works`}
-        className={clsx(`vertical w-full gap-y-3.5 px-4.5`)}
+        className={clsx(`vertical mb-6 w-full gap-y-3.5 px-4.5`)}
       >
         <SecondaryTitle {...{ title: secondaryTitles.title[0] }} />
         <FinishedWorks {...{ finishedWorks }} />
       </section>
-      <section aria-label={`all-our-services`} className={clsx(`vertical w-full gap-y-3.5 px-4.5`)}>
+      <section
+        aria-label={`all-our-services`}
+        className={clsx(`vertical mb-6 w-full gap-y-3.5 px-4.5`)}
+      >
         <SecondaryTitle {...{ title: secondaryTitles.title[1] }} />
         <AllOurServices {...{ allOurServices }} />
         <div className={clsx(`horizontal mt-2.5 mb-0.5 h-auto w-full justify-center`)}>
@@ -117,21 +131,36 @@ export default function Main(props: {
       </section>
       <section
         aria-label={`here-are-your-answers`}
-        className={clsx(`vertical w-full gap-y-3.5 px-4.5`)}
+        className={clsx(`vertical mb-6 w-full gap-y-3.5 px-4.5`)}
       >
         <SecondaryTitle {...{ title: secondaryTitles.title[2] }} />
         <FQAs {...{ questions: frequentlyAskedQuestions.questions }} />
       </section>
-      <section aria-label={`why-choose-us`} className={clsx(`vertical w-full gap-y-3.5 pl-4.5`)}>
+      <section
+        aria-label={`why-choose-us`}
+        className={clsx(`vertical mb-3.5 w-full gap-y-3.5 pl-4.5`)}
+      >
         <SecondaryTitle {...{ title: secondaryTitles.title[3] }} />
         <WhyChooseUs {...{ benefits }} />
       </section>
       <section
         aria-label={`join-our-team`}
-        className={clsx(`vertical w-full gap-y-3.5 overflow-hidden px-4.5`)}
+        className={clsx(`vertical mb-[0.1875rem] w-full gap-y-3.5 overflow-hidden px-4.5`)}
       >
         <SecondaryTitle {...{ title: secondaryTitles.title[4] }} />
         <JoinOurTeam {...{ joinOurTeam }} />
+      </section>
+      <section
+        aria-label={`customer-testimonials`}
+        className={clsx(`vertical mb-6 w-full gap-y-3.5 overflow-hidden px-4.5`)}
+      >
+        <SecondaryTitle {...{ title: secondaryTitles.title[5] }} />
+        <CustomerTestimonials
+          {...{
+            testimonials: customerTestimonials.testimonials,
+            score: customerTestimonials.score,
+          }}
+        />
       </section>
     </div>
   )
