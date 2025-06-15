@@ -35,7 +35,7 @@ export default function Home() {
             navigationLinks: sd.home.main.navigationLinks,
             benefits: sd.home.main.whyChooseUs.benefits,
             customerTestimonials: sd.home.main.customerTestimonials,
-            promotions: sd.home.main.somePromotions.promotions,
+            introduction: sd.home.main.introduction,
           }}
         />
       </main>

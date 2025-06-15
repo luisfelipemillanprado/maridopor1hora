@@ -33,21 +33,39 @@ export default function Benefit(props: {
   const iconSwitch = (icon: string) => {
     switch (icon) {
       case 'discount':
-        return { icon: <TicketIcon className={clsx(`fill-content2 h-5 w-5`)} /> }
+        return {
+          icon: <TicketIcon className={clsx(`fill-content2 h-[1.3125rem] w-[1.3125rem]`)} />,
+        }
       case 'money':
-        return { icon: <BanknotesIcon className={clsx(`fill-content2 h-5 w-5`)} /> }
+        return {
+          icon: <BanknotesIcon className={clsx(`fill-content2 h-[1.3125rem] w-[1.3125rem]`)} />,
+        }
       case 'clock':
-        return { icon: <ClockIcon className={clsx(`fill-content2 h-5 w-5`)} /> }
+        return { icon: <ClockIcon className={clsx(`fill-content2 h-[1.3125rem] w-[1.3125rem]`)} /> }
       case 'gift':
-        return { icon: <GiftIcon className={clsx(`fill-content2 h-5 w-5`)} /> }
+        return { icon: <GiftIcon className={clsx(`fill-content2 h-[1.3125rem] w-[1.3125rem]`)} /> }
       case 'shield':
-        return { icon: <ShieldCheckIcon className={clsx(`fill-content2 h-5 w-5`)} /> }
+        return {
+          icon: <ShieldCheckIcon className={clsx(`fill-content2 h-[1.3125rem] w-[1.3125rem]`)} />,
+        }
       case 'badge':
-        return { icon: <PercentBadgeIcon className={clsx(`fill-content2 h-5 w-5`)} /> }
+        return {
+          icon: <PercentBadgeIcon className={clsx(`fill-content2 h-[1.3125rem] w-[1.3125rem]`)} />,
+        }
       case 'alert':
-        return { icon: <ExclamationTriangleIcon className={clsx(`fill-content2 h-5 w-5`)} /> }
+        return {
+          icon: (
+            <ExclamationTriangleIcon
+              className={clsx(`fill-content2 h-[1.3125rem] w-[1.3125rem]`)}
+            />
+          ),
+        }
       case 'work':
-        return { icon: <WrenchScrewdriverIcon className={clsx(`fill-content2 h-5 w-5`)} /> }
+        return {
+          icon: (
+            <WrenchScrewdriverIcon className={clsx(`fill-content2 h-[1.3125rem] w-[1.3125rem]`)} />
+          ),
+        }
     }
   }
   return (

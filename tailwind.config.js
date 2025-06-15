@@ -39,6 +39,8 @@ const config = {
             content5: `#2d3035`,
             content6: `#8e391c`,
             content7: `#fafbfd`,
+            content8: `#ffe0a6`,
+            content9: `#fff8eb21`,
           },
         },
         dark: {
