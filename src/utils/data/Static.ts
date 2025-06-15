@@ -298,43 +298,13 @@ const sd = {
           { key: Math.random() },
         ],
       },
-      somePromotions: {
-        promotions: [
-          {
-            imageUrl: `/images/main/promotions/promotion01.webp`,
-            href: `#`,
-            key: Math.random(),
-          },
-          {
-            imageUrl: `/images/main/promotions/promotion02.webp`,
-            href: `#`,
-            key: Math.random(),
-          },
-          {
-            imageUrl: `/images/main/promotions/promotion03.webp`,
-            href: `#`,
-            key: Math.random(),
-          },
-          {
-            imageUrl: `/images/main/promotions/promotion04.webp`,
-            href: `#`,
-            key: Math.random(),
-          },
-          {
-            imageUrl: `/images/main/promotions/promotion05.webp`,
-            href: `#`,
-            key: Math.random(),
-          },
-          {
-            imageUrl: `/images/main/promotions/promotion06.webp`,
-            href: `#`,
-            key: Math.random(),
-          },
-          {
-            imageUrl: `/images/main/promotions/promotion07.webp`,
-            href: `#`,
-            key: Math.random(),
-          },
+      introduction: {
+        text: [
+          `En Marido por una Hora, nos enorgullece ofrecer un servicio de calidad, pero no lo decimos
+          solo nosotros. Descubre lo que nuestros clientes tienen que decir sobre sus experiencias
+          con nosotros. Sus opiniones nos ayudan a seguir mejorando y a brindar soluciones rápidas y
+          efectivas para el hogar. ¡Lee las valoraciones y únete a la familia de clientes
+          satisfechos!`,
         ],
       },
     },

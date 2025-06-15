@@ -10,7 +10,7 @@ export default function SecondaryTitle(props: { title: string }) {
   return (
     <h2
       className={clsx(
-        `horizontal text-default-900 h-auto w-full justify-center text-xl font-bold text-shadow-sm`,
+        `horizontal text-default-900 h-auto w-full justify-center text-[1.3125rem] font-bold text-shadow-sm`,
         `from-default-900 to-warning-500 via-default-600 bg-gradient-to-tr from-50% via-55% to-80%`,
         `bg-clip-text text-transparent`
       )}

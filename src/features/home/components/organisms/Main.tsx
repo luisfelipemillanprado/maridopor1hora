@@ -6,8 +6,9 @@ import NavigationLink from '@/features/home/components/molecules/NavigationLinks
 import FQAs from '@/features/home/components/molecules/FQAs'
 import JoinOurTeam from '@/features/home/components/molecules/JoinOurTeam'
 import WhyChooseUs from '@/features/home/components/molecules/WhyChooseUs'
+import Introduction from '@/features/home/components/atoms/Introduction'
 import CustomerTestimonials from '@/features/home/components/molecules/CustomerTestimonials'
-import SomePromotions from '@/features/home/components/molecules/SomePromotions'
+import ReceiveNotifications from '@/features/home/components/molecules/ReceiveNotifications'
 import clsx from 'clsx'
 
 /**
@@ -88,11 +89,9 @@ export default function Main(props: {
     }[]
     score: { key: number }[]
   }
-  promotions: {
-    imageUrl: string
-    href: string
-    key: number
-  }[]
+  introduction: {
+    text: string[]
+  }
 }) {
   const {
     trustBadge,
@@ -104,7 +103,7 @@ export default function Main(props: {
     joinOurTeam,
     navigationLinks,
     customerTestimonials,
-    promotions,
+    introduction,
   } = props
   return (
     <div className={clsx(`vertical h-auto w-full`)}>
@@ -159,9 +158,12 @@ export default function Main(props: {
       </section>
       <section
         aria-label={`customer-testimonials`}
-        className={clsx(`vertical mb-5 w-full gap-y-3.5 overflow-hidden px-4.5`)}
+        className={clsx(`vertical mb-7 w-full gap-y-3.5 px-4.5`)}
       >
         <SecondaryTitle {...{ title: secondaryTitles.title[5] }} />
+        <div className={clsx(`horizontal mb-2.5 h-auto w-auto justify-center`)}>
+          <Introduction {...{ text: introduction.text[0] }} />
+        </div>
         <CustomerTestimonials
           {...{
             testimonials: customerTestimonials.testimonials,
@@ -169,8 +171,11 @@ export default function Main(props: {
           }}
         />
       </section>
-      <section aria-label={`some-promotion`} className={clsx(`horizontal w-full pl-4.5`)}>
-        <SomePromotions {...{ promotions }} />
+      <section
+        aria-label={`receive-notifications`}
+        className={clsx(`horizontal w-full justify-center px-6`)}
+      >
+        <ReceiveNotifications />
       </section>
     </div>
   )
