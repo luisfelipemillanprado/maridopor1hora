@@ -32,7 +32,7 @@ export default function PeekServices(props: { peekServices: { imageUrl: string; 
       }}
       modules={[Scrollbar, Autoplay, Pagination, EffectFade]}
       className={clsx(
-        `h-[18.75rem] w-full rounded-tl-[1.25rem] rounded-tr-[1.25rem] rounded-br-[1.25rem] rounded-bl-[1.25rem]`,
+        `h-80 w-full rounded-tl-[1.25rem] rounded-tr-[1.25rem] rounded-br-[1.25rem] rounded-bl-[1.25rem]`,
         `outline-warning-200 shadow-md outline-1`
       )}
     >

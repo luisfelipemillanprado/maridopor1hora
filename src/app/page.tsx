@@ -36,6 +36,7 @@ export default function Home() {
             benefits: sd.home.main.whyChooseUs.benefits,
             customerTestimonials: sd.home.main.customerTestimonials,
             introduction: sd.home.main.introduction,
+            receiveNotifications: sd.home.main.receiveNotifications,
           }}
         />
       </main>
