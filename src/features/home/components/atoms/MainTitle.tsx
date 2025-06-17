@@ -13,9 +13,19 @@ export default function MainTitle(props: {
 }) {
   const { first, second /*, third */ } = props.mainTitle
   return (
-    <h1 className={clsx(`vertical h-auto w-auto text-2xl font-bold text-white text-shadow-lg/30`)}>
-      <span className={clsx(`h-auto w-auto`)}>{first}</span>
-      <span className={clsx(`ml-2.5 h-auto w-auto`)}>{second}</span>
-    </h1>
+    <div className={clsx(`vertical w- h-auto items-center justify-center gap-y-2`)}>
+      <h1
+        className={clsx(
+          `text-default-50 h-auto w-auto text-4xl font-extrabold text-shadow-lg`,
+          `from-default to-default via-warning bg-gradient-to-tr from-40% via-50% to-60%`,
+          `bg-clip-text text-transparent`
+        )}
+      >
+        {first}
+      </h1>
+      <p className={clsx(`text-default text-medium h-auto w-auto text-center font-bold`)}>
+        {second}
+      </p>
+    </div>
   )
 }

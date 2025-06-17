@@ -92,6 +92,14 @@ export default function Main(props: {
   introduction: {
     text: string[]
   }
+  receiveNotifications: {
+    title: string
+    text: string
+    buttonText: string
+    placeholder: string[]
+    type: string[]
+    name: string[]
+  }
 }) {
   const {
     trustBadge,
@@ -104,6 +112,7 @@ export default function Main(props: {
     navigationLinks,
     customerTestimonials,
     introduction,
+    receiveNotifications,
   } = props
   return (
     <div className={clsx(`vertical h-auto w-full`)}>
@@ -175,7 +184,16 @@ export default function Main(props: {
         aria-label={`receive-notifications`}
         className={clsx(`horizontal w-full justify-center px-6`)}
       >
-        <ReceiveNotifications />
+        <ReceiveNotifications
+          {...{
+            title: receiveNotifications.title,
+            text: receiveNotifications.text,
+            buttonText: receiveNotifications.buttonText,
+            placeholder: receiveNotifications.placeholder,
+            type: receiveNotifications.type,
+            name: receiveNotifications.name,
+          }}
+        />
       </section>
     </div>
   )

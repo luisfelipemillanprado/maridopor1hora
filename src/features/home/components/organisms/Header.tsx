@@ -1,4 +1,5 @@
 import PeekServices from '@/features/home/components/molecules/PeekServices'
+import MainTitle from '@/features/home/components/atoms/MainTitle'
 import LinksButtons from '@/features/home/components/molecules/LinksButtons'
 import NavBar from '@/common/gcomponents/navbar/components/organisms/NavBar'
 import Metrics from '@/features/home/components/molecules/Metrics'
@@ -37,12 +38,13 @@ export default function Header(props: {
   }
   metrics: { amount: string; text: string; change: boolean }[]
 }) {
-  const { peekServices /* , mainTitle, */, linksButtons, navbar, metrics } = props
+  const { peekServices, mainTitle, linksButtons, navbar, metrics } = props
   return (
     <div className={clsx(`horizontal h-auto w-full`)}>
-      <div
+      <section
+        aria-label={`header-secction`}
         className={clsx(
-          `relative h-[25.9375rem] w-full overflow-hidden rounded-tl-[1.25rem] rounded-tr-[1.25rem] rounded-br-[1.25rem]`,
+          `relative h-[27.1875rem] w-full overflow-hidden rounded-tl-[1.25rem] rounded-tr-[1.25rem] rounded-br-[1.25rem]`,
           `rounded-bl-[1.25rem]`
         )}
       >
@@ -51,14 +53,21 @@ export default function Header(props: {
         </div>
         <div className={clsx(`horizontal relative h-auto w-full p-2`)}>
           <PeekServices {...{ peekServices }} />
-          <div className={clsx(`absolute right-0 -bottom-7 left-0 z-10`)}>
-            <Metrics {...{ metrics }} />
+          <div
+            className={clsx(
+              `horizontal absolute top-[20%] z-10 h-auto w-[22.4375rem] justify-center`
+            )}
+          >
+            <MainTitle {...{ mainTitle }} />
           </div>
-          <div className={clsx(`absolute top-1/2 right-0 left-0 z-10 h-auto w-full`)}>
+          <div className={clsx(`absolute top-[55%] right-0 left-0 z-10 h-auto w-full`)}>
             <LinksButtons {...{ linksButtons }} />
           </div>
+          <div className={clsx(`absolute right-0 -bottom-7 left-0 z-20`)}>
+            <Metrics {...{ metrics }} />
+          </div>
         </div>
-      </div>
+      </section>
     </div>
   )
 }

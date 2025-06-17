@@ -7,9 +7,8 @@ const sd = {
   home: {
     header: {
       mainTitle: {
-        first: `Husband for an Hour`,
-        second: `& Repair solutions.`,
-        third: `Quality Work.`,
+        first: `MaridoPor1Hora.`,
+        second: `Conectándote con las mejores servicios a los mejores precios.`,
       },
       sliders: {
         peekServices: [
@@ -306,6 +305,14 @@ const sd = {
           efectivas para el hogar. ¡Lee las valoraciones y únete a la familia de clientes
           satisfechos!`,
         ],
+      },
+      receiveNotifications: {
+        title: `Recibe ofertas exclusivas`,
+        text: `Registra tu correo electrónico para recibir promociones exclusivas de MaridoPor1Hora.`,
+        buttonText: `Regístrate aquí`,
+        placeholder: [`name: juan`, `ejemplo@gmail.com`],
+        type: [`text`, `email`],
+        name: [`name`, `email`],
       },
     },
   },
