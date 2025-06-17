@@ -9,7 +9,6 @@ const sd = {
       mainTitle: {
         first: `MaridoPor1Hora.`,
         second: `Conectándote con las mejores servicios a los mejores precios.`,
-        third: `Quality Work.`,
       },
       sliders: {
         peekServices: [

@@ -19,7 +19,7 @@ import clsx from 'clsx'
  */
 export default function Header(props: {
   peekServices: { imageUrl: string; key: number }[]
-  mainTitle: { first: string; second: string; third: string }
+  mainTitle: { first: string; second: string }
   linksButtons: {
     variants: {
       color: string
