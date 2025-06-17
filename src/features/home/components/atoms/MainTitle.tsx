@@ -8,10 +8,8 @@ import clsx from 'clsx'
  * @param props.mainTitle.second - The second part of the title to display.
  * @param props.mainTitle.third - The third part of the title (currently unused).
  */
-export default function MainTitle(props: {
-  mainTitle: { first: string; second: string; third: string }
-}) {
-  const { first, second /*, third */ } = props.mainTitle
+export default function MainTitle(props: { mainTitle: { first: string; second: string } }) {
+  const { first, second } = props.mainTitle
   return (
     <div className={clsx(`vertical w- h-auto items-center justify-center gap-y-2`)}>
       <h1
