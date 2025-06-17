@@ -7,7 +7,7 @@ const sd = {
   home: {
     header: {
       mainTitle: {
-        first: `MaridoPor1Hora`,
+        first: `MaridoPor1Hora.`,
         second: `Conectándote con las mejores servicios a los mejores precios.`,
         third: `Quality Work.`,
       },
