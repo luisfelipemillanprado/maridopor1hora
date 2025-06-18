@@ -11,17 +11,21 @@ import clsx from 'clsx'
 export default function MainTitle(props: { mainTitle: { first: string; second: string } }) {
   const { first, second } = props.mainTitle
   return (
-    <div className={clsx(`vertical w- h-auto items-center justify-center gap-y-2`)}>
+    <div className={clsx(`vertical w- h-auto items-center justify-center gap-y-3`)}>
       <h1
         className={clsx(
-          `text-default-50 h-auto w-auto text-4xl font-extrabold text-shadow-lg`,
-          `from-default to-default via-warning bg-gradient-to-tr from-40% via-50% to-60%`,
+          `text-shadow-2xl h-auto w-auto text-4xl font-extrabold`,
+          `from-default to-default via-warning bg-gradient-to-tl from-35% via-45% to-60%`,
           `bg-clip-text text-transparent`
         )}
       >
         {first}
       </h1>
-      <p className={clsx(`text-default text-medium h-auto w-auto text-center font-bold`)}>
+      <p
+        className={clsx(
+          `text-default h-auto w-auto px-2 text-center text-[1.1875rem] font-semibold`
+        )}
+      >
         {second}
       </p>
     </div>

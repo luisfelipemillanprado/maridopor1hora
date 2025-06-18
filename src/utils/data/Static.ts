@@ -8,20 +8,28 @@ const sd = {
     header: {
       mainTitle: {
         first: `MaridoPor1Hora.`,
-        second: `Conectándote con las mejores servicios a los mejores precios.`,
+        second: `Conectándote con los mejores servicios, y a los mejores precios.`,
       },
       sliders: {
         peekServices: [
           {
-            imageUrl: '/images/header/plumber/headermedium-1.webp',
+            imageUrl: `/images/header/multipleservices/multipleservices05.webp`,
             key: Math.random(),
           },
           {
-            imageUrl: '/images/header/carpentry/headermedium-3.webp',
+            imageUrl: `/images/header/multipleservices/multipleservices01.webp`,
             key: Math.random(),
           },
           {
-            imageUrl: '/images/header/maintenance/headermedium-2.webp',
+            imageUrl: `/images/header/multipleservices/multipleservices02.webp`,
+            key: Math.random(),
+          },
+          {
+            imageUrl: `/images/header/multipleservices/multipleservices03.webp`,
+            key: Math.random(),
+          },
+          {
+            imageUrl: `/images/header/multipleservices/multipleservices04.webp`,
             key: Math.random(),
           },
         ],

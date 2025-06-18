@@ -30,7 +30,7 @@ export default function NavBar(props: {
 }) {
   const { navbar } = props
   return (
-    <Navbar className={clsx(`h-14 bg-inherit backdrop-blur-none [&>header]:px-4`)}>
+    <Navbar className={clsx(`h-14 bg-inherit pt-1.5 backdrop-blur-none [&>header]:px-4`)}>
       <NavbarContent className={clsx(``)} justify={`start`}>
         <NavbarBrand className={clsx(`mr-4`)}>
           <Logo {...{ iconUrl: navbar.logo.iconUrl }} />

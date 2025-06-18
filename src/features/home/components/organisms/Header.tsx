@@ -42,7 +42,7 @@ export default function Header(props: {
   return (
     <div className={clsx(`horizontal h-auto w-full`)}>
       <section
-        aria-label={`header-secction`}
+        aria-label={`peek-services`}
         className={clsx(
           `relative h-[27.1875rem] w-full overflow-hidden rounded-tl-[1.25rem] rounded-tr-[1.25rem] rounded-br-[1.25rem]`,
           `rounded-bl-[1.25rem]`
@@ -55,12 +55,12 @@ export default function Header(props: {
           <PeekServices {...{ peekServices }} />
           <div
             className={clsx(
-              `horizontal absolute top-[20%] z-10 h-auto w-[22.4375rem] justify-center`
+              `horizontal absolute top-[19%] z-10 h-auto w-[22.4375rem] justify-center`
             )}
           >
             <MainTitle {...{ mainTitle }} />
           </div>
-          <div className={clsx(`absolute top-[55%] right-0 left-0 z-10 h-auto w-full`)}>
+          <div className={clsx(`absolute top-[59%] right-0 left-0 z-10 h-auto w-full`)}>
             <LinksButtons {...{ linksButtons }} />
           </div>
           <div className={clsx(`absolute right-0 -bottom-7 left-0 z-20`)}>

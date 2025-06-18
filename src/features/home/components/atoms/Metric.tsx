@@ -17,7 +17,7 @@ export default function Metric(props: {
   return (
     <Card
       className={clsx(
-        `outline-warning-200 h-[5.125rem] w-[5.5rem] gap-y-0.5 outline-1 outline-solid`,
+        `outline-warning-200 h-auto w-24 gap-y-0.5 outline-1 outline-solid`,
         `bg-content7`
       )}
       shadow={`sm`}
@@ -28,7 +28,7 @@ export default function Metric(props: {
           {metric.change ? `k` : <PlusIcon className={clsx(`h-[1.125rem] w-[1.125rem]`)} />}
         </span>
       </CardHeader>
-      <CardBody className={clsx(`vertical !scrollbar-hide px-1 pt-0 pb-2.5`)}>
+      <CardBody className={clsx(`vertical !scrollbar-hide px-1.5 pt-0 pb-2.5`)}>
         <span className={clsx(`text-small text-center`)}>{metric.text}</span>
       </CardBody>
     </Card>

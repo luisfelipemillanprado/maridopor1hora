@@ -5,14 +5,18 @@ import clsx from 'clsx'
 import sd from '@/utils/data/Static'
 
 /**
- * @description - Home page component. Renders the main layout of the home page,
- * including the header, main content, and footer. Utilizes the `clsx` utility for
- * conditional class names.
+ * @description - The main Home page component for the application.
+ * This component structures the landing page into three main sections:
+ * - Header: Displays the main navigation, title, metrics, and service links.
+ * - Main: Contains trust badges, secondary titles, finished works, services, FAQs, team info, navigation links,
+ * benefits, testimonials, introduction, and notification signup.
+ * - Footer: Shows company information, team, social networks, additional titles/descriptions, contact info, and terms & conditions.
+ * All content is dynamically injected via the `sd` object, which provides structured data for each section.
  */
 export default function Home() {
   return (
-    <div className={clsx(`h-full w-full`)}>
-      <header className={clsx(`h-auto w-full`)}>
+    <div className={clsx(`relative h-full w-full`)}>
+      <header className={clsx(`relative h-auto w-full`)}>
         <Header
           {...{
             peekServices: sd.home.header.sliders.peekServices,
@@ -23,7 +27,7 @@ export default function Home() {
           }}
         />
       </header>
-      <main className={clsx(`mt-3 h-auto w-full`)}>
+      <main className={clsx(`relative mt-3 h-auto w-full`)}>
         <Main
           {...{
             trustBadge: sd.home.main.trustBadge,
@@ -40,7 +44,7 @@ export default function Home() {
           }}
         />
       </main>
-      <footer className={clsx(`mt-8 h-auto w-full`)}>
+      <footer className={clsx(`relative mt-8 h-auto w-full`)}>
         <Footer
           {...{
             companyInformation: sd.footer.companyInformation,
