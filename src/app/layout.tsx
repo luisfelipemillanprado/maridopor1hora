@@ -1,16 +1,8 @@
 import './globals.css'
-import { /* Inter, Roboto */ Nunito_Sans } from 'next/font/google'
+import { Nunito_Sans } from 'next/font/google'
 import Provider from '@/app/providers'
 import { Metadata } from 'next'
 import clsx from 'clsx'
-
-/* const inter = Inter({
-  variable: '--font-inter',
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-  style: ['normal', 'italic'],
-  subsets: ['latin'],
-  display: 'swap',
-}) */
 
 const nunito_sans = Nunito_Sans({
   variable: '--font-nunito',
@@ -20,8 +12,8 @@ const nunito_sans = Nunito_Sans({
 })
 
 export const metadata: Metadata = {
-  title: 'Remiux - Next level cars | Transform your road.',
-  description: "Discover world's best car showcase application",
+  title: `Compañía MaridoPor1Hora - Servicios profesionales a domicilio.`,
+  description: `Soluciones para tu hogar, simples y rápidas. ¡Contrata con confianza!`,
 }
 
 /**
