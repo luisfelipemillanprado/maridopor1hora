@@ -33,7 +33,8 @@ export default function PeekServices(props: { peekServices: { imageUrl: string; 
       modules={[Scrollbar, Autoplay, Pagination, EffectFade]}
       className={clsx(
         `h-80 w-full rounded-tl-[1.25rem] rounded-tr-[1.25rem] rounded-br-[1.25rem] rounded-bl-[1.25rem]`,
-        `outline-warning-200 shadow-md outline-1`
+        `outline-warning-200 shadow-md outline-1`,
+        `3xl:h-96`
       )}
     >
       {peekServices.map((item, index) => (
@@ -41,7 +42,7 @@ export default function PeekServices(props: { peekServices: { imageUrl: string; 
           <Image
             width={312}
             height={310}
-            className={clsx(`block h-full w-full object-cover`)}
+            className={clsx(`block h-full w-full object-cover brightness-75`)}
             src={item.imageUrl}
             alt={`Service ${index + 1}`}
           />

@@ -25,7 +25,10 @@ export default function LinksButtons(props: {
       <Tabs
         key={linksButtons.variants.key}
         aria-label={`principal-options`}
-        className={clsx(`[&>div]:bg-content7] drop-shadow-lg/30 [&>div]:gap-0`)}
+        className={clsx(
+          `[&>div]:bg-content7] drop-shadow-lg/30 [&>div]:gap-0`,
+          `3xl:[&>div]:gap-9`
+        )}
         color={`${linksButtons.variants.color as 'default' | 'primary' | 'secondary' | 'success' | 'warning' | 'danger'}`}
         variant={`solid`}
         radius={`full`}
@@ -34,11 +37,13 @@ export default function LinksButtons(props: {
         {linksButtons.texts.map((item /*, index */) => (
           <Tab
             key={item.key}
-            className={clsx(`py-4`)}
+            className={clsx(`py-4`, `3xl:py-4.5`)}
             title={
-              <div className={clsx(`horizontal items-center space-x-1.5`)}>
+              <div
+                className={clsx(`horizontal items-center space-x-1.5`, `3xl:space-x-3 3xl:pr-1.5`)}
+              >
                 <LinkButtonIcons {...{ icon: item.icon }} />
-                <span className={clsx(`text-[0.9375rem] font-semibold`, `2xl:text-medium`)}>
+                <span className={clsx(`text-[0.9375rem]`, `xl:text-medium 3xl:text-large`)}>
                   {item.text}
                 </span>
               </div>

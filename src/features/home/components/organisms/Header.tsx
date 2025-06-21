@@ -34,7 +34,7 @@ export default function Header(props: {
     }
     logo: { iconUrl: string }
     signUpButton: { text: string }
-    links: { text: string; key: number }[]
+    links: { text: string; href: string; key: number }[]
   }
   metrics: { amount: string; text: string; change: boolean }[]
 }) {
@@ -44,15 +44,15 @@ export default function Header(props: {
       <section
         aria-label={`peek-services`}
         className={clsx(
-          `relative h-[27.4375rem] w-full overflow-hidden rounded-tl-[1.25rem] rounded-tr-[1.25rem] rounded-br-[1.25rem]`,
+          `relative h-[27.9375rem] w-full overflow-hidden rounded-tl-[1.25rem] rounded-tr-[1.25rem] rounded-br-[1.25rem]`,
           `rounded-bl-[1.25rem]`,
-          `2xl:h-[27.625rem]`
+          `3xl:h-[32.25rem] 2xl:h-[28.3125rem]`
         )}
       >
         <div className={clsx(`horizontal relative h-auto w-full`)}>
           <NavBar {...{ navbar }} />
         </div>
-        <div className={clsx(`horizontal relative h-auto w-full p-2`, `xl:px-3`)}>
+        <div className={clsx(`horizontal relative h-auto w-full p-2`, `3xl:px-6 3xl:py-3 xl:px-3`)}>
           <PeekServices {...{ peekServices }} />
           <div className={clsx(`absolute top-[17%] right-0 left-0 z-10 h-auto w-full`)}>
             <MainTitle {...{ mainTitle }} />
@@ -60,7 +60,12 @@ export default function Header(props: {
           <div className={clsx(`absolute top-[56%] right-0 left-0 z-10 h-auto w-full`)}>
             <LinksButtons {...{ linksButtons }} />
           </div>
-          <div className={clsx(`absolute right-0 -bottom-8 left-0 z-20`, `2xl:-bottom-9`)}>
+          <div
+            className={clsx(
+              `absolute right-0 -bottom-8 left-0 z-20`,
+              `3xl:-bottom-8 2xl:-bottom-9`
+            )}
+          >
             <Metrics {...{ metrics }} />
           </div>
         </div>

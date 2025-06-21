@@ -16,7 +16,7 @@ export default function ContactFloatButton(props: {
 }) {
   const { contactFloatButton } = props
   return (
-    <div className={clsx(`horizontal fixed right-3 bottom-3 z-50 h-auto w-auto justify-center`)}>
+    <div className={clsx(`horizontal fixed right-4 bottom-4 z-50 h-auto w-auto justify-center`)}>
       <ContactButton
         {...{ imageUrl: contactFloatButton.imageUrl, href: contactFloatButton.href }}
       />

@@ -19,26 +19,41 @@ export default function Metric(props: {
       className={clsx(
         `outline-warning-200 h-auto w-24 gap-y-0.5 outline-1 outline-solid`,
         `bg-content7`,
-        `2xl:w-[6.3125rem]`
+        `3xl:w-32 3xl:py-[0.0625rem] 3xl:shadow-medium 2xl:w-[6.3125rem]`
       )}
       shadow={`sm`}
     >
       <CardHeader className={clsx(`horizontal justify-center gap-x-0.5 px-1 pt-2 pb-0`)}>
-        <span className={clsx(`text-warning text-[1.0625rem] font-semibold`, `2xl:text-large`)}>
+        <span
+          className={clsx(
+            `text-warning text-[1.0625rem] font-semibold`,
+            `2xl:text-large 3xl:text-[1.3125rem]`
+          )}
+        >
           {metric.amount}
         </span>
         <span className={clsx(`text-warning text-[1.0625rem]`)}>
           {metric.change ? (
             <span
-              className={clsx(`text-warning text-[1.0625rem] font-semibold`, `2xl:text-large`)}
+              className={clsx(
+                `text-warning text-[1.0625rem] font-semibold`,
+                `2xl:text-large 3xl:text-[1.375rem]`
+              )}
             >{`k`}</span>
           ) : (
-            <PlusIcon className={clsx(`h-[1.125rem] w-[1.125rem]`)} />
+            <PlusIcon
+              className={clsx(`h-[1.125rem] w-[1.125rem]`, `3xl:h-[1.375rem] 3xl:w-[1.375rem]`)}
+            />
           )}
         </span>
       </CardHeader>
       <CardBody className={clsx(`vertical !scrollbar-hide px-1.5 pt-0 pb-2.5`)}>
-        <span className={clsx(`text-small text-center`, `2xl:text-medium xl:text-[0.9375rem]`)}>
+        <span
+          className={clsx(
+            `text-small text-center`,
+            `2xl:text-medium 3xl:text-[1.0625rem] xl:text-[0.9375rem]`
+          )}
+        >
           {metric.text}
         </span>
       </CardBody>

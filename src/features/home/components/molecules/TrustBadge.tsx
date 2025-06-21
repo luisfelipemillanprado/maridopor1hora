@@ -25,14 +25,14 @@ export default function TrustBadge(props: {
 }) {
   const { trustBadge } = props
   return (
-    <Card className={clsx(`bg-content3 border-content4 h-auto w-full border-1`)} shadow={`md`}>
+    <Card className={clsx(`bg-content3 border-content4 h-auto w-full border-1 px-1`)} shadow={`md`}>
       <CardHeader className={clsx(`horizontal pb-2`)}>
         <div className={clsx(``)}></div>
         <div className={clsx(`vertical gap-y-2.5`)}>
           <h4
             className={clsx(
               `text-default-900 text-xl font-bold text-shadow-md`,
-              `2xl:text-[1.3125rem]`
+              `3xl:text-[1.4375rem] 2xl:text-[1.3125rem]`
             )}
           >
             {trustBadge.slogan}
@@ -48,7 +48,10 @@ export default function TrustBadge(props: {
             className={clsx(`bg-content1`)}
             startContent={
               <BoltIcon
-                className={clsx(`fill-warning-500 h-4 w-4`, `2xl:h-[1.0625rem] 2xl:w-[1.0625rem]`)}
+                className={clsx(
+                  `fill-warning-500 h-4 w-4`,
+                  `3xl:w-5 3xl:h-5 2xl:h-[1.0625rem] 2xl:w-[1.0625rem]`
+                )}
               />
             }
             variant={`flat`}
@@ -56,7 +59,10 @@ export default function TrustBadge(props: {
             size={`sm`}
           >
             <span
-              className={clsx(`text-small text-default-700 h-auto w-auto`, `2xl:text-[0.9375rem]`)}
+              className={clsx(
+                `text-small text-default-700 h-auto w-auto`,
+                `3xl:text-medium 2xl:text-[0.9375rem]`
+              )}
             >
               {trustBadge.buttonText}
             </span>
