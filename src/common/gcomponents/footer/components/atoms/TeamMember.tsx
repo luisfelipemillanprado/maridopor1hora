@@ -1,4 +1,5 @@
 import { Avatar } from '@heroui/react'
+import clsx from 'clsx'
 
 /**
  * @description - Renders a team member avatar using the provided image source.
@@ -7,5 +8,5 @@ import { Avatar } from '@heroui/react'
  */
 export default function TeamMember(props: { src: string }) {
   const { src } = props
-  return <Avatar src={src} size={`sm`} color={`warning`} />
+  return <Avatar className={clsx(`2xl:h-9 2xl:w-9`)} src={src} size={`sm`} color={`warning`} />
 }

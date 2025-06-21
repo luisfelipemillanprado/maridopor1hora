@@ -44,26 +44,23 @@ export default function Header(props: {
       <section
         aria-label={`peek-services`}
         className={clsx(
-          `relative h-[27.1875rem] w-full overflow-hidden rounded-tl-[1.25rem] rounded-tr-[1.25rem] rounded-br-[1.25rem]`,
-          `rounded-bl-[1.25rem]`
+          `relative h-[27.4375rem] w-full overflow-hidden rounded-tl-[1.25rem] rounded-tr-[1.25rem] rounded-br-[1.25rem]`,
+          `rounded-bl-[1.25rem]`,
+          `2xl:h-[27.625rem]`
         )}
       >
         <div className={clsx(`horizontal relative h-auto w-full`)}>
           <NavBar {...{ navbar }} />
         </div>
-        <div className={clsx(`horizontal relative h-auto w-full p-2`)}>
+        <div className={clsx(`horizontal relative h-auto w-full p-2`, `xl:px-3`)}>
           <PeekServices {...{ peekServices }} />
-          <div
-            className={clsx(
-              `horizontal absolute top-[19%] z-10 h-auto w-[22.4375rem] justify-center`
-            )}
-          >
+          <div className={clsx(`absolute top-[17%] right-0 left-0 z-10 h-auto w-full`)}>
             <MainTitle {...{ mainTitle }} />
           </div>
-          <div className={clsx(`absolute top-[59%] right-0 left-0 z-10 h-auto w-full`)}>
+          <div className={clsx(`absolute top-[56%] right-0 left-0 z-10 h-auto w-full`)}>
             <LinksButtons {...{ linksButtons }} />
           </div>
-          <div className={clsx(`absolute right-0 -bottom-7 left-0 z-20`)}>
+          <div className={clsx(`absolute right-0 -bottom-8 left-0 z-20`, `2xl:-bottom-9`)}>
             <Metrics {...{ metrics }} />
           </div>
         </div>

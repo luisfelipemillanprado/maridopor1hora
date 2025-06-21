@@ -29,15 +29,18 @@ export default function LinksButtons(props: {
         color={`${linksButtons.variants.color as 'default' | 'primary' | 'secondary' | 'success' | 'warning' | 'danger'}`}
         variant={`solid`}
         radius={`full`}
-        size={`sm`}
+        size={`md`}
       >
         {linksButtons.texts.map((item /*, index */) => (
           <Tab
             key={item.key}
+            className={clsx(`py-4`)}
             title={
               <div className={clsx(`horizontal items-center space-x-1.5`)}>
                 <LinkButtonIcons {...{ icon: item.icon }} />
-                <span className={clsx(`text-small`)}>{item.text}</span>
+                <span className={clsx(`text-[0.9375rem] font-semibold`, `2xl:text-medium`)}>
+                  {item.text}
+                </span>
               </div>
             }
           />

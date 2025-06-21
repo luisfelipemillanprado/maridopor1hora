@@ -7,7 +7,7 @@ const sd = {
   home: {
     header: {
       mainTitle: {
-        first: `MaridoPor1Hora.`,
+        first: `MaridoPor1Hora`,
         second: `Conectándote con los mejores servicios, y a los mejores precios.`,
       },
       sliders: {
@@ -17,11 +17,15 @@ const sd = {
             key: Math.random(),
           },
           {
-            imageUrl: `/images/header/multipleservices/multipleservices01.webp`,
+            imageUrl: `/images/header/multipleservices/multipleservices06.webp`,
             key: Math.random(),
           },
           {
-            imageUrl: `/images/header/multipleservices/multipleservices02.webp`,
+            imageUrl: `/images/header/multipleservices/multipleservices07.webp`,
+            key: Math.random(),
+          },
+          {
+            imageUrl: `/images/header/multipleservices/multipleservices01.webp`,
             key: Math.random(),
           },
           {
@@ -467,6 +471,10 @@ const sd = {
       { icon: `phone`, name: `+34 607 088 505`, href: `#`, key: Math.random() },
     ],
     termsConditions: { text: `Copyright © 2025 Siatuweb. Todos los derechos reservados.` },
+  },
+  contactFloatButton: {
+    imageUrl: `/icon/whatsapp.webp`,
+    href: `https://api.whatsapp.com/send?phone=%2B34607088505&app=facebook&entry_point=page_cta&fbclid=IwY2xjawK6ZSRleHRuA2FlbQIxMABicmlkETFJZGpSY1NYUFRHVUpZcmJYAR6isiuK0Xkp5X60u0wiu0EAWwmEvor3lciKr9Os_Zy-FXA-fR86lamXzAn4gQ_aem_5yIeRp4q3qMelswNhf53MQ`,
   },
 }
 export default sd

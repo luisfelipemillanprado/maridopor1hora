@@ -18,18 +18,29 @@ export default function Metric(props: {
     <Card
       className={clsx(
         `outline-warning-200 h-auto w-24 gap-y-0.5 outline-1 outline-solid`,
-        `bg-content7`
+        `bg-content7`,
+        `2xl:w-[6.3125rem]`
       )}
       shadow={`sm`}
     >
       <CardHeader className={clsx(`horizontal justify-center gap-x-0.5 px-1 pt-2 pb-0`)}>
-        <span className={clsx(`text-warning text-[1.0625rem]`)}>{metric.amount}</span>
+        <span className={clsx(`text-warning text-[1.0625rem] font-semibold`, `2xl:text-large`)}>
+          {metric.amount}
+        </span>
         <span className={clsx(`text-warning text-[1.0625rem]`)}>
-          {metric.change ? `k` : <PlusIcon className={clsx(`h-[1.125rem] w-[1.125rem]`)} />}
+          {metric.change ? (
+            <span
+              className={clsx(`text-warning text-[1.0625rem] font-semibold`, `2xl:text-large`)}
+            >{`k`}</span>
+          ) : (
+            <PlusIcon className={clsx(`h-[1.125rem] w-[1.125rem]`)} />
+          )}
         </span>
       </CardHeader>
       <CardBody className={clsx(`vertical !scrollbar-hide px-1.5 pt-0 pb-2.5`)}>
-        <span className={clsx(`text-small text-center`)}>{metric.text}</span>
+        <span className={clsx(`text-small text-center`, `2xl:text-medium xl:text-[0.9375rem]`)}>
+          {metric.text}
+        </span>
       </CardBody>
     </Card>
   )

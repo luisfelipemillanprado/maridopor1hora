@@ -153,7 +153,7 @@ export default function Main(props: {
       </section>
       <section
         aria-label={`why-choose-us`}
-        className={clsx(`vertical mb-3.5 w-full gap-y-3.5 pl-4.5`)}
+        className={clsx(`vertical mb-3.5 w-full gap-y-1.5 pl-4.5`)}
       >
         <SecondaryTitle {...{ title: secondaryTitles.title[3] }} />
         <WhyChooseUs {...{ benefits }} />
@@ -169,9 +169,11 @@ export default function Main(props: {
         aria-label={`customer-testimonials`}
         className={clsx(`vertical mb-7 w-full gap-y-3.5 px-4.5`)}
       >
-        <SecondaryTitle {...{ title: secondaryTitles.title[5] }} />
-        <div className={clsx(`horizontal mb-2.5 h-auto w-auto justify-center`)}>
-          <Introduction {...{ text: introduction.text[0] }} />
+        <div className={clsx(`vertical h-auto w-auto gap-y-2.5`)}>
+          <SecondaryTitle {...{ title: secondaryTitles.title[5] }} />
+          <div className={clsx(`horizontal mb-2.5 h-auto w-auto justify-center`)}>
+            <Introduction {...{ text: introduction.text[0] }} />
+          </div>
         </div>
         <CustomerTestimonials
           {...{

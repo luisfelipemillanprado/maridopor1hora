@@ -14,7 +14,7 @@ export default function Metrics(props: {
 }) {
   const { metrics } = props
   return (
-    <div className={clsx(`horizontal h-auto w-full justify-center gap-x-3`)}>
+    <div className={clsx(`horizontal h-auto w-full justify-center gap-x-3`, `2xl:gap-x-4`)}>
       {metrics.map((item, index) => (
         <Metric key={index} {...{ metric: item }} />
       ))}

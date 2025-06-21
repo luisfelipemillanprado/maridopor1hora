@@ -2,8 +2,19 @@ import './globals.css'
 import { Nunito_Sans } from 'next/font/google'
 import Provider from '@/app/providers'
 import { Metadata } from 'next'
+import ContactFloatButton from '@/common/gcomponents/contactus/components/organisms/ContactFloatButton'
+import sd from '@/utils/data/Static'
 import clsx from 'clsx'
 
+/**
+ * @description - Loads the Nunito Sans font with specified weights and subsets for use in the application.
+ * @constant
+ * @type {ReturnType<typeof Nunito_Sans>}
+ * @property {string} variable - The CSS variable name for the font.
+ * @property {string[]} weight - The font weights to include (200–900).
+ * @property {string[]} subsets - The language subsets to include (e.g., 'latin').
+ * @property {string} display - The font display strategy ('swap').
+ */
 const nunito_sans = Nunito_Sans({
   variable: '--font-nunito',
   weight: ['200', '300', '400', '500', '600', '700', '800', '900'],
@@ -11,6 +22,11 @@ const nunito_sans = Nunito_Sans({
   display: 'swap',
 })
 
+/**
+ * @description - Metadata object containing SEO-related information for the application.
+ * @property {string} title - The title of the website, displayed in the browser tab and used by search engines.
+ * @property {string} description - A brief description of the website's services for SEO and social sharing.
+ */
 export const metadata: Metadata = {
   title: `Compañía MaridoPor1Hora - Servicios profesionales a domicilio.`,
   description: `Soluciones para tu hogar, simples y rápidas. ¡Contrata con confianza!`,
@@ -42,6 +58,7 @@ export default function RootLayout({
           }}
         >
           {children}
+          <ContactFloatButton {...{ contactFloatButton: sd.contactFloatButton }} />
         </Provider>
       </body>
     </html>

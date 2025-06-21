@@ -23,15 +23,19 @@ export default function Service(props: { imageUrl: string; name: string; descrip
           className={clsx(``)}
           color={`warning`}
           radius={`full`}
-          size={`sm`}
+          size={`md`}
           src={imageUrl}
         />
       </CardHeader>
-      <CardBody className={clsx(`px-3 py-0`)}>
-        <span className={clsx(`text-default-900 text-large font-bold`)}>{name}</span>
+      <CardBody className={clsx(`flex-none p-0 px-3 py-0`)}>
+        <span className={clsx(`text-default-900 text-large font-bold`, `2xl:text-[1.1875rem]`)}>
+          {name}
+        </span>
       </CardBody>
-      <CardFooter className={clsx(`pt-0`)}>
-        <p className={clsx(`text-default-800 text-medium truncate`)}>{description}</p>
+      <CardFooter className={clsx(`horizontal items-start pt-0`)}>
+        <p className={clsx(`text-default-800 text-medium truncate`, `2xl:text-[1.0625rem]`)}>
+          {description}
+        </p>
       </CardFooter>
     </Card>
   )

@@ -29,22 +29,35 @@ export default function TrustBadge(props: {
       <CardHeader className={clsx(`horizontal pb-2`)}>
         <div className={clsx(``)}></div>
         <div className={clsx(`vertical gap-y-2.5`)}>
-          <h4 className={clsx(`text-default-900 text-xl font-bold text-shadow-md`)}>
+          <h4
+            className={clsx(
+              `text-default-900 text-xl font-bold text-shadow-md`,
+              `2xl:text-[1.3125rem]`
+            )}
+          >
             {trustBadge.slogan}
           </h4>
-          <p className={clsx(`text-default-800 text-medium`)}>{trustBadge.summary}</p>
+          <p className={clsx(`text-default-800 text-medium`, `2xl:text-[1.0625rem]`)}>
+            {trustBadge.summary}
+          </p>
         </div>
       </CardHeader>
       <CardBody className={clsx(`horizontal justify-between`)}>
         <div className={clsx(`horizontal h-auto w-auto`)}>
           <Button
             className={clsx(`bg-content1`)}
-            startContent={<BoltIcon className={clsx(`fill-warning-500 h-4 w-4`)} />}
+            startContent={
+              <BoltIcon
+                className={clsx(`fill-warning-500 h-4 w-4`, `2xl:h-[1.0625rem] 2xl:w-[1.0625rem]`)}
+              />
+            }
             variant={`flat`}
             radius={`full`}
             size={`sm`}
           >
-            <span className={clsx(`text-small text-default-700 h-auto w-auto`)}>
+            <span
+              className={clsx(`text-small text-default-700 h-auto w-auto`, `2xl:text-[0.9375rem]`)}
+            >
               {trustBadge.buttonText}
             </span>
           </Button>

@@ -21,9 +21,13 @@ export default function Member(props: { imageUrl: string; index: number }) {
         className={clsx(
           `object-cover`,
           `${index == 0 ? 'border-default-50 shadow-small rounded-medium min-h-28 border-4' : ''}`,
+          `${index == 0 ? '2xl:min-h-32 2xl:w-[10.4375rem]' : ''}`,
           `${index == 1 ? 'border-warning shadow-small absolute top-0 h-[4.6875rem] w-[4.6875rem] rounded-full border-3' : ''}`,
+          `${index == 1 ? '2xl:h-[5.625rem] 2xl:w-[5.625rem]' : ''}`,
           `${index == 2 ? 'border-warning shadow-small absolute -top-1 right-10 h-[4.6875rem] w-[4.6875rem] rounded-full border-3' : ''}`,
-          `${index == 3 ? 'border-default-50 shadow-medium rounded-medium absolute -top-10 -left-10 z-10 min-h-28 border-8' : ''}`
+          `${index == 2 ? '2xl:h-[5.625rem] 2xl:w-[5.625rem]' : ''}`,
+          `${index == 3 ? 'border-default-50 shadow-medium rounded-medium absolute -top-10 -left-10 z-10 min-h-28 border-8' : ''}`,
+          `${index == 3 ? '2xl:min-h-32 2xl:w-[10.4375rem]' : ''}`
         )}
         src={imageUrl}
       />

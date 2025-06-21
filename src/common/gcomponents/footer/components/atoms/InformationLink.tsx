@@ -10,7 +10,11 @@ import clsx from 'clsx'
 export default function InformationLink(props: { href: string; text: string }) {
   const { href, text } = props
   return (
-    <Link className={clsx(`text-default-400 text-medium`)} href={href} size={`sm`}>
+    <Link
+      className={clsx(`text-default-400 text-medium`, `2xl:text-[1.0625rem]`)}
+      href={href}
+      size={`sm`}
+    >
       {text}
     </Link>
   )

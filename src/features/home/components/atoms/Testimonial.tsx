@@ -29,7 +29,10 @@ export default function Testimonial(props: {
           <Image
             width={57}
             height={57}
-            className={clsx(`h-[3.5625rem] w-[3.5625rem] rounded-full shadow-md`)}
+            className={clsx(
+              `h-[3.5625rem] w-[3.5625rem] rounded-full shadow-md`,
+              `2xl:h-[3.75rem] 2xl:w-[3.75rem]`
+            )}
             src={imageUrl}
             blurDataURL={blurEffects.blurUrl}
             placeholder={`blur`}
@@ -40,17 +43,31 @@ export default function Testimonial(props: {
           {score.map((item) => {
             return (
               <span key={item.key} className={clsx(`horizontal h-auto w-auto justify-center`)}>
-                <StarIcon className={clsx(`fill-warning-500 h-[1.125rem] w-[1.125rem]`)} />
+                <StarIcon
+                  className={clsx(
+                    `fill-warning-500 h-[1.125rem] w-[1.125rem]`,
+                    `2xl:h-[1.1875rem] 2xl:w-[1.1875rem]`
+                  )}
+                />
               </span>
             )
           })}
         </div>
       </div>
       <div className={clsx(`horizontal h-auto w-auto justify-center`)}>
-        <p className={clsx(`text-default-800 text-medium text-center`)}>{text}</p>
+        <p className={clsx(`text-default-800 text-medium text-center`, `2xl:text-[1.0625rem]`)}>
+          {text}
+        </p>
       </div>
       <div className={clsx(`horzontal mt-1 h-auto w-auto justify-center`)}>
-        <span className={clsx(`text-large text-default-900 h-auto w-auto font-bold`)}>{name}</span>
+        <span
+          className={clsx(
+            `text-large text-default-900 h-auto w-auto font-bold`,
+            `2xl:text-[1.1875rem]`
+          )}
+        >
+          {name}
+        </span>
       </div>
     </div>
   )
