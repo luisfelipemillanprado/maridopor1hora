@@ -40,7 +40,7 @@ export default function WhyChooseUs(props: {
         disableOnInteraction: false,
       }}
       modules={[Autoplay]}
-      className={clsx(`h-auto w-full !pb-2.5 !pl-1.5`)}
+      className={clsx(`h-auto w-full !py-2.5 !pl-1.5`)}
     >
       {benefits.map((item) => (
         <SwiperSlide key={item.key} className={clsx(`!h-auto !w-auto`)}>

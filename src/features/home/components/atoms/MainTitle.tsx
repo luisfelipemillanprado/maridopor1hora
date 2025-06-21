@@ -8,26 +8,24 @@ import clsx from 'clsx'
  * @param props.mainTitle.second - The second part of the title to display.
  * @param props.mainTitle.third - The third part of the title (currently unused).
  */
-export default function MainTitle(props: { mainTitle: { first: string; second: string } }) {
-  const { first, second } = props.mainTitle
+export default function MainTitle(props: { mainTitle: { second: string } }) {
+  const { second } = props.mainTitle
   return (
-    <div className={clsx(`vertical w- h-auto items-center justify-center gap-y-3`)}>
+    <div
+      className={clsx(
+        `vertical h-auto w-full items-center justify-center gap-y-3 px-5`,
+        `2xl:px-6`
+      )}
+    >
       <h1
         className={clsx(
-          `text-shadow-2xl h-auto w-auto text-4xl font-extrabold`,
-          `from-default to-default via-warning bg-gradient-to-tl from-35% via-45% to-60%`,
-          `bg-clip-text text-transparent`
-        )}
-      >
-        {first}
-      </h1>
-      <p
-        className={clsx(
-          `text-default h-auto w-auto px-2 text-center text-[1.1875rem] font-semibold`
+          `text-default h-auto w-auto text-center text-[1.6875rem] font-extrabold text-shadow-2xs`,
+          `leading-9`,
+          `2xl:text-3xl`
         )}
       >
         {second}
-      </p>
+      </h1>
     </div>
   )
 }

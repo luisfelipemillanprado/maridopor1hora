@@ -19,8 +19,8 @@ export default function OurTeam(props: {
   return (
     <div className={clsx(`vertical h-auto w-full gap-y-4`)}>
       <div className={clsx(`vertical w-full items-center gap-y-2`)}>
-        <span className={clsx(`text-default-50 text-[1.1875rem]`)}>{text1}</span>
-        <span className={clsx(`text-warning text-[1.0625rem]`)}>{text2}</span>
+        <span className={clsx(`text-default-50 text-[1.1875rem]`, `2xl:text-xl`)}>{text1}</span>
+        <span className={clsx(`text-warning text-large`)}>{text2}</span>
       </div>
       <div className={clsx(`horizontal h-auto w-full justify-center`)}>
         <AvatarGroup isBordered max={6} total={10} size={`sm`}>

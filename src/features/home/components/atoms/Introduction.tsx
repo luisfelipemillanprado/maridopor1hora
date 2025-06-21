@@ -7,5 +7,14 @@ import clsx from 'clsx'
  */
 export default function Introduction(props: { text: string }) {
   const { text } = props
-  return <p className={clsx(`text-medium text-default-900 h-auto w-auto text-center`)}>{text}</p>
+  return (
+    <p
+      className={clsx(
+        `text-medium text-default-900 h-auto w-auto text-center`,
+        `2xl:text-[1.0625rem]`
+      )}
+    >
+      {text}
+    </p>
+  )
 }

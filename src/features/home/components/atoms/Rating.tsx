@@ -13,28 +13,26 @@ export default function Rating(props: { rating: string; reviews: string }) {
     <div className={clsx(`vertical relative h-auto w-auto gap-y-0.5`)}>
       <div className={clsx(`horizontal relative h-auto w-auto gap-x-1.5`)}>
         <div className={clsx(`horizontal h-auto w-auto`)}>
-          <span className={clsx(`text-medium text-default-900 font-semibold`)}>{rating}</span>
+          <span
+            className={clsx(`text-medium text-default-900 font-semibold`, `2xl:text-[1.0625rem]`)}
+          >
+            {rating}
+          </span>
         </div>
         <div className={clsx(`horizontal relative h-auto w-auto gap-x-0.5`)}>
-          <span className={clsx(`bg-content1 h-auto w-auto`)}>
-            <StarIcon className={clsx(`fill-warning-500 h-[0.9375rem] w-[0.9375rem]`)} />
-          </span>
-          <span className={clsx(`bg-content1 h-auto w-auto`)}>
-            <StarIcon className={clsx(`fill-warning-500 h-[0.9375rem] w-[0.9375rem]`)} />
-          </span>
-          <span className={clsx(`bg-content1 h-auto w-auto`)}>
-            <StarIcon className={clsx(`fill-warning-500 h-[0.9375rem] w-[0.9375rem]`)} />
-          </span>
-          <span className={clsx(`bg-content1 h-auto w-auto`)}>
-            <StarIcon className={clsx(`fill-warning-500 h-[0.9375rem] w-[0.9375rem]`)} />
-          </span>
-          <span className={clsx(`bg-content1 h-auto w-auto`)}>
-            <StarIcon className={clsx(`fill-warning-500 h-[0.9375rem] w-[0.9375rem]`)} />
-          </span>
+          {[1, 2, 3, 4, 5].map((item, index) => (
+            <span key={index} className={clsx(`bg-content1 h-auto w-auto`)}>
+              <StarIcon
+                className={clsx(`fill-warning-500 h-[0.9375rem] w-[0.9375rem]`, `2xl:h-4 2xl:w-4`)}
+              />
+            </span>
+          ))}
         </div>
       </div>
       <div className={clsx(`horizontal h-auto w-auto`)}>
-        <span className={clsx(`text-default-700 text-[0.8125rem]`)}>{reviews}</span>
+        <span className={clsx(`text-default-700 text-[0.8125rem]`, `2xl:text-[0.9375rem]`)}>
+          {reviews}
+        </span>
       </div>
     </div>
   )

@@ -43,7 +43,14 @@ export default function ReceiveNotifications(props: {
         </span>
       </div>
       <div className={clsx(`horizontal h-auto w-full justify-center`)}>
-        <p className={clsx(`text-default-800 text-medium h-auto w-auto text-center`)}>{text}</p>
+        <p
+          className={clsx(
+            `text-default-800 text-medium h-auto w-auto text-center`,
+            `2xl:text-[1.0625rem]`
+          )}
+        >
+          {text}
+        </p>
       </div>
       <div className={clsx(`vertical mt-2 h-auto w-full items-center gap-y-4.5`)}>
         <Input
@@ -98,7 +105,9 @@ export default function ReceiveNotifications(props: {
           type={`submit`}
           size={`md`}
         >
-          <span className={clsx(`text-default-50 text-medium`)}>{buttonText}</span>
+          <span className={clsx(`text-default-50 text-medium`, `2xl:text-[1.0625rem]`)}>
+            {buttonText}
+          </span>
         </Button>
       </div>
     </Form>

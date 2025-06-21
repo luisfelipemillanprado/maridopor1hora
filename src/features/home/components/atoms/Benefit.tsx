@@ -34,43 +34,76 @@ export default function Benefit(props: {
     switch (icon) {
       case 'discount':
         return {
-          icon: <TicketIcon className={clsx(`fill-content2 h-[1.3125rem] w-[1.3125rem]`)} />,
+          icon: (
+            <TicketIcon
+              className={clsx(`fill-content2 h-[1.4375rem] w-[1.4375rem]`, `2xl:h-6 2xl:w-6`)}
+            />
+          ),
         }
       case 'money':
         return {
-          icon: <BanknotesIcon className={clsx(`fill-content2 h-[1.3125rem] w-[1.3125rem]`)} />,
+          icon: (
+            <BanknotesIcon
+              className={clsx(`fill-content2 h-[1.4375rem] w-[1.4375rem]`, `2xl:h-6 2xl:w-6`)}
+            />
+          ),
         }
       case 'clock':
-        return { icon: <ClockIcon className={clsx(`fill-content2 h-[1.3125rem] w-[1.3125rem]`)} /> }
+        return {
+          icon: (
+            <ClockIcon
+              className={clsx(`fill-content2 h-[1.4375rem] w-[1.4375rem]`, `2xl:h-6 2xl:w-6`)}
+            />
+          ),
+        }
       case 'gift':
-        return { icon: <GiftIcon className={clsx(`fill-content2 h-[1.3125rem] w-[1.3125rem]`)} /> }
+        return {
+          icon: (
+            <GiftIcon
+              className={clsx(`fill-content2 h-[1.4375rem] w-[1.4375rem]`, `2xl:h-6 2xl:w-6`)}
+            />
+          ),
+        }
       case 'shield':
         return {
-          icon: <ShieldCheckIcon className={clsx(`fill-content2 h-[1.3125rem] w-[1.3125rem]`)} />,
+          icon: (
+            <ShieldCheckIcon
+              className={clsx(`fill-content2 h-[1.4375rem] w-[1.4375rem]`, `2xl:h-6 2xl:w-6`)}
+            />
+          ),
         }
       case 'badge':
         return {
-          icon: <PercentBadgeIcon className={clsx(`fill-content2 h-[1.3125rem] w-[1.3125rem]`)} />,
+          icon: (
+            <PercentBadgeIcon
+              className={clsx(`fill-content2 h-[1.4375rem] w-[1.4375rem]`, `2xl:h-6 2xl:w-6`)}
+            />
+          ),
         }
       case 'alert':
         return {
           icon: (
             <ExclamationTriangleIcon
-              className={clsx(`fill-content2 h-[1.3125rem] w-[1.3125rem]`)}
+              className={clsx(`fill-content2 h-[1.4375rem] w-[1.4375rem]`, `2xl:h-6 2xl:w-6`)}
             />
           ),
         }
       case 'work':
         return {
           icon: (
-            <WrenchScrewdriverIcon className={clsx(`fill-content2 h-[1.3125rem] w-[1.3125rem]`)} />
+            <WrenchScrewdriverIcon
+              className={clsx(`fill-content2 h-[1.4375rem] w-[1.4375rem]`, `2xl:h-6 2xl:w-6`)}
+            />
           ),
         }
     }
   }
   return (
     <Card
-      className={clsx(`bg-content2 border-content3 h-auto w-80 border-1 px-3 py-3.5`)}
+      className={clsx(
+        `bg-content2 border-content3 h-[18.9375rem] w-80 border-1 px-3 py-3.5`,
+        `2xl:h-[19.5rem] 2xl:w-[20.9375rem]`
+      )}
       shadow={`sm`}
     >
       <CardHeader className={clsx(`horizontal pt-2 pb-2.5`)}>
@@ -84,27 +117,42 @@ export default function Benefit(props: {
             <span className={clsx(`h-auto w-auto`)}>{iconSwitch(icon)?.icon}</span>
           </div>
           <span
-            className={clsx(`text-default-900 text-left text-[1.1875rem] font-bold text-shadow-sm`)}
+            className={clsx(
+              `text-default-900 text-left text-[1.1875rem] font-bold text-shadow-sm`,
+              `2xl:text-xl`
+            )}
           >
             {title}
           </span>
         </div>
       </CardHeader>
       <CardBody className={clsx(`px-3 py-0`)}>
-        <p className={clsx(`text-default-800 text-medium text-left text-ellipsis`)}>
+        <p
+          className={clsx(
+            `text-default-800 text-medium text-left text-ellipsis`,
+            `2xl:text-[1.0625rem]`
+          )}
+        >
           {description}
         </p>
       </CardBody>
       <CardFooter className={clsx(`vertical items-start pt-3.5 pb-0 pl-2.5`)}>
         <Button
-          className={clsx(`bg-content1 border-content4 mb-2.5 border-1 shadow-sm`)}
+          className={clsx(
+            `bg-content1 border-content4 mb-2.5 border-1 shadow-sm`,
+            `2xl:min-h-8 2xl:py-4`
+          )}
           as={Link}
           href={href}
           variant={`flat`}
           size={`sm`}
           radius={`full`}
         >
-          <span className={clsx(`text-medium text-default-900 h-auto w-auto`)}>{hrefText}</span>
+          <span
+            className={clsx(`text-medium text-default-900 h-auto w-auto`, `2xl:text-[1.0625rem]`)}
+          >
+            {hrefText}
+          </span>
         </Button>
       </CardFooter>
     </Card>

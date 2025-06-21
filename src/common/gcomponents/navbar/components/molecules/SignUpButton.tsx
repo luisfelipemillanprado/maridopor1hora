@@ -9,13 +9,8 @@ import clsx from 'clsx'
 export default function SignUpButton(props: { text: string }) {
   const { text } = props
   return (
-    <Button
-      className={clsx(`text-default-50 text-small bg-warning shadow-lg`)}
-      variant={`flat`}
-      radius={`full`}
-      size={`sm`}
-    >
-      {text}
+    <Button className={clsx(`bg-warning shadow-lg`)} variant={`flat`} radius={`full`} size={`sm`}>
+      <span className={clsx(`text-default-50 text-medium`)}>{text}</span>
     </Button>
   )
 }

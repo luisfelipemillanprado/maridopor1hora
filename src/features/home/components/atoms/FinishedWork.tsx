@@ -18,7 +18,9 @@ export default function FinishedWork(props: { imageUrl: string; text: string }) 
         src={imageUrl}
       />
       <CardFooter className={clsx(`absolute bottom-0 z-10 bg-black/0 px-3 py-1`)}>
-        <span className={clsx(`text-default-50 text-medium`)}>{text}</span>
+        <span className={clsx(`text-default-50 text-medium font-bold`, `2xl:text-large`)}>
+          {text}
+        </span>
       </CardFooter>
     </Card>
   )
