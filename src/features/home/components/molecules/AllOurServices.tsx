@@ -19,7 +19,7 @@ export default function AllOurServices(props: {
 }) {
   const { allOurServices } = props
   return (
-    <div className={clsx(`grid w-full grid-cols-12 grid-rows-3 gap-3`)}>
+    <div className={clsx(`grid w-full grid-cols-12 grid-rows-3 gap-3`, `3xl:gap-5`)}>
       {allOurServices.imageUrls.map((item, index) => (
         <Service
           key={item.key}

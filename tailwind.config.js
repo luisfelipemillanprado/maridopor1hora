@@ -22,8 +22,8 @@ const config = {
         // => @media (min-width: 392px) { ... }
         '2xl': '25rem',
         // => @media (min-width: 400px) { ... }
-        '3xl': '31.25rem',
-        // => @media (min-width: 500px) { ... }
+        '3xl': '48rem',
+        // => @media (min-width: 768px) { ... }
       },
     },
   },

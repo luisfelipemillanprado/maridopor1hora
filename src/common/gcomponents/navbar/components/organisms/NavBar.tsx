@@ -25,19 +25,24 @@ export default function NavBar(props: {
     }
     logo: { iconUrl: string }
     signUpButton: { text: string }
-    links: { text: string; key: number }[]
+    links: { text: string; href: string; key: number }[]
   }
 }) {
   const { navbar } = props
   return (
-    <Navbar className={clsx(`h-14 bg-inherit pt-1.5 backdrop-blur-none [&>header]:px-4`)}>
+    <Navbar
+      className={clsx(
+        `h-[3.75rem] bg-inherit pt-1.5 backdrop-blur-none [&>header]:px-4`,
+        `3xl:[&>header]:px-8`
+      )}
+    >
       <NavbarContent className={clsx(``)} justify={`start`}>
-        <NavbarBrand className={clsx(`mr-4`)}>
+        <NavbarBrand className={clsx(`mr-10`)}>
           <Logo {...{ iconUrl: navbar.logo.iconUrl }} />
         </NavbarBrand>
-        <NavbarContent className={clsx(`hidden gap-3 sm:flex`)}>
+        <NavbarContent className={clsx(`hidden gap-x-8 sm:flex`)}>
           {navbar.links.map((item /*, index*/) => (
-            <NavLink key={item.key} {...{ text: item.text }} />
+            <NavLink key={item.key} {...{ text: item.text, href: item.href }} />
           ))}
         </NavbarContent>
       </NavbarContent>

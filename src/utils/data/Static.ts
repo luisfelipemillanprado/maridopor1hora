@@ -106,12 +106,12 @@ const sd = {
           `Limpieza.`,
         ],
         description: [
-          `Servicios eléctricos profesionales para necesidades residenciales y comerciales.`,
-          `Los mejores y más completos servicios de fontanería, instalación y reparación.`,
-          `Técnicos expertos garantizan una instalación rápida, segura y precisa de sus muebles.`,
-          `Servicios especializados de albañilería para todo tipo de proyectos de construcción y reparación de viviendas.`,
-          `Servicios de excelencia sobre carpintería para su hogar, oficina y otras instalaciones.`,
-          `Servicios de limpieza profunda para mantener su espacio impecable y reluciente.`,
+          `Servicios eléctricos profesionales para hogares y negocios. Garantizamos soluciones seguras, eficientes y personalizadas.`,
+          `Fontanería experta: instalación, reparación y mantenimiento. Soluciones rápidas y duraderas para tu hogar.`,
+          `Instalación profesional de muebles. Montaje rápido, seguro y preciso para hogares, oficinas, locales comerciales u otros.`,
+          `Albañilería especializada en construcción, reformas y reparaciones. Trabajos de calidad con materiales resistentes.`,
+          `Carpintería de alta calidad: muebles a medida, puertas y ventanas para hogares, oficinas y proyectos personalizados.`,
+          `Limpieza profunda y mantenimiento de espacios. Dejamos tu hogar o negocio impecable, higiénico y libre de bacterias.`,
         ],
       },
       frequentlyAskedQuestions: {
@@ -358,10 +358,10 @@ const sd = {
     logo: { iconUrl: `/icon/logo.webp` },
     signUpButton: { text: `Regístrate` },
     links: [
-      { text: `IrInicio`, key: Math.random() },
-      { text: `Servicios`, key: Math.random() },
-      { text: `Blog`, key: Math.random() },
-      { text: `Proveedores`, key: Math.random() },
+      { text: `Inicio`, href: `#`, key: Math.random() },
+      { text: `Servicios`, href: `#`, key: Math.random() },
+      { text: `Blog`, href: `#`, key: Math.random() },
+      { text: `Proveedores`, href: `#`, key: Math.random() },
     ],
   },
   footer: {
