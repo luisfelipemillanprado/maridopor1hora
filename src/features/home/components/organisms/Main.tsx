@@ -134,7 +134,9 @@ export default function Main(props: {
       >
         <SecondaryTitle {...{ title: secondaryTitles.title[1] }} />
         <AllOurServices {...{ allOurServices }} />
-        <div className={clsx(`horizontal mt-2.5 mb-0.5 h-auto w-full justify-center`)}>
+        <div
+          className={clsx(`horizontal mt-2.5 mb-0.5 h-auto w-full justify-center`, `3xl:mt-3.5`)}
+        >
           <NavigationLink
             {...{
               text: navigationLinks.text[0],
@@ -167,7 +169,7 @@ export default function Main(props: {
       </section>
       <section
         aria-label={`customer-testimonials`}
-        className={clsx(`vertical mb-7 w-full gap-y-3.5 px-4.5`, `3xl:px-10`)}
+        className={clsx(`vertical mb-7 w-full gap-y-3.5 px-4.5`, `3xl:px-10 3xl:gap-y-4.5`)}
       >
         <div className={clsx(`vertical h-auto w-auto gap-y-2.5`)}>
           <SecondaryTitle {...{ title: secondaryTitles.title[5] }} />

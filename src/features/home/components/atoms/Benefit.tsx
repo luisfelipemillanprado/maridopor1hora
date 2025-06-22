@@ -36,7 +36,10 @@ export default function Benefit(props: {
         return {
           icon: (
             <TicketIcon
-              className={clsx(`fill-content2 h-[1.4375rem] w-[1.4375rem]`, `2xl:h-6 2xl:w-6`)}
+              className={clsx(
+                `fill-content2 h-[1.4375rem] w-[1.4375rem]`,
+                `3xl:h-[1.6875rem] 3xl:w-[1.6875rem] 2xl:h-6 2xl:w-6`
+              )}
             />
           ),
         }
@@ -44,7 +47,10 @@ export default function Benefit(props: {
         return {
           icon: (
             <BanknotesIcon
-              className={clsx(`fill-content2 h-[1.4375rem] w-[1.4375rem]`, `2xl:h-6 2xl:w-6`)}
+              className={clsx(
+                `fill-content2 h-[1.4375rem] w-[1.4375rem]`,
+                `3xl:h-[1.6875rem] 3xl:w-[1.6875rem] 2xl:h-6 2xl:w-6`
+              )}
             />
           ),
         }
@@ -52,7 +58,10 @@ export default function Benefit(props: {
         return {
           icon: (
             <ClockIcon
-              className={clsx(`fill-content2 h-[1.4375rem] w-[1.4375rem]`, `2xl:h-6 2xl:w-6`)}
+              className={clsx(
+                `fill-content2 h-[1.4375rem] w-[1.4375rem]`,
+                `3xl:h-[1.6875rem] 3xl:w-[1.6875rem] 2xl:h-6 2xl:w-6`
+              )}
             />
           ),
         }
@@ -60,7 +69,10 @@ export default function Benefit(props: {
         return {
           icon: (
             <GiftIcon
-              className={clsx(`fill-content2 h-[1.4375rem] w-[1.4375rem]`, `2xl:h-6 2xl:w-6`)}
+              className={clsx(
+                `fill-content2 h-[1.4375rem] w-[1.4375rem]`,
+                `3xl:h-[1.6875rem] 3xl:w-[1.6875rem] 2xl:h-6 2xl:w-6`
+              )}
             />
           ),
         }
@@ -68,7 +80,10 @@ export default function Benefit(props: {
         return {
           icon: (
             <ShieldCheckIcon
-              className={clsx(`fill-content2 h-[1.4375rem] w-[1.4375rem]`, `2xl:h-6 2xl:w-6`)}
+              className={clsx(
+                `fill-content2 h-[1.4375rem] w-[1.4375rem]`,
+                `3xl:h-[1.6875rem] 3xl:w-[1.6875rem] 2xl:h-6 2xl:w-6`
+              )}
             />
           ),
         }
@@ -76,7 +91,10 @@ export default function Benefit(props: {
         return {
           icon: (
             <PercentBadgeIcon
-              className={clsx(`fill-content2 h-[1.4375rem] w-[1.4375rem]`, `2xl:h-6 2xl:w-6`)}
+              className={clsx(
+                `fill-content2 h-[1.4375rem] w-[1.4375rem]`,
+                `3xl:h-[1.6875rem] 3xl:w-[1.6875rem] 2xl:h-6 2xl:w-6`
+              )}
             />
           ),
         }
@@ -84,7 +102,10 @@ export default function Benefit(props: {
         return {
           icon: (
             <ExclamationTriangleIcon
-              className={clsx(`fill-content2 h-[1.4375rem] w-[1.4375rem]`, `2xl:h-6 2xl:w-6`)}
+              className={clsx(
+                `fill-content2 h-[1.4375rem] w-[1.4375rem]`,
+                `3xl:h-[1.6875rem] 3xl:w-[1.6875rem] 2xl:h-6 2xl:w-6`
+              )}
             />
           ),
         }
@@ -92,7 +113,10 @@ export default function Benefit(props: {
         return {
           icon: (
             <WrenchScrewdriverIcon
-              className={clsx(`fill-content2 h-[1.4375rem] w-[1.4375rem]`, `2xl:h-6 2xl:w-6`)}
+              className={clsx(
+                `fill-content2 h-[1.4375rem] w-[1.4375rem]`,
+                `3xl:h-[1.6875rem] 3xl:w-[1.6875rem] 2xl:h-6 2xl:w-6`
+              )}
             />
           ),
         }

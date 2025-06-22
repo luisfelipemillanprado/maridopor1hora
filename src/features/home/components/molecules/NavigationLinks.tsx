@@ -24,7 +24,9 @@ export default function NavigationLink(props: { text: string; href: string; icon
         size={`md`}
         radius={`full`}
       >
-        <span className={clsx(`text-default text-medium pt-0.5`, `2xl:text-[1.0625rem]`)}>
+        <span
+          className={clsx(`text-default text-medium pt-0.5`, `3xl:text-large 2xl:text-[1.0625rem]`)}
+        >
           {text}
         </span>
       </Button>
