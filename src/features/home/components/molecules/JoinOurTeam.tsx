@@ -33,7 +33,7 @@ export default function JoinOurTeam(props: {
   return (
     <div
       className={clsx(
-        `vertical bg-content3 rounded-large h-auto w-full gap-y-7 px-3 pt-4`,
+        `vertical bg-content3 rounded-large h-auto w-full gap-y-7 px-4 pt-4`,
         `border-content4 shadow-medium mb-5 border-1`
       )}
     >
@@ -46,7 +46,7 @@ export default function JoinOurTeam(props: {
           }}
         />
       </div>
-      <div className={clsx(`horizontal ml-5 h-auto w-full justify-center`)}>
+      <div className={clsx(`horizontal ml-5 h-auto w-full justify-center`, `3xl:ml-7`)}>
         <div className={clsx(`grid w-auto grid-cols-12 grid-rows-2 gap-3`)}>
           {joinOurTeam.team.map((item, index) => (
             <Member key={item.key} {...{ imageUrl: item.imageUrl, index }} />

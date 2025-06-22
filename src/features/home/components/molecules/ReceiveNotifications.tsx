@@ -37,8 +37,13 @@ export default function ReceiveNotifications(props: {
       )}
       onSubmit={onSubmit}
     >
-      <div className={clsx(`horizontal h-auto w-full justify-center`)}>
-        <span className={clsx(`text-default-900 text-[1.3125rem] font-extrabold text-shadow-sm`)}>
+      <div className={clsx(`horizontal h-auto w-full justify-center`, `3xl:justify-start`)}>
+        <span
+          className={clsx(
+            `text-default-900 text-[1.3125rem] font-extrabold text-shadow-sm`,
+            `3xl:text-[1.4375rem]`
+          )}
+        >
           {title}
         </span>
       </div>
@@ -46,18 +51,23 @@ export default function ReceiveNotifications(props: {
         <p
           className={clsx(
             `text-default-800 text-medium h-auto w-auto text-center`,
-            `2xl:text-[1.0625rem]`
+            `3xl:text-start 2xl:text-[1.0625rem]`
           )}
         >
           {text}
         </p>
       </div>
-      <div className={clsx(`vertical mt-2 h-auto w-full items-center gap-y-4.5`)}>
+      <div
+        className={clsx(
+          `mt-2 flex h-auto w-full flex-col justify-center gap-y-4.5`,
+          `3xl:flex-wrap 3xl:flex-row 3xl:gap-x-4`
+        )}
+      >
         <Input
           id={name[0]}
           isRequired
           isClearable
-          className={clsx(`border-content4 rounded-small border-1`)}
+          className={clsx(`border-content4 rounded-small border-1`, `3xl:w-1/3`)}
           startContent={
             <UserIcon className={clsx(`fill-default-400 pointer-events-none h-5 w-5`)} />
           }
@@ -79,7 +89,7 @@ export default function ReceiveNotifications(props: {
           id={name[1]}
           isRequired
           isClearable
-          className={clsx(`border-content4 rounded-small border-1`)}
+          className={clsx(`border-content4 rounded-small border-1`, `3xl:w-1/3`)}
           startContent={
             <EnvelopeIcon className={clsx(`fill-default-400 pointer-events-none h-5 w-5`)} />
           }
@@ -97,18 +107,20 @@ export default function ReceiveNotifications(props: {
           size={`lg`}
           radius={`sm`}
         />
-        <Button
-          className={clsx(`shadow-medium mt-2`)}
-          endContent={<ArrowTrendingUpIcon className={clsx(`fill-default-50 h-5 w-5`)} />}
-          variant={`solid`}
-          color={`warning`}
-          type={`submit`}
-          size={`md`}
-        >
-          <span className={clsx(`text-default-50 text-medium`, `2xl:text-[1.0625rem]`)}>
-            {buttonText}
-          </span>
-        </Button>
+        <div className={clsx(`horizontal h-auto w-full justify-center`, `3xl:w-auto`)}>
+          <Button
+            className={clsx(`shadow-medium mt-2`, `3xl:h-12 3xl:mt-0 3xl:rounded-small`)}
+            endContent={<ArrowTrendingUpIcon className={clsx(`fill-default-50 h-5 w-5`)} />}
+            variant={`solid`}
+            color={`warning`}
+            type={`submit`}
+            size={`md`}
+          >
+            <span className={clsx(`text-default-50 text-medium`, `2xl:text-[1.0625rem]`)}>
+              {buttonText}
+            </span>
+          </Button>
+        </div>
       </div>
     </Form>
   )
