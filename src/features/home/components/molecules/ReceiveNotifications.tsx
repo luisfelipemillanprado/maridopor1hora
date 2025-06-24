@@ -41,13 +41,13 @@ export default function ReceiveNotifications(props: {
         <span
           className={clsx(
             `text-default-900 text-[1.3125rem] font-extrabold text-shadow-sm`,
-            `3xl:text-[1.4375rem]`
+            `3xl:text-[1.375rem]`
           )}
         >
           {title}
         </span>
       </div>
-      <div className={clsx(`horizontal h-auto w-full justify-center`)}>
+      <div className={clsx(`horizontal h-auto w-full justify-center`, `3xl:justify-start`)}>
         <p
           className={clsx(
             `text-default-800 text-medium h-auto w-auto text-center`,

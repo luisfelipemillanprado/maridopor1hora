@@ -18,8 +18,8 @@ const config = {
         // => @media (min-width: 360px) { ... }
         lg: '23.4375rem',
         // => @media (min-width: 375px) { ... }
-        xl: '24.5rem',
-        // => @media (min-width: 392px) { ... }
+        xl: '24.375rem',
+        // => @media (min-width: 390px) { ... }
         '2xl': '25rem',
         // => @media (min-width: 400px) { ... }
         '3xl': '47.5rem',

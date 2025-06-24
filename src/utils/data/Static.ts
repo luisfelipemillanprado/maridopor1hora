@@ -326,6 +326,15 @@ const sd = {
         type: [`text`, `email`],
         name: [`name`, `email`],
       },
+      certifications: {
+        imageUrls: [
+          { imageUrl: `/icon/certification01.svg`, key: Math.random() },
+          { imageUrl: `/icon/certification02.svg`, key: Math.random() },
+          { imageUrl: `/icon/certification03.svg`, key: Math.random() },
+          { imageUrl: `/icon/certification04.svg`, key: Math.random() },
+          { imageUrl: `/icon/certification05.svg`, key: Math.random() },
+        ],
+      },
     },
   },
   navbar: {
@@ -463,6 +472,24 @@ const sd = {
       { text1: `Estamos para ti. Confía en nosotros.`, text2: `MaridoPor1Hora.` },
       { text1: `Nos puedes encontrar en :`, text2: `Social Networks.` },
     ],
+    otherLinks: {
+      titles: [`Compañía`, `Clientes`, `Afiliados`],
+      links: [
+        { text: `Política de privacidad`, href: `#`, key: Math.random() },
+        { text: `Relaciones con inversores`, href: `#`, key: Math.random() },
+        { text: `Mejores precios garantizados`, href: `#`, key: Math.random() },
+        { text: `Términos y condiciones`, href: `#`, key: Math.random() },
+        { text: `Todos los proveedores`, href: `#`, key: Math.random() },
+        { text: `Todos los profesionales`, href: `#`, key: Math.random() },
+        { text: `Preguntas fecuentes`, href: `#`, key: Math.random() },
+        { text: `Gestiona mi reserva`, href: `#`, key: Math.random() },
+        { text: `Contáctanos`, href: `#`, key: Math.random() },
+        { text: `Tarifas de los servicios`, href: `#`, key: Math.random() },
+        { text: `Testimonios de clientes`, href: `#`, key: Math.random() },
+        { text: `Promociones especiales`, href: `#`, key: Math.random() },
+        { text: `Sobre maridopor1hora`, href: `#`, key: Math.random() },
+      ],
+    },
     secondaryDescription: [
       `Ofrecemos mantenimiento, limpieza, reparaciones y mejoras para el hogar con profesionales confiables y soluciones rápidas. Su hogar está en las mejores manos.`,
     ],

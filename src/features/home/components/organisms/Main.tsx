@@ -9,23 +9,23 @@ import WhyChooseUs from '@/features/home/components/molecules/WhyChooseUs'
 import Introduction from '@/features/home/components/atoms/Introduction'
 import CustomerTestimonials from '@/features/home/components/molecules/CustomerTestimonials'
 import ReceiveNotifications from '@/features/home/components/molecules/ReceiveNotifications'
+import Certifications from '@/features/home/components/molecules/Certifications'
 import clsx from 'clsx'
 
 /**
- * @description - Main component for the home page, responsible for rendering all major sections including:
- * - Trust badge
- * - Featured completed works
- * - All our services
- * - Frequently asked questions
- * - Join our team
- * @param props - The properties required to render the main sections of the home page.
- * @param props.trustBadge - Information for the trust badge section, including slogan, summary, rating, reviews, and button text.
- * @param props.secondaryTitles - Titles for each major section of the page.
- * @param props.finishedWorks - Data for the featured completed works section, including image URLs and descriptive texts.
- * @param props.allOurServices - Data for the services section, including images, names, and descriptions of services.
- * @param props.frequentlyAskedQuestions - List of frequently asked questions, each with a question, answer, key, and icon.
- * @param props.joinOurTeam - Information for the join our team section, including team images, texts, and a join button.
- * @param props.navigationLinks - Navigation links for the services section, including text, href, and icon for each link.
+ * @description - Main component for the Home feature, responsible for rendering the primary sections of the homepage.
+ * @param props - The properties required to render the Main component.
+ * @param props.trustBadge - Information for the trust badge section.
+ * @param props.secondaryTitles - Titles for each main section.
+ * @param props.finishedWorks - Data for the finished works section.
+ * @param props.allOurServices - Data for the services section.
+ * @param props.frequentlyAskedQuestions - FAQ section data.
+ * @param props.benefits - Array of benefit items for the "Why Choose Us" section.
+ * @param props.joinOurTeam - Data for the "Join Our Team" section.
+ * @param props.navigationLinks - Navigation links for the services section.
+ * @param props.customerTestimonials - Customer testimonials section data.
+ * @param props.introduction - Introduction section data.
+ * @param props.receiveNotifications - Data for the notifications section.
  */
 export default function Main(props: {
   trustBadge: {
@@ -100,6 +100,9 @@ export default function Main(props: {
     type: string[]
     name: string[]
   }
+  certifications: {
+    imageUrls: { imageUrl: string; key: number }[]
+  }
 }) {
   const {
     trustBadge,
@@ -113,6 +116,7 @@ export default function Main(props: {
     customerTestimonials,
     introduction,
     receiveNotifications,
+    certifications,
   } = props
   return (
     <div className={clsx(`vertical h-auto w-full`)}>
@@ -186,7 +190,7 @@ export default function Main(props: {
       </section>
       <section
         aria-label={`receive-notifications`}
-        className={clsx(`horizontal w-full justify-center px-6`, `3xl:px-10`)}
+        className={clsx(`horizontal mb-8 w-full justify-center px-6`, `3xl:px-10`)}
       >
         <ReceiveNotifications
           {...{
@@ -198,6 +202,12 @@ export default function Main(props: {
             name: receiveNotifications.name,
           }}
         />
+      </section>
+      <section
+        aria-label={`certifications-affiliations`}
+        className={clsx(`horizontal bg-content2 w-full justify-center px-6`, `3xl:px-14`)}
+      >
+        <Certifications {...{ imageUrls: certifications.imageUrls }} />
       </section>
     </div>
   )

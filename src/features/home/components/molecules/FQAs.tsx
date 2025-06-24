@@ -36,7 +36,7 @@ export default function FQAs(props: {
             <span
               className={clsx(
                 `text-default-900 text-large font-bold`,
-                `3xl:text-xl 2xl:text-[1.1875rem]`
+                `3xl:text-[1.1875rem] 2xl:text-[1.1875rem]`
               )}
             >
               {item.question}
