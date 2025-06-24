@@ -32,7 +32,7 @@ export default function TrustBadge(props: {
           <h4
             className={clsx(
               `text-default-900 text-xl font-bold text-shadow-md`,
-              `3xl:text-[1.4375rem] 2xl:text-[1.3125rem]`
+              `3xl:text-[1.375rem] 2xl:text-[1.3125rem]`
             )}
           >
             {trustBadge.slogan}

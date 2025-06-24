@@ -19,6 +19,10 @@ export default function HFooter(props: {
   secondaryDescription: string[]
   contactUs: { icon: string; name: string; href: string; key: number }[]
   termsConditions: { text: string }
+  otherlinks: {
+    titles: string[]
+    links: { text: string; href: string; key: number }[]
+  }
 }) {
   const {
     companyInformation,
@@ -28,6 +32,7 @@ export default function HFooter(props: {
     secondaryDescription,
     contactUs,
     termsConditions,
+    otherlinks,
   } = props
   return (
     <>
@@ -40,6 +45,7 @@ export default function HFooter(props: {
           secondaryDescription,
           contactUs,
           termsConditions,
+          otherlinks,
         }}
       />
     </>

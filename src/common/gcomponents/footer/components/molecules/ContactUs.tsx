@@ -16,7 +16,12 @@ export default function ContactUs(props: {
 }) {
   const { contactUs } = props
   return (
-    <div className={clsx(`vertical h-auto w-full justify-center gap-y-0.5`)}>
+    <div
+      className={clsx(
+        `flex h-auto w-full flex-col justify-center gap-y-0.5`,
+        `3xl:flex-row 3xl:justify-evenly 3xl:gap-y-0`
+      )}
+    >
       {contactUs.map((contact) => (
         <Contact
           key={contact.key}

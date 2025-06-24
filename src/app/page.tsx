@@ -41,6 +41,7 @@ export default function Home() {
             customerTestimonials: sd.home.main.customerTestimonials,
             introduction: sd.home.main.introduction,
             receiveNotifications: sd.home.main.receiveNotifications,
+            certifications: sd.home.main.certifications,
           }}
         />
       </main>
@@ -54,6 +55,7 @@ export default function Home() {
             secondaryDescription: sd.footer.secondaryDescription,
             contactUs: sd.footer.contactUs,
             termsConditions: sd.footer.termsConditions,
+            otherlinks: sd.footer.otherLinks,
           }}
         />
       </footer>

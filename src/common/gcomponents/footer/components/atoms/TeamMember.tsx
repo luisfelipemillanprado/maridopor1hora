@@ -8,5 +8,12 @@ import clsx from 'clsx'
  */
 export default function TeamMember(props: { src: string }) {
   const { src } = props
-  return <Avatar className={clsx(`2xl:h-9 2xl:w-9`)} src={src} size={`sm`} color={`warning`} />
+  return (
+    <Avatar
+      className={clsx(`2xl:h-9 2xl:w-9`, `3xl:h-8 3xl:w-8`)}
+      src={src}
+      size={`sm`}
+      color={`warning`}
+    />
+  )
 }
