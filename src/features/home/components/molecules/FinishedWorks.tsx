@@ -19,10 +19,7 @@ export default function FinishedWorks(props: {
   return (
     <div className={clsx(`grid w-full grid-cols-12 grid-rows-3 gap-3`, `3xl:gap-5`)}>
       {finishedWorks.imageUrls.map((item, index) => (
-        <FinishedWork
-          key={item.key}
-          {...{ imageUrl: item.imageUrl, text: finishedWorks.texts[index] }}
-        />
+        <FinishedWork key={item.key} {...{ imageUrl: item.imageUrl, text: finishedWorks.texts[index] }} />
       ))}
     </div>
   )

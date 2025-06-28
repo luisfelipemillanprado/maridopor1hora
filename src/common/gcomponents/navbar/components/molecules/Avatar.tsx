@@ -36,7 +36,10 @@ export default function Avatars(props: {
   return (
     <Dropdown>
       <DropdownTrigger>
-        <Button className={clsx(`vertical h-11 w-11 min-w-11 items-center p-2`)} variant={`light`}>
+        <Button
+          className={clsx(`vertical h-11 w-11 min-w-11 items-center p-2`, `3xl:h-12 3xl:w-12`)}
+          variant={`light`}
+        >
           <Badge
             color={`success`}
             content={content}
@@ -47,7 +50,7 @@ export default function Avatars(props: {
             showOutline={false}
           >
             <Avatar
-              className={clsx(`h-[2.1875rem] w-[2.1875rem]`)}
+              className={clsx(`h-[2.1875rem] w-[2.1875rem]`, `3xl:h-[2.3125rem] 3xl:w-[2.3125rem]`)}
               isBordered
               size={`sm`}
               color={`warning`}

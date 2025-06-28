@@ -1,4 +1,3 @@
-import React from 'react'
 import { Card, CardHeader, CardBody, CardFooter, Link, Button } from '@heroui/react'
 import {
   TicketIcon,
@@ -11,6 +10,112 @@ import {
   PercentBadgeIcon,
 } from '@heroicons/react/24/solid'
 import clsx from 'clsx'
+
+/**
+ * @description - Enum representing the available icons for benefits.
+ * @remarks Each value corresponds to a specific icon that can be used to visually represent a benefit in the UI.
+ * @enum
+ * @property {string} DISCOUNT - Represents a discount benefit.
+ * @property {string} MONEY - Represents a monetary benefit.
+ * @property {string} CLOCK - Represents a time-related benefit.
+ * @property {string} GIFT - Represents a gift or reward benefit.
+ * @property {string} SHIELD - Represents a protection or security benefit.
+ * @property {string} BADGE - Represents an achievement or badge benefit.
+ * @property {string} ALERT - Represents an alert or warning benefit.
+ * @property {string} WORK - Represents a work or service-related benefit.
+ */
+export enum BenefitIcon {
+  DISCOUNT = 'discount',
+  MONEY = 'money',
+  CLOCK = 'clock',
+  GIFT = 'gift',
+  SHIELD = 'shield',
+  BADGE = 'badge',
+  ALERT = 'alert',
+  WORK = 'work',
+}
+
+/**
+ * @description - Returns the corresponding icon component based on the provided `icon` type.
+ * @param icon - The string identifier for the desired benefit icon. Should be one of the values from `BenefitIcon`.
+ * @returns The corresponding React icon component with predefined styling, or `undefined` if the icon type is not recognized.
+ */
+const iconSwitch = (icon: string) => {
+  switch (icon) {
+    case BenefitIcon.DISCOUNT:
+      return (
+        <TicketIcon
+          className={clsx(
+            `fill-content2 h-[1.4375rem] w-[1.4375rem]`,
+            `3xl:h-[1.6875rem] 3xl:w-[1.6875rem] 2xl:h-6 2xl:w-6`
+          )}
+        />
+      )
+    case BenefitIcon.MONEY:
+      return (
+        <BanknotesIcon
+          className={clsx(
+            `fill-content2 h-[1.4375rem] w-[1.4375rem]`,
+            `3xl:h-[1.6875rem] 3xl:w-[1.6875rem] 2xl:h-6 2xl:w-6`
+          )}
+        />
+      )
+    case BenefitIcon.CLOCK:
+      return (
+        <ClockIcon
+          className={clsx(
+            `fill-content2 h-[1.4375rem] w-[1.4375rem]`,
+            `3xl:h-[1.6875rem] 3xl:w-[1.6875rem] 2xl:h-6 2xl:w-6`
+          )}
+        />
+      )
+    case BenefitIcon.GIFT:
+      return (
+        <GiftIcon
+          className={clsx(
+            `fill-content2 h-[1.4375rem] w-[1.4375rem]`,
+            `3xl:h-[1.6875rem] 3xl:w-[1.6875rem] 2xl:h-6 2xl:w-6`
+          )}
+        />
+      )
+    case BenefitIcon.SHIELD:
+      return (
+        <ShieldCheckIcon
+          className={clsx(
+            `fill-content2 h-[1.4375rem] w-[1.4375rem]`,
+            `3xl:h-[1.6875rem] 3xl:w-[1.6875rem] 2xl:h-6 2xl:w-6`
+          )}
+        />
+      )
+    case BenefitIcon.BADGE:
+      return (
+        <PercentBadgeIcon
+          className={clsx(
+            `fill-content2 h-[1.4375rem] w-[1.4375rem]`,
+            `3xl:h-[1.6875rem] 3xl:w-[1.6875rem] 2xl:h-6 2xl:w-6`
+          )}
+        />
+      )
+    case BenefitIcon.ALERT:
+      return (
+        <ExclamationTriangleIcon
+          className={clsx(
+            `fill-content2 h-[1.4375rem] w-[1.4375rem]`,
+            `3xl:h-[1.6875rem] 3xl:w-[1.6875rem] 2xl:h-6 2xl:w-6`
+          )}
+        />
+      )
+    case BenefitIcon.WORK:
+      return (
+        <WrenchScrewdriverIcon
+          className={clsx(
+            `fill-content2 h-[1.4375rem] w-[1.4375rem]`,
+            `3xl:h-[1.6875rem] 3xl:w-[1.6875rem] 2xl:h-6 2xl:w-6`
+          )}
+        />
+      )
+  }
+}
 
 /**
  * @description - Renders a benefit card displaying an icon, title, description, and a link.
@@ -30,98 +135,6 @@ export default function Benefit(props: {
   icon: string
 }) {
   const { title, description, icon, hrefText, href } = props
-  const iconSwitch = (icon: string) => {
-    switch (icon) {
-      case 'discount':
-        return {
-          icon: (
-            <TicketIcon
-              className={clsx(
-                `fill-content2 h-[1.4375rem] w-[1.4375rem]`,
-                `3xl:h-[1.6875rem] 3xl:w-[1.6875rem] 2xl:h-6 2xl:w-6`
-              )}
-            />
-          ),
-        }
-      case 'money':
-        return {
-          icon: (
-            <BanknotesIcon
-              className={clsx(
-                `fill-content2 h-[1.4375rem] w-[1.4375rem]`,
-                `3xl:h-[1.6875rem] 3xl:w-[1.6875rem] 2xl:h-6 2xl:w-6`
-              )}
-            />
-          ),
-        }
-      case 'clock':
-        return {
-          icon: (
-            <ClockIcon
-              className={clsx(
-                `fill-content2 h-[1.4375rem] w-[1.4375rem]`,
-                `3xl:h-[1.6875rem] 3xl:w-[1.6875rem] 2xl:h-6 2xl:w-6`
-              )}
-            />
-          ),
-        }
-      case 'gift':
-        return {
-          icon: (
-            <GiftIcon
-              className={clsx(
-                `fill-content2 h-[1.4375rem] w-[1.4375rem]`,
-                `3xl:h-[1.6875rem] 3xl:w-[1.6875rem] 2xl:h-6 2xl:w-6`
-              )}
-            />
-          ),
-        }
-      case 'shield':
-        return {
-          icon: (
-            <ShieldCheckIcon
-              className={clsx(
-                `fill-content2 h-[1.4375rem] w-[1.4375rem]`,
-                `3xl:h-[1.6875rem] 3xl:w-[1.6875rem] 2xl:h-6 2xl:w-6`
-              )}
-            />
-          ),
-        }
-      case 'badge':
-        return {
-          icon: (
-            <PercentBadgeIcon
-              className={clsx(
-                `fill-content2 h-[1.4375rem] w-[1.4375rem]`,
-                `3xl:h-[1.6875rem] 3xl:w-[1.6875rem] 2xl:h-6 2xl:w-6`
-              )}
-            />
-          ),
-        }
-      case 'alert':
-        return {
-          icon: (
-            <ExclamationTriangleIcon
-              className={clsx(
-                `fill-content2 h-[1.4375rem] w-[1.4375rem]`,
-                `3xl:h-[1.6875rem] 3xl:w-[1.6875rem] 2xl:h-6 2xl:w-6`
-              )}
-            />
-          ),
-        }
-      case 'work':
-        return {
-          icon: (
-            <WrenchScrewdriverIcon
-              className={clsx(
-                `fill-content2 h-[1.4375rem] w-[1.4375rem]`,
-                `3xl:h-[1.6875rem] 3xl:w-[1.6875rem] 2xl:h-6 2xl:w-6`
-              )}
-            />
-          ),
-        }
-    }
-  }
   return (
     <Card
       className={clsx(
@@ -138,43 +151,36 @@ export default function Benefit(props: {
               `border-warning shadow-small border-1`
             )}
           >
-            <span className={clsx(`h-auto w-auto`)}>{iconSwitch(icon)?.icon}</span>
+            <span className={clsx(`h-auto w-auto`)}>{iconSwitch(icon)}</span>
           </div>
-          <span
+          <h3
             className={clsx(
               `text-default-900 text-left text-[1.1875rem] font-bold text-shadow-sm`,
               `2xl:text-xl`
             )}
+            itemProp={title}
           >
             {title}
-          </span>
+          </h3>
         </div>
       </CardHeader>
       <CardBody className={clsx(`px-3 py-0`)}>
-        <p
-          className={clsx(
-            `text-default-800 text-medium text-left text-ellipsis`,
-            `2xl:text-[1.0625rem]`
-          )}
-        >
+        <p className={clsx(`text-default-800 text-medium text-left text-ellipsis`, `2xl:text-[1.0625rem]`)}>
           {description}
         </p>
       </CardBody>
       <CardFooter className={clsx(`vertical items-start pt-3.5 pb-0 pl-2.5`)}>
         <Button
-          className={clsx(
-            `bg-content1 border-content4 mb-2.5 border-1 shadow-sm`,
-            `2xl:min-h-8 2xl:py-4`
-          )}
+          isExternal
+          className={clsx(`bg-content1 border-content4 mb-2.5 border-1 shadow-sm`, `2xl:min-h-8 2xl:py-4`)}
           as={Link}
           href={href}
           variant={`flat`}
           size={`sm`}
           radius={`full`}
+          aria-label={hrefText}
         >
-          <span
-            className={clsx(`text-medium text-default-900 h-auto w-auto`, `2xl:text-[1.0625rem]`)}
-          >
+          <span className={clsx(`text-medium text-default-900 h-auto w-auto`, `2xl:text-[1.0625rem]`)}>
             {hrefText}
           </span>
         </Button>

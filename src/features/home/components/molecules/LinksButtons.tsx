@@ -25,27 +25,28 @@ export default function LinksButtons(props: {
       <Tabs
         key={linksButtons.variants.key}
         aria-label={`principal-options`}
-        className={clsx(
-          `[&>div]:bg-content7] drop-shadow-lg/30 [&>div]:gap-0`,
-          `3xl:[&>div]:gap-9`
-        )}
+        className={clsx(`[&>div]:bg-content7] drop-shadow-lg/30 [&>div]:gap-0`, `3xl:[&>div]:gap-x-1`)}
         color={`${linksButtons.variants.color as 'default' | 'primary' | 'secondary' | 'success' | 'warning' | 'danger'}`}
         variant={`solid`}
         radius={`full`}
         size={`md`}
       >
-        {linksButtons.texts.map((item /*, index */) => (
+        {linksButtons.texts.map((item, index) => (
           <Tab
             key={item.key}
-            className={clsx(`py-4`, `3xl:py-4.5`)}
+            className={clsx(
+              `${index == 3 ? 'hidden' : 'py-4'}`,
+              `${index == 3 ? '3xl:flex 3xl:flex-row' : ''} 3xl:py-[1.1875rem]`
+            )}
             title={
               <div
-                className={clsx(`horizontal items-center space-x-1.5`, `3xl:space-x-3 3xl:pr-1.5`)}
+                className={clsx(
+                  `${index == 3 ? 'hidden' : 'horizontal items-center space-x-1.5'}`,
+                  `${index == 3 ? '3xl:flex 3xl:flex-row' : ''} 3xl:space-x-2 3xl:pr-1`
+                )}
               >
                 <LinkButtonIcons {...{ icon: item.icon }} />
-                <span className={clsx(`text-[0.9375rem]`, `xl:text-medium 3xl:text-large`)}>
-                  {item.text}
-                </span>
+                <span className={clsx(`text-[0.9375rem]`, `xl:text-medium 3xl:text-large`)}>{item.text}</span>
               </div>
             }
           />

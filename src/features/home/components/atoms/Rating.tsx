@@ -10,14 +10,14 @@ import clsx from 'clsx'
 export default function Rating(props: { rating: string; reviews: string }) {
   const { rating, reviews } = props
   return (
-    <div className={clsx(`vertical relative h-auto w-auto gap-y-0.5`)}>
-      <div className={clsx(`horizontal relative h-auto w-auto gap-x-1.5`)}>
+    <div
+      aria-label={`Calificación: ${rating} de 5, ${reviews} reseñas`}
+      className={clsx(`vertical relative h-auto w-auto gap-y-0.5`)}
+    >
+      <div className={clsx(`horizontal relative h-auto w-auto justify-center gap-x-1.5`)}>
         <div className={clsx(`horizontal h-auto w-auto`)}>
           <span
-            className={clsx(
-              `text-medium text-default-900 font-semibold`,
-              `3xl:text-large 2xl:text-[1.0625rem]`
-            )}
+            className={clsx(`text-medium text-default-900 font-bold`, `3xl:text-large 2xl:text-[1.0625rem]`)}
           >
             {rating}
           </span>
@@ -38,7 +38,7 @@ export default function Rating(props: { rating: string; reviews: string }) {
       <div className={clsx(`horizontal h-auto w-auto`)}>
         <span
           className={clsx(
-            `text-default-700 text-[0.8125rem]`,
+            `text-default-700 text-small`,
             `xl:text-small 3xl:text-[1.0625rem] 2xl:text-[0.9375rem]`
           )}
         >

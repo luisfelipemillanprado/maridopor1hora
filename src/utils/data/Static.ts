@@ -7,8 +7,8 @@ const sd = {
   home: {
     header: {
       mainTitle: {
-        first: `MaridoPor1Hora`,
-        second: `Conectándote con los mejores servicios, y a los mejores precios.`,
+        first: `Conectándote con los mejores`,
+        second: `servicios, y a los mejores precios.`,
       },
       sliders: {
         peekServices: [
@@ -44,13 +44,44 @@ const sd = {
           { text: `Ubicación`, icon: `location`, key: Math.random() },
           { text: `Servicios`, icon: `services`, key: Math.random() },
           { text: `Buscar`, icon: `search`, key: Math.random() },
+          { text: `Únetenos`, icon: `team`, key: Math.random() },
         ],
       },
       metrics: [
-        { amount: `400`, text: `Clientes frecuentes`, change: false },
-        { amount: `4.3`, text: `Clientes satisfechos`, change: true },
-        { amount: `25`, text: `Expertos calificados`, change: false },
+        {
+          amount: `400`,
+          icon: `frequent`,
+          text: `Clientes frecuentes`,
+          description: `Garantía de excelencia avalada por familias.`,
+          change: false,
+          key: Math.random(),
+        },
+        {
+          amount: `4.3`,
+          icon: `satisfied`,
+          text: `Clientes satisfechos`,
+          description: `Su felicidad en el hogar, es nuestra meta.`,
+          change: true,
+          key: Math.random(),
+        },
+        {
+          amount: `25`,
+          icon: `qualified`,
+          text: `Expertos calificados`,
+          description: `Soluciones expertas para cada hogar.`,
+          change: false,
+          key: Math.random(),
+        },
       ],
+      popularServices: {
+        services: [
+          { text: `Limpieza`, icon: `clear`, href: `#`, key: Math.random() },
+          { text: `Electricista`, icon: `electrician`, href: `#`, key: Math.random() },
+          { text: `Fontanería`, icon: `plumbing`, href: `#`, key: Math.random() },
+          { text: `Clima`, icon: `airconditioner`, href: `#`, key: Math.random() },
+          { text: `Muebles`, icon: `furniture`, href: `#`, key: Math.random() },
+        ],
+      },
     },
     main: {
       trustBadge: {
@@ -79,14 +110,7 @@ const sd = {
           { imageUrl: `/images/main/finishedwork/finishedwork05.webp`, key: Math.random() },
           { imageUrl: `/images/main/finishedwork/finishedwork06.webp`, key: Math.random() },
         ],
-        texts: [
-          `Electricista.`,
-          `Carpintería.`,
-          `Limpieza.`,
-          `Mantenimiento.`,
-          `Muebles.`,
-          `Albañilería.`,
-        ],
+        texts: [`Electricista.`, `Carpintería.`, `Limpieza.`, `Mantenimiento.`, `Muebles.`, `Albañilería.`],
       },
       allOurServices: {
         imageUrls: [
@@ -97,14 +121,7 @@ const sd = {
           { imageUrl: `/images/main/services/servicecarpentry06.webp`, key: Math.random() },
           { imageUrl: `/images/main/services/servicecleaning07.webp`, key: Math.random() },
         ],
-        name: [
-          `Electricista.`,
-          `Fontanería.`,
-          `Muebles.`,
-          `Albañilería.`,
-          `Carpintería.`,
-          `Limpieza.`,
-        ],
+        name: [`Electricista.`, `Fontanería.`, `Muebles.`, `Albañilería.`, `Carpintería.`, `Limpieza.`],
         description: [
           `Servicios eléctricos profesionales para hogares y negocios. Garantizamos soluciones seguras, eficientes y personalizadas.`,
           `Fontanería experta: instalación, reparación y mantenimiento. Soluciones rápidas y duraderas para tu hogar.`,
@@ -272,7 +289,7 @@ const sd = {
       navigationLinks: {
         text: [`Mas servicios...`],
         href: [`#`],
-        icon: [`arrrowupright`],
+        icon: [`arrowupright`],
       },
       customerTestimonials: {
         testimonials: [
@@ -318,10 +335,17 @@ const sd = {
           satisfechos!`,
         ],
       },
+      advertisingFlyer: {
+        title: `Aprovecha nuestras ofertas`,
+        text: `Compara precios y contrata nuestros servicios donde quiera que estés. Rápido y fácil.`,
+        buttonText: `¡Reserva ya..!`,
+        imageUrl: `/images/main/flyer/flyer.webp`,
+        href: `#`,
+      },
       receiveNotifications: {
         title: `Recibe ofertas exclusivas`,
         text: `Registra tu correo electrónico para recibir promociones exclusivas de MaridoPor1Hora.`,
-        buttonText: `Regístrate aquí`,
+        buttonText: `¡Regístrate aquí..!`,
         placeholder: [`name: juan`, `ejemplo@gmail.com`],
         type: [`text`, `email`],
         name: [`name`, `email`],
