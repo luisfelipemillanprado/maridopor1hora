@@ -33,7 +33,6 @@ export default function WhyChooseUs(props: {
   return (
     <Swiper
       slidesPerView={`auto`}
-      spaceBetween={20}
       loop={true}
       autoplay={{
         delay: 7000,
@@ -41,9 +40,10 @@ export default function WhyChooseUs(props: {
       }}
       modules={[Autoplay]}
       className={clsx(`h-auto w-full !py-2.5 !pl-1.5`)}
+      aria-label={`Highlighted benefits`}
     >
       {benefits.map((item) => (
-        <SwiperSlide key={item.key} className={clsx(`!h-auto !w-auto`)}>
+        <SwiperSlide key={item.key} className={clsx(`mr-5 !h-auto !w-auto`, `3xl:mr-6`)}>
           <Benefit
             {...{
               title: item.title,

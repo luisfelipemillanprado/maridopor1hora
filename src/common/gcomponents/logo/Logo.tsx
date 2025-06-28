@@ -12,8 +12,8 @@ export default function Logo(props: { iconUrl: string }) {
     <div className={`horizontal h-auto w-auto justify-center backdrop-blur-lg`}>
       <Image
         className={clsx(
-          `horizontal border-warning h-[2.5625rem] w-[2.5625rem] min-w-[2.5625rem] justify-center border-3 border-solid`,
-          `rounded-full`
+          `border-warning h-[2.5625rem] min-w-[2.5625rem] rounded-full border-3 border-solid`,
+          `3xl:min-w-11 3xl:h-11`
         )}
         width={41}
         height={41}

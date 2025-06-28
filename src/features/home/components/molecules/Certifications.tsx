@@ -1,6 +1,11 @@
 import Certification from '@/features/home/components/atoms/Certification'
 import clsx from 'clsx'
 
+/**
+ * @description - Renders a horizontal list of certification images.
+ * @param props - The component props.
+ * @param props.imageUrls - An array of objects containing image URLs and unique keys for each certification.
+ */
 export default function Certifications(props: { imageUrls: { imageUrl: string; key: number }[] }) {
   const { imageUrls } = props
   return (

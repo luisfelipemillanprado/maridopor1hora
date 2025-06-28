@@ -25,17 +25,14 @@ export default function Service(props: { imageUrl: string; name: string; descrip
           radius={`full`}
           size={`md`}
           src={imageUrl}
+          alt={`Image service ${name}`}
+          itemProp={`image`}
         />
       </CardHeader>
       <CardBody className={clsx(`flex-none p-0 px-3 py-0`)}>
-        <span
-          className={clsx(
-            `text-default-900 text-large font-bold`,
-            `3xl:text-xl 2xl:text-[1.1875rem]`
-          )}
-        >
+        <h3 className={clsx(`text-default-900 text-large font-bold`, `3xl:text-xl 2xl:text-[1.1875rem]`)}>
           {name}
-        </span>
+        </h3>
       </CardBody>
       <CardFooter className={clsx(`horizontal items-start pt-0`)}>
         <p

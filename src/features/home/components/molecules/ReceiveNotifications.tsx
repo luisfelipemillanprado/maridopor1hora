@@ -36,23 +36,21 @@ export default function ReceiveNotifications(props: {
         `from-content8 via-content9/30 to-content9/70 bg-gradient-to-br from-25% via-30% to-80%`
       )}
       onSubmit={onSubmit}
+      aria-label={`Form to receive notifications`}
     >
       <div className={clsx(`horizontal h-auto w-full justify-center`, `3xl:justify-start`)}>
-        <span
+        <h3
           className={clsx(
             `text-default-900 text-[1.3125rem] font-extrabold text-shadow-sm`,
             `3xl:text-[1.375rem]`
           )}
         >
           {title}
-        </span>
+        </h3>
       </div>
       <div className={clsx(`horizontal h-auto w-full justify-center`, `3xl:justify-start`)}>
         <p
-          className={clsx(
-            `text-default-800 text-medium h-auto w-auto text-center`,
-            `3xl:text-start 2xl:text-[1.0625rem]`
-          )}
+          className={clsx(`text-default-800 text-medium text-center`, `3xl:text-start 2xl:text-[1.0625rem]`)}
         >
           {text}
         </p>
@@ -60,17 +58,16 @@ export default function ReceiveNotifications(props: {
       <div
         className={clsx(
           `mt-2 flex h-auto w-full flex-col justify-center gap-y-4.5`,
-          `3xl:flex-wrap 3xl:flex-row 3xl:gap-x-4`
+          `3xl:flex-nowrap 3xl:flex-row 3xl:gap-x-4 3xl:justify-start`
         )}
       >
         <Input
           id={name[0]}
+          aria-label={name[0]}
           isRequired
           isClearable
           className={clsx(`border-content4 rounded-small border-1`, `3xl:w-1/3`)}
-          startContent={
-            <UserIcon className={clsx(`fill-default-400 pointer-events-none h-5 w-5`)} />
-          }
+          startContent={<UserIcon className={clsx(`fill-default-400 pointer-events-none h-5 w-5`)} />}
           validate={(value) => {
             if (value.length < 3) {
               return `El numbre debe de tener almenos 3 caracteres`
@@ -87,12 +84,11 @@ export default function ReceiveNotifications(props: {
         />
         <Input
           id={name[1]}
+          aria-label={name[1]}
           isRequired
           isClearable
           className={clsx(`border-content4 rounded-small border-1`, `3xl:w-1/3`)}
-          startContent={
-            <EnvelopeIcon className={clsx(`fill-default-400 pointer-events-none h-5 w-5`)} />
-          }
+          startContent={<EnvelopeIcon className={clsx(`fill-default-400 pointer-events-none h-5 w-5`)} />}
           errorMessage={({ validationDetails, validationErrors }) => {
             if (validationDetails.typeMismatch) {
               return `Please enter a valid email address`
@@ -110,15 +106,14 @@ export default function ReceiveNotifications(props: {
         <div className={clsx(`horizontal h-auto w-full justify-center`, `3xl:w-auto`)}>
           <Button
             className={clsx(`shadow-medium mt-2`, `3xl:h-12 3xl:mt-0 3xl:rounded-small`)}
-            endContent={<ArrowTrendingUpIcon className={clsx(`fill-default-50 h-5 w-5`)} />}
+            endContent={<ArrowTrendingUpIcon className={clsx(`fill-default-50 h-5.5 w-5.5`)} />}
             variant={`solid`}
             color={`warning`}
             type={`submit`}
             size={`md`}
+            aria-label={`Send notification form`}
           >
-            <span className={clsx(`text-default-50 text-medium`, `2xl:text-[1.0625rem]`)}>
-              {buttonText}
-            </span>
+            <span className={clsx(`text-default-50 text-medium`, `2xl:text-[1.0625rem]`)}>{buttonText}</span>
           </Button>
         </div>
       </div>

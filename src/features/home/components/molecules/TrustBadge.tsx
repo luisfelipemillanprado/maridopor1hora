@@ -29,17 +29,15 @@ export default function TrustBadge(props: {
       <CardHeader className={clsx(`horizontal pb-2`)}>
         <div className={clsx(``)}></div>
         <div className={clsx(`vertical gap-y-2.5`)}>
-          <h4
+          <h3
             className={clsx(
               `text-default-900 text-xl font-bold text-shadow-md`,
               `3xl:text-[1.375rem] 2xl:text-[1.3125rem]`
             )}
           >
             {trustBadge.slogan}
-          </h4>
-          <p className={clsx(`text-default-800 text-medium`, `2xl:text-[1.0625rem]`)}>
-            {trustBadge.summary}
-          </p>
+          </h3>
+          <p className={clsx(`text-default-800 text-medium`, `2xl:text-[1.0625rem]`)}>{trustBadge.summary}</p>
         </div>
       </CardHeader>
       <CardBody className={clsx(`horizontal justify-between`)}>
@@ -52,11 +50,14 @@ export default function TrustBadge(props: {
                   `fill-warning-500 h-4 w-4`,
                   `3xl:w-5 3xl:h-5 2xl:h-[1.0625rem] 2xl:w-[1.0625rem]`
                 )}
+                aria-hidden={true}
               />
             }
             variant={`flat`}
             radius={`full`}
             size={`sm`}
+            aria-label={trustBadge.buttonText}
+            title={trustBadge.buttonText}
           >
             <span
               className={clsx(

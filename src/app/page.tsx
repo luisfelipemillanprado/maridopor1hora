@@ -24,10 +24,11 @@ export default function Home() {
             linksButtons: sd.home.header.linksButtons,
             navbar: sd.navbar,
             metrics: sd.home.header.metrics,
+            popularServices: sd.home.header.popularServices,
           }}
         />
       </header>
-      <main className={clsx(`relative mt-3 h-auto w-full`)}>
+      <main className={clsx(`relative mt-3 w-full`)}>
         <Main
           {...{
             trustBadge: sd.home.main.trustBadge,
@@ -40,12 +41,13 @@ export default function Home() {
             benefits: sd.home.main.whyChooseUs.benefits,
             customerTestimonials: sd.home.main.customerTestimonials,
             introduction: sd.home.main.introduction,
+            advertisingFlyer: sd.home.main.advertisingFlyer,
             receiveNotifications: sd.home.main.receiveNotifications,
             certifications: sd.home.main.certifications,
           }}
         />
       </main>
-      <footer className={clsx(`relative mt-8 h-auto w-full`)}>
+      <footer className={clsx(`relative mt-8 w-full`)}>
         <Footer
           {...{
             companyInformation: sd.footer.companyInformation,

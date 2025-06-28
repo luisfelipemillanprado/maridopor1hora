@@ -1,6 +1,6 @@
 import Image from 'next/image'
-import clsx from 'clsx'
 import { StarIcon } from '@heroicons/react/20/solid'
+import clsx from 'clsx'
 import blurEffects from '@/utils/blurs/Blurs'
 
 /**
@@ -36,7 +36,8 @@ export default function Testimonial(props: {
             src={imageUrl}
             blurDataURL={blurEffects.blurUrl}
             placeholder={`blur`}
-            alt={`Client's avatar ${name}`}
+            alt={`Photo by ${name}, satisfied customer`}
+            itemProp={`image`}
           />
         </div>
         <div className={clsx(`horizontal h-auto w-auto justify-between gap-1`)}>
@@ -48,6 +49,7 @@ export default function Testimonial(props: {
                     `fill-warning-500 h-[1.125rem] w-[1.125rem]`,
                     `2xl:h-[1.1875rem] 2xl:w-[1.1875rem]`
                   )}
+                  aria-hidden="true"
                 />
               </span>
             )
@@ -55,19 +57,12 @@ export default function Testimonial(props: {
         </div>
       </div>
       <div className={clsx(`horizontal h-auto w-auto justify-center`)}>
-        <p className={clsx(`text-default-800 text-medium text-center`, `2xl:text-[1.0625rem]`)}>
-          {text}
-        </p>
+        <p className={clsx(`text-default-800 text-medium text-center`, `2xl:text-[1.0625rem]`)}>{text}</p>
       </div>
-      <div className={clsx(`horzontal mt-1 h-auto w-auto justify-center`)}>
-        <span
-          className={clsx(
-            `text-large text-default-900 h-auto w-auto font-bold`,
-            `2xl:text-[1.1875rem]`
-          )}
-        >
+      <div className={clsx(`horizontal mt-1 h-auto w-auto justify-center`)}>
+        <h4 className={clsx(`text-large text-default-900 h-auto w-auto font-bold`, `2xl:text-[1.1875rem]`)}>
           {name}
-        </span>
+        </h4>
       </div>
     </div>
   )

@@ -34,17 +34,19 @@ export default function PeekServices(props: { peekServices: { imageUrl: string; 
       className={clsx(
         `h-80 w-full rounded-tl-[1.25rem] rounded-tr-[1.25rem] rounded-br-[1.25rem] rounded-bl-[1.25rem]`,
         `outline-warning-200 shadow-md outline-1`,
-        `3xl:h-96`
+        `3xl:h-[25rem]`
       )}
+      aria-label={`Carousel of featured services`}
     >
       {peekServices.map((item, index) => (
-        <SwiperSlide className={clsx(``)} key={item.key}>
+        <SwiperSlide key={item.key}>
           <Image
             width={312}
             height={310}
             className={clsx(`block h-full w-full object-cover brightness-75`)}
             src={item.imageUrl}
             alt={`Service ${index + 1}`}
+            priority
           />
         </SwiperSlide>
       ))}

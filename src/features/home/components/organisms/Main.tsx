@@ -8,6 +8,7 @@ import JoinOurTeam from '@/features/home/components/molecules/JoinOurTeam'
 import WhyChooseUs from '@/features/home/components/molecules/WhyChooseUs'
 import Introduction from '@/features/home/components/atoms/Introduction'
 import CustomerTestimonials from '@/features/home/components/molecules/CustomerTestimonials'
+import AdvertisingFlyer from '@/features/home/components/molecules/AdvertisingFlyer'
 import ReceiveNotifications from '@/features/home/components/molecules/ReceiveNotifications'
 import Certifications from '@/features/home/components/molecules/Certifications'
 import clsx from 'clsx'
@@ -92,6 +93,13 @@ export default function Main(props: {
   introduction: {
     text: string[]
   }
+  advertisingFlyer: {
+    title: string
+    text: string
+    buttonText: string
+    imageUrl: string
+    href: string
+  }
   receiveNotifications: {
     title: string
     text: string
@@ -115,6 +123,7 @@ export default function Main(props: {
     navigationLinks,
     customerTestimonials,
     introduction,
+    advertisingFlyer,
     receiveNotifications,
     certifications,
   } = props
@@ -138,9 +147,7 @@ export default function Main(props: {
       >
         <SecondaryTitle {...{ title: secondaryTitles.title[1] }} />
         <AllOurServices {...{ allOurServices }} />
-        <div
-          className={clsx(`horizontal mt-2.5 mb-0.5 h-auto w-full justify-center`, `3xl:mt-3.5`)}
-        >
+        <div className={clsx(`horizontal mt-2.5 mb-0.5 h-auto w-full justify-center`, `3xl:mt-3.5`)}>
           <NavigationLink
             {...{
               text: navigationLinks.text[0],
@@ -190,8 +197,17 @@ export default function Main(props: {
       </section>
       <section
         aria-label={`receive-notifications`}
-        className={clsx(`horizontal mb-8 w-full justify-center px-6`, `3xl:px-10`)}
+        className={clsx(`mb-8 flex w-full flex-col gap-y-8.5 px-6`, `3xl:px-10 xl:px-7`)}
       >
+        <AdvertisingFlyer
+          {...{
+            title: advertisingFlyer.title,
+            text: advertisingFlyer.text,
+            buttonText: advertisingFlyer.buttonText,
+            imageUrl: advertisingFlyer.imageUrl,
+            href: advertisingFlyer.href,
+          }}
+        />
         <ReceiveNotifications
           {...{
             title: receiveNotifications.title,
@@ -205,7 +221,7 @@ export default function Main(props: {
       </section>
       <section
         aria-label={`certifications-affiliations`}
-        className={clsx(`horizontal bg-content2 w-full justify-center px-6`, `3xl:px-14`)}
+        className={clsx(`horizontal bg-content2 w-full justify-center px-6`, `3xl:px-28`)}
       >
         <Certifications {...{ imageUrls: certifications.imageUrls }} />
       </section>

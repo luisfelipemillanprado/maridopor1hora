@@ -33,19 +33,17 @@ export default function FQAs(props: {
           aria-label={`FQAs ${index + 1}`}
           startContent={<FQAIcon {...{ icon: item.icon }} />}
           title={
-            <span
+            <h3
               className={clsx(
                 `text-default-900 text-large font-bold`,
                 `3xl:text-[1.1875rem] 2xl:text-[1.1875rem]`
               )}
             >
               {item.question}
-            </span>
+            </h3>
           }
         >
-          <span className={clsx(`text-default-800 text-medium`, `2xl:text-[1.0625rem]`)}>
-            {item.answer}
-          </span>
+          <span className={clsx(`text-default-800 text-medium`, `2xl:text-[1.0625rem]`)}>{item.answer}</span>
         </AccordionItem>
       ))}
     </Accordion>

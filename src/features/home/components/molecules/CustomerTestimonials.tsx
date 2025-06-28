@@ -38,13 +38,8 @@ export default function CustomerTestimonials(props: {
     >
       {testimonials.map((item /*, index*/) => {
         return (
-          <SwiperSlide
-            key={item.key}
-            className={clsx(`bg-content1 shadow-small w-full rounded-xl`)}
-          >
-            <Testimonial
-              {...{ name: item.name, text: item.text, imageUrl: item.imageUrl, score }}
-            />
+          <SwiperSlide key={item.key} className={clsx(`bg-content1 shadow-small w-full rounded-xl`)}>
+            <Testimonial {...{ name: item.name, text: item.text, imageUrl: item.imageUrl, score }} />
           </SwiperSlide>
         )
       })}
