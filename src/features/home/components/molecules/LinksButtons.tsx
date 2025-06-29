@@ -35,7 +35,7 @@ export default function LinksButtons(props: {
           <Tab
             key={item.key}
             className={clsx(
-              `${index == 3 ? 'hidden' : 'py-4'}`,
+              `${index == 3 ? 'hidden' : 'py-[1.0625rem]'}`,
               `${index == 3 ? '3xl:flex 3xl:flex-row' : ''} 3xl:py-[1.1875rem]`
             )}
             title={
@@ -46,7 +46,9 @@ export default function LinksButtons(props: {
                 )}
               >
                 <LinkButtonIcons {...{ icon: item.icon }} />
-                <span className={clsx(`text-[0.9375rem]`, `xl:text-medium 3xl:text-large`)}>{item.text}</span>
+                <span className={clsx(`text-default-900 text-[0.9375rem]`, `xl:text-medium 3xl:text-large`)}>
+                  {item.text}
+                </span>
               </div>
             }
           />

@@ -10,7 +10,7 @@ import clsx from 'clsx'
 export default function FinishedWork(props: { imageUrl: string; text: string }) {
   const { imageUrl, text } = props
   return (
-    <Card isFooterBlurred isPressable className={clsx(`col-span-6`)} shadow={`md`}>
+    <Card isFooterBlurred isPressable className={clsx(`col-span-6`, `4xl:col-span-4`)} shadow={`md`}>
       <Image
         removeWrapper
         alt={`Work ${text} completed satisfactorily`}

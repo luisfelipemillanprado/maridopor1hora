@@ -69,7 +69,7 @@ export default function Header(props: {
         <div className={clsx(`horizontal relative h-auto w-full`)}>
           <NavBar {...{ navbar }} />
         </div>
-        <div className={clsx(`horizontal relative h-auto w-full p-2`, `3xl:px-6 3xl:py-3 xl:px-3`)}>
+        <div className={clsx(`horizontal relative h-auto w-full p-2`, `3xl:px-6 3xl:py-3 4xl:px-8 xl:px-3`)}>
           <PeekServices {...{ peekServices }} />
           <div className={clsx(`absolute top-[17%] right-0 left-0 z-10 h-auto w-full`, `xl:top-[16%]`)}>
             <MainTitle {...{ mainTitle }} />
