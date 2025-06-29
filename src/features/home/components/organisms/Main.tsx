@@ -129,21 +129,21 @@ export default function Main(props: {
   } = props
   return (
     <div className={clsx(`vertical h-auto w-full`)}>
-      <section aria-label={`trust-badge-card`} className={clsx(`mb-6 w-full px-4.5`, `3xl:px-10`)}>
+      <section aria-label={`trust-badge-card`} className={clsx(`mb-6 w-full px-4.5`, `3xl:px-10 4xl:px-11`)}>
         <div className={clsx(`horizontal h-auto w-full justify-start`)}>
           <TrustBadge {...{ trustBadge }} />
         </div>
       </section>
       <section
         aria-label={`featured-completed-works`}
-        className={clsx(`vertical mb-6 w-full gap-y-3.5 px-4.5`, `3xl:px-10`)}
+        className={clsx(`vertical mb-6 w-full gap-y-3.5 px-4.5`, `3xl:px-10 4xl:px-11`)}
       >
         <SecondaryTitle {...{ title: secondaryTitles.title[0] }} />
         <FinishedWorks {...{ finishedWorks }} />
       </section>
       <section
         aria-label={`all-our-services`}
-        className={clsx(`vertical mb-6 w-full gap-y-3.5 px-4.5`, `3xl:px-10`)}
+        className={clsx(`vertical mb-6 w-full gap-y-3.5 px-4.5`, `3xl:px-10 4xl:px-11`)}
       >
         <SecondaryTitle {...{ title: secondaryTitles.title[1] }} />
         <AllOurServices {...{ allOurServices }} />
@@ -159,28 +159,28 @@ export default function Main(props: {
       </section>
       <section
         aria-label={`here-are-your-answers`}
-        className={clsx(`vertical mb-6 w-full gap-y-3.5 px-4.5`, `3xl:px-10`)}
+        className={clsx(`vertical mb-6 w-full gap-y-3.5 px-4.5`, `3xl:px-10 4xl:px-11`)}
       >
         <SecondaryTitle {...{ title: secondaryTitles.title[2] }} />
         <FQAs {...{ questions: frequentlyAskedQuestions.questions }} />
       </section>
       <section
         aria-label={`why-choose-us`}
-        className={clsx(`vertical mb-3.5 w-full gap-y-1.5 pl-4.5`, `3xl:pl-9`)}
+        className={clsx(`vertical mb-3.5 w-full gap-y-1.5 pl-4.5`, `3xl:pl-9 4xl:pl-10`)}
       >
         <SecondaryTitle {...{ title: secondaryTitles.title[3] }} />
         <WhyChooseUs {...{ benefits }} />
       </section>
       <section
         aria-label={`join-our-team`}
-        className={clsx(`vertical mb-1 w-full gap-y-3.5 overflow-hidden px-4.5`, `3xl:px-10`)}
+        className={clsx(`vertical mb-1 w-full gap-y-3.5 overflow-hidden px-4.5`, `3xl:px-10 4xl:px-11`)}
       >
         <SecondaryTitle {...{ title: secondaryTitles.title[4] }} />
         <JoinOurTeam {...{ joinOurTeam }} />
       </section>
       <section
         aria-label={`customer-testimonials`}
-        className={clsx(`vertical mb-7 w-full gap-y-3.5 px-4.5`, `3xl:px-10 3xl:gap-y-4.5`)}
+        className={clsx(`vertical mb-7 w-full gap-y-3.5 px-4.5`, `3xl:px-10 4xl:px-11 3xl:gap-y-4.5`)}
       >
         <div className={clsx(`vertical h-auto w-auto gap-y-2.5`)}>
           <SecondaryTitle {...{ title: secondaryTitles.title[5] }} />
@@ -197,7 +197,7 @@ export default function Main(props: {
       </section>
       <section
         aria-label={`receive-notifications`}
-        className={clsx(`mb-8 flex w-full flex-col gap-y-8.5 px-6`, `3xl:px-10 xl:px-7`)}
+        className={clsx(`mb-8 flex w-full flex-col gap-y-8.5 px-6`, `3xl:px-10 4xl:px-11 xl:px-6.5`)}
       >
         <AdvertisingFlyer
           {...{
@@ -221,7 +221,7 @@ export default function Main(props: {
       </section>
       <section
         aria-label={`certifications-affiliations`}
-        className={clsx(`horizontal bg-content2 w-full justify-center px-6`, `3xl:px-28`)}
+        className={clsx(`horizontal bg-content2 w-full justify-center px-6`, `3xl:px-28 4xl:px-44`)}
       >
         <Certifications {...{ imageUrls: certifications.imageUrls }} />
       </section>

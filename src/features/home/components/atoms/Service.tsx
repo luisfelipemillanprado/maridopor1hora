@@ -14,7 +14,10 @@ export default function Service(props: { imageUrl: string; name: string; descrip
   return (
     <Card
       isPressable
-      className={clsx(`bg-content3 border-content4 col-span-6 gap-y-2 border-1 p-1`, `3xl:p-1.5`)}
+      className={clsx(
+        `bg-content3 border-content4 col-span-6 gap-y-2 border-1 p-1`,
+        `3xl:p-1.5 4xl:col-span-4`
+      )}
       shadow={`md`}
     >
       <CardHeader className={clsx(`justify-between pb-2`)}>
