@@ -2,6 +2,11 @@ import express from 'express'
 import next from 'next'
 import { Request, Response } from 'express'
 
+/**
+ * @description - The port number on which the server will listen.
+ * This value is parsed from the `PORT` environment variable. If the variable is not set,
+ * it defaults to `3000`.
+ */
 const port = parseInt(process.env.PORT || '3000', 10)
 const dev = process.env.NODE_ENV !== 'production'
 const domain = 'maridoporunahora.com'
@@ -45,8 +50,8 @@ app
     })
     server.listen(port, (err?: Error) => {
       if (err) throw err
-      console.log(`> Running in ${dev ? 'development' : 'production'} mode`)
-      console.log(`> Ready on http://${dev ? 'localhost' : domain}:${port}`)
+      console.log(`--> Running in ${dev ? 'development' : 'production'} mode`)
+      console.log(`--> Ready on http://${dev ? 'localhost' : domain}:${port}`)
       if (process.env.PHUSION_ENV) {
         console.log('Running in Phusion environment')
       }

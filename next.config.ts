@@ -1,16 +1,7 @@
 import type { NextConfig } from 'next'
 
 /**
- * Next.js configuration object for the application.
- *
- * @remarks
- * - Dynamically adds `turbopack.resolveExtensions` in non-production environments for custom module resolution.
- * - Configures the Next.js Image Optimization API to allow remote images from specific domains and sets supported formats and sizes.
- * - Disables development indicators in the UI.
- * - Enforces TypeScript build errors to fail the build.
- * - Ignores ESLint errors during builds.
- * - Includes commented options for deploying the app in a subdirectory.
- *
+ * @description - Next.js configuration object for the application.
  * @property {object} images - Configuration for the Next.js Image component.
  * @property {Array} images.remotePatterns - Allowed remote image sources with protocol and hostname.
  * @property {Array} images.formats - Supported image formats for optimization.
@@ -53,7 +44,6 @@ const nextConfig: NextConfig = {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
-  //output: 'standalone',
   devIndicators: false,
   typescript: {
     ignoreBuildErrors: false,
