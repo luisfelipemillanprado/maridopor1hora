@@ -93,12 +93,12 @@ const sd = {
       },
       secondaryTitles: {
         title: [
-          `Obras Completas Destacadas`,
-          `Todos Nuestros Servicios`,
-          `Aquí, Tus Respuestas`,
-          `Somos Tu Mejor Elección`,
-          `Unete A Nuestro Equipo`,
-          `Testimonios De Clientes`,
+          `Obras Completas Destacadas.`,
+          `Todos Nuestros Servicios.`,
+          `Aquí, Tus Respuestas.`,
+          `Somos Tu Mejor Elección.`,
+          `Unete A Nuestro Equipo.`,
+          `Testimonios De Clientes.`,
         ],
       },
       finishedWorks: {
@@ -336,14 +336,14 @@ const sd = {
         ],
       },
       advertisingFlyer: {
-        title: `Aprovecha nuestras ofertas`,
+        title: `Aprovecha nuestras ofertas.`,
         text: `Compara precios y contrata nuestros servicios donde quiera que estés. Rápido y fácil.`,
         buttonText: `¡Reserva ya..!`,
         imageUrl: `/images/main/flyer/flyer.webp`,
         href: `#`,
       },
       receiveNotifications: {
-        title: `Recibe ofertas exclusivas`,
+        title: `Recibe ofertas exclusivas.`,
         text: `Registra tu correo electrónico para recibir promociones exclusivas de MaridoPor1Hora.`,
         buttonText: `¡Regístrate aquí..!`,
         placeholder: [`name: juan`, `ejemplo@gmail.com`],

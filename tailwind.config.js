@@ -20,8 +20,8 @@ const config = {
         // => @media (min-width: 375px) { ... }
         xl: '24.375rem',
         // => @media (min-width: 390px) { ... }
-        '2xl': '25rem',
-        // => @media (min-width: 400px) { ... }
+        '2xl': '30.625rem',
+        // => @media (min-width: 490px) { ... }
         '3xl': '47.5rem',
         // => @media (min-width: 760px) { ... }
         '4xl': '64rem',
