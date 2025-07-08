@@ -64,7 +64,7 @@ export default function Metric(props: {
       isPressable
       className={clsx(
         `outline-warning-200 bg-content7 w-[6.125rem] gap-y-0.5 outline-1 outline-solid`,
-        `3xl:w-auto ${metric.change ? 'shadow-md' : '3xl:shadow-medium'} 2xl:w-[6.4375rem]`
+        `3xl:w-auto ${metric.change ? 'shadow-md' : '3xl:shadow-medium'} xl:w-[6.375rem]`
       )}
       shadow={`sm`}
     >
@@ -76,12 +76,7 @@ export default function Metric(props: {
       >
         <span className={clsx(`hidden h-auto w-auto`, `3xl:flex`)}>{iconSwitch(metric.icon)}</span>
         <div className={clsx(`horizontal h-auto w-auto`, `3xl:pr-4.5`)}>
-          <span
-            className={clsx(
-              `text-warning text-[1.1875rem] font-semibold`,
-              `3xl:text-xl 2xl:text-[1.1875rem]`
-            )}
-          >
+          <span className={clsx(`text-warning text-[1.1875rem] font-semibold`, `xl:text-xl`)}>
             {metric.amount}
           </span>
           <span className={clsx(`text-warning text-[1.0625rem]`)}>{changeElement}</span>
@@ -93,7 +88,7 @@ export default function Metric(props: {
         <span
           className={clsx(
             `text-center text-[0.9375rem]`,
-            `2xl:text-medium 3xl:text-large 3xl:text-start xl:text-[0.9375rem]`
+            `2xl:text-medium 3xl:text-large 3xl:text-start xl:text-medium`
           )}
         >
           {metric.text}

@@ -10,7 +10,7 @@ export default function SignUpButton(props: { text: string }) {
   const { text } = props
   return (
     <Button className={clsx(`bg-warning shadow-lg`)} variant={`flat`} radius={`full`} size={`sm`}>
-      <span className={clsx(`text-default-50 text-medium`, `3xl:text-[1.0625rem]`)}>{text}</span>
+      <span className={clsx(`text-default-50 text-medium`, `xl:text-[1.0625rem]`)}>{text}</span>
     </Button>
   )
 }

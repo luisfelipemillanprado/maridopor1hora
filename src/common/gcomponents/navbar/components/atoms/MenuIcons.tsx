@@ -5,7 +5,7 @@ import {
   CloudArrowUpIcon,
   ShareIcon,
   ArrowUpOnSquareStackIcon,
-} from '@heroicons/react/24/outline'
+} from '@heroicons/react/24/solid'
 import clsx from 'clsx'
 
 /**
@@ -24,22 +24,18 @@ export default function MenuIcons(props: { icon: string }) {
   const iconSwitch = (icon: string) => {
     switch (icon) {
       case 'info':
-        return { icon: <IdentificationIcon className={clsx(`h-[1.375rem] w-[1.375rem]`)} /> }
+        return { icon: <IdentificationIcon className={clsx(`fill-default-500 h-6 w-6`)} /> }
       case 'alert':
-        return { icon: <BellAlertIcon className={clsx(`h-[1.375rem] w-[1.375rem]`)} /> }
+        return { icon: <BellAlertIcon className={clsx(`fill-default-500 h-6 w-6`)} /> }
       case 'setting':
-        return { icon: <Cog8ToothIcon className={clsx(`h-[1.375rem] w-[1.375rem]`)} /> }
+        return { icon: <Cog8ToothIcon className={clsx(`fill-default-500 h-6 w-6`)} /> }
       case 'link':
-        return { icon: <ShareIcon className={clsx(`h-[1.375rem] w-[1.375rem]`)} /> }
+        return { icon: <ShareIcon className={clsx(`fill-default-500 h-6 w-6`)} /> }
       case 'upload':
-        return { icon: <CloudArrowUpIcon className={clsx(`h-[1.375rem] w-[1.375rem]`)} /> }
+        return { icon: <CloudArrowUpIcon className={clsx(`fill-default-500 h-6 w-6`)} /> }
       case 'logout':
         return {
-          icon: (
-            <ArrowUpOnSquareStackIcon
-              className={clsx(`h-[1.375rem] w-[1.375rem]`, 'text-danger')}
-            />
-          ),
+          icon: <ArrowUpOnSquareStackIcon className={clsx(`h-6 w-6`, 'text-warning')} />,
         }
     }
   }

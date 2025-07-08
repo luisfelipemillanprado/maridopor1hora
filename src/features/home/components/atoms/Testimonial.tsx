@@ -62,7 +62,7 @@ export default function Testimonial(props: {
         </p>
       </div>
       <div className={clsx(`horizontal mt-1 h-auto w-auto justify-center`)}>
-        <h4 className={clsx(`text-large text-default-900 h-auto w-auto font-bold`, `2xl:text-[1.1875rem]`)}>
+        <h4 className={clsx(`text-large text-default-900 h-auto w-auto font-bold`, `xl:text-[1.1875rem]`)}>
           {name}
         </h4>
       </div>

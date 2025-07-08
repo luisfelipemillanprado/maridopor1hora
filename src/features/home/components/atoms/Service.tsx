@@ -33,7 +33,7 @@ export default function Service(props: { imageUrl: string; name: string; descrip
         />
       </CardHeader>
       <CardBody className={clsx(`flex-none p-0 px-3 py-0`)}>
-        <h3 className={clsx(`text-default-900 text-large font-bold`, `3xl:text-xl 2xl:text-[1.1875rem]`)}>
+        <h3 className={clsx(`text-default-900 text-large font-bold`, `3xl:text-xl xl:text-[1.1875rem]`)}>
           {name}
         </h3>
       </CardBody>
