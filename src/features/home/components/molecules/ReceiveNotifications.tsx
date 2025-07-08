@@ -42,7 +42,7 @@ export default function ReceiveNotifications(props: {
         <h3
           className={clsx(
             `text-default-900 text-[1.3125rem] font-extrabold text-shadow-sm`,
-            `3xl:text-[1.375rem]`
+            `3xl:text-[1.4375rem] xl:text-[1.375rem]`
           )}
         >
           {title}
@@ -50,7 +50,10 @@ export default function ReceiveNotifications(props: {
       </div>
       <div className={clsx(`horizontal h-auto w-full justify-center`, `3xl:justify-start`)}>
         <p
-          className={clsx(`text-default-800 text-medium text-center`, `3xl:text-start 2xl:text-[1.0625rem]`)}
+          className={clsx(
+            `text-default-800 text-medium text-center`,
+            `3xl:text-start 2xl:text-large xl:text-[1.0625rem]`
+          )}
         >
           {text}
         </p>
@@ -113,7 +116,9 @@ export default function ReceiveNotifications(props: {
             size={`md`}
             aria-label={`Send notification form`}
           >
-            <span className={clsx(`text-default-50 text-medium`, `2xl:text-[1.0625rem]`)}>{buttonText}</span>
+            <span className={clsx(`text-default-50 text-medium`, `2xl:text-large xl:text-[1.0625rem]`)}>
+              {buttonText}
+            </span>
           </Button>
         </div>
       </div>

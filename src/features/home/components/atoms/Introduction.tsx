@@ -11,7 +11,7 @@ export default function Introduction(props: { text: string }) {
     <p
       className={clsx(
         `text-medium text-default-900 h-auto w-auto text-center`,
-        `3xl:px-0.5 2xl:text-[1.0625rem]`
+        `3xl:px-0.5 2xl:text-large xl:text-[1.0625rem]`
       )}
     >
       {text}

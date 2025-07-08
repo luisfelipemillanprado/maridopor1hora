@@ -23,7 +23,9 @@ export default function JoinTeamButton(props: { text: string; href: string }) {
         size={`md`}
         radius={`full`}
       >
-        <span className={clsx(`text-default-50 text-medium`, `3xl:text-large 2xl:text-[1.0625rem]`)}>
+        <span
+          className={clsx(`text-default-50 text-medium`, `3xl:text-large 2xl:text-large xl:text-[1.0625rem]`)}
+        >
           {text}
         </span>
       </Button>

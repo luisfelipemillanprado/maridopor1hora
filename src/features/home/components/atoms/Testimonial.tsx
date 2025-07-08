@@ -19,8 +19,8 @@ export default function Testimonial(props: {
 }) {
   const { name, text, score, imageUrl } = props
   return (
-    <div className={clsx(`vertical h-full w-full items-center justify-start gap-y-1 p-4`)}>
-      <div className={clsx(`vertical mb-1 h-auto w-full items-center gap-y-2`)}>
+    <div className={clsx(`vertical h-full w-full items-center justify-start gap-y-1 p-4`, `xl:p-4.5`)}>
+      <div className={clsx(`vertical mb-1 h-auto w-full items-center gap-y-2`, `xl:gap-y-2.5`)}>
         <div
           className={clsx(
             `horizontal border-warning-500 border-1.5 h-auto w-auto justify-center rounded-full border-dashed p-1`
@@ -57,7 +57,9 @@ export default function Testimonial(props: {
         </div>
       </div>
       <div className={clsx(`horizontal h-auto w-auto justify-center`)}>
-        <p className={clsx(`text-default-800 text-medium text-center`, `2xl:text-[1.0625rem]`)}>{text}</p>
+        <p className={clsx(`text-default-800 text-medium text-center`, `2xl:text-large xl:text-[1.0625rem]`)}>
+          {text}
+        </p>
       </div>
       <div className={clsx(`horizontal mt-1 h-auto w-auto justify-center`)}>
         <h4 className={clsx(`text-large text-default-900 h-auto w-auto font-bold`, `2xl:text-[1.1875rem]`)}>

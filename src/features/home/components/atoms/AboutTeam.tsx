@@ -18,7 +18,12 @@ export default function AboutTeam(props: { firstText: string; secondText: string
       >
         {firstText}
       </h4>
-      <p className={clsx(`vertical text-default-800 text-medium text-center`, `2xl:text-[1.0625rem]`)}>
+      <p
+        className={clsx(
+          `vertical text-default-800 text-medium text-center`,
+          `2xl:text-large xl:text-[1.0625rem]`
+        )}
+      >
         <span className={clsx(`h-auto w-auto`)}>{secondText[0]}</span>
         <span className={clsx(`h-auto w-auto`)}>{secondText[1]}</span>
       </p>

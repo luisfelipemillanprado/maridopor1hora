@@ -139,7 +139,7 @@ export default function Benefit(props: {
     <Card
       className={clsx(
         `bg-content2 border-content3 h-[18.9375rem] w-80 border-1 px-3 py-3.5`,
-        `2xl:h-[19.5rem] 2xl:w-[20.9375rem]`
+        `xl:h-[19.125rem] xl:w-[20.9375rem] 2xl:h-[19.5rem]`
       )}
       shadow={`sm`}
     >
@@ -165,7 +165,12 @@ export default function Benefit(props: {
         </div>
       </CardHeader>
       <CardBody className={clsx(`px-3 py-0`)}>
-        <p className={clsx(`text-default-800 text-medium text-left text-ellipsis`, `2xl:text-[1.0625rem]`)}>
+        <p
+          className={clsx(
+            `text-default-800 text-medium text-left text-ellipsis`,
+            `2xl:text-large xl:text-[1.0625rem]`
+          )}
+        >
           {description}
         </p>
       </CardBody>
@@ -180,7 +185,12 @@ export default function Benefit(props: {
           radius={`full`}
           aria-label={hrefText}
         >
-          <span className={clsx(`text-medium text-default-900 h-auto w-auto`, `2xl:text-[1.0625rem]`)}>
+          <span
+            className={clsx(
+              `text-medium text-default-900 h-auto w-auto`,
+              `2xl:text-large xl:text-[1.0625rem]`
+            )}
+          >
             {hrefText}
           </span>
         </Button>
