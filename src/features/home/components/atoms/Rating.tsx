@@ -17,7 +17,7 @@ export default function Rating(props: { rating: string; reviews: string }) {
       <div className={clsx(`horizontal relative h-auto w-auto justify-center gap-x-1.5`)}>
         <div className={clsx(`horizontal h-auto w-auto`)}>
           <span
-            className={clsx(`text-medium text-default-900 font-bold`, `3xl:text-large 2xl:text-[1.0625rem]`)}
+            className={clsx(`text-medium text-default-900 font-bold`, `2xl:text-large xl:text-[1.0625rem]`)}
           >
             {rating}
           </span>
@@ -39,7 +39,7 @@ export default function Rating(props: { rating: string; reviews: string }) {
         <span
           className={clsx(
             `text-default-700 text-small`,
-            `xl:text-small 3xl:text-[1.0625rem] 2xl:text-[0.9375rem]`
+            `3xl:text-[1.0625rem] 2xl:text-large xl:text-[0.9375rem]`
           )}
         >
           {reviews}
