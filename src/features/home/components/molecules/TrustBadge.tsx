@@ -37,7 +37,9 @@ export default function TrustBadge(props: {
           >
             {trustBadge.slogan}
           </h3>
-          <p className={clsx(`text-default-800 text-medium`, `2xl:text-[1.0625rem]`)}>{trustBadge.summary}</p>
+          <p className={clsx(`text-default-800 text-medium`, `2xl:text-large xl:text-[1.0625rem]`)}>
+            {trustBadge.summary}
+          </p>
         </div>
       </CardHeader>
       <CardBody className={clsx(`horizontal justify-between`)}>
@@ -62,7 +64,7 @@ export default function TrustBadge(props: {
             <span
               className={clsx(
                 `text-small text-default-700 h-auto w-auto`,
-                `3xl:text-medium 2xl:text-[0.9375rem]`
+                `2xl:text-medium xl:text-[0.9375rem]`
               )}
             >
               {trustBadge.buttonText}

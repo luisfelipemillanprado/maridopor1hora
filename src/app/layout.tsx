@@ -1,5 +1,6 @@
 import './globals.css'
 import { Nunito_Sans } from 'next/font/google'
+// -- import SlowScrollClient from '@/app/SlowScrollClient'
 import Provider from '@/app/providers'
 import { Metadata } from 'next'
 import ContactFloatButton from '@/common/gcomponents/contactus/components/organisms/ContactFloatButton'
@@ -47,9 +48,10 @@ export default function RootLayout({
     <html
       suppressHydrationWarning
       className={clsx(`${nunito_sans.className} scroll-smooth antialiased`)}
-      lang="en-US"
+      lang="es-ES"
     >
       <body className={clsx(`bg-[#fafbfd]`)}>
+        {/* <SlowScrollClient {...{ speed: 20, step: 1000 }} /> */}
         <Provider
           themeProps={{
             attribute: 'class',
