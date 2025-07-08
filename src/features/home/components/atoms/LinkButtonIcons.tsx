@@ -29,21 +29,21 @@ const iconSwitch = (icon: string) => {
       return (
         <MapPinIcon
           aria-label={`location`}
-          className={clsx(`h-[1.125rem] w-[1.125rem]`, `3xl:h-6 3xl:w-6 xl:h-[1.53125rem] xl:w-[1.53125rem]`)}
+          className={clsx(`h-[1.125rem] w-[1.125rem]`, `3xl:h-6 3xl:w-6 xl:h-5 xl:w-5`)}
         />
       )
     case LinkButtonIconType.SERVICES:
       return (
         <WrenchScrewdriverIcon
           aria-label={`services`}
-          className={clsx(`h-[1.125rem] w-[1.125rem]`, `3xl:h-6 3xl:w-6 xl:h-[1.53125rem] xl:w-[1.53125rem]`)}
+          className={clsx(`h-[1.125rem] w-[1.125rem]`, `3xl:h-6 3xl:w-6 xl:h-5 xl:w-5`)}
         />
       )
     case LinkButtonIconType.SEARCH:
       return (
         <SearchIcon
           aria-label={`search`}
-          className={clsx(`h-6 w-6 fill-current`, `3xl:h-7 3xl:w-7 xl:h-[1.53125rem] xl:w-[1.53125rem]`)}
+          className={clsx(`h-6 w-6 fill-current`, `3xl:h-7 3xl:w-7 xl:h-5 xl:w-5`)}
         />
       )
     case LinkButtonIconType.TEAM:

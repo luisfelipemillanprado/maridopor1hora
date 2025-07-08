@@ -46,7 +46,9 @@ export default function LinksButtons(props: {
                 )}
               >
                 <LinkButtonIcons {...{ icon: item.icon }} />
-                <span className={clsx(`text-default-900 text-[0.9375rem]`, `xl:text-medium 3xl:text-large`)}>
+                <span
+                  className={clsx(`text-default-900 text-[0.9375rem]`, `3xl:text-large xl:text-[1.0625rem]`)}
+                >
                   {item.text}
                 </span>
               </div>
