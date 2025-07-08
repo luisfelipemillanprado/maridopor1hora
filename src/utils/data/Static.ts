@@ -313,7 +313,7 @@ const sd = {
           },
           {
             name: `Juan Hernandez.`,
-            text: `Tenía reservas al contratar, pero el servicio superó todas mis expectativas claramente.`,
+            text: `Tenía reservas al contratar, pero el servicio superó todas mis expectativas.`,
             imageUrl: `/images/main/testimonials/testimonial04.webp`,
             key: Math.random(),
           },

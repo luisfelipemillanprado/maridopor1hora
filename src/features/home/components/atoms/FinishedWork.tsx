@@ -19,7 +19,10 @@ export default function FinishedWork(props: { imageUrl: string; text: string }) 
       />
       <CardFooter className={clsx(`absolute bottom-0 z-10 bg-black/0 px-3 py-1`, `3xl:py-2`)}>
         <span
-          className={clsx(`text-default-50 text-medium font-bold`, `2xl:text-large 3xl:text-[1.1875rem]`)}
+          className={clsx(
+            `text-default-50 text-medium font-bold`,
+            `2xl:text-large 3xl:text-[1.1875rem] xl:text-[1.0625rem]`
+          )}
         >
           {text}
         </span>

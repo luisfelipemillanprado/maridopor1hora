@@ -41,7 +41,7 @@ export default function Service(props: { imageUrl: string; name: string; descrip
         <p
           className={clsx(
             `text-default-800 text-medium truncate`,
-            `3xl:overflow-visible 3xl:whitespace-normal 3xl:text-start 2xl:text-[1.0625rem]`
+            `3xl:overflow-visible 3xl:whitespace-normal 3xl:text-start 2xl:text-large xl:text-[1.0625rem]`
           )}
         >
           {description}

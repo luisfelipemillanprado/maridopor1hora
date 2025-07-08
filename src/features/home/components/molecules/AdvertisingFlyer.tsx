@@ -5,6 +5,16 @@ import { PaperAirplaneIcon } from '@heroicons/react/24/solid'
 import blurEffects from '@/utils/blurs/Blurs'
 import clsx from 'clsx'
 
+/**
+ * @description - Renders an advertising flyer card component with a title, description text, button, and image.
+ * @param props - The properties for the AdvertisingFlyer component.
+ * @param props.title - The main title displayed on the flyer.
+ * @param props.text - The descriptive text content of the flyer.
+ * @param props.buttonText - The text displayed on the action button.
+ * @param props.imageUrl - The URL of the image to display on the flyer.
+ * @param props.href - The URL to navigate to when the button is clicked.
+ * @returns A styled card component presenting an advertising flyer with a call-to-action.
+ */
 export default function AdvertisingFlyer(props: {
   title: string
   text: string
@@ -30,13 +40,16 @@ export default function AdvertisingFlyer(props: {
         <h3
           className={clsx(
             `text-default-900 text-[1.3125rem] font-extrabold text-shadow-sm`,
-            `3xl:text-[1.375rem]`
+            `3xl:text-[1.4375rem] xl:text-[1.375rem]`
           )}
         >
           {title}
         </h3>
         <p
-          className={clsx(`text-default-800 text-medium text-center`, `3xl:text-start 2xl:text-[1.0625rem]`)}
+          className={clsx(
+            `text-default-800 text-medium text-center`,
+            `3xl:text-start 2xl:text-large xl:text-[1.0625rem]`
+          )}
         >
           {text}
         </p>
@@ -50,7 +63,9 @@ export default function AdvertisingFlyer(props: {
           size={`md`}
           aria-label={`Service Reservation`}
         >
-          <span className={clsx(`text-default-50 text-medium`, `2xl:text-[1.0625rem]`)}>{buttonText}</span>
+          <span className={clsx(`text-default-50 text-medium`, `2xl:text-large xl:text-[1.0625rem]`)}>
+            {buttonText}
+          </span>
         </Button>
       </CardHeader>
       <CardBody
