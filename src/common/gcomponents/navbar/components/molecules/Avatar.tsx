@@ -34,7 +34,7 @@ export default function Avatars(props: {
 }) {
   const { imageUrl, content, items } = props
   return (
-    <Dropdown>
+    <Dropdown className={clsx(`border-warning-200 border-1 bg-[#fafbfd]`)}>
       <DropdownTrigger>
         <Button
           className={clsx(`vertical h-11 w-11 min-w-11 items-center p-2`, `3xl:h-12 3xl:w-12`)}
@@ -50,7 +50,10 @@ export default function Avatars(props: {
             showOutline={false}
           >
             <Avatar
-              className={clsx(`h-[2.1875rem] w-[2.1875rem]`, `3xl:h-[2.3125rem] 3xl:w-[2.3125rem]`)}
+              className={clsx(
+                `h-[2.1875rem] w-[2.1875rem]`,
+                `3xl:h-[2.3125rem] 3xl:w-[2.3125rem] xl:h-9 xl:w-9`
+              )}
               isBordered
               size={`sm`}
               color={`warning`}
@@ -64,11 +67,10 @@ export default function Avatars(props: {
           {items.map((item /* , index */) => (
             <DropdownItem
               key={item.key}
-              description={item.description}
-              shortcut={item.shortcut}
+              description={<span className={clsx(`text-small`)}>{item.description}</span>}
               startContent={<MenuIcons {...{ icon: item.key }} />}
             >
-              {item.title}
+              <span className={clsx(`text-medium`, `xl:text-[1.0625rem]`)}>{item.title}</span>
             </DropdownItem>
           ))}
         </DropdownSection>

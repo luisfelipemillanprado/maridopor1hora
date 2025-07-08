@@ -156,7 +156,7 @@ export default function Benefit(props: {
           <h3
             className={clsx(
               `text-default-900 text-left text-[1.1875rem] font-bold text-shadow-sm`,
-              `2xl:text-xl`
+              `xl:text-xl`
             )}
             itemProp={title}
           >

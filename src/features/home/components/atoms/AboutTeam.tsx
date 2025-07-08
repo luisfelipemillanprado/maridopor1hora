@@ -13,7 +13,7 @@ export default function AboutTeam(props: { firstText: string; secondText: string
       <h4
         className={clsx(
           `from-warning to-content5 via-content6 bg-gradient-to-tr bg-clip-text text-xl font-extrabold text-transparent`,
-          `2xl:text-[1.3125rem]`
+          `xl:text-[1.3125rem]`
         )}
       >
         {firstText}
