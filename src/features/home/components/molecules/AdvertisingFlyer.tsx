@@ -26,7 +26,7 @@ export default function AdvertisingFlyer(props: {
   return (
     <Card
       className={clsx(
-        `gap-y-4.5 px-6 pt-6`,
+        `gap-y-4.5 px-[1.4375rem] pt-6`,
         `from-content9 via-content9 to-warning bg-gradient-to-br from-25% via-30% to-80%`,
         `3xl:flex 3xl:flex-row 3xl:flex-nowrap 3xl:gap-x-10`
       )}
