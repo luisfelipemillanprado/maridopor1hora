@@ -23,6 +23,7 @@ export default function NavigationLink(props: { text: string; href: string; icon
         variant={`shadow`}
         size={`md`}
         radius={`full`}
+        aria-label={`${text} button`}
       >
         <span
           className={clsx(
