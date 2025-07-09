@@ -17,6 +17,7 @@ export default function NavLink(props: { text: string; href: string }) {
         aria-current={isActive ? 'page' : undefined}
         className={clsx(`text-default-900 text-large`)}
         href={href}
+        title={text}
       >
         {text}
       </Link>

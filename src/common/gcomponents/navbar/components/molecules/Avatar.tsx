@@ -34,10 +34,13 @@ export default function Avatars(props: {
 }) {
   const { imageUrl, content, items } = props
   return (
-    <Dropdown className={clsx(`border-warning-200 border-1 bg-[#fafbfd]`)}>
+    <Dropdown className={clsx(`border-content4 border-1 bg-[#fafbfd]`)}>
       <DropdownTrigger>
         <Button
-          className={clsx(`vertical h-11 w-11 min-w-11 items-center p-2`, `3xl:h-12 3xl:w-12`)}
+          className={clsx(
+            `vertical h-11 w-11 min-w-11 items-center p-2`,
+            `3xl:h-12 3xl:w-12 xl:h-[2.8125rem] xl:w-[2.8125rem]`
+          )}
           variant={`light`}
         >
           <Badge
@@ -58,19 +61,28 @@ export default function Avatars(props: {
               size={`sm`}
               color={`warning`}
               src={imageUrl}
+              alt={`User Avatar`}
             />
           </Badge>
         </Button>
       </DropdownTrigger>
       <DropdownMenu aria-label={`dropdown-avatar-menu`} variant={`faded`}>
-        <DropdownSection showDivider title={`Actions`}>
+        <DropdownSection>
           {items.map((item /* , index */) => (
             <DropdownItem
               key={item.key}
-              description={<span className={clsx(`text-small`)}>{item.description}</span>}
+              className={clsx(
+                `[&>:nth-child(2)>:first-child]:text-medium`,
+                `xl:[&>:nth-child(2)>:first-child]:text-[1.0625rem]`
+              )}
+              description={
+                <span className={clsx(`text-small`, `xl:text-[0.9375rem]`)}>{item.description}</span>
+              }
               startContent={<MenuIcons {...{ icon: item.key }} />}
+              aria-label={`${item.title} menu item`}
+              title={item.title}
             >
-              <span className={clsx(`text-medium`, `xl:text-[1.0625rem]`)}>{item.title}</span>
+              {item.title}
             </DropdownItem>
           ))}
         </DropdownSection>

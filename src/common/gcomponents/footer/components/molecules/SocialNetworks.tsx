@@ -20,9 +20,7 @@ export default function SocialNetworks(props: {
   return (
     <div className={clsx(`vertical h-auto w-full gap-y-4`)}>
       <div className={clsx(`vertical w-full items-center gap-y-2`)}>
-        <span
-          className={clsx(`text-default-50 text-[1.1875rem]`, `3xl:text-[1.1875rem] 2xl:text-xl`)}
-        >
+        <span className={clsx(`text-default-50 text-[1.1875rem]`, `3xl:text-[1.1875rem] xl:text-xl`)}>
           {text1}
         </span>
       </div>
