@@ -20,23 +20,19 @@ export default function OtherLinks(props: {
     <div className={clsx(`vertical items-center`)}>
       <div className={clsx(`horizontal mb-2 h-auto w-full justify-between`)}>
         <div className={clsx(`horizontal justify-start`)}>
-          <span className={clsx(`text-default-50 text-[1.1875rem] font-bold`)}>{titles[0]}</span>
+          <span className={clsx(`text-default-50 text-xl font-bold`)}>{titles[0]}</span>
         </div>
         <div className={clsx(`horizontal justify-start`)}>
-          <span className={clsx(`text-default-50 pr-[1.1875rem] text-[1.1875rem] font-bold`)}>
-            {titles[1]}
-          </span>
+          <span className={clsx(`text-default-50 pr-[1.1875rem] text-xl font-bold`)}>{titles[1]}</span>
         </div>
         <div className={clsx(`horizontal justify-start`)}>
-          <span className={clsx(`text-default-50 pr-[4.1875rem] text-[1.1875rem] font-bold`)}>
-            {titles[2]}
-          </span>
+          <span className={clsx(`text-default-50 pr-14 text-xl font-bold`)}>{titles[2]}</span>
         </div>
       </div>
       <div className={clsx(`grid grid-cols-3 grid-rows-5 gap-x-5 gap-y-3.5`)}>
         {links.map((item, index) => (
           <Link key={index} isExternal href={`#`}>
-            <span className={clsx(`text-default-50 text-[1.0625rem]`)}>{item.text}</span>
+            <span className={clsx(`text-default-50 text-large`)}>{item.text}</span>
           </Link>
         ))}
       </div>

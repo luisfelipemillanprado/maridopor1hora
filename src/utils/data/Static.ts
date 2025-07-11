@@ -107,10 +107,85 @@ const sd = {
           { imageUrl: `/images/main/finishedwork/finishedwork02.webp`, key: Math.random() },
           { imageUrl: `/images/main/finishedwork/finishedwork03.webp`, key: Math.random() },
           { imageUrl: `/images/main/finishedwork/finishedwork04.webp`, key: Math.random() },
-          { imageUrl: `/images/main/finishedwork/finishedwork05.webp`, key: Math.random() },
+          { imageUrl: `/images/main/services/servicefurniture04.webp`, key: Math.random() },
           { imageUrl: `/images/main/finishedwork/finishedwork06.webp`, key: Math.random() },
         ],
         texts: [`Electricista.`, `Carpintería.`, `Limpieza.`, `Mantenimiento.`, `Muebles.`, `Albañilería.`],
+        ratings: [4.5, 4.5, 4.8, 4.6, 4.5, 4.7],
+        teams: [
+          {
+            workers: [
+              { src: `/images/footer/team/ourteam01.webp`, key: Math.random() },
+              { src: `/images/footer/team/ourteam02.webp`, key: Math.random() },
+              { src: `/images/footer/team/ourteam03.webp`, key: Math.random() },
+              { src: `/images/footer/team/ourteam04.webp`, key: Math.random() },
+              { src: `/images/footer/team/ourteam05.webp`, key: Math.random() },
+              { src: `/images/footer/team/ourteam06.webp`, key: Math.random() },
+            ],
+            maxCount: 5,
+            totalCount: 6,
+          },
+          {
+            workers: [
+              { src: `/images/footer/team/ourteam10.webp`, key: Math.random() },
+              { src: `/images/footer/team/ourteam09.webp`, key: Math.random() },
+              { src: `/images/footer/team/ourteam08.webp`, key: Math.random() },
+              { src: `/images/footer/team/ourteam07.webp`, key: Math.random() },
+              { src: `/images/footer/team/ourteam08.webp`, key: Math.random() },
+              { src: `/images/footer/team/ourteam09.webp`, key: Math.random() },
+            ],
+            maxCount: 4,
+            totalCount: 7,
+          },
+          {
+            workers: [
+              { src: `/images/footer/team/ourteam01.webp`, key: Math.random() },
+              { src: `/images/footer/team/ourteam02.webp`, key: Math.random() },
+              { src: `/images/footer/team/ourteam03.webp`, key: Math.random() },
+              { src: `/images/footer/team/ourteam04.webp`, key: Math.random() },
+              { src: `/images/footer/team/ourteam05.webp`, key: Math.random() },
+              { src: `/images/footer/team/ourteam06.webp`, key: Math.random() },
+            ],
+            maxCount: 5,
+            totalCount: 6,
+          },
+          {
+            workers: [
+              { src: `/images/footer/team/ourteam07.webp`, key: Math.random() },
+              { src: `/images/footer/team/ourteam01.webp`, key: Math.random() },
+              { src: `/images/footer/team/ourteam02.webp`, key: Math.random() },
+              { src: `/images/footer/team/ourteam05.webp`, key: Math.random() },
+              { src: `/images/footer/team/ourteam08.webp`, key: Math.random() },
+              { src: `/images/footer/team/ourteam03.webp`, key: Math.random() },
+            ],
+            maxCount: 4,
+            totalCount: 5,
+          },
+          {
+            workers: [
+              { src: `/images/footer/team/ourteam03.webp`, key: Math.random() },
+              { src: `/images/footer/team/ourteam07.webp`, key: Math.random() },
+              { src: `/images/footer/team/ourteam05.webp`, key: Math.random() },
+              { src: `/images/footer/team/ourteam09.webp`, key: Math.random() },
+              { src: `/images/footer/team/ourteam04.webp`, key: Math.random() },
+              { src: `/images/footer/team/ourteam02.webp`, key: Math.random() },
+            ],
+            maxCount: 4,
+            totalCount: 6,
+          },
+          {
+            workers: [
+              { src: `/images/footer/team/ourteam03.webp`, key: Math.random() },
+              { src: `/images/footer/team/ourteam06.webp`, key: Math.random() },
+              { src: `/images/footer/team/ourteam05.webp`, key: Math.random() },
+              { src: `/images/footer/team/ourteam08.webp`, key: Math.random() },
+              { src: `/images/footer/team/ourteam04.webp`, key: Math.random() },
+              { src: `/images/footer/team/ourteam01.webp`, key: Math.random() },
+            ],
+            maxCount: 5,
+            totalCount: 5,
+          },
+        ],
       },
       allOurServices: {
         imageUrls: [
@@ -494,7 +569,7 @@ const sd = {
     ],
     fourthTitle: [
       { text1: `Estamos para ti. Confía en nosotros.`, text2: `MaridoPor1Hora.` },
-      { text1: `Nos puedes encontrar en :`, text2: `Social Networks.` },
+      { text1: `Nos puedes encontrar acá:`, text2: `Social Networks.` },
     ],
     otherLinks: {
       titles: [`Compañía`, `Clientes`, `Afiliados`],

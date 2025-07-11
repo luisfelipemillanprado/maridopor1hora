@@ -13,13 +13,29 @@ export default function FinishedWorks(props: {
   finishedWorks: {
     imageUrls: { imageUrl: string; key: number }[]
     texts: string[]
+    ratings: number[]
+    teams: {
+      workers: { src: string; key: number }[]
+      maxCount: number
+      totalCount: number
+    }[]
   }
 }) {
   const { finishedWorks } = props
   return (
     <div className={clsx(`grid w-full grid-cols-12 grid-rows-3 gap-3`, `3xl:gap-5 4xl:grid-rows-2`)}>
       {finishedWorks.imageUrls.map((item, index) => (
-        <FinishedWork key={item.key} {...{ imageUrl: item.imageUrl, text: finishedWorks.texts[index] }} />
+        <FinishedWork
+          key={item.key}
+          {...{
+            imageUrl: item.imageUrl,
+            text: finishedWorks.texts[index],
+            rating: finishedWorks.ratings[index],
+            totalCount: finishedWorks.teams[index].totalCount,
+            maxCount: finishedWorks.teams[index].maxCount,
+            workers: finishedWorks.teams[index].workers,
+          }}
+        />
       ))}
     </div>
   )

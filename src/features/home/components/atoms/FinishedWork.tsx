@@ -1,23 +1,68 @@
-import { Card, CardFooter, Image } from '@heroui/react'
+import { Avatar, AvatarGroup, Card, CardFooter, Chip, Image } from '@heroui/react'
+import { StarIcon } from '@/utils/svgs/Svgs'
 import clsx from 'clsx'
 
 /**
- * @description - Displays a finished work card with a background image and a footer containing descriptive text.
+ * @description - Displays a finished work card with an image, text, and rating.
  * @param props - The component props.
- * @param props.imageUrl - The URL of the image to display as the card background.
- * @param props.text - The text to display in the card footer.
+ * @param props.imageUrl - The URL of the image to display.
+ * @param props.text - The text description of the finished work.
+ * @param props.rating - The rating of the finished work.
  */
-export default function FinishedWork(props: { imageUrl: string; text: string }) {
-  const { imageUrl, text } = props
+export default function FinishedWork(props: {
+  imageUrl: string
+  text: string
+  rating: number
+  maxCount: number
+  totalCount: number
+  workers: { src: string; key: number }[]
+}) {
+  const { imageUrl, text, rating, maxCount, workers } = props
   return (
-    <Card isFooterBlurred isPressable className={clsx(`col-span-6`, `4xl:col-span-4`)} shadow={`md`}>
+    <Card isFooterBlurred isPressable className={clsx(`relative col-span-6`, `4xl:col-span-4`)} shadow={`md`}>
+      <div
+        className={clsx(`horizontal absolute top-1.5 right-1.5 z-50 justify-center`, `3xl:top-3 3xl:right-3`)}
+      >
+        <Chip
+          className={clsx(
+            `text-default-50 text-[0.9375rem] [&>span]:pt-0.5 [&>span]:font-semibold`,
+            `xl:text-medium 3xl:text-[1.0625rem]`
+          )}
+          color={`default`}
+          endContent={
+            <StarIcon
+              className={clsx(
+                `fill-warning-500 h-5.5 w-5.5`,
+                `3xl:h-7 3xl:w-7 xl:h-[1.5625rem] xl:w-[1.5625rem]`
+              )}
+            />
+          }
+          variant={`flat`}
+          size={`sm`}
+        >
+          {rating}
+        </Chip>
+      </div>
       <Image
         removeWrapper
         alt={`Work ${text} completed satisfactorily`}
         className={clsx(`z-0 h-full w-full object-cover`)}
         src={imageUrl}
       />
-      <CardFooter className={clsx(`absolute bottom-0 z-10 bg-black/0 px-3 py-1`, `3xl:py-2`)}>
+      <CardFooter
+        className={clsx(`horizontal absolute bottom-0 z-10 bg-black/0 px-3 py-1`, `3xl:py-2.5 3xl:gap-x-4`)}
+      >
+        <AvatarGroup
+          className={clsx(`3xl:flex hidden`)}
+          isBordered
+          color={`default`}
+          max={maxCount}
+          size={`sm`}
+        >
+          {workers.map((item /*, index */) => (
+            <Avatar key={item.key} src={item.src} />
+          ))}
+        </AvatarGroup>
         <span
           className={clsx(
             `text-default-50 text-medium font-bold`,

@@ -47,11 +47,7 @@ export default function Footer(props: {
     otherlinks,
   } = props
   return (
-    <div
-      className={clsx(
-        `vertical bg-content5 h-auto w-full !justify-start gap-y-8 rounded-t-3xl pt-7`
-      )}
-    >
+    <div className={clsx(`vertical bg-content5 h-auto w-full !justify-start gap-y-8 rounded-t-3xl pt-7`)}>
       <section aria-label={`company-information`} className={clsx(`h-auto w-full px-4`)}>
         <CompanyInformation {...{ companyInformation }} />
       </section>
@@ -62,21 +58,16 @@ export default function Footer(props: {
         >
           <OtherLinks {...{ titles: otherlinks.titles, links: otherlinks.links }} />
         </section>
-        <div
-          className={clsx(
-            `vertical h-auto w-full !justify-start gap-y-9`,
-            `3xl:w-auto 3xl:h-[20.8125rem]`
-          )}
-        >
+        <div className={clsx(`flex w-full flex-col justify-start gap-y-9`, `3xl:w-auto 3xl:h-[23.25rem]`)}>
           <section
             aria-label={`company-team`}
-            className={clsx(`horizontal h-auto w-full justify-center px-4`, `3xl:w-auto`)}
+            className={clsx(`horizontal h-auto w-full justify-center px-4`, `3xl:w-auto 3xl:px-0 3xl:pl-4`)}
           >
             <OurTeam {...{ ourTeam, text1: fourthTitle[0].text1, text2: fourthTitle[0].text2 }} />
           </section>
           <section
             aria-label={`company-social-networks`}
-            className={clsx(`horizontal h-auto w-full justify-center px-4`, `3xl:w-auto`)}
+            className={clsx(`horizontal h-auto w-full justify-center px-4`, `3xl:w-auto 3xl:px-0 3xl:pl-4`)}
           >
             <SocialNetworks {...{ socialNetworks, text1: fourthTitle[1].text1 }} />
           </section>
@@ -96,9 +87,7 @@ export default function Footer(props: {
       </section>
       <section
         aria-label={`company-terms-conditions`}
-        className={clsx(
-          `horizontal border-default-600 h-auto w-full justify-center border-t-1 p-4`
-        )}
+        className={clsx(`horizontal border-default-600 h-auto w-full justify-center border-t-1 p-4`)}
       >
         <TermsConditions {...{ termsConditions }} />
       </section>

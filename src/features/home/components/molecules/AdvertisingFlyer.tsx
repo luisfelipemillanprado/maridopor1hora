@@ -26,8 +26,8 @@ export default function AdvertisingFlyer(props: {
   return (
     <Card
       className={clsx(
-        `gap-y-4.5 px-[1.4375rem] pt-6`,
-        `from-content9 via-content9 to-warning bg-gradient-to-br from-25% via-30% to-80%`,
+        `gap-y-4.5 bg-gradient-to-br px-[1.4375rem] pt-6`,
+        `from-content9 via-content9 to-warning from-25% via-30% to-80%`,
         `3xl:flex 3xl:flex-row 3xl:flex-nowrap 3xl:gap-x-10`
       )}
     >
@@ -57,7 +57,7 @@ export default function AdvertisingFlyer(props: {
           isExternal
           as={Link}
           href={href}
-          className={clsx(`bg-content5 mt-2`, `3xl:mt-2 3xl:h-11`)}
+          className={clsx(`bg-content5 mt-2`, `3xl:mt-2 3xl:h-11 3xl:mb-[1.625rem]`)}
           endContent={<PaperAirplaneIcon className={clsx(`fill-default-50 h-5.5 w-5.5`)} />}
           variant={`shadow`}
           size={`md`}
@@ -71,7 +71,7 @@ export default function AdvertisingFlyer(props: {
       <CardBody
         className={clsx(
           `flex flex-row justify-center px-1 pt-2 pb-0`,
-          `3xl:w-1/2 3xl:h-52 3xl:justify-start`
+          `3xl:w-1/2 3xl:h-[13.875rem] 3xl:justify-start`
         )}
       >
         <Image
