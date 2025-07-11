@@ -47,7 +47,7 @@ export default function Testimonial(props: {
                 <StarIcon
                   className={clsx(
                     `fill-warning-500 h-[1.125rem] w-[1.125rem]`,
-                    `2xl:h-[1.1875rem] 2xl:w-[1.1875rem]`
+                    `xl:h-[1.1875rem] xl:w-[1.1875rem]`
                   )}
                   aria-hidden="true"
                 />
@@ -62,7 +62,12 @@ export default function Testimonial(props: {
         </p>
       </div>
       <div className={clsx(`horizontal mt-1 h-auto w-auto justify-center`)}>
-        <h4 className={clsx(`text-large text-default-900 h-auto w-auto font-bold`, `xl:text-[1.1875rem]`)}>
+        <h4
+          className={clsx(
+            `text-large text-default-900 h-auto w-auto font-bold`,
+            `xl:text-[1.1875rem] 2xl:text-xl`
+          )}
+        >
           {name}
         </h4>
       </div>

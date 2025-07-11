@@ -25,11 +25,26 @@ export enum MetricIcon {
 const iconSwitch = (icon: string) => {
   switch (icon) {
     case MetricIcon.FRECUENTES:
-      return <CalendarCheckIcon aria-label={`frequent`} className={clsx('fill-default-500 h-8 w-8')} />
+      return (
+        <CalendarCheckIcon
+          aria-label={`frequent`}
+          className={clsx('fill-default-500 h-[2.0625rem] w-[2.0625rem]')}
+        />
+      )
     case MetricIcon.SATISFECHOS:
-      return <MedalStarIcon aria-label={`satisfied`} className={clsx('fill-default-500 h-9 w-9')} />
+      return (
+        <MedalStarIcon
+          aria-label={`satisfied`}
+          className={clsx('fill-default-500 h-[2.3125rem] w-[2.3125rem]')}
+        />
+      )
     case MetricIcon.CALIFICADOS:
-      return <BadgeCheckIcon aria-label={`qualified`} className={clsx('fill-default-500 h-8 w-8')} />
+      return (
+        <BadgeCheckIcon
+          aria-label={`qualified`}
+          className={clsx('fill-default-500 h-[2.3125rem] w-[2.3125rem]')}
+        />
+      )
     default:
       return <span aria-label={`icon-none`}>?</span>
   }

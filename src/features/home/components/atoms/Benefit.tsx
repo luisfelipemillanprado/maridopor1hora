@@ -139,7 +139,7 @@ export default function Benefit(props: {
     <Card
       className={clsx(
         `bg-content2 border-content3 h-[18.9375rem] w-80 border-1 px-3 py-3.5`,
-        `xl:h-[19.125rem] xl:w-[20.9375rem] 2xl:h-[19.5rem]`
+        `3xl:h-[20.9375rem] 3xl:w-[21.875rem] xl:h-[19.125rem] xl:w-[20.9375rem] 2xl:h-[19.5rem]`
       )}
       shadow={`sm`}
     >

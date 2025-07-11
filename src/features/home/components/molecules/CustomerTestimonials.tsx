@@ -1,10 +1,15 @@
 'use client'
+import { useRef } from 'react'
 import Testimonial from '@/features/home/components/atoms/Testimonial'
+import { Button } from '@heroui/react'
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import type { Swiper as SwiperType } from 'swiper'
 import 'swiper/css'
 import 'swiper/css/effect-cards'
 import 'swiper/css/pagination'
-import { EffectCards, Navigation } from 'swiper/modules'
+import 'swiper/css/navigation'
+import { EffectCards } from 'swiper/modules'
 import clsx from 'clsx'
 
 /**
@@ -28,21 +33,49 @@ export default function CustomerTestimonials(props: {
   score: { key: number }[]
 }) {
   const { testimonials, score } = props
+  const swiperRef = useRef<SwiperType | null>(null)
   return (
-    <Swiper
-      navigation={true}
-      effect={'cards'}
-      grabCursor={true}
-      modules={[EffectCards, Navigation]}
-      className={clsx(`horizontal h-auto w-56 justify-center !pb-1.5`)}
-    >
-      {testimonials.map((item /*, index*/) => {
-        return (
-          <SwiperSlide key={item.key} className={clsx(`bg-content1 shadow-small w-full rounded-xl`)}>
-            <Testimonial {...{ name: item.name, text: item.text, imageUrl: item.imageUrl, score }} />
-          </SwiperSlide>
-        )
-      })}
-    </Swiper>
+    <div className={clsx(`relative`)}>
+      <Swiper
+        onBeforeInit={(swiper) => {
+          swiperRef.current = swiper
+        }}
+        navigation={false}
+        effect={'cards'}
+        grabCursor={true}
+        modules={[EffectCards]}
+        className={clsx(`horizontal h-auto w-56 justify-center !pb-1.5`, `2xl:w-[14.9375rem]`)}
+      >
+        {testimonials.map((item /*, index*/) => {
+          return (
+            <SwiperSlide key={item.key} className={clsx(`bg-content1 shadow-small w-full rounded-xl`)}>
+              <Testimonial {...{ name: item.name, text: item.text, imageUrl: item.imageUrl, score }} />
+            </SwiperSlide>
+          )
+        })}
+        <Button
+          isIconOnly
+          onPress={() => swiperRef.current?.slidePrev()}
+          className={clsx(`bg-content2 absolute top-5/12 -left-2 z-50 shadow-lg`)}
+          variant={`shadow`}
+          radius={`full`}
+          size={`md`}
+          aria-label={`See previous testimony`}
+        >
+          <ChevronLeftIcon className={clsx(`fill-warning h-9 w-9`, `xl:h-9.5 xl:w-9.5`)} />
+        </Button>
+        <Button
+          isIconOnly
+          onPress={() => swiperRef.current?.slideNext()}
+          className={clsx(`bg-content2 absolute top-5/12 -right-2 z-50 shadow-lg`)}
+          variant={`shadow`}
+          radius={`full`}
+          size={`md`}
+          aria-label={`See next testimony`}
+        >
+          <ChevronRightIcon className={clsx(`fill-warning h-9 w-9`, `xl:h-9.5 xl:w-9.5`)} />
+        </Button>
+      </Swiper>
+    </div>
   )
 }
