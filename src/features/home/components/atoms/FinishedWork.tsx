@@ -30,12 +30,7 @@ export default function FinishedWork(props: {
           )}
           color={`default`}
           endContent={
-            <StarIcon
-              className={clsx(
-                `fill-warning-500 h-5.5 w-5.5`,
-                `3xl:h-7 3xl:w-7 xl:h-[1.5625rem] xl:w-[1.5625rem]`
-              )}
-            />
+            <StarIcon className={clsx(`fill-warning-500 h-5 w-5`, `3xl:h-6 3xl:w-6 xl:h-5.5 xl:w-5.5`)} />
           }
           variant={`flat`}
           size={`sm`}
@@ -50,17 +45,21 @@ export default function FinishedWork(props: {
         src={imageUrl}
       />
       <CardFooter
-        className={clsx(`horizontal absolute bottom-0 z-10 bg-black/0 px-3 py-1`, `3xl:py-2.5 3xl:gap-x-4`)}
+        className={clsx(
+          `horizontal absolute bottom-0 z-10 bg-black/0 px-3 py-1`,
+          `3xl:py-2.5 3xl:gap-x-4 3xl:px-4`
+        )}
       >
         <AvatarGroup
-          className={clsx(`3xl:flex hidden`)}
           isBordered
-          color={`default`}
+          className={clsx(`hidden [&>span]:h-7.5 [&>span]:w-7.5`, `3xl:flex`)}
+          color={`warning`}
           max={maxCount}
+          renderCount={(/*count*/) => <></>}
           size={`sm`}
         >
           {workers.map((item /*, index */) => (
-            <Avatar key={item.key} src={item.src} />
+            <Avatar className={clsx(``)} key={item.key} src={item.src} />
           ))}
         </AvatarGroup>
         <span

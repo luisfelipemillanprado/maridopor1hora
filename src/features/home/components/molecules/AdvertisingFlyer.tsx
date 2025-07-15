@@ -75,7 +75,7 @@ export default function AdvertisingFlyer(props: {
         )}
       >
         <Image
-          className={clsx(`h-full w-full rounded-t-xl rounded-b-none object-cover`)}
+          className={clsx(`h-full w-full rounded-t-2xl rounded-b-none object-cover`)}
           src={imageUrl}
           width={260}
           height={260}
