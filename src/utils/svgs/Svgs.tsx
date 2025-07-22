@@ -175,6 +175,16 @@ export const StarIcon = (props: { className: string }) => (
   </svg>
 )
 /**
+ * @function DotsHorizontalIcon
+ * @param props
+ * @returns JSX.Element
+ */
+export const DotsHorizontalIcon = (props: { className: string }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className={props.className}>
+    <path d="M12 10a2 2 0 1 0 0 4 2 2 0 1 0 0-4M18 10a2 2 0 1 0 0 4 2 2 0 1 0 0-4M6 10a2 2 0 1 0 0 4 2 2 0 1 0 0-4"></path>
+  </svg>
+)
+/**
  * @function DotsVerticalIcon
  * @param props
  * @returns JSX.Element

@@ -14,9 +14,10 @@ export default function MainDashboard() {
           {...{
             mainTitles: sd.dashboard.mainTitles,
             searchService: sd.dashboard.searchService,
-            allDetailsServices: sd.dashboard.allDetailsServices,
+            typesOfServices: sd.dashboard.typesOfServices,
             secondaryTitles: sd.dashboard.secondaryTitles,
             mostBookedServices: sd.dashboard.mostBookedServices,
+            detailsServices: sd.dashboard.detailsServices,
           }}
         />
       </main>

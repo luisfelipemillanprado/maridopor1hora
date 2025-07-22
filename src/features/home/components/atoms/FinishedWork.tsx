@@ -1,5 +1,5 @@
-import { Avatar, AvatarGroup, Card, CardFooter, Chip, Image } from '@heroui/react'
-import { StarIcon } from '@/utils/svgs/Svgs'
+import Ratings from '@/common/gcomponents/ratings/Ratings'
+import { Avatar, AvatarGroup, Card, CardFooter, Image } from '@heroui/react'
 import clsx from 'clsx'
 
 /**
@@ -20,24 +20,7 @@ export default function FinishedWork(props: {
   const { imageUrl, text, rating, maxCount, workers } = props
   return (
     <Card isFooterBlurred isPressable className={clsx(`relative col-span-6`, `4xl:col-span-4`)} shadow={`md`}>
-      <div
-        className={clsx(`horizontal absolute top-1.5 right-1.5 z-50 justify-center`, `3xl:top-3 3xl:right-3`)}
-      >
-        <Chip
-          className={clsx(
-            `text-default-50 text-[0.9375rem] [&>span]:pt-0.5 [&>span]:font-semibold`,
-            `xl:text-medium 3xl:text-[1.0625rem]`
-          )}
-          color={`default`}
-          endContent={
-            <StarIcon className={clsx(`fill-warning-500 h-5 w-5`, `3xl:h-6 3xl:w-6 xl:h-5.5 xl:w-5.5`)} />
-          }
-          variant={`flat`}
-          size={`sm`}
-        >
-          {rating}
-        </Chip>
-      </div>
+      <Ratings rating={rating} />
       <Image
         removeWrapper
         alt={`Work ${text} completed satisfactorily`}

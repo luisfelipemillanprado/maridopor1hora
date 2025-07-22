@@ -1,61 +1,50 @@
-import Ratings from '@/common/gcomponents/ratings/Ratings'
+import Image from 'next/image'
 import {
-  Button,
   Card,
-  CardFooter,
+  CardBody,
   CardHeader,
-  Image,
   Modal,
-  ModalBody,
   ModalContent,
-  ModalFooter,
   ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Button,
   useDisclosure,
 } from '@heroui/react'
-import { DotsHorizontalIcon } from '@/utils/svgs/Svgs'
+import { DotsVerticalIcon } from '@/utils/svgs/Svgs'
 import clsx from 'clsx'
+import blurEffects from '@/utils/blurs/Blurs'
 
 /**
- * @description - Displays a booked service card with image, price, rating, and description modal.
- * @param props - The properties for the BookedService component.
- * @param props.imageUrl - The URL of the service image.
- * @param props.text - The name or description of the service.
- * @param props.price - The price of the service.
- * @param props.rating - The rating value for the service.
- * @returns A card component showing the service details and a modal for more information.
+ * @description - Renders a card component displaying a service type with its name and image.
+ * Includes an options button that opens a modal with additional actions or information.
+ * @param props - The properties for the component.
+ * @param props.name - The name of the service to display.
+ * @param props.imageUrl - The URL of the image representing the service.
+ * @returns A card UI element with service details and a modal for further actions.
  */
-export default function BookedService(props: {
-  imageUrl: string
-  text: string
-  price: string
-  rating: number
-}) {
-  const { imageUrl, text, price, rating } = props
+export default function DetailService(props: { name: string; imageUrl: string }) {
+  const { imageUrl, name } = props
   const { isOpen, onOpen, onOpenChange } = useDisclosure()
   return (
-    <Card isPressable as={`div`} className={clsx(`bg-content2 h-auto w-[13.125rem]`)} shadow={`sm`}>
-      <CardHeader className={clsx(`relative px-1 pt-1 pb-0`)}>
-        <Ratings rating={rating} />
-        <div className={clsx(`horizontal rounded-large h-36 w-full justify-start overflow-hidden`)}>
+    <Card isPressable as={`div`} className={clsx(`bg-content2`)} shadow={`sm`}>
+      <CardHeader className={clsx(`horizontal relative justify-start px-3`)}>
+        <div
+          className={clsx(`border-warning h-[3.125rem] w-[3.125rem] overflow-hidden rounded-full border-2`)}
+        >
           <Image
-            className={clsx(`h-full w-full object-cover`)}
-            width={206}
-            height={144}
+            width={50}
+            height={50}
+            className={`h-full w-full object-cover`}
+            placeholder={`blur`}
+            blurDataURL={blurEffects.blurUrl}
             src={imageUrl}
-            alt={`Photo of ${text}`}
-            itemProp={`image`}
+            alt={`${name} service`}
           />
         </div>
-        <div className={clsx(`absolute top-1 left-1 z-50`)}>
-          <Button
-            onPress={onOpen}
-            isIconOnly
-            className={clsx(`bg-content5/35 h-7 min-h-7 w-7 min-w-7`)}
-            aria-label={`More description of ${text}`}
-            radius={`full`}
-            variant={`shadow`}
-          >
-            <DotsHorizontalIcon className={clsx(`fill-default h-7.5 w-7.5`)} />
+        <div className={clsx(`absolute top-1 right-0`)}>
+          <Button onPress={onOpen} isIconOnly className={clsx(`bg-content2 h-9 min-h-9 w-9 min-w-9`)}>
+            <DotsVerticalIcon className={clsx(`fill-content5 h-7.5 w-7.5`)} />
           </Button>
           <Modal
             backdrop={`opaque`}
@@ -90,6 +79,9 @@ export default function BookedService(props: {
                     <Button color="danger" variant="light" onPress={onClose}>
                       Close
                     </Button>
+                    <Button color="primary" onPress={onClose}>
+                      Action
+                    </Button>
                   </ModalFooter>
                 </>
               )}
@@ -97,12 +89,9 @@ export default function BookedService(props: {
           </Modal>
         </div>
       </CardHeader>
-      <CardFooter className={clsx(`horizontal justify-start`)}>
-        <div className={clsx(`vertical items-start gap-y-1 text-start`)}>
-          <span className={clsx(`text-default-500 text-medium`)}>{price}</span>
-          <p className={clsx(`text-default-900 text-[1.0625rem] font-semibold`)}>{text}</p>
-        </div>
-      </CardFooter>
+      <CardBody className={clsx(`justify-center pt-0 pr-0 pl-3`)}>
+        <span className={clsx(`text-default-900 text-[1.0625rem] font-semibold`)}>{name}</span>
+      </CardBody>
     </Card>
   )
 }
