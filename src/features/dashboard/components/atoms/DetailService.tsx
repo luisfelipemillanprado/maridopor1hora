@@ -1,42 +1,61 @@
-import Image from 'next/image'
+// import Ratings from '@/common/gcomponents/ratings/Ratings'
 import {
-  Card,
-  CardBody,
-  CardHeader,
-  Modal,
-  ModalContent,
-  ModalHeader,
-  ModalBody,
-  ModalFooter,
   Button,
+  Card,
+  CardFooter,
+  CardHeader,
+  Image,
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
   useDisclosure,
 } from '@heroui/react'
-import { DotsVerticalIcon } from '@/utils/svgs/Svgs'
+import { DotsHorizontalIcon } from '@/utils/svgs/Svgs'
 import clsx from 'clsx'
-import blurEffects from '@/utils/blurs/Blurs'
 
-export default function DetailService(props: { name: string; imageUrl: string }) {
-  const { imageUrl, name } = props
+/**
+ * @description - Displays a card representing a booked service with an image, description, price, and rating.
+ * Includes a button to open a modal with more details about the service.
+ * @param props - The properties for the BookedService component.
+ * @param props.imageUrl - The URL of the service image.
+ * @param props.text - The description or name of the service.
+ * @param props.price - The price of the service.
+ * @param props.rating - The rating of the service.
+ * @returns A card UI element displaying the service details and a modal for additional information.
+ */
+export default function DetailService(props: { imageUrl: string; text: string }) {
+  const { imageUrl, text } = props
   const { isOpen, onOpen, onOpenChange } = useDisclosure()
   return (
-    <Card isPressable as={`div`} className={clsx(`bg-content3`)} shadow={`sm`}>
-      <CardHeader className={clsx(`horizontal relative justify-start px-3`)}>
-        <div
-          className={clsx(`border-warning h-[2.9375rem] w-[2.9375rem] overflow-hidden rounded-full border-2`)}
-        >
+    <Card
+      isPressable
+      as={`div`}
+      className={clsx(`bg-content2 border-content2 h-auto w-[13.125rem] border-1`)}
+      shadow={`sm`}
+    >
+      <CardHeader className={clsx(`relative px-1 py-1`)}>
+        <div className={clsx(`horizontal rounded-large h-40 justify-start overflow-hidden`)}>
           <Image
-            width={46}
-            height={46}
-            className={`h-full w-full object-cover`}
-            placeholder={`blur`}
-            blurDataURL={blurEffects.blurUrl}
+            className={clsx(`h-full w-full object-cover`)}
+            height={160}
+            width={206}
             src={imageUrl}
-            alt={`${name} service`}
+            alt={`Photo of ${text}`}
+            itemProp={`image`}
           />
         </div>
-        <div className={clsx(`absolute top-1 right-0`)}>
-          <Button onPress={onOpen} isIconOnly className={clsx(`bg-content3 h-9 min-h-9 w-9 min-w-9`)}>
-            <DotsVerticalIcon className={clsx(`fill-content5 h-6.5 w-6.5`)} />
+        <div className={clsx(`absolute top-1 left-1 z-50`)}>
+          <Button
+            onPress={onOpen}
+            isIconOnly
+            className={clsx(`bg-content5/35 h-7 min-h-7 w-7 min-w-7`)}
+            aria-label={`More description of ${text}`}
+            radius={`full`}
+            variant={`shadow`}
+          >
+            <DotsHorizontalIcon className={clsx(`fill-default h-7.5 w-7.5`)} />
           </Button>
           <Modal
             backdrop={`opaque`}
@@ -71,9 +90,6 @@ export default function DetailService(props: { name: string; imageUrl: string })
                     <Button color="danger" variant="light" onPress={onClose}>
                       Close
                     </Button>
-                    <Button color="primary" onPress={onClose}>
-                      Action
-                    </Button>
                   </ModalFooter>
                 </>
               )}
@@ -81,9 +97,14 @@ export default function DetailService(props: { name: string; imageUrl: string })
           </Modal>
         </div>
       </CardHeader>
-      <CardBody className={clsx(`justify-center pt-0 pr-0 pl-3`)}>
-        <span className={clsx(`text-medium text-default-900`)}>{name}</span>
-      </CardBody>
+      <CardFooter
+        className={clsx(
+          `rounded-b-large absolute bottom-1 z-50 ml-1 w-[calc(100%_-_8px)] px-3 py-1.5`,
+          `bg-content5/40`
+        )}
+      >
+        <p className={clsx(`text-default-50 truncate text-[1.0625rem] font-semibold`)}>{text}</p>
+      </CardFooter>
     </Card>
   )
 }

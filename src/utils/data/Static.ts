@@ -438,10 +438,16 @@ const sd = {
   },
   dashboard: {
     mainTitles: {
-      titles: [`Encontra todos tus servicios aquí.`],
+      titles: [`Encuentra todos tus servicios aquí.`],
     },
     secondaryTitles: {
-      title: [`Servicios más reservados.`],
+      title: [
+        `Servicios Más Solicitados.`,
+        `Limpieza Y Control De Plagas.`,
+        `Servicios De Fontanería.`,
+        `Servicios De Electricista.`,
+        `Servicios De Albañilería.`,
+      ],
     },
     searchService: {
       placeholder: [`tipo de servicio a buscar...`],
@@ -459,45 +465,45 @@ const sd = {
         { key: `cleaning`, label: `Limpieza` },
       ],
     },
-    allDetailsServices: {
+    typesOfServices: {
       imageUrls: [
         {
-          name: `Electricidad.`,
+          name: `Electricista`,
           imageUrl: `/images/main/services/serviceelectrical01.webp`,
           key: Math.random(),
         },
         {
-          name: `Fontanería.`,
+          name: `Fontanería`,
           imageUrl: `/images/main/services/serviceplumbing02.webp`,
           key: Math.random(),
         },
         {
-          name: `Climatizar.`,
+          name: `Climatizar`,
           imageUrl: `/images/main/services/serviceclimax03.webp`,
           key: Math.random(),
         },
         {
-          name: `Albañilería.`,
+          name: `Albañilería`,
           imageUrl: `/images/main/services/servicemasonry05.webp`,
           key: Math.random(),
         },
         {
-          name: `Carpintería.`,
+          name: `Carpintería`,
           imageUrl: `/images/main/services/servicecarpentry04.webp`,
           key: Math.random(),
         },
         {
-          name: `Limpieza.`,
+          name: `Limpieza`,
           imageUrl: `/images/main/services/servicecleaning06.webp`,
           key: Math.random(),
         },
         {
-          name: `Pladur.`,
+          name: `Pladur`,
           imageUrl: `/images/main/services/serviceplasterboard08.webp`,
           key: Math.random(),
         },
         {
-          name: `Manitas.`,
+          name: `Manitas`,
           imageUrl: `/images/main/services/servicehandyman07.webp`,
           key: Math.random(),
         },
@@ -506,30 +512,30 @@ const sd = {
     mostBookedServices: {
       bookedServices: [
         {
+          text: `Reparación de aire-acondicionado.`,
+          imageUrl: `/images/main/bookedservice/bookedservice05.webp`,
+          price: `80-200 €/tratamiento`,
+          rating: 4.5,
+          key: Math.random(),
+        },
+        {
           text: `Limpieza básica (o premium) del hogar.`,
-          imageUrl: `/images/main/services/serviceelectrical01.webp`,
+          imageUrl: `/images/main/bookedservice/bookedservice08.webp`,
           price: `10-15 €/hora`,
           rating: 4.5,
           key: Math.random(),
         },
         {
-          text: `Control de plagas (cucarachas y chinches).`,
-          imageUrl: `/images/main/services/serviceplumbing02.webp`,
+          text: `Control de plagas (chinches y otros).`,
+          imageUrl: `/images/main/bookedservice/bookedservice01.webp`,
           price: `150-300 €/tratamiento`,
           rating: 4.5,
           key: Math.random(),
         },
         {
           text: `Fontanería y reparaciones urgentes.`,
-          imageUrl: `/images/main/services/serviceclimax03.webp`,
+          imageUrl: `/images/main/bookedservice/bookedservice02.webp`,
           price: `25-100 €/hora`,
-          rating: 4.5,
-          key: Math.random(),
-        },
-        {
-          text: `Reparación de aire-acondicionado.`,
-          imageUrl: `/images/main/services/servicemasonry05.webp`,
-          price: `80-200 €/tratamiento`,
           rating: 4.5,
           key: Math.random(),
         },
@@ -542,9 +548,205 @@ const sd = {
         },
         {
           text: `Pintura del hogar (completa o parcial).`,
-          imageUrl: `/images/main/services/servicecleaning06.webp`,
+          imageUrl: `/images/main/bookedservice/bookedservice09.webp`,
           price: `	4-25 €/m² tratamiento`,
           rating: 4.5,
+          key: Math.random(),
+        },
+        {
+          text: `Limpieza de alfombras y muebles.`,
+          imageUrl: `/images/main/bookedservice/bookedservice07.webp`,
+          price: `	15-100 €/tratamiento`,
+          rating: 4.5,
+          key: Math.random(),
+        },
+        {
+          text: `Lavandería y tintorería a domicilio.`,
+          imageUrl: `/images/main/bookedservice/bookedservice06.webp`,
+          price: `	10-125 €/tratamiento`,
+          rating: 4.5,
+          key: Math.random(),
+        },
+        {
+          text: `Limpieza de cristales y ventanas.`,
+          imageUrl: `/images/main/bookedservice/bookedservice03.webp`,
+          price: `	80-350 €/tratamiento`,
+          rating: 4.5,
+          key: Math.random(),
+        },
+      ],
+    },
+    detailsServices: {
+      cleaningPestControl: [
+        {
+          text: `Limpieza de paredes, techos y ventanas.`,
+          imageUrl: `/images/main/cleaningpestcontrol/cleaningpestcontrol05.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Limpieza profunda de cocina.`,
+          imageUrl: `/images/main/cleaningpestcontrol/cleaningpestcontrol01.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Limpieza completa del hogar.`,
+          imageUrl: `/images/main/cleaningpestcontrol/cleaningpestcontrol03.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Lavado de alfombras, tapicerías y cortinas.`,
+          imageUrl: `/images/main/cleaningpestcontrol/cleaningpestcontrol02.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Limpieza profunda de baños.`,
+          imageUrl: `/images/main/cleaningpestcontrol/cleaningpestcontrol04.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Control de plagas (roedores e insectos).`,
+          imageUrl: `/images/main/cleaningpestcontrol/cleaningpestcontrol06.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Limpieza post-obra o post-mudanza.`,
+          imageUrl: `/images/main/cleaningpestcontrol/cleaningpestcontrol07.webp`,
+          key: Math.random(),
+        },
+      ],
+      plumbing: [
+        {
+          text: `Montaje de sistemas de calefacción y ACS.`,
+          imageUrl: `/images/main/plumbing/plumbing02.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Cambio de cisternas, inodoros, bidés.`,
+          imageUrl: `/images/main/plumbing/plumbing01.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Recambio de tuberías rotas.`,
+          imageUrl: `/images/main/plumbing/plumbing03.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Sellado de juntas y conexiones.`,
+          imageUrl: `/images/main/plumbing/plumbing04.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Reemplazo de válvulas y grifos defectuosos.`,
+          imageUrl: `/images/main/plumbing/plumbing05.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Colocación de lavavajillas y lavadoras.`,
+          imageUrl: `/images/main/plumbing/plumbing06.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Colocación de mamparas y duchas.`,
+          imageUrl: `/images/main/plumbing/plumbing07.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Eliminación de atascos en tuberías.`,
+          imageUrl: `/images/main/plumbing/plumbing08.webp`,
+          key: Math.random(),
+        },
+      ],
+      electrician: [
+        {
+          text: `Instalación y reparación de luminarias.`,
+          imageUrl: `/images/main/electrician/electrician03.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Instalación de sistemas de vigilancia.`,
+          imageUrl: `/images/main/electrician/electrician01.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Detección y reparación de cortocircuitos.`,
+          imageUrl: `/images/main/electrician/electrician02.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Instalación de sistemas de domótica.`,
+          imageUrl: `/images/main/electrician/electrician04.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Instalación de sensores de humo y gas.`,
+          imageUrl: `/images/main/electrician/electrician05.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Instalación de paneles de interruptores.`,
+          imageUrl: `/images/main/electrician/electrician06.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Instalación de timbres inteligentes.`,
+          imageUrl: `/images/main/electrician/electrician07.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Sustitución de mecanismos eléctricos.`,
+          imageUrl: `/images/main/electrician/electrician08.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Inspección eléctrica de la vivienda.`,
+          imageUrl: `/images/main/electrician/electrician09.webp`,
+          key: Math.random(),
+        },
+      ],
+      masonry: [
+        {
+          text: `Colocación de azulejos y baldosas.`,
+          imageUrl: `/images/main/masonry/masonry01.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Construcción de muros perimetrales.`,
+          imageUrl: `/images/main/masonry/masonry02.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Construcción de escaleras interiores.`,
+          imageUrl: `/images/main/masonry/masonry03.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Acabados decorativos, modernos y duraderos.`,
+          imageUrl: `/images/main/masonry/masonry04.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Pavimentación de patios, terrazas y jardines.`,
+          imageUrl: `/images/main/masonry/masonry05.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Rehabilitación de revestimientos de exteriores.`,
+          imageUrl: `/images/main/masonry/masonry06.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Cerramiento o cerco de terrazas de lujo.`,
+          imageUrl: `/images/main/masonry/masonry07.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Preparación de paredes para acabados decorativos.`,
+          imageUrl: `/images/main/masonry/masonry08.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Reparación de techos, paredes y suelos.`,
+          imageUrl: `/images/main/masonry/masonry09.webp`,
           key: Math.random(),
         },
       ],

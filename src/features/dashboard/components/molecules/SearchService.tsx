@@ -42,7 +42,7 @@ export default function SearchService(props: {
           </SelectItem>
         ))}
       </Select>
-      <div className={clsx(`horizontal h-auto w-[77%] justify-between gap-x-2`)}>
+      <div className={clsx(`horizontal h-auto w-[78%] justify-between gap-x-2`)}>
         <Input
           id={name[0]}
           name={name[0]}
