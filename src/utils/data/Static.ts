@@ -443,10 +443,12 @@ const sd = {
     secondaryTitles: {
       title: [
         `Servicios Más Solicitados.`,
-        `Limpieza Y Control De Plagas.`,
+        `Limpieza, Control De Plagas.`,
         `Servicios De Fontanería.`,
         `Servicios De Electricista.`,
         `Servicios De Albañilería.`,
+        `Servicios De Carpintería.`,
+        `Servicios De Climatización.`,
       ],
     },
     searchService: {
@@ -512,7 +514,7 @@ const sd = {
     mostBookedServices: {
       bookedServices: [
         {
-          text: `Reparación de aire-acondicionado.`,
+          text: `Mantenimiento de aire-acondicionado.`,
           imageUrl: `/images/main/bookedservice/bookedservice05.webp`,
           price: `80-200 €/tratamiento`,
           rating: 4.5,
@@ -747,6 +749,85 @@ const sd = {
         {
           text: `Reparación de techos, paredes y suelos.`,
           imageUrl: `/images/main/masonry/masonry09.webp`,
+          key: Math.random(),
+        },
+      ],
+      carpentry: [
+        {
+          text: `Carpintería de muebles de cocina a medida.`,
+          imageUrl: `/images/main/carpentry/carpentry01.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Colocación de parquet laminado o flotante.`,
+          imageUrl: `/images/main/carpentry/carpentry03.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Renovación sin cambiar de suelos antiguos.`,
+          imageUrl: `/images/main/carpentry/carpentry02.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Cambio o reparación de puertas interiores.`,
+          imageUrl: `/images/main/carpentry/carpentry08.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Cambio o reparación de ventanas de PVC o aluminio.`,
+          imageUrl: `/images/main/carpentry/carpentry04.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Montaje de muebles de Ikea o similares`,
+          imageUrl: `/images/main/carpentry/carpentry06.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Armarios y vestidores modernos empotrados.`,
+          imageUrl: `/images/main/carpentry/carpentry05.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Carpintería de estanterías y librerías a medida.`,
+          imageUrl: `/images/main/carpentry/carpentry07.webp`,
+          key: Math.random(),
+        },
+      ],
+      airConditioning: [
+        {
+          text: `Instalación de sistemas de extracción de aire.`,
+          imageUrl: `/images/main/airconditioning/airconditioning02.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Mantenimiento periódico de sistemas de compresores.`,
+          imageUrl: `/images/main/airconditioning/airconditioning01.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Desinstalación y retirada de equipos de aire acondicionado.`,
+          imageUrl: `/images/main/airconditioning/airconditioning03.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Instalación de equipos de aire acondicionado.`,
+          imageUrl: `/images/main/airconditioning/airconditioning04.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Reparación de sistemas de aire acondicionado.`,
+          imageUrl: `/images/main/airconditioning/airconditioning05.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Reparación de sistemas de aire acondicionado.`,
+          imageUrl: `/images/main/airconditioning/airconditioning06.webp`,
+          key: Math.random(),
+        },
+        {
+          text: `Reparación de sistemas de aire acondicionado.`,
+          imageUrl: `/images/main/airconditioning/airconditioning07.webp`,
           key: Math.random(),
         },
       ],

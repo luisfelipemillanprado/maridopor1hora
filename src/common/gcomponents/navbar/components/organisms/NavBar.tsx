@@ -31,10 +31,7 @@ export default function NavBar(props: {
   const { navbar } = props
   return (
     <Navbar
-      className={clsx(
-        `h-[3.75rem] bg-inherit pt-1.5 backdrop-blur-none [&>header]:px-4`,
-        `3xl:[&>header]:px-8`
-      )}
+      className={clsx(`h-16 bg-inherit pt-1.5 backdrop-blur-none [&>header]:px-4`, `3xl:[&>header]:px-8`)}
     >
       <NavbarContent className={clsx(``)} justify={`start`}>
         <NavbarBrand className={clsx(`mr-10`)}>
