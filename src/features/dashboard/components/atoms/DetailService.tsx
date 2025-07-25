@@ -12,7 +12,7 @@ import {
   ModalHeader,
   useDisclosure,
 } from '@heroui/react'
-import { DotsHorizontalIcon } from '@/utils/svgs/Svgs'
+import { DotsVerticalIcon } from '@/utils/svgs/Svgs'
 import clsx from 'clsx'
 
 /**
@@ -32,7 +32,7 @@ export default function DetailService(props: { imageUrl: string; text: string })
     <Card
       isPressable
       as={`div`}
-      className={clsx(`bg-content2 border-content2 h-auto w-[13.125rem] border-1`)}
+      className={clsx(`bg-content2 border-content2 h-auto w-48 border-1`)}
       shadow={`sm`}
     >
       <CardHeader className={clsx(`relative px-1 py-1`)}>
@@ -55,7 +55,7 @@ export default function DetailService(props: { imageUrl: string; text: string })
             radius={`full`}
             variant={`shadow`}
           >
-            <DotsHorizontalIcon className={clsx(`fill-default h-7.5 w-7.5`)} />
+            <DotsVerticalIcon className={clsx(`fill-default h-7.5 w-7.5`)} />
           </Button>
           <Modal
             backdrop={`opaque`}

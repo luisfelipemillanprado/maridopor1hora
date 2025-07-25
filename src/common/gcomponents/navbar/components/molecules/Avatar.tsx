@@ -38,7 +38,7 @@ export default function Avatars(props: {
       <DropdownTrigger>
         <Button
           className={clsx(
-            `vertical h-11 w-11 min-w-11 items-center p-2`,
+            `vertical h-[2.875rem] w-[2.875rem] min-w-[2.875rem] items-center p-2`,
             `3xl:h-12 3xl:w-12 xl:h-[2.8125rem] xl:w-[2.8125rem]`
           )}
           variant={`light`}
@@ -54,7 +54,7 @@ export default function Avatars(props: {
           >
             <Avatar
               className={clsx(
-                `h-[2.1875rem] w-[2.1875rem]`,
+                `h-[2.375rem] w-[2.375rem]`,
                 `3xl:h-[2.3125rem] 3xl:w-[2.3125rem] xl:h-9 xl:w-9`
               )}
               isBordered

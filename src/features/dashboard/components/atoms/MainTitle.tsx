@@ -11,7 +11,7 @@ export default function MainTitle(props: { title: string }) {
   return (
     <h1
       className={clsx(
-        `horizontal text-default-900 h-auto w-full justify-start text-[1.5625rem] font-bold text-shadow-sm`,
+        `horizontal text-default-900 h-auto w-full justify-start text-[1.625rem] font-bold text-shadow-sm`,
         `from-default-900 to-warning-500 via-default-600 bg-gradient-to-tr from-50% via-55% to-60%`,
         `bg-clip-text text-transparent`
       )}

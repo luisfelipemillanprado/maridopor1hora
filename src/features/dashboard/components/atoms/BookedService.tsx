@@ -12,7 +12,7 @@ import {
   ModalHeader,
   useDisclosure,
 } from '@heroui/react'
-import { DotsHorizontalIcon } from '@/utils/svgs/Svgs'
+import { DotsVerticalIcon } from '@/utils/svgs/Svgs'
 import clsx from 'clsx'
 
 /**
@@ -33,7 +33,7 @@ export default function BookedService(props: {
   const { imageUrl, text, price, rating } = props
   const { isOpen, onOpen, onOpenChange } = useDisclosure()
   return (
-    <Card isPressable as={`div`} className={clsx(`bg-content2 h-auto w-[13.125rem]`)} shadow={`sm`}>
+    <Card isPressable as={`div`} className={clsx(`bg-content3 h-auto w-48`)} shadow={`sm`}>
       <CardHeader className={clsx(`relative px-1 pt-1 pb-0`)}>
         <Ratings rating={rating} />
         <div className={clsx(`horizontal rounded-large h-36 w-full justify-start overflow-hidden`)}>
@@ -55,7 +55,7 @@ export default function BookedService(props: {
             radius={`full`}
             variant={`shadow`}
           >
-            <DotsHorizontalIcon className={clsx(`fill-default h-7.5 w-7.5`)} />
+            <DotsVerticalIcon className={clsx(`fill-default h-7.5 w-7.5`)} />
           </Button>
           <Modal
             backdrop={`opaque`}
@@ -100,7 +100,7 @@ export default function BookedService(props: {
       <CardFooter className={clsx(`horizontal justify-start`)}>
         <div className={clsx(`vertical items-start gap-y-1 text-start`)}>
           <span className={clsx(`text-default-500 text-medium`)}>{price}</span>
-          <p className={clsx(`text-default-900 text-[1.0625rem] font-semibold`)}>{text}</p>
+          <p className={clsx(`text-default-900 text-medium font-semibold`)}>{text}</p>
         </div>
       </CardFooter>
     </Card>

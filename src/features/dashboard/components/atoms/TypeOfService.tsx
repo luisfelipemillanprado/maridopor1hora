@@ -30,7 +30,10 @@ export default function DetailService(props: { name: string; imageUrl: string })
     <Card isPressable as={`div`} className={clsx(`bg-content2`)} shadow={`sm`}>
       <CardHeader className={clsx(`horizontal relative justify-start px-3`)}>
         <div
-          className={clsx(`border-warning h-[3.125rem] w-[3.125rem] overflow-hidden rounded-full border-2`)}
+          className={clsx(
+            `rounded-large border-warning h-[3.125rem] w-[3.125rem] overflow-hidden border-1`,
+            `drop-shadow-lg`
+          )}
         >
           <Image
             width={50}

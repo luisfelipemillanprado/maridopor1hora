@@ -59,6 +59,16 @@ export default function Main(props: {
       imageUrl: string
       key: number
     }[]
+    carpentry: {
+      text: string
+      imageUrl: string
+      key: number
+    }[]
+    airConditioning: {
+      text: string
+      imageUrl: string
+      key: number
+    }[]
   }
 }) {
   const { mainTitles, searchService, typesOfServices, secondaryTitles, mostBookedServices, detailsServices } =
@@ -83,12 +93,12 @@ export default function Main(props: {
           }}
         />
       </section>
-      <section aria-label={``} className={clsx(`horizontal relative mb-5.5 h-auto w-full px-4.5`)}>
+      <section aria-label={``} className={clsx(`horizontal relative mb-6 h-auto w-full px-4.5`)}>
         <div className={clsx(`horizontal h-auto w-full`)}>
           <TypesOfServices {...{ imageUrls: typesOfServices.imageUrls }} />
         </div>
       </section>
-      <section aria-label={``} className={clsx(`horizontal relative mb-3.5 h-auto w-full pl-3`)}>
+      <section aria-label={``} className={clsx(`horizontal relative mb-3 h-auto w-full pl-3`)}>
         <div className={clsx(`vertical h-auto w-full items-start gap-y-0.5`)}>
           <div className={clsx(`horizontal w-full justify-center px-1.5`)}>
             <SecondaryTitle {...{ title: secondaryTitles.title[0] }} />
@@ -96,7 +106,7 @@ export default function Main(props: {
           <MostBookedServices {...{ bookedServices: mostBookedServices.bookedServices }} />
         </div>
       </section>
-      <section aria-label={``} className={clsx(`horizontal relative mb-3.5 h-auto w-full pl-3`)}>
+      <section aria-label={``} className={clsx(`horizontal relative mb-3 h-auto w-full pl-3`)}>
         <div className={clsx(`vertical h-auto w-full items-start gap-y-0.5`)}>
           <div className={clsx(`horizontal w-full justify-center px-1.5`)}>
             <SecondaryTitle {...{ title: secondaryTitles.title[1] }} />
@@ -104,7 +114,7 @@ export default function Main(props: {
           <DetailsServices {...{ destailsServices: detailsServices.cleaningPestControl }} />
         </div>
       </section>
-      <section aria-label={``} className={clsx(`horizontal relative mb-3.5 h-auto w-full pl-3`)}>
+      <section aria-label={``} className={clsx(`horizontal relative mb-3 h-auto w-full pl-3`)}>
         <div className={clsx(`vertical h-auto w-full items-start gap-y-0.5`)}>
           <div className={clsx(`horizontal w-full justify-center px-1.5`)}>
             <SecondaryTitle {...{ title: secondaryTitles.title[2] }} />
@@ -112,7 +122,7 @@ export default function Main(props: {
           <DetailsServices {...{ destailsServices: detailsServices.plumbing }} />
         </div>
       </section>
-      <section aria-label={``} className={clsx(`horizontal relative mb-3.5 h-auto w-full pl-3`)}>
+      <section aria-label={``} className={clsx(`horizontal relative mb-3 h-auto w-full pl-3`)}>
         <div className={clsx(`vertical h-auto w-full items-start gap-y-0.5`)}>
           <div className={clsx(`horizontal w-full justify-center px-1.5`)}>
             <SecondaryTitle {...{ title: secondaryTitles.title[3] }} />
@@ -120,7 +130,7 @@ export default function Main(props: {
           <DetailsServices {...{ destailsServices: detailsServices.electrician }} />
         </div>
       </section>
-      <section aria-label={``} className={clsx(`horizontal relative mb-3.5 h-auto w-full pl-3`)}>
+      <section aria-label={``} className={clsx(`horizontal relative mb-3 h-auto w-full pl-3`)}>
         <div className={clsx(`vertical h-auto w-full items-start gap-y-0.5`)}>
           <div className={clsx(`horizontal w-full justify-center px-1.5`)}>
             <SecondaryTitle {...{ title: secondaryTitles.title[4] }} />
@@ -128,14 +138,22 @@ export default function Main(props: {
           <DetailsServices {...{ destailsServices: detailsServices.masonry }} />
         </div>
       </section>
-      <p>lcmwekcmqeflcvefmkvcmefvcefkmcvelkmcekol</p>
-      <p>lcmwekcmqeflcvefmkvcmefvcefkmcvelkmcekol</p>
-      <p>lcmwekcmqeflcvefmkvcmefvcefkmcvelkmcekol</p>
-      <p>lcmwekcmqeflcvefmkvcmefvcefkmcvelkmcekol</p>
-      <p>lcmwekcmqeflcvefmkvcmefvcefkmcvelkmcekol</p>
-      <p>lcmwekcmqeflcvefmkvcmefvcefkmcvelkmcekol</p>
-      <p>lcmwekcmqeflcvefmkvcmefvcefkmcvelkmcekol</p>
-      <p>lcmwekcmqeflcvefmkvcmefvcefkmcvelkmcekol</p>
+      <section aria-label={``} className={clsx(`horizontal relative mb-3 h-auto w-full pl-3`)}>
+        <div className={clsx(`vertical h-auto w-full items-start gap-y-0.5`)}>
+          <div className={clsx(`horizontal w-full justify-center px-1.5`)}>
+            <SecondaryTitle {...{ title: secondaryTitles.title[5] }} />
+          </div>
+          <DetailsServices {...{ destailsServices: detailsServices.carpentry }} />
+        </div>
+      </section>
+      <section aria-label={``} className={clsx(`horizontal relative mb-3 h-auto w-full pl-3`)}>
+        <div className={clsx(`vertical h-auto w-full items-start gap-y-0.5`)}>
+          <div className={clsx(`horizontal w-full justify-center px-1.5`)}>
+            <SecondaryTitle {...{ title: secondaryTitles.title[6] }} />
+          </div>
+          <DetailsServices {...{ destailsServices: detailsServices.airConditioning }} />
+        </div>
+      </section>
     </div>
   )
 }
