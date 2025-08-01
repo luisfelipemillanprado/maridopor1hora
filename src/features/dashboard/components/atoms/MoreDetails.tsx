@@ -31,7 +31,7 @@ import clsx from 'clsx'
 export default function MoreDetails(props: {
   imageUrl: string
   title: string
-  moreDetails?: {
+  moreDetails: {
     text1: string
     text2: string
     text3: string
@@ -41,14 +41,18 @@ export default function MoreDetails(props: {
     }
     description: string
     phases: { step: string }[]
-    frequentlyAskedQuestions: {
-      questions: {
-        question: string
-        answer: string
-        key: number
-      }[]
-    }
+    questions: {
+      question: string
+      answer: string
+      key: number
+    }[]
     ventajas: string
+    testimonials: {
+      name: string
+      text: string
+      imageUrl: string
+      key: number
+    }[]
   }
 }) {
   const { imageUrl, title, moreDetails } = props
@@ -94,10 +98,10 @@ export default function MoreDetails(props: {
                   <SecondaryTitle {...{ title }} />
                 </div>
                 <div className={clsx(`horizontal w-full justify-start`)}>
-                  <span className={clsx(`text-default-900 text-medium`)}>{moreDetails?.description}</span>
+                  <span className={clsx(`text-default-900 text-medium`)}>{moreDetails.description}</span>
                 </div>
                 <div className={clsx(`horizontal w-full justify-start pb-1`)}>
-                  <TertiaryTitle {...{ title: moreDetails?.text1 }} />
+                  <TertiaryTitle {...{ title: moreDetails.text1 }} />
                 </div>
                 <div className={clsx(`vertical w-full gap-y-3 pb-1.5`)}>
                   {moreDetails?.phases?.map((item, index) => (
@@ -113,16 +117,16 @@ export default function MoreDetails(props: {
                   ))}
                 </div>
                 <div className={clsx(`horizontal w-full justify-start pb-1`)}>
-                  <TertiaryTitle {...{ title: moreDetails?.text2 }} />
+                  <TertiaryTitle {...{ title: moreDetails.text2 }} />
                 </div>
                 <div className={clsx(`horizontal w-full pb-1.5`)}>
-                  <FQAsService {...{ questions: moreDetails?.frequentlyAskedQuestions?.questions }} />
+                  <FQAsService {...{ questions: moreDetails.questions }} />
                 </div>
                 <div className={clsx(`horizontal justify-start pb-[0.0625rem]`)}>
-                  <TertiaryTitle {...{ title: moreDetails?.text3 }} />
+                  <TertiaryTitle {...{ title: moreDetails.text3 }} />
                 </div>
                 <div className={clsx(`horizontal w-full justify-start`)}>
-                  <p className={clsx(`text-default-900 text-medium`)}>{moreDetails?.ventajas}</p>
+                  <p className={clsx(`text-default-900 text-medium`)}>{moreDetails.ventajas}</p>
                 </div>
               </div>
             </ModalBody>
@@ -131,14 +135,14 @@ export default function MoreDetails(props: {
                 <Button
                   className={clsx(`bg-warning shadow-small px-4`)}
                   as={Link}
-                  href={moreDetails?.link?.href}
+                  href={moreDetails.link.href}
                   color={`warning`}
                   variant={`shadow`}
                   size={`md`}
                   radius={`full`}
-                  aria-label={`${moreDetails?.text1} button`}
+                  aria-label={`${moreDetails.text1} button`}
                 >
-                  <span className={clsx(`text-default text-medium pt-0.5`)}>{moreDetails?.link?.text}</span>
+                  <span className={clsx(`text-default text-medium pt-0.5`)}>{moreDetails.link.text}</span>
                 </Button>
               </div>
             </ModalFooter>
