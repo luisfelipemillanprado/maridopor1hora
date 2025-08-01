@@ -15,7 +15,7 @@ import clsx from 'clsx'
 export default function DetailService(props: {
   imageUrl: string
   title: string
-  moreDetails?: {
+  moreDetails: {
     text1: string
     text2: string
     text3: string
@@ -25,14 +25,18 @@ export default function DetailService(props: {
     }
     description: string
     phases: { step: string }[]
-    frequentlyAskedQuestions: {
-      questions: {
-        question: string
-        answer: string
-        key: number
-      }[]
-    }
+    questions: {
+      question: string
+      answer: string
+      key: number
+    }[]
     ventajas: string
+    testimonials: {
+      name: string
+      text: string
+      imageUrl: string
+      key: number
+    }[]
   }
 }) {
   const { imageUrl, title, moreDetails } = props

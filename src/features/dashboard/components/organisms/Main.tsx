@@ -68,14 +68,18 @@ export default function Main(props: {
         }
         description: string
         phases: { step: string }[]
-        frequentlyAskedQuestions: {
-          questions: {
-            question: string
-            answer: string
-            key: number
-          }[]
-        }
+        questions: {
+          question: string
+          answer: string
+          key: number
+        }[]
         ventajas: string
+        testimonials: {
+          name: string
+          text: string
+          imageUrl: string
+          key: number
+        }[]
       }
       key: number
     }[]
@@ -92,14 +96,18 @@ export default function Main(props: {
         }
         description: string
         phases: { step: string }[]
-        frequentlyAskedQuestions: {
-          questions: {
-            question: string
-            answer: string
-            key: number
-          }[]
-        }
+        questions: {
+          question: string
+          answer: string
+          key: number
+        }[]
         ventajas: string
+        testimonials: {
+          name: string
+          text: string
+          imageUrl: string
+          key: number
+        }[]
       }
       key: number
     }[]
@@ -116,14 +124,18 @@ export default function Main(props: {
         }
         description: string
         phases: { step: string }[]
-        frequentlyAskedQuestions: {
-          questions: {
-            question: string
-            answer: string
-            key: number
-          }[]
-        }
+        questions: {
+          question: string
+          answer: string
+          key: number
+        }[]
         ventajas: string
+        testimonials: {
+          name: string
+          text: string
+          imageUrl: string
+          key: number
+        }[]
       }
       key: number
     }[]
@@ -140,14 +152,18 @@ export default function Main(props: {
         }
         description: string
         phases: { step: string }[]
-        frequentlyAskedQuestions: {
-          questions: {
-            question: string
-            answer: string
-            key: number
-          }[]
-        }
+        questions: {
+          question: string
+          answer: string
+          key: number
+        }[]
         ventajas: string
+        testimonials: {
+          name: string
+          text: string
+          imageUrl: string
+          key: number
+        }[]
       }
       key: number
     }[]
@@ -164,14 +180,18 @@ export default function Main(props: {
         }
         description: string
         phases: { step: string }[]
-        frequentlyAskedQuestions: {
-          questions: {
-            question: string
-            answer: string
-            key: number
-          }[]
-        }
+        questions: {
+          question: string
+          answer: string
+          key: number
+        }[]
         ventajas: string
+        testimonials: {
+          name: string
+          text: string
+          imageUrl: string
+          key: number
+        }[]
       }
       key: number
     }[]
@@ -188,14 +208,18 @@ export default function Main(props: {
         }
         description: string
         phases: { step: string }[]
-        frequentlyAskedQuestions: {
-          questions: {
-            question: string
-            answer: string
-            key: number
-          }[]
-        }
+        questions: {
+          question: string
+          answer: string
+          key: number
+        }[]
         ventajas: string
+        testimonials: {
+          name: string
+          text: string
+          imageUrl: string
+          key: number
+        }[]
       }
       key: number
     }[]
@@ -212,14 +236,18 @@ export default function Main(props: {
         }
         description: string
         phases: { step: string }[]
-        frequentlyAskedQuestions: {
-          questions: {
-            question: string
-            answer: string
-            key: number
-          }[]
-        }
+        questions: {
+          question: string
+          answer: string
+          key: number
+        }[]
         ventajas: string
+        testimonials: {
+          name: string
+          text: string
+          imageUrl: string
+          key: number
+        }[]
       }
       key: number
     }[]
