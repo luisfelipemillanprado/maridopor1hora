@@ -2,7 +2,7 @@ import { Accordion, AccordionItem } from '@heroui/react'
 import clsx from 'clsx'
 
 export default function FQAsService(props: {
-  questions?: {
+  questions: {
     question: string
     answer: string
     key: number

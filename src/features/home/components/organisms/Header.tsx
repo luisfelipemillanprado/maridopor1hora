@@ -57,12 +57,10 @@ export default function Header(props: {
 }) {
   const { peekServices, mainTitle, linksButtons, navbar, metrics, popularServices } = props
   return (
-    <div className={clsx(`horizontal h-auto w-full`)}>
-      <section
-        aria-label={`peek-services`}
+    <section aria-label={`peek-services`} className={clsx(`horizontal h-auto w-full`)}>
+      <div
         className={clsx(
-          `relative h-[28.125rem] w-full overflow-hidden rounded-tl-[1.25rem] rounded-tr-[1.25rem] rounded-br-[1.25rem]`,
-          `rounded-bl-[1.25rem]`,
+          `relative h-[28.125rem] w-full overflow-hidden rounded-[1.25rem]`,
           `3xl:h-[34.1875rem] 2xl:h-[28.3125rem]`
         )}
       >
@@ -71,20 +69,12 @@ export default function Header(props: {
         </div>
         <div className={clsx(`horizontal relative h-auto w-full p-2`, `3xl:px-6 3xl:py-3 4xl:px-8 xl:px-3`)}>
           <PeekServices {...{ peekServices }} />
-          <div className={clsx(`absolute top-[17%] right-0 left-0 z-10 h-auto w-full`, `xl:top-[16%]`)}>
-            <MainTitle {...{ mainTitle }} />
-          </div>
-          <div className={clsx(`absolute top-[56%] right-0 left-0 z-10 h-auto w-full`, `3xl:top-[43.5%]`)}>
-            <LinksButtons {...{ linksButtons }} />
-          </div>
-          <div className={clsx(`absolute top-[65%] right-0 left-0 z-10 hidden h-auto w-full`, `3xl:block`)}>
-            <PopularServices {...{ services: popularServices.services }} />
-          </div>
-          <div className={clsx(`absolute right-0 -bottom-8.5 left-0 z-20`, `3xl:-bottom-10 2xl:-bottom-9`)}>
-            <Metrics {...{ metrics }} />
-          </div>
+          <MainTitle {...{ mainTitle }} />
+          <LinksButtons {...{ linksButtons }} />
+          <PopularServices {...{ services: popularServices.services }} />
+          <Metrics {...{ metrics }} />
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   )
 }
