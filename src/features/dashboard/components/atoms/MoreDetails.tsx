@@ -32,9 +32,7 @@ export default function MoreDetails(props: {
   imageUrl: string
   title: string
   moreDetails: {
-    text1: string
-    text2: string
-    text3: string
+    subTitles: string[]
     link: {
       href: string
       text: string
@@ -62,15 +60,15 @@ export default function MoreDetails(props: {
       <Button
         onPress={onOpen}
         isIconOnly
-        className={clsx(`bg-content5/35 h-7 min-h-7 w-7 min-w-7`)}
+        className={clsx(`bg-content5/35 h-7.5 min-h-7.5 w-7.5 min-w-7.5`)}
         aria-label={`More description of the service`}
         radius={`full`}
         variant={`shadow`}
       >
-        <DotsVerticalIcon className={clsx(`fill-default h-7.5 w-7.5`)} />
+        <DotsVerticalIcon className={clsx(`fill-default h-8 w-8`)} />
       </Button>
       <Modal
-        className={clsx(`bg-content7`)}
+        className={clsx(`bg-content7 overflow-hidden`)}
         backdrop={`opaque`}
         scrollBehavior={`inside`}
         classNames={{
@@ -101,7 +99,7 @@ export default function MoreDetails(props: {
                   <span className={clsx(`text-default-900 text-medium`)}>{moreDetails.description}</span>
                 </div>
                 <div className={clsx(`horizontal w-full justify-start pb-1`)}>
-                  <TertiaryTitle {...{ title: moreDetails.text1 }} />
+                  <TertiaryTitle {...{ title: moreDetails.subTitles[0] }} />
                 </div>
                 <div className={clsx(`vertical w-full gap-y-3 pb-1.5`)}>
                   {moreDetails?.phases?.map((item, index) => (
@@ -116,17 +114,20 @@ export default function MoreDetails(props: {
                     </Chip>
                   ))}
                 </div>
+                <div className={clsx(`horizontal justify-start pb-[0.0625rem]`)}>
+                  <TertiaryTitle {...{ title: moreDetails.subTitles[2] }} />
+                </div>
+                <div className={clsx(`horizontal w-full justify-start`)}>
+                  <p className={clsx(`text-default-900 text-medium`)}>{moreDetails.ventajas}</p>
+                </div>
                 <div className={clsx(`horizontal w-full justify-start pb-1`)}>
-                  <TertiaryTitle {...{ title: moreDetails.text2 }} />
+                  <TertiaryTitle {...{ title: moreDetails.subTitles[1] }} />
                 </div>
                 <div className={clsx(`horizontal w-full pb-1.5`)}>
                   <FQAsService {...{ questions: moreDetails.questions }} />
                 </div>
                 <div className={clsx(`horizontal justify-start pb-[0.0625rem]`)}>
-                  <TertiaryTitle {...{ title: moreDetails.text3 }} />
-                </div>
-                <div className={clsx(`horizontal w-full justify-start`)}>
-                  <p className={clsx(`text-default-900 text-medium`)}>{moreDetails.ventajas}</p>
+                  <TertiaryTitle {...{ title: moreDetails.subTitles[3] }} />
                 </div>
               </div>
             </ModalBody>
@@ -140,7 +141,7 @@ export default function MoreDetails(props: {
                   variant={`shadow`}
                   size={`md`}
                   radius={`full`}
-                  aria-label={`${moreDetails.text1} button`}
+                  aria-label={`${moreDetails.link.text} button`}
                 >
                   <span className={clsx(`text-default text-medium pt-0.5`)}>{moreDetails.link.text}</span>
                 </Button>

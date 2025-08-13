@@ -194,3 +194,13 @@ export const DotsVerticalIcon = (props: { className: string }) => (
     <path d="M12 10a2 2 0 1 0 0 4 2 2 0 1 0 0-4M12 16a2 2 0 1 0 0 4 2 2 0 1 0 0-4M12 4a2 2 0 1 0 0 4 2 2 0 1 0 0-4"></path>
   </svg>
 )
+/**
+ * @function PlayIcon
+ * @param props
+ * @returns JSX.Element
+ */
+export const PlayIcon = (props: { className: string }) => (
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" className={props.className}>
+    <path d="M6.63 18.27c.19.11.41.17.62.17s.44-.06.64-.18l8.78-5.19c.38-.23.61-.63.61-1.08s-.23-.85-.61-1.08L7.89 5.74c-.39-.23-.86-.23-1.25 0-.4.23-.63.63-.63 1.09V17.2c0 .45.24.86.63 1.09Z"></path>
+  </svg>
+)

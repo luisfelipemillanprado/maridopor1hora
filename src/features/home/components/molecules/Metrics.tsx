@@ -23,10 +23,12 @@ export default function Metrics(props: {
 }) {
   const { metrics } = props
   return (
-    <div className={clsx(`horizontal h-auto w-full justify-center gap-x-3`, `3xl:gap-x-5 2xl:gap-x-4`)}>
-      {metrics.map((item /*, index*/) => (
-        <Metric key={item.key} {...{ metric: item }} />
-      ))}
+    <div className={clsx(`absolute right-0 -bottom-8.5 left-0 z-20`, `3xl:-bottom-10 2xl:-bottom-9`)}>
+      <div className={clsx(`horizontal h-auto w-full justify-center gap-x-3`, `3xl:gap-x-5 2xl:gap-x-4`)}>
+        {metrics.map((item /*, index*/) => (
+          <Metric key={item.key} {...{ metric: item }} />
+        ))}
+      </div>
     </div>
   )
 }

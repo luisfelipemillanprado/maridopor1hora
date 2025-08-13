@@ -16,9 +16,7 @@ export default function DetailService(props: {
   imageUrl: string
   title: string
   moreDetails: {
-    text1: string
-    text2: string
-    text3: string
+    subTitles: string[]
     link: {
       href: string
       text: string

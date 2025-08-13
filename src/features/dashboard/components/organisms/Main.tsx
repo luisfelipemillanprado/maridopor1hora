@@ -7,8 +7,7 @@ import DetailsServices from '@/features/dashboard/components/molecules/DetailsSe
 import { clsx } from 'clsx'
 
 /**
- * Main dashboard component that renders the primary sections of the application.
- *
+ * @description - Main dashboard component that renders the primary sections of the application.
  * @param props - The properties required to render the dashboard.
  * @param props.mainTitles - Contains the main titles for the dashboard.
  * @param props.mainTitles.titles - Array of main title strings.
@@ -59,9 +58,7 @@ export default function Main(props: {
       title: string
       imageUrl: string
       moreDetails: {
-        text1: string
-        text2: string
-        text3: string
+        subTitles: string[]
         link: {
           href: string
           text: string
@@ -76,6 +73,7 @@ export default function Main(props: {
         ventajas: string
         testimonials: {
           name: string
+          date: string
           text: string
           imageUrl: string
           key: number
@@ -87,9 +85,7 @@ export default function Main(props: {
       title: string
       imageUrl: string
       moreDetails: {
-        text1: string
-        text2: string
-        text3: string
+        subTitles: string[]
         link: {
           href: string
           text: string
@@ -104,6 +100,7 @@ export default function Main(props: {
         ventajas: string
         testimonials: {
           name: string
+          date: string
           text: string
           imageUrl: string
           key: number
@@ -115,9 +112,7 @@ export default function Main(props: {
       title: string
       imageUrl: string
       moreDetails: {
-        text1: string
-        text2: string
-        text3: string
+        subTitles: string[]
         link: {
           href: string
           text: string
@@ -132,6 +127,7 @@ export default function Main(props: {
         ventajas: string
         testimonials: {
           name: string
+          date: string
           text: string
           imageUrl: string
           key: number
@@ -143,9 +139,7 @@ export default function Main(props: {
       title: string
       imageUrl: string
       moreDetails: {
-        text1: string
-        text2: string
-        text3: string
+        subTitles: string[]
         link: {
           href: string
           text: string
@@ -160,6 +154,7 @@ export default function Main(props: {
         ventajas: string
         testimonials: {
           name: string
+          date: string
           text: string
           imageUrl: string
           key: number
@@ -171,9 +166,7 @@ export default function Main(props: {
       title: string
       imageUrl: string
       moreDetails: {
-        text1: string
-        text2: string
-        text3: string
+        subTitles: string[]
         link: {
           href: string
           text: string
@@ -188,6 +181,7 @@ export default function Main(props: {
         ventajas: string
         testimonials: {
           name: string
+          date: string
           text: string
           imageUrl: string
           key: number
@@ -199,9 +193,7 @@ export default function Main(props: {
       title: string
       imageUrl: string
       moreDetails: {
-        text1: string
-        text2: string
-        text3: string
+        subTitles: string[]
         link: {
           href: string
           text: string
@@ -216,6 +208,7 @@ export default function Main(props: {
         ventajas: string
         testimonials: {
           name: string
+          date: string
           text: string
           imageUrl: string
           key: number
@@ -227,9 +220,7 @@ export default function Main(props: {
       title: string
       imageUrl: string
       moreDetails: {
-        text1: string
-        text2: string
-        text3: string
+        subTitles: string[]
         link: {
           href: string
           text: string
@@ -244,6 +235,7 @@ export default function Main(props: {
         ventajas: string
         testimonials: {
           name: string
+          date: string
           text: string
           imageUrl: string
           key: number
@@ -257,11 +249,17 @@ export default function Main(props: {
     props
   return (
     <div className={clsx(`vertical h-auto w-full`)}>
+      {/**
+       * Main title section.
+       */}
       <section aria-label={``} className={clsx(`relative h-auto w-full px-4.5`)}>
         <div className={clsx(`vertical mb-2 w-full gap-y-3.5`)}>
           <MainTitle {...{ title: mainTitles.titles[0] }} />
         </div>
       </section>
+      {/**
+       * Search service section.
+       */}
       <section
         aria-label={`service-search`}
         className={clsx(`horizontal relative mb-6 h-auto w-full px-4.5`)}
@@ -278,6 +276,9 @@ export default function Main(props: {
           }}
         />
       </section>
+      {/**
+       * Types of services section.
+       */}
       <section
         aria-label={`types-services-available`}
         className={clsx(`horizontal relative mb-6 h-auto w-full px-4.5`)}
@@ -286,6 +287,9 @@ export default function Main(props: {
           <TypesOfServices {...{ imageUrls: typesOfServices.imageUrls }} />
         </div>
       </section>
+      {/**
+       * Secondary titles and details sections (most reserved services).
+       */}
       <section
         aria-label={`most-reserved-services`}
         className={clsx(`horizontal relative mb-3 h-auto w-full pl-3`)}
@@ -297,6 +301,9 @@ export default function Main(props: {
           <MostBookedServices {...{ bookedServices: mostBookedServices.bookedServices }} />
         </div>
       </section>
+      {/**
+       * Secondary titles and details services sections (cleaning and pest control).
+       */}
       <section
         aria-label={`details-services-cleaning-pest-control`}
         className={clsx(`horizontal relative mb-3 h-auto w-full pl-3`)}
@@ -308,6 +315,9 @@ export default function Main(props: {
           <DetailsServices {...{ destailsServices: detailsServices.cleaningPestControl }} />
         </div>
       </section>
+      {/**
+       * Secondary titles and details services sections (plumbing).
+       */}
       <section
         aria-label={`details-services-plumbing`}
         className={clsx(`horizontal relative mb-3 h-auto w-full pl-3`)}
@@ -319,6 +329,9 @@ export default function Main(props: {
           <DetailsServices {...{ destailsServices: detailsServices.plumbing }} />
         </div>
       </section>
+      {/**
+       * Secondary titles and details services sections (electrician).
+       */}
       <section
         aria-label={`details-services-electrician`}
         className={clsx(`horizontal relative mb-3 h-auto w-full pl-3`)}
@@ -330,6 +343,9 @@ export default function Main(props: {
           <DetailsServices {...{ destailsServices: detailsServices.electrician }} />
         </div>
       </section>
+      {/**
+       * Secondary titles and details services sections (masonry).
+       */}
       <section
         aria-label={`details-services-masonry`}
         className={clsx(`horizontal relative mb-3 h-auto w-full pl-3`)}
@@ -341,6 +357,9 @@ export default function Main(props: {
           <DetailsServices {...{ destailsServices: detailsServices.masonry }} />
         </div>
       </section>
+      {/**
+       * Secondary titles and details services sections (carpentry).
+       */}
       <section
         aria-label={`details-services-carpentry`}
         className={clsx(`horizontal relative mb-3 h-auto w-full pl-3`)}
@@ -352,6 +371,9 @@ export default function Main(props: {
           <DetailsServices {...{ destailsServices: detailsServices.carpentry }} />
         </div>
       </section>
+      {/**
+       * Secondary titles and details services sections (air conditioning).
+       */}
       <section
         aria-label={`details-services-air-conditioning`}
         className={clsx(`horizontal relative mb-3 h-auto w-full pl-3`)}
@@ -363,6 +385,9 @@ export default function Main(props: {
           <DetailsServices {...{ destailsServices: detailsServices.airConditioning }} />
         </div>
       </section>
+      {/**
+       * Secondary titles and details services sections (plasterboard).
+       */}
       <section
         aria-label={`details-services-plasterboard`}
         className={clsx(`horizontal relative mb-3 h-auto w-full pl-3`)}

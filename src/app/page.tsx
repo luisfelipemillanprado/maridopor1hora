@@ -44,6 +44,7 @@ export default function Home() {
             advertisingFlyer: sd.home.main.advertisingFlyer,
             receiveNotifications: sd.home.main.receiveNotifications,
             certifications: sd.home.main.certifications,
+            videoTestimonials: sd.home.main.videoTestimonials,
           }}
         />
       </main>

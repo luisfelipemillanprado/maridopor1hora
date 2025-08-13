@@ -1,7 +1,14 @@
 /**
- * @description - Static data object containing configuration and content for the application's UI.
- * @property {object} home - Contains data for the home page.
- * @property {object} navbar - Contains data for the navigation bar.
+ * @description - Static data object containing all the structured content for the MaridoPor1Hora application.
+ * @property {object} home - Content and configuration for the home page, including header, sliders, metrics,
+ * services, and more.
+ * @property {object} dashboard - Content and configuration for the dashboard, including service search, types,
+ * details, and most booked services.
+ * @property {object} navbar - Content and configuration for the navigation bar, including links and branding.
+ * @property {object} footer - Content and configuration for the footer, including company information, team, and
+ * social media links.
+ * @property {object} ContactFloatButton - Content and configuration for the contact float button, including
+ * visibility and position.
  */
 const sd = {
   home: {
@@ -99,6 +106,7 @@ const sd = {
           `Somos Tu Mejor Elección.`,
           `Unete A Nuestro Equipo.`,
           `Testimonios De Clientes.`,
+          `Algunos Videos Destacados.`,
         ],
       },
       finishedWorks: {
@@ -401,6 +409,33 @@ const sd = {
           { key: Math.random() },
         ],
       },
+      videoTestimonials: [
+        {
+          imageUrl: `/images/main/testimonialvideos/testimonialvideos01.webp`,
+          videoUrl: `/videos/moretestimonials01.mp4`,
+          key: Math.random(),
+        },
+        {
+          imageUrl: `/images/main/testimonialvideos/testimonialvideos02.webp`,
+          videoUrl: `/videos/moretestimonials02.mp4`,
+          key: Math.random(),
+        },
+        {
+          imageUrl: `/images/main/testimonialvideos/testimonialvideos03.webp`,
+          videoUrl: `/videos/moretestimonials03.mp4`,
+          key: Math.random(),
+        },
+        {
+          imageUrl: `/images/main/testimonialvideos/testimonialvideos04.webp`,
+          videoUrl: `/videos/moretestimonials04.mp4`,
+          key: Math.random(),
+        },
+        {
+          imageUrl: `/images/main/testimonialvideos/testimonialvideos05.webp`,
+          videoUrl: `/videos/moretestimonials05.mp4`,
+          key: Math.random(),
+        },
+      ],
       introduction: {
         text: [
           `En Marido por una Hora, nos enorgullece ofrecer un servicio de calidad, pero no lo decimos
@@ -585,9 +620,12 @@ const sd = {
           title: `Limpieza de paredes, suelos, techos y ventanas.`,
           imageUrl: `/images/main/cleaningpestcontrol/cleaningpestcontrol05.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -634,27 +672,75 @@ const sd = {
                 key: Math.random(),
               },
             ],
-            ventajas: `Nuestro servicio profesional de limpieza elimina ácaros, bacterias y moho, protegiendo sus superficies y salud. Usamos equipos industriales y productos especializados para resultados duraderos que ahorran costes en reparaciones. Cumplimos normativas, mejoramos la imagen de su negocio y nos adaptamos a sus necesidades con soluciones personalizadas. Resultados visibles desde el primer día.`,
+            ventajas: `Nuestro servicio profesional de limpieza elimina ácaros, bacterias y moho, protegiendo sus superficies y salud. Usamos equipos industriales y productos especializados para resultados duraderos que ahorran costes en reparaciones. Mejoramos la imagen de su negocio y nos adaptamos a sus necesidades con soluciones personalizadas. Resultados visibles desde el primer día.`,
             testimonials: [
               {
-                name: `Adriana Espinosa.`,
-                text: `Solucionaron mi emergencia con rapidez, profesionalidad e impecable precisión.`,
+                name: `María Gómez S.`,
+                date: `30/10/2024`,
+                text: `Quedé muy impresionada con la limpieza de ventanas. Brillan como nuevas y no dejaron restos de productos.`,
                 imageUrl: `/images/main/testimonials/testimonial01.webp`,
                 key: Math.random(),
               },
               {
-                name: `Sergio Javier P.`,
-                text: `Dejaron mi hogar reluciente, con atención, paciencia y cuidado excepcional.`,
+                name: `Javier López F.`,
+                date: `20/07/2024`,
+                text: `Recomiendo este servicio sin dudar. La atención al detalle es increíble, especialmente en marcos y esquinas.`,
                 imageUrl: `/images/main/testimonials/testimonial02.webp`,
                 key: Math.random(),
               },
               {
-                name: `Jorge Melendez.`,
-                text: `Al principio tenía mis dudas e inseguridades, pero todo salió bien y sin problemas.`,
+                name: `Álvaro García J.`,
+                date: `17/07/2025`,
+                text: `Muy buena relación calidad-precio. El personal fue amable y meticuloso con cada rincón del local.`,
+                imageUrl: `/images/main/testimonials/testimonial03.webp`,
+                key: Math.random(),
+              },
+              {
+                name: `Pedro Pérez M.`,
+                date: `20/05/2024`,
+                text: `Quedé muy impresionada con la limpieza de ventanas. Brillan como nuevas y no dejaron restos de productos.`,
                 imageUrl: `/images/main/testimonials/testimonial03.webp`,
                 key: Math.random(),
               },
             ],
+            cleaningTips: [
+              {
+                title: `Ventila diariamente`,
+                tip: `Abrir ventanas al menos 15 minutos al día mejora la calidad del aire y reduce la humedad.`,
+                key: Math.random(),
+              },
+              {
+                title: `Evita acumulación de objetos`,
+                tip: `Menos objetos sobre mesas y estantes trae menos polvo y más fácil de limpiar.`,
+                key: Math.random(),
+              },
+              {
+                title: `El orden afecta al resultado`,
+                tip: `Barrer o aspirar antes de fregar evita rayar el suelo con partículas de polvo.`,
+                key: Math.random(),
+              },
+              {
+                title: `Productos adecuados para cada material`,
+                tip: `Usa limpiadores pH neutro para suelos de mármol y lejía diluida para baldosas antideslizantes.`,
+                key: Math.random(),
+              },
+              {
+                title: `Vigila las humedades emergentes`,
+                tip: `Usa deshumidificadores y ventila a diario adecuadamente para prevenir la aparición de moho.`,
+                key: Math.random(),
+              },
+              {
+                title: `Cuidado con el posicionamiento de los muebles`,
+                tip: `Deja 5 cm de espacio entre muebles y paredes para evitar humedad y facilitar la limpieza en futuros servicios.`,
+                key: Math.random(),
+              },
+            ],
+            qualityStats: {
+              clientsServed: 325,
+              satisfactionRate: '98%',
+              averageResponseTime: 'Menos de 12 horas',
+              recurringClients: '67%',
+            },
           },
           key: Math.random(),
         },
@@ -662,9 +748,12 @@ const sd = {
           title: `Limpieza profunda de cocina.`,
           imageUrl: `/images/main/cleaningpestcontrol/cleaningpestcontrol01.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -739,9 +828,12 @@ const sd = {
           title: `Limpieza completa del hogar.`,
           imageUrl: `/images/main/cleaningpestcontrol/cleaningpestcontrol03.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -816,9 +908,12 @@ const sd = {
           title: `Limpieza y lavado de alfombras, tapicerías y cortinas.`,
           imageUrl: `/images/main/cleaningpestcontrol/cleaningpestcontrol02.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -893,9 +988,12 @@ const sd = {
           title: `Limpieza profunda de baños.`,
           imageUrl: `/images/main/cleaningpestcontrol/cleaningpestcontrol04.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -970,9 +1068,12 @@ const sd = {
           title: `Control de plagas (roedores e insectos).`,
           imageUrl: `/images/main/cleaningpestcontrol/cleaningpestcontrol06.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -1047,9 +1148,12 @@ const sd = {
           title: `Limpieza post-obra o post-mudanza.`,
           imageUrl: `/images/main/cleaningpestcontrol/cleaningpestcontrol07.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -1124,9 +1228,12 @@ const sd = {
           title: `Desinfeccion profunda de suelos, paredes y techos.`,
           imageUrl: `/images/main/cleaningpestcontrol/cleaningpestcontrol08.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -1203,9 +1310,12 @@ const sd = {
           title: `Montaje de sistemas de calefacción y ACS.`,
           imageUrl: `/images/main/plumbing/plumbing02.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -1280,9 +1390,12 @@ const sd = {
           title: `Cambio de cisternas, inodoros, bidés.`,
           imageUrl: `/images/main/plumbing/plumbing01.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -1357,9 +1470,12 @@ const sd = {
           title: `Recambio de tuberías rotas.`,
           imageUrl: `/images/main/plumbing/plumbing03.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -1434,9 +1550,12 @@ const sd = {
           title: `Sellado de juntas y conexiones.`,
           imageUrl: `/images/main/plumbing/plumbing04.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -1511,9 +1630,12 @@ const sd = {
           title: `Reemplazo de válvulas y grifos defectuosos.`,
           imageUrl: `/images/main/plumbing/plumbing05.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -1588,9 +1710,12 @@ const sd = {
           title: `Colocación de lavavajillas y lavadoras.`,
           imageUrl: `/images/main/plumbing/plumbing06.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -1665,9 +1790,12 @@ const sd = {
           title: `Colocación de mamparas y duchas.`,
           imageUrl: `/images/main/plumbing/plumbing07.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -1742,9 +1870,12 @@ const sd = {
           title: `Eliminación de atascos en tuberías.`,
           imageUrl: `/images/main/plumbing/plumbing08.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -1821,9 +1952,12 @@ const sd = {
           title: `Instalación y reparación de luminarias.`,
           imageUrl: `/images/main/electrician/electrician03.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -1898,9 +2032,12 @@ const sd = {
           title: `Instalación de sistemas de vigilancia.`,
           imageUrl: `/images/main/electrician/electrician01.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -1975,9 +2112,12 @@ const sd = {
           title: `Detección y reparación de cortocircuitos.`,
           imageUrl: `/images/main/electrician/electrician02.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -2052,9 +2192,12 @@ const sd = {
           title: `Instalación de sistemas de domótica.`,
           imageUrl: `/images/main/electrician/electrician04.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -2129,9 +2272,12 @@ const sd = {
           title: `Instalación de sensores de humo y gas.`,
           imageUrl: `/images/main/electrician/electrician05.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -2206,9 +2352,12 @@ const sd = {
           title: `Instalación de paneles de interruptores.`,
           imageUrl: `/images/main/electrician/electrician06.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -2283,9 +2432,12 @@ const sd = {
           title: `Instalación de timbres inteligentes.`,
           imageUrl: `/images/main/electrician/electrician07.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -2360,9 +2512,12 @@ const sd = {
           title: `Sustitución de mecanismos eléctricos.`,
           imageUrl: `/images/main/electrician/electrician08.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -2437,9 +2592,12 @@ const sd = {
           title: `Inspección eléctrica de la vivienda.`,
           imageUrl: `/images/main/electrician/electrician09.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -2516,9 +2674,12 @@ const sd = {
           title: `Colocación de azulejos y baldosas.`,
           imageUrl: `/images/main/masonry/masonry01.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -2593,9 +2754,12 @@ const sd = {
           title: `Construcción de muros perimetrales.`,
           imageUrl: `/images/main/masonry/masonry02.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -2670,9 +2834,12 @@ const sd = {
           title: `Construcción de escaleras interiores.`,
           imageUrl: `/images/main/masonry/masonry03.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -2747,9 +2914,12 @@ const sd = {
           title: `Acabados decorativos, modernos y duraderos.`,
           imageUrl: `/images/main/masonry/masonry04.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -2824,9 +2994,12 @@ const sd = {
           title: `Pavimentación de patios, terrazas y jardines.`,
           imageUrl: `/images/main/masonry/masonry05.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -2901,9 +3074,12 @@ const sd = {
           title: `Rehabilitación de revestimientos de exteriores.`,
           imageUrl: `/images/main/masonry/masonry06.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -2978,9 +3154,12 @@ const sd = {
           title: `Cerramiento o cerco de terrazas de lujo.`,
           imageUrl: `/images/main/masonry/masonry07.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -3055,9 +3234,12 @@ const sd = {
           title: `Preparación de paredes para acabados decorativos.`,
           imageUrl: `/images/main/masonry/masonry08.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -3132,9 +3314,12 @@ const sd = {
           title: `Reparación de techos, paredes y suelos.`,
           imageUrl: `/images/main/masonry/masonry09.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -3211,9 +3396,12 @@ const sd = {
           title: `Carpintería de muebles de cocina a medida.`,
           imageUrl: `/images/main/carpentry/carpentry01.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -3288,9 +3476,12 @@ const sd = {
           title: `Colocación de parquet laminado o flotante.`,
           imageUrl: `/images/main/carpentry/carpentry03.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -3365,9 +3556,12 @@ const sd = {
           title: `Renovación sin cambiar de suelos antiguos.`,
           imageUrl: `/images/main/carpentry/carpentry02.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -3442,9 +3636,12 @@ const sd = {
           title: `Cambio o reparación de puertas interiores.`,
           imageUrl: `/images/main/carpentry/carpentry08.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -3519,9 +3716,12 @@ const sd = {
           title: `Cambio o reparación de ventanas de PVC o aluminio.`,
           imageUrl: `/images/main/carpentry/carpentry04.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -3596,9 +3796,12 @@ const sd = {
           title: `Montaje de muebles de Ikea o similares`,
           imageUrl: `/images/main/carpentry/carpentry06.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -3673,9 +3876,12 @@ const sd = {
           title: `Armarios y vestidores modernos empotrados.`,
           imageUrl: `/images/main/carpentry/carpentry05.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -3750,9 +3956,12 @@ const sd = {
           title: `Carpintería de estanterías y librerías a medida.`,
           imageUrl: `/images/main/carpentry/carpentry07.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -3829,9 +4038,12 @@ const sd = {
           title: `Instalación de sistemas de extracción de aire.`,
           imageUrl: `/images/main/airconditioning/airconditioning02.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -3906,9 +4118,12 @@ const sd = {
           title: `Mantenimiento periódico de sistemas de compresores.`,
           imageUrl: `/images/main/airconditioning/airconditioning01.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -3983,9 +4198,12 @@ const sd = {
           title: `Desinstalación y retirada de equipos de aire acondicionado.`,
           imageUrl: `/images/main/airconditioning/airconditioning03.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -4060,9 +4278,12 @@ const sd = {
           title: `Instalación de equipos de aire acondicionado split.`,
           imageUrl: `/images/main/airconditioning/airconditioning04.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -4137,9 +4358,12 @@ const sd = {
           title: `Instalación de sistemas de ventilación mecánica controlada.`,
           imageUrl: `/images/main/airconditioning/airconditioning05.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -4214,9 +4438,12 @@ const sd = {
           title: `Limpieza y mantenimiento periódico de splits.`,
           imageUrl: `/images/main/airconditioning/airconditioning06.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -4291,9 +4518,12 @@ const sd = {
           title: `Reparación de sistemas de aire acondicionado.`,
           imageUrl: `/images/main/airconditioning/airconditioning07.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -4368,9 +4598,12 @@ const sd = {
           title: `Instalación de bombas de calor (reversible frío/calor).`,
           imageUrl: `/images/main/airconditioning/airconditioning08.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -4445,9 +4678,12 @@ const sd = {
           title: `Instalación de compresores exteriores de splits.`,
           imageUrl: `/images/main/airconditioning/airconditioning09.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -4524,9 +4760,12 @@ const sd = {
           title: `Instalación de tabiquería y particiones estándares.`,
           imageUrl: `/images/main/plasterboard/plasterboard05.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -4601,9 +4840,12 @@ const sd = {
           title: `Acabados personalizados y modernos para tabiques.`,
           imageUrl: `/images/main/plasterboard/plasterboard02.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -4678,9 +4920,12 @@ const sd = {
           title: `Instalación de aire acondicionado en pladur.`,
           imageUrl: `/images/main/plasterboard/plasterboard03.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -4755,9 +5000,12 @@ const sd = {
           title: `Trasdosados autoportantes con aislante en lana de roca.`,
           imageUrl: `/images/main/plasterboard/plasterboard04.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -4832,9 +5080,12 @@ const sd = {
           title: `Mostradores y recepciones para pequeños negocios.`,
           imageUrl: `/images/main/plasterboard/plasterboard01.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -4909,9 +5160,12 @@ const sd = {
           title: `Reparaciones y sellado de grietas y agujeros.`,
           imageUrl: `/images/main/plasterboard/plasterboard06.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -4986,9 +5240,12 @@ const sd = {
           title: `Sustitución de placas dañadas por humedades o golpes.`,
           imageUrl: `/images/main/plasterboard/plasterboard07.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,
@@ -5063,9 +5320,12 @@ const sd = {
           title: `Montaje de techos suspendidos.`,
           imageUrl: `/images/main/plasterboard/plasterboard08.webp`,
           moreDetails: {
-            text1: `El servicio se realiza en varias fases:`,
-            text2: `Preguntas frecuentes de clientes:`,
-            text3: `¿Por qué contratar este servicio?`,
+            subTitles: [
+              `El servicio se realiza en varias fases:`,
+              `Preguntas frecuentes de clientes:`,
+              `¿Por qué contratar este servicio?`,
+              `Testimonios de clientes:`,
+            ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
               text: `Ir al servicio.`,

@@ -21,41 +21,46 @@ export default function LinksButtons(props: {
 }) {
   const { linksButtons } = props
   return (
-    <div className={clsx(`horizontal w-full justify-center`)}>
-      <Tabs
-        key={linksButtons.variants.key}
-        aria-label={`principal-options`}
-        className={clsx(`[&>div]:bg-content7] drop-shadow-lg/30 [&>div]:gap-0`, `3xl:[&>div]:gap-x-1`)}
-        color={`${linksButtons.variants.color as 'default' | 'primary' | 'secondary' | 'success' | 'warning' | 'danger'}`}
-        variant={`solid`}
-        radius={`full`}
-        size={`md`}
-      >
-        {linksButtons.texts.map((item, index) => (
-          <Tab
-            key={item.key}
-            className={clsx(
-              `${index == 3 ? 'hidden' : 'py-[1.0625rem]'}`,
-              `${index == 3 ? '3xl:flex 3xl:flex-row' : ''} 3xl:py-[1.1875rem]`
-            )}
-            title={
-              <div
-                className={clsx(
-                  `${index == 3 ? 'hidden' : 'horizontal items-center space-x-1.5'}`,
-                  `${index == 3 ? '3xl:flex 3xl:flex-row' : ''} 3xl:space-x-2 3xl:pr-1`
-                )}
-              >
-                <LinkButtonIcons {...{ icon: item.icon }} />
-                <span
-                  className={clsx(`text-default-900 text-[0.9375rem]`, `3xl:text-large xl:text-[1.0625rem]`)}
+    <div className={clsx(`absolute top-[56%] right-0 left-0 z-10 h-auto w-full`, `3xl:top-[43.5%]`)}>
+      <div className={clsx(`horizontal w-full justify-center`)}>
+        <Tabs
+          key={linksButtons.variants.key}
+          aria-label={`principal-options`}
+          className={clsx(`[&>div]:bg-content7] drop-shadow-lg/30 [&>div]:gap-0`, `3xl:[&>div]:gap-x-1`)}
+          color={`${linksButtons.variants.color as 'default' | 'primary' | 'secondary' | 'success' | 'warning' | 'danger'}`}
+          variant={`solid`}
+          radius={`full`}
+          size={`md`}
+        >
+          {linksButtons.texts.map((item, index) => (
+            <Tab
+              key={item.key}
+              className={clsx(
+                `${index == 3 ? 'hidden' : 'py-[1.0625rem]'}`,
+                `${index == 3 ? '3xl:flex 3xl:flex-row' : ''} 3xl:py-[1.1875rem]`
+              )}
+              title={
+                <div
+                  className={clsx(
+                    `${index == 3 ? 'hidden' : 'horizontal items-center space-x-1.5'}`,
+                    `${index == 3 ? '3xl:flex 3xl:flex-row' : ''} 3xl:space-x-2 3xl:pr-1`
+                  )}
                 >
-                  {item.text}
-                </span>
-              </div>
-            }
-          />
-        ))}
-      </Tabs>
+                  <LinkButtonIcons {...{ icon: item.icon }} />
+                  <span
+                    className={clsx(
+                      `text-default-900 text-[0.9375rem]`,
+                      `3xl:text-large xl:text-[1.0625rem]`
+                    )}
+                  >
+                    {item.text}
+                  </span>
+                </div>
+              }
+            />
+          ))}
+        </Tabs>
+      </div>
     </div>
   )
 }
