@@ -14,7 +14,7 @@ export default function MainTitle(props: { mainTitle: { first: string; second: s
       <div className={clsx(`horizontal h-auto w-full items-center justify-center gap-y-3 px-4`, `2xl:px-3`)}>
         <h1
           className={clsx(
-            `h-auto w-auto text-[1.6875rem] leading-9 font-bold text-shadow-lg`,
+            `h-auto w-auto text-[1.75rem] leading-9 font-bold text-shadow-lg`,
             `text-default-50 text-center`,
             `3xl:text-[2rem] 3xl:px-10 xl:text-[1.8125rem] 2xl:text-[1.875rem]`
           )}

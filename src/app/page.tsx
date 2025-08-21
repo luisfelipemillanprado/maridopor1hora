@@ -48,7 +48,7 @@ export default function Home() {
           }}
         />
       </main>
-      <footer className={clsx(`relative mt-8 w-full`)}>
+      <footer className={clsx(`relative mt-8 w-full`, `4xl:mt-0`)}>
         <Footer
           {...{
             companyInformation: sd.footer.companyInformation,

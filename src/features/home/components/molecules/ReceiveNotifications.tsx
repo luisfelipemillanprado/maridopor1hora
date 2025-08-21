@@ -16,7 +16,7 @@ import clsx from 'clsx'
  */
 export default function ReceiveNotifications(props: {
   title: string
-  text: string
+  text: string[]
   buttonText: string
   placeholder: string[]
   type: string[]
@@ -33,7 +33,8 @@ export default function ReceiveNotifications(props: {
     <Form
       className={clsx(
         `vertical rounded-large border-content3 shadow-small h-auto w-full gap-y-2.5 border-1 p-6`,
-        `from-content8 via-content9/30 to-content9/70 bg-gradient-to-br from-25% via-30% to-80%`
+        `from-content8 via-content9/30 to-content9/70 bg-gradient-to-br from-25% via-30% to-80%`,
+        `4xl:w-[50%] 4xl:gap-y-3`
       )}
       onSubmit={onSubmit}
       aria-label={`Form to receive notifications`}
@@ -42,20 +43,28 @@ export default function ReceiveNotifications(props: {
         <h3
           className={clsx(
             `text-default-900 text-[1.3125rem] font-extrabold text-shadow-sm`,
-            `3xl:text-[1.4375rem] xl:text-[1.375rem]`
+            `3xl:text-[1.4375rem] 4xl:text-[1.5625rem] xl:text-[1.375rem]`
           )}
         >
           {title}
         </h3>
       </div>
-      <div className={clsx(`horizontal h-auto w-full justify-center`, `3xl:justify-start`)}>
+      <div className={clsx(`vertical h-auto w-full justify-center gap-y-2`, `3xl:justify-start`)}>
         <p
           className={clsx(
             `text-default-800 text-medium text-center`,
             `3xl:text-start 2xl:text-large xl:text-[1.0625rem]`
           )}
         >
-          {text}
+          {text[0]}
+        </p>
+        <p
+          className={clsx(
+            `text-default-800 text-medium hidden text-center`,
+            `3xl:text-start 2xl:text-large 2xl:flex`
+          )}
+        >
+          {text[1]}
         </p>
       </div>
       <div
@@ -116,9 +125,7 @@ export default function ReceiveNotifications(props: {
             size={`md`}
             aria-label={`Send notification form`}
           >
-            <span className={clsx(`text-default-50 text-medium`, `2xl:text-large xl:text-[1.0625rem]`)}>
-              {buttonText}
-            </span>
+            <span className={clsx(`text-default-50 text-[1.0625rem]`, `2xl:text-large`)}>{buttonText}</span>
           </Button>
         </div>
       </div>

@@ -31,7 +31,7 @@ export default function DetailService(props: { name: string; imageUrl: string })
       <CardHeader className={clsx(`horizontal relative justify-start px-3`)}>
         <div
           className={clsx(
-            `rounded-large border-warning h-[3.125rem] w-[3.125rem] overflow-hidden border-1`,
+            `rounded-large border-warning-500 h-[3.125rem] w-[3.125rem] overflow-hidden border-1`,
             `drop-shadow-lg`
           )}
         >
@@ -93,7 +93,7 @@ export default function DetailService(props: { name: string; imageUrl: string })
         </div>
       </CardHeader>
       <CardBody className={clsx(`justify-center pt-0 pr-0 pl-3`)}>
-        <span className={clsx(`text-default-900 text-[1.0625rem] font-semibold`)}>{name}</span>
+        <span className={clsx(`text-default-900 text-[1.0625rem]`)}>{name}</span>
       </CardBody>
     </Card>
   )

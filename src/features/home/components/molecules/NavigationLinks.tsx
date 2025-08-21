@@ -15,7 +15,7 @@ export default function NavigationLink(props: { text: string; href: string; icon
   return (
     <div className={clsx(`horizontal h-auto w-auto`)}>
       <Button
-        className={clsx(`bg-warning shadow-small pr-[0.1875rem]`)}
+        className={clsx(`bg-warning shadow-small pr-[0.1875rem]`, `4xl:h-11.5`)}
         endContent={<NavigationLinkIcons {...{ icon }} />}
         as={Link}
         href={href}
@@ -25,12 +25,7 @@ export default function NavigationLink(props: { text: string; href: string; icon
         radius={`full`}
         aria-label={`${text} button`}
       >
-        <span
-          className={clsx(
-            `text-default text-medium pt-0.5`,
-            `3xl:text-large 2xl:text-large xl:text-[1.0625rem]`
-          )}
-        >
+        <span className={clsx(`text-default text-[1.0625rem]`, `4xl:text-[1.1875rem] 2xl:text-large`)}>
           {text}
         </span>
       </Button>

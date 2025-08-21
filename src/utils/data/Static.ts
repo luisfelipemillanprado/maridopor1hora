@@ -96,7 +96,8 @@ const sd = {
         summary: `Nuestra reputación está respaldada por miles de clientes en todo el mundo.`,
         rating: `5.0`,
         reviews: `145.239 • Excelente`,
-        buttonText: `MaridoPor1Hora`,
+        buttonMaridoPor1Hora: [`MaridoPor1Hora`, `https://www.maridopor1hora.com`],
+        buttonTrustPilot: [`TrustPilot`, `https://www.trustpilot.com/review/maridopor1hora.com`],
       },
       secondaryTitles: {
         title: [
@@ -208,7 +209,7 @@ const sd = {
         description: [
           `Servicios eléctricos profesionales para hogares y negocios. Garantizamos soluciones seguras, eficientes y personalizadas.`,
           `Fontanería experta: instalación, reparación y mantenimiento. Soluciones rápidas y duraderas para tu hogar.`,
-          `Instalación profesional de muebles. Montaje rápido, seguro y preciso para hogares, oficinas, locales comerciales u otros.`,
+          `Instalación de sistemas de climatización. Montaje rápido, seguro y preciso para hogares, oficinas, locales comerciales u otros`,
           `Albañilería especializada en construcción, reformas y reparaciones. Trabajos de calidad con materiales resistentes.`,
           `Carpintería de alta calidad: muebles a medida, puertas y ventanas para hogares, oficinas y proyectos personalizados.`,
           `Limpieza profunda y mantenimiento de espacios. Dejamos tu hogar o negocio impecable, higiénico y libre de bacterias.`,
@@ -411,28 +412,33 @@ const sd = {
       },
       videoTestimonials: [
         {
-          imageUrl: `/images/main/testimonialvideos/testimonialvideos01.webp`,
-          videoUrl: `/videos/moretestimonials01.mp4`,
-          key: Math.random(),
-        },
-        {
           imageUrl: `/images/main/testimonialvideos/testimonialvideos02.webp`,
           videoUrl: `/videos/moretestimonials02.mp4`,
+          durationTime: `00:32`,
           key: Math.random(),
         },
         {
           imageUrl: `/images/main/testimonialvideos/testimonialvideos03.webp`,
           videoUrl: `/videos/moretestimonials03.mp4`,
+          durationTime: `00:23`,
           key: Math.random(),
         },
         {
           imageUrl: `/images/main/testimonialvideos/testimonialvideos04.webp`,
           videoUrl: `/videos/moretestimonials04.mp4`,
+          durationTime: `00:25`,
           key: Math.random(),
         },
         {
           imageUrl: `/images/main/testimonialvideos/testimonialvideos05.webp`,
           videoUrl: `/videos/moretestimonials05.mp4`,
+          durationTime: `00:28`,
+          key: Math.random(),
+        },
+        {
+          imageUrl: `/images/main/testimonialvideos/testimonialvideos01.webp`,
+          videoUrl: `/videos/moretestimonials01.mp4`,
+          durationTime: `00:39`,
           key: Math.random(),
         },
       ],
@@ -454,7 +460,10 @@ const sd = {
       },
       receiveNotifications: {
         title: `Recibe ofertas exclusivas.`,
-        text: `Registra tu correo electrónico para recibir promociones exclusivas de MaridoPor1Hora.`,
+        text: [
+          `Registra tu correo electrónico para recibir promociones exclusivas de MaridoPor1Hora.`,
+          `Sin spam, solo ofertas que de verdad te interesan y te ayudan a mejorar tu hogar.`,
+        ],
         buttonText: `¡Regístrate aquí..!`,
         placeholder: [`name: juan`, `ejemplo@gmail.com`],
         type: [`text`, `email`],
@@ -622,9 +631,9 @@ const sd = {
           moreDetails: {
             subTitles: [
               `El servicio se realiza en varias fases:`,
-              `Preguntas frecuentes de clientes:`,
               `¿Por qué contratar este servicio?`,
-              `Testimonios de clientes:`,
+              `Preguntas frecuentes de clientes:`,
+              `Testimonios de nuestros clientes:`,
             ],
             link: {
               href: `/dashboard/cleaningpestcontrol`,
@@ -699,7 +708,7 @@ const sd = {
                 name: `Pedro Pérez M.`,
                 date: `20/05/2024`,
                 text: `Quedé muy impresionada con la limpieza de ventanas. Brillan como nuevas y no dejaron restos de productos.`,
-                imageUrl: `/images/main/testimonials/testimonial03.webp`,
+                imageUrl: `/images/main/testimonials/testimonial04.webp`,
                 key: Math.random(),
               },
             ],

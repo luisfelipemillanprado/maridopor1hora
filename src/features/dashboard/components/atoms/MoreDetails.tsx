@@ -1,6 +1,8 @@
+import { useRef, useEffect } from 'react'
 import SecondaryTitle from '@/features/dashboard/components/atoms/SecondaryTitle'
 import TertiaryTitle from '@/features/dashboard/components/atoms/TertiaryTitle'
 import FQAsService from '@/features/dashboard/components/atoms/FQAsService'
+import ServiceTestimonials from '@/features/dashboard/components/atoms/ServiceTestimonials'
 import {
   Button,
   Image,
@@ -47,6 +49,7 @@ export default function MoreDetails(props: {
     ventajas: string
     testimonials: {
       name: string
+      date: string
       text: string
       imageUrl: string
       key: number
@@ -54,7 +57,17 @@ export default function MoreDetails(props: {
   }
 }) {
   const { imageUrl, title, moreDetails } = props
+  const modalRef = useRef<HTMLDivElement | null>(null)
   const { isOpen, onOpen, onOpenChange } = useDisclosure()
+  /**
+   * Cuando el modal se abre (`isOpen` es true), este efecto intenta enfocar el div referenciado por `modalRef`.
+   * Esto mejora la accesibilidad, permitiendo que el usuario navegue el contenido del modal usando el teclado.
+   */
+  useEffect(() => {
+    if (isOpen && modalRef.current) {
+      modalRef.current.focus()
+    }
+  }, [isOpen])
   return (
     <div className={clsx(`absolute top-1 left-1 z-50`)}>
       <Button
@@ -68,7 +81,9 @@ export default function MoreDetails(props: {
         <DotsVerticalIcon className={clsx(`fill-default h-8 w-8`)} />
       </Button>
       <Modal
-        className={clsx(`bg-content7 overflow-hidden`)}
+        className={clsx(
+          `bg-content7 [&>button:nth-child(2)]:bg-content4 overflow-hidden [&>button:nth-child(2)]:z-50`
+        )}
         backdrop={`opaque`}
         scrollBehavior={`inside`}
         classNames={{
@@ -80,7 +95,13 @@ export default function MoreDetails(props: {
         <ModalContent>
           <>
             <ModalBody className={clsx(`px-0 pt-6`)}>
-              <div className={clsx(`horizontal rounded-large h-52 w-full justify-center px-4 pb-3.5`)}>
+              <div
+                className={clsx(
+                  `horizontal rounded-large h-52 w-full justify-center px-4 pb-3.5 outline-none`
+                )}
+                ref={modalRef}
+                tabIndex={-1}
+              >
                 <Image
                   isZoomed
                   removeWrapper
@@ -98,36 +119,49 @@ export default function MoreDetails(props: {
                 <div className={clsx(`horizontal w-full justify-start`)}>
                   <span className={clsx(`text-default-900 text-medium`)}>{moreDetails.description}</span>
                 </div>
-                <div className={clsx(`horizontal w-full justify-start pb-1`)}>
+                <div className={clsx(`vertical w-full gap-y-[1.0625rem] pb-[0.5625rem]`)}>
                   <TertiaryTitle {...{ title: moreDetails.subTitles[0] }} />
+                  <div className={clsx(`vertical w-full gap-y-3`)}>
+                    {moreDetails.phases.map((item, index) => (
+                      <Chip
+                        key={index}
+                        className={clsx(
+                          `bg-content7 border-content3 text-medium text-default-900 shadow-small border-1 py-4`
+                        )}
+                        variant={`solid`}
+                      >
+                        {item.step}
+                      </Chip>
+                    ))}
+                  </div>
                 </div>
-                <div className={clsx(`vertical w-full gap-y-3 pb-1.5`)}>
-                  {moreDetails?.phases?.map((item, index) => (
-                    <Chip
-                      key={index}
-                      className={clsx(
-                        `bg-content2 border-content3 text-medium text-default-900 shadow-small border-1 py-4`
-                      )}
-                      variant={`solid`}
-                    >
-                      {item.step}
-                    </Chip>
-                  ))}
-                </div>
-                <div className={clsx(`horizontal justify-start pb-[0.0625rem]`)}>
-                  <TertiaryTitle {...{ title: moreDetails.subTitles[2] }} />
-                </div>
-                <div className={clsx(`horizontal w-full justify-start`)}>
-                  <p className={clsx(`text-default-900 text-medium`)}>{moreDetails.ventajas}</p>
-                </div>
-                <div className={clsx(`horizontal w-full justify-start pb-1`)}>
+                <div className={clsx(`vertical w-full gap-y-3 pb-0.5`)}>
                   <TertiaryTitle {...{ title: moreDetails.subTitles[1] }} />
+                  <div className={clsx(`horizontal w-full justify-start`)}>
+                    <p className={clsx(`text-default-900 text-medium`)}>{moreDetails.ventajas}</p>
+                  </div>
                 </div>
-                <div className={clsx(`horizontal w-full pb-1.5`)}>
-                  <FQAsService {...{ questions: moreDetails.questions }} />
+                <div className={clsx(`vertical w-full gap-y-[1.0625rem] pb-[0.5625rem]`)}>
+                  <TertiaryTitle {...{ title: moreDetails.subTitles[2] }} />
+                  <div className={clsx(`horizontal w-full`)}>
+                    <FQAsService {...{ questions: moreDetails.questions }} />
+                  </div>
                 </div>
-                <div className={clsx(`horizontal justify-start pb-[0.0625rem]`)}>
+                <div className={clsx(`vertical w-full gap-y-[1.0625rem] pb-[0.0625rem]`)}>
                   <TertiaryTitle {...{ title: moreDetails.subTitles[3] }} />
+                  <div className={clsx(`vertical w-full gap-y-4`)}>
+                    {moreDetails.testimonials.map((item, index) => (
+                      <ServiceTestimonials
+                        key={index}
+                        {...{
+                          name: item.name,
+                          date: item.date,
+                          text: item.text,
+                          imageUrl: item.imageUrl,
+                        }}
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
             </ModalBody>

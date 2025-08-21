@@ -50,18 +50,19 @@ export default function RootLayout({
       className={clsx(`${nunito_sans.className} scroll-smooth antialiased`)}
       lang="es-ES"
     >
-      <body className={clsx(`bg-[#fafbfd]`)}>
-        {/* <SlowScrollClient {...{ speed: 20, step: 1000 }} /> */}
-        <Provider
-          themeProps={{
-            attribute: 'class',
-            defaultTheme: 'light',
-            themes: ['dark', 'light', 'modern'],
-          }}
-        >
-          {children}
-          <ContactFloatButton {...{ contactFloatButton: sd.contactFloatButton }} />
-        </Provider>
+      <body className={clsx(`bg-content7`)}>
+        <div className={clsx(`no-scrollbar h-screen overflow-auto`)}>
+          <Provider
+            themeProps={{
+              attribute: 'class',
+              defaultTheme: 'light',
+              themes: ['dark', 'light', 'modern'],
+            }}
+          >
+            {children}
+            <ContactFloatButton {...{ contactFloatButton: sd.contactFloatButton }} />
+          </Provider>
+        </div>
       </body>
     </html>
   )

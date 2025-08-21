@@ -29,40 +29,15 @@ export enum SocialIcon {
 const iconSwitch = (icon: string) => {
   switch (icon) {
     case SocialIcon.FACEBOOK:
-      return (
-        <FacebookIcon
-          aria-label={`facebook`}
-          className={clsx('h-[1.6875rem] w-[1.6875rem]', 'xl:h-9 xl:w-9')}
-        />
-      )
+      return <FacebookIcon aria-label={`facebook`} className={clsx(`h-9 w-9`)} />
     case SocialIcon.YOUTUBE:
-      return (
-        <YouTubeIcon
-          aria-label={`youtube`}
-          className={clsx('h-[1.6875rem] w-[1.6875rem]', 'xl:h-9 xl:w-9')}
-        />
-      )
+      return <YouTubeIcon aria-label={`youtube`} className={clsx(`h-9 w-9`)} />
     case SocialIcon.INSTAGRAM:
-      return (
-        <InstagramIcon
-          aria-label={`instagram`}
-          className={clsx('h-[1.6875rem] w-[1.6875rem]', 'xl:h-9 xl:w-9')}
-        />
-      )
+      return <InstagramIcon aria-label={`instagram`} className={clsx(`h-9 w-9`)} />
     case SocialIcon.WHATSAPP:
-      return (
-        <WhatsappIcon
-          aria-label={`whatsapp`}
-          className={clsx('h-[1.6875rem] w-[1.6875rem]', 'xl:h-9 xl:w-9')}
-        />
-      )
+      return <WhatsappIcon aria-label={`whatsapp`} className={clsx(`h-9 w-9`)} />
     case SocialIcon.TWITTER:
-      return (
-        <TwitterIcon
-          aria-label={`twitter`}
-          className={clsx('h-[1.5625rem] w-[1.5625rem]', 'xl:h-7 xl:w-7')}
-        />
-      )
+      return <TwitterIcon aria-label={`twitter`} className={clsx(`h-7 w-7`)} />
     default:
       return <span aria-label={`icon-none`}>?</span>
   }
@@ -81,7 +56,7 @@ export default function SocialNetwork(props: { icon: string; href: string }) {
     <Button
       isIconOnly
       isExternal
-      className={clsx(`bg-content3`, `xl:h-9 xl:w-9`)}
+      className={clsx(`bg-content3 h-9 w-9`)}
       aria-label={`social-network-${icon}`}
       as={Link}
       href={href}

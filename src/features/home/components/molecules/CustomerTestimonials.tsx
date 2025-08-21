@@ -44,7 +44,10 @@ export default function CustomerTestimonials(props: {
         effect={'cards'}
         grabCursor={true}
         modules={[EffectCards]}
-        className={clsx(`horizontal h-auto w-56 justify-center !pb-1.5`, `2xl:w-[14.9375rem]`)}
+        className={clsx(
+          `horizontal h-auto w-56 justify-center !pb-1.5`,
+          `4xl:w-[15.5rem] 2xl:w-[14.9375rem]`
+        )}
       >
         {testimonials.map((item /*, index*/) => {
           return (
@@ -56,24 +59,24 @@ export default function CustomerTestimonials(props: {
         <Button
           isIconOnly
           onPress={() => swiperRef.current?.slidePrev()}
-          className={clsx(`bg-content2 absolute top-5/12 -left-2 z-50 shadow-lg`)}
+          className={clsx(`bg-content1 absolute top-5/12 -left-4 z-50 shadow-lg`)}
           variant={`shadow`}
           radius={`full`}
-          size={`md`}
+          size={`lg`}
           aria-label={`See previous testimony`}
         >
-          <ChevronLeftIcon className={clsx(`fill-warning h-9 w-9`, `xl:h-9.5 xl:w-9.5`)} />
+          <ChevronLeftIcon className={clsx(`fill-warning-500 h-12 w-12`)} />
         </Button>
         <Button
           isIconOnly
           onPress={() => swiperRef.current?.slideNext()}
-          className={clsx(`bg-content2 absolute top-5/12 -right-2 z-50 shadow-lg`)}
+          className={clsx(`bg-content1 absolute top-5/12 -right-4 z-50 shadow-lg`)}
           variant={`shadow`}
           radius={`full`}
-          size={`md`}
+          size={`lg`}
           aria-label={`See next testimony`}
         >
-          <ChevronRightIcon className={clsx(`fill-warning h-9 w-9`, `xl:h-9.5 xl:w-9.5`)} />
+          <ChevronRightIcon className={clsx(`fill-warning-500 h-12 w-12`)} />
         </Button>
       </Swiper>
     </div>

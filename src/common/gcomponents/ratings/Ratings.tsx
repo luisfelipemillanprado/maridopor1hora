@@ -17,12 +17,15 @@ export default function Ratings(props: { rating: number }) {
     >
       <Chip
         className={clsx(
-          `text-default-50 bg-content5/35 text-[0.9375rem] [&>span]:pt-0.5 [&>span]:font-semibold`,
-          `xl:text-medium 3xl:text-[1.0625rem]`
+          `text-default-50 bg-content5/35 horizontal text-[0.9375rem] [&>span]:font-semibold`,
+          `xl:text-medium 3xl:text-large 4xl:text-xl`
         )}
         endContent={
           <StarIcon
-            className={clsx(`fill-warning-500 h-5 w-5`, `3xl:h-6 3xl:w-6 xl:h-5.5 xl:w-5.5`)}
+            className={clsx(
+              `fill-warning-500 h-5 w-5`,
+              `4xl:h-6.5 4xl:w-6.5 3xl:h-6 3xl:w-6 xl:h-5.5 xl:w-5.5`
+            )}
             title={`Rating: ${rating} 5 stars`}
           />
         }

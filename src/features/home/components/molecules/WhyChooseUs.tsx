@@ -42,7 +42,7 @@ export default function WhyChooseUs(props: {
       aria-label={`Highlighted benefits`}
     >
       {benefits.map((item) => (
-        <SwiperSlide key={item.key} className={clsx(`mr-5 !h-auto !w-auto`, `3xl:mr-6`)}>
+        <SwiperSlide key={item.key} className={clsx(`mr-5 !h-auto !w-auto`, `3xl:mr-6 4xl:mr-7`)}>
           <Benefit
             {...{
               title: item.title,
