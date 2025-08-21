@@ -20,9 +20,14 @@ export enum NavigationIcon {
 const iconSwitch = (icon: string) => {
   switch (icon) {
     case NavigationIcon.ARROWUPRIGHT:
-      return <ArrowUpRightIcon aria-label={`arrow-up-right`} className={clsx(`fill-default-900 h-4 w-4`)} />
+      return (
+        <ArrowUpRightIcon
+          aria-label={`arrow-up-right`}
+          className={clsx(`fill-default-900 h-4 w-4`, `h-5.5 w-5.5`)}
+        />
+      )
     case NavigationIcon.PLUS:
-      return <PlusIcon aria-label={`plus`} className={clsx(`fill-default-900 h-4 w-4`)} />
+      return <PlusIcon aria-label={`plus`} className={clsx(`fill-default-900 h-4 w-4`, `h-5.5 w-5.5`)} />
     default:
       return <span aria-label={`icon-none`}>?</span>
   }
@@ -36,7 +41,12 @@ const iconSwitch = (icon: string) => {
 export default function NavigationLinkIcons(props: { icon: string }) {
   const { icon } = props
   return (
-    <span className={clsx(`horizontal bg-content2 h-[2.125rem] w-[2.1875rem] justify-center rounded-full`)}>
+    <span
+      className={clsx(
+        `horizontal bg-content2 h-[2.125rem] w-[2.1875rem] justify-center rounded-full`,
+        `4xl:h-10 4xl:w-10`
+      )}
+    >
       {iconSwitch(icon)}
     </span>
   )

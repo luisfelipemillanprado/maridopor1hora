@@ -31,6 +31,7 @@ export default function DetailService(props: {
     ventajas: string
     testimonials: {
       name: string
+      date: string
       text: string
       imageUrl: string
       key: number

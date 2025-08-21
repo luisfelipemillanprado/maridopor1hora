@@ -46,8 +46,8 @@ const iconSwitch = (icon: string) => {
       return (
         <TicketIcon
           className={clsx(
-            `fill-content2 h-[1.4375rem] w-[1.4375rem]`,
-            `3xl:h-[1.6875rem] 3xl:w-[1.6875rem] 2xl:h-6 2xl:w-6`
+            `fill-content2 h-7 w-7`,
+            `3xl:h-8 3xl:w-8 4xl:w-9 4xl:h-9 xl:h-7.5 xl:w-7.5 2xl:h-[1.9375rem] 2xl:w-[1.9375rem]`
           )}
         />
       )
@@ -55,8 +55,8 @@ const iconSwitch = (icon: string) => {
       return (
         <BanknotesIcon
           className={clsx(
-            `fill-content2 h-[1.4375rem] w-[1.4375rem]`,
-            `3xl:h-[1.6875rem] 3xl:w-[1.6875rem] 2xl:h-6 2xl:w-6`
+            `fill-content2 h-7 w-7`,
+            `3xl:h-8 3xl:w-8 4xl:w-9 4xl:h-9 xl:h-7.5 xl:w-7.5 2xl:h-[1.9375rem] 2xl:w-[1.9375rem]`
           )}
         />
       )
@@ -64,8 +64,8 @@ const iconSwitch = (icon: string) => {
       return (
         <ClockIcon
           className={clsx(
-            `fill-content2 h-[1.4375rem] w-[1.4375rem]`,
-            `3xl:h-[1.6875rem] 3xl:w-[1.6875rem] 2xl:h-6 2xl:w-6`
+            `fill-content2 h-7 w-7`,
+            `3xl:h-8 3xl:w-8 4xl:w-9 4xl:h-9 xl:h-7.5 xl:w-7.5 2xl:h-[1.9375rem] 2xl:w-[1.9375rem]`
           )}
         />
       )
@@ -73,8 +73,8 @@ const iconSwitch = (icon: string) => {
       return (
         <GiftIcon
           className={clsx(
-            `fill-content2 h-[1.4375rem] w-[1.4375rem]`,
-            `3xl:h-[1.6875rem] 3xl:w-[1.6875rem] 2xl:h-6 2xl:w-6`
+            `fill-content2 h-7 w-7`,
+            `3xl:h-8 3xl:w-8 4xl:w-9 4xl:h-9 xl:h-7.5 xl:w-7.5 2xl:h-[1.9375rem] 2xl:w-[1.9375rem]`
           )}
         />
       )
@@ -82,8 +82,8 @@ const iconSwitch = (icon: string) => {
       return (
         <ShieldCheckIcon
           className={clsx(
-            `fill-content2 h-[1.4375rem] w-[1.4375rem]`,
-            `3xl:h-[1.6875rem] 3xl:w-[1.6875rem] 2xl:h-6 2xl:w-6`
+            `fill-content2 h-7 w-7`,
+            `3xl:h-8 3xl:w-8 4xl:w-9 4xl:h-9 xl:h-7.5 xl:w-7.5 2xl:h-[1.9375rem] 2xl:w-[1.9375rem]`
           )}
         />
       )
@@ -91,8 +91,8 @@ const iconSwitch = (icon: string) => {
       return (
         <PercentBadgeIcon
           className={clsx(
-            `fill-content2 h-[1.4375rem] w-[1.4375rem]`,
-            `3xl:h-[1.6875rem] 3xl:w-[1.6875rem] 2xl:h-6 2xl:w-6`
+            `fill-content2 h-7 w-7`,
+            `3xl:h-8 3xl:w-8 4xl:w-9 4xl:h-9 xl:h-7.5 xl:w-7.5 2xl:h-[1.9375rem] 2xl:w-[1.9375rem]`
           )}
         />
       )
@@ -100,8 +100,8 @@ const iconSwitch = (icon: string) => {
       return (
         <ExclamationTriangleIcon
           className={clsx(
-            `fill-content2 h-[1.4375rem] w-[1.4375rem]`,
-            `3xl:h-[1.6875rem] 3xl:w-[1.6875rem] 2xl:h-6 2xl:w-6`
+            `fill-content2 h-7 w-7`,
+            `3xl:h-8 3xl:w-8 4xl:w-9 4xl:h-9 xl:h-7.5 xl:w-7.5 2xl:h-[1.9375rem] 2xl:w-[1.9375rem]`
           )}
         />
       )
@@ -109,8 +109,8 @@ const iconSwitch = (icon: string) => {
       return (
         <WrenchScrewdriverIcon
           className={clsx(
-            `fill-content2 h-[1.4375rem] w-[1.4375rem]`,
-            `3xl:h-[1.6875rem] 3xl:w-[1.6875rem] 2xl:h-6 2xl:w-6`
+            `fill-content2 h-7 w-7`,
+            `3xl:h-8 3xl:w-8 4xl:w-9 4xl:h-9 xl:h-7.5 xl:w-7.5 2xl:h-[1.9375rem] 2xl:w-[1.9375rem]`
           )}
         />
       )
@@ -138,17 +138,17 @@ export default function Benefit(props: {
   return (
     <Card
       className={clsx(
-        `bg-content2 border-content3 h-[18.9375rem] w-80 border-1 px-3 py-3.5`,
-        `3xl:h-[20.9375rem] 3xl:w-[21.875rem] xl:h-[19.125rem] xl:w-[20.9375rem] 2xl:h-[19.5rem]`
+        `bg-content3 border-content4 h-[19.375rem] w-80 border-1 p-3`,
+        `3xl:h-[20.9375rem] 3xl:w-[21.875rem] 4xl:w-[22.8125rem] 4xl:h-[21.875rem] xl:h-[19.5rem] xl:w-[20.9375rem]`
       )}
       shadow={`sm`}
     >
-      <CardHeader className={clsx(`horizontal pt-2 pb-2.5`)}>
+      <CardHeader className={clsx(`horizontal pt-2 pb-2.5`, `4xl:pb-[0.6875rem]`)}>
         <div className={clsx(`vertical h-auto w-full items-start gap-3.5`)}>
           <div
             className={clsx(
-              `bg-warning hrizontal h-auto w-auto justify-center rounded-full p-1.5`,
-              `border-warning shadow-small border-1`
+              `bg-warning horizontal border-warning shadow-small justify-center rounded-full border-1 p-1.5`,
+              `4xl:p-[0.4375rem]`
             )}
           >
             <span className={clsx(`h-auto w-auto`)}>{iconSwitch(icon)}</span>
@@ -156,7 +156,7 @@ export default function Benefit(props: {
           <h3
             className={clsx(
               `text-default-900 text-left text-[1.1875rem] font-bold text-shadow-sm`,
-              `xl:text-xl`
+              `4xl:text-[1.375rem] 3xl:text-[1.3125rem] xl:text-xl`
             )}
             itemProp={title}
           >
@@ -177,7 +177,10 @@ export default function Benefit(props: {
       <CardFooter className={clsx(`vertical items-start pt-3.5 pb-0 pl-2.5`)}>
         <Button
           isExternal
-          className={clsx(`bg-content1 border-content4 mb-2.5 border-1 shadow-sm`, `2xl:min-h-8 2xl:py-4`)}
+          className={clsx(
+            `bg-content1 border-content4 mb-2.5 h-9 border-1 shadow-sm`,
+            `4xl:h-10 3xl:h-9.5 2xl:py-4`
+          )}
           as={Link}
           href={href}
           variant={`flat`}
@@ -185,12 +188,7 @@ export default function Benefit(props: {
           radius={`full`}
           aria-label={hrefText}
         >
-          <span
-            className={clsx(
-              `text-medium text-default-900 h-auto w-auto`,
-              `2xl:text-large xl:text-[1.0625rem]`
-            )}
-          >
+          <span className={clsx(`text-medium text-default-900`, `2xl:text-large xl:text-[1.0625rem]`)}>
             {hrefText}
           </span>
         </Button>

@@ -16,14 +16,14 @@ export default function Service(props: { imageUrl: string; name: string; descrip
       isPressable
       className={clsx(
         `bg-content3 border-content4 col-span-6 gap-y-2 border-1 p-1`,
-        `3xl:p-1.5 4xl:col-span-4`
+        `3xl:p-1.5 4xl:col-span-4 4xl:p-2`
       )}
       shadow={`md`}
     >
-      <CardHeader className={clsx(`justify-between pb-2`)}>
+      <CardHeader className={clsx(`justify-between pb-2`, `4xl:pb-2.5`)}>
         <Avatar
           isBordered
-          className={clsx(`3xl:h-[2.625rem] 3xl:w-[2.625rem]`)}
+          className={clsx(`h-11.5 w-11.5`, `4xl:h-15 4xl:w-15 3xl:h-14 3xl:w-14 xl:h-12 xl:w-12`)}
           color={`warning`}
           radius={`full`}
           size={`md`}
@@ -33,7 +33,12 @@ export default function Service(props: { imageUrl: string; name: string; descrip
         />
       </CardHeader>
       <CardBody className={clsx(`flex-none p-0 px-3 py-0`)}>
-        <h3 className={clsx(`text-default-900 text-large font-bold`, `3xl:text-xl xl:text-[1.1875rem]`)}>
+        <h3
+          className={clsx(
+            `text-default-900 text-large font-bold`,
+            `4xl:text-[1.375rem] 3xl:text-[1.3125rem] xl:text-xl`
+          )}
+        >
           {name}
         </h3>
       </CardBody>

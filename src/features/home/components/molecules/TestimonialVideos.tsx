@@ -16,7 +16,7 @@ import clsx from 'clsx'
  * @returns A Swiper carousel containing testimonial video slides.
  */
 export default function TestimonialVideos(props: {
-  videoTestimonials: { imageUrl: string; videoUrl: string; key: number }[]
+  videoTestimonials: { imageUrl: string; videoUrl: string; durationTime: string; key: number }[]
 }) {
   const { videoTestimonials } = props
   return (
@@ -27,11 +27,12 @@ export default function TestimonialVideos(props: {
       aria-label={`Video testimonials`}
     >
       {videoTestimonials.map((item) => (
-        <SwiperSlide key={item.key} className={clsx(`mr-5 !h-auto !w-auto`, `3xl:mr-6`)}>
+        <SwiperSlide key={item.key} className={clsx(`mr-5 !h-auto !w-auto`, `3xl:mr-6 4xl:mr-7`)}>
           <TestimonialVideo
             {...{
               videoUrl: item.videoUrl,
               imageUrl: item.imageUrl,
+              durationTime: item.durationTime,
             }}
           />
         </SwiperSlide>

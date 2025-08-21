@@ -13,7 +13,7 @@ export default function AboutTeam(props: { firstText: string; secondText: string
       <h4
         className={clsx(
           `from-warning to-content5 via-content6 bg-gradient-to-tr bg-clip-text text-xl font-extrabold text-transparent`,
-          `xl:text-[1.3125rem]`
+          `4xl:text-[1.75rem] 3xl:text-[1.4375rem] xl:text-[1.3125rem]`
         )}
       >
         {firstText}
@@ -21,7 +21,7 @@ export default function AboutTeam(props: { firstText: string; secondText: string
       <p
         className={clsx(
           `vertical text-default-800 text-medium text-center`,
-          `2xl:text-large xl:text-[1.0625rem]`
+          `2xl:text-large 4xl:px-4 xl:text-[1.0625rem]`
         )}
       >
         <span className={clsx(`h-auto w-auto`)}>{secondText[0]}</span>

@@ -6,6 +6,15 @@
   --foreground: #171717;
 }
 
+/* style to remove focus ring in Chrome/Edge videos */
+video:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -webkit-focus-ring-color: transparent !important;
+}
+
+/* utility classes en Tailwind v4 */
 @layer utilities {
   .horizontal {
     @apply flex items-center flex-nowrap flex-row;
@@ -13,5 +22,15 @@
 
   .vertical {
     @apply flex justify-center flex-nowrap flex-col;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
   }
 }

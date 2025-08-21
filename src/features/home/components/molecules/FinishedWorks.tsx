@@ -23,7 +23,9 @@ export default function FinishedWorks(props: {
 }) {
   const { finishedWorks } = props
   return (
-    <div className={clsx(`grid w-full grid-cols-12 grid-rows-3 gap-3`, `3xl:gap-5 4xl:grid-rows-2`)}>
+    <div
+      className={clsx(`grid w-full grid-cols-12 grid-rows-3 gap-3`, `3xl:gap-5 4xl:grid-rows-2 4xl:gap-7`)}
+    >
       {finishedWorks.imageUrls.map((item, index) => (
         <FinishedWork
           key={item.key}

@@ -15,17 +15,15 @@ export default function JoinTeamButton(props: { text: string; href: string }) {
       <Button
         isExternal
         aria-label={`join-team`}
-        className={clsx(`bg-warning`)}
-        endContent={<UserGroupIcon className={clsx(`fill-content5 h-6 w-6`)} />}
+        className={clsx(`bg-warning`, `4xl:h-11.5`)}
+        endContent={<UserGroupIcon className={clsx(`fill-content5 h-6.5 w-6.5`, `4xl:h-7.5 4xl:w-7.5`)} />}
         as={Link}
         href={href}
         variant={`shadow`}
         size={`md`}
         radius={`full`}
       >
-        <span
-          className={clsx(`text-default-50 text-medium`, `3xl:text-large 2xl:text-large xl:text-[1.0625rem]`)}
-        >
+        <span className={clsx(`text-default-50 text-[1.0625rem]`, `4xl:text-[1.1875rem] 2xl:text-large`)}>
           {text}
         </span>
       </Button>

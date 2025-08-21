@@ -33,12 +33,12 @@ export default function JoinOurTeam(props: {
   return (
     <div
       className={clsx(
-        `vertical bg-content3 rounded-large h-auto w-full gap-y-7 px-4 pt-4`,
-        `border-content4 shadow-medium mb-5 border-1`
+        `vertical bg-content3 rounded-large border-content4 shadow-medium h-auto w-full gap-y-7 border-1 px-4 pt-4`,
+        `4xl:gap-y-8`
       )}
     >
       <AboutTeam {...{ firstText: joinOurTeam.firstText, secondText: joinOurTeam.secondText }} />
-      <div className={clsx(`horizontal mb-1 h-auto w-full justify-center`)}>
+      <div className={clsx(`horizontal mb-1 h-auto w-full justify-center`, `4xl:mb-2.5`)}>
         <JoinTeamButton
           {...{
             text: joinOurTeam.joinOurTeamButton.text,

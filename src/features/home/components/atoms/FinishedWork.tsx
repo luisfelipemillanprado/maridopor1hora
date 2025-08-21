@@ -35,7 +35,10 @@ export default function FinishedWork(props: {
       >
         <AvatarGroup
           isBordered
-          className={clsx(`hidden [&>span]:h-7.5 [&>span]:w-7.5`, `3xl:flex`)}
+          className={clsx(
+            `hidden [&>span]:h-7.5 [&>span]:w-7.5`,
+            `3xl:flex 4xl:[&>span]:h-12 4xl:[&>span]:w-12 3xl:[&>span]:h-11 3xl:[&>span]:w-11`
+          )}
           color={`warning`}
           max={maxCount}
           renderCount={(/*count*/) => <></>}
@@ -48,7 +51,7 @@ export default function FinishedWork(props: {
         <span
           className={clsx(
             `text-default-50 text-medium font-bold`,
-            `2xl:text-large 3xl:text-[1.1875rem] xl:text-[1.0625rem]`
+            `2xl:text-large 3xl:text-[1.1875rem] 4xl:text-[1.3125rem] xl:text-[1.0625rem]`
           )}
         >
           {text}

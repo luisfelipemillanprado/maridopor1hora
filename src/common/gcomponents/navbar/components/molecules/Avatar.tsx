@@ -34,12 +34,12 @@ export default function Avatars(props: {
 }) {
   const { imageUrl, content, items } = props
   return (
-    <Dropdown className={clsx(`border-content4 border-1 bg-[#fafbfd]`)}>
+    <Dropdown className={clsx(`border-content4 bg-content7 border-1`)}>
       <DropdownTrigger>
         <Button
           className={clsx(
             `vertical h-[2.875rem] w-[2.875rem] min-w-[2.875rem] items-center p-2`,
-            `3xl:h-12 3xl:w-12 xl:h-[2.8125rem] xl:w-[2.8125rem]`
+            `3xl:h-12 3xl:w-12`
           )}
           variant={`light`}
         >
@@ -53,10 +53,7 @@ export default function Avatars(props: {
             showOutline={false}
           >
             <Avatar
-              className={clsx(
-                `h-[2.375rem] w-[2.375rem]`,
-                `3xl:h-[2.3125rem] 3xl:w-[2.3125rem] xl:h-9 xl:w-9`
-              )}
+              className={clsx(`h-[2.375rem] w-[2.375rem]`)}
               isBordered
               size={`sm`}
               color={`warning`}
