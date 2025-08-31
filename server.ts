@@ -9,7 +9,7 @@ import { Request, Response } from 'express'
  */
 const port = parseInt(process.env.PORT || '3000', 10)
 const dev = process.env.NODE_ENV !== 'production'
-const domain = 'maridoporunahora.com'
+const domain = 'maridopor1hora.com'
 
 /**
  * @description - Initializes a Next.js application instance with custom server configuration.

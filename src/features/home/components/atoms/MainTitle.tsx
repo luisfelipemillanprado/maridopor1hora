@@ -17,7 +17,7 @@ export default function MainTitle(props: { mainTitle: { first: string; second: s
         <h1
           className={clsx(
             `text-center text-[1.75rem] leading-9 font-bold text-shadow-lg`,
-            `3xl:text-[2.3125rem] 3xl:px-7 3xl:leading-12 4xl:text-[3.375rem] 4xl:px-20 4xl:leading-[4.375rem] xl:text-[1.8125rem] 2xl:text-[1.875rem]`
+            `3xl:text-[2.3125rem] 3xl:px-7 3xl:leading-12 4xl:text-5xl 4xl:px-36 4xl:leading-[4.375rem] xl:text-[1.8125rem] 2xl:text-[1.875rem]`
           )}
           title={`${first} ${second}`}
         >

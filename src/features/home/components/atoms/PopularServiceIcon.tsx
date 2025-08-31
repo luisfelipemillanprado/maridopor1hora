@@ -29,42 +29,42 @@ const iconSwitch = (icon: string) => {
       return (
         <i
           aria-label={`clear`}
-          className={clsx(`bxr bxs-spray-can`, `text-content9 text-3xl`, `4xl:text-[2.375rem]`)}
+          className={clsx(`bxr bxs-spray-can`, `text-content9 text-3xl`, `4xl:text-4xl`)}
         />
       )
     case PopularServiceIconType.ELECTRICIAN:
       return (
         <i
           aria-label={`electrician`}
-          className={clsx(`bxr bxs-light-bulb-alt`, `text-content9 text-3xl`, `4xl:text-[2.375rem]`)}
+          className={clsx(`bxr bxs-light-bulb-alt`, `text-content9 text-3xl`, `4xl:text-4xl`)}
         />
       )
     case PopularServiceIconType.PLUMBING:
       return (
         <i
           aria-label={`plumbing`}
-          className={clsx(`bxr bxs-water-alt`, `text-content9 text-3xl`, `4xl:text-[2.375rem]`)}
+          className={clsx(`bxr bxs-water-alt`, `text-content9 text-3xl`, `4xl:text-4xl`)}
         />
       )
     case PopularServiceIconType.AIRCONDITIONER:
       return (
         <i
           aria-label={`airconditioner`}
-          className={clsx(`bxr bxs-snowflake`, `text-content9 text-3xl`, `4xl:text-[2.375rem]`)}
+          className={clsx(`bxr bxs-snowflake`, `text-content9 text-3xl`, `4xl:text-4xl`)}
         />
       )
     case PopularServiceIconType.FURNITURE:
       return (
         <i
           aria-label={`furniture`}
-          className={clsx(`bxr bxs-cabinet`, `text-content9 text-3xl`, `4xl:text-[2.375rem]`)}
+          className={clsx(`bxr bxs-cabinet`, `text-content9 text-3xl`, `4xl:text-4xl`)}
         />
       )
     case PopularServiceIconType.MASONRY:
       return (
         <i
           aria-label={`masonry`}
-          className={clsx(`bxr bxs-wall`, `text-content9 text-3xl`, `4xl:text-[2.375rem]`)}
+          className={clsx(`bxr bxs-wall`, `text-content9 text-3xl`, `4xl:text-4xl`)}
         />
       )
     default:
