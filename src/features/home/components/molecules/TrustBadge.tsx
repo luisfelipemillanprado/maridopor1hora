@@ -1,8 +1,7 @@
 'use client'
-import { Card, CardHeader, CardBody, Button } from '@heroui/react'
+import BadgePulse from '@/common/gcomponents/pulse/BadgePulse'
 import Rating from '@/features/home/components/atoms/Rating'
-import { BoltIcon, ShieldCheckIcon, ChevronRightIcon } from '@heroicons/react/24/solid'
-import { SparklesIcon } from '@/utils/svgs/Svgs'
+import { Card, CardHeader, CardBody, Button } from '@heroui/react'
 import clsx from 'clsx'
 
 /**
@@ -29,32 +28,25 @@ export default function TrustBadge(props: {
   return (
     <Card className={clsx(`bg-content3 border-content4 h-auto w-full border-1 px-1`)} shadow={`md`}>
       <CardHeader className={clsx(`horizontal gap-x-4 pb-2`)}>
-        <div
-          className={clsx(
-            `hidden`,
-            `4xl:flex 4xl:flex-row 4xl:border-1.5 4xl:justify-center 4xl:rounded-full 4xl:border-content4/50 4xl:p-3`
-          )}
-        >
+        <BadgePulse colorChange={false}>
           <div
             className={clsx(
-              `horizontal border-default-400/40 border-1.5 h-auto w-auto justify-center rounded-full p-3 shadow-md`
+              `horizontal border-default-400/20 z-50 justify-center rounded-full border-1 p-3 shadow-sm`
             )}
           >
-            <div
-              className={clsx(
-                `horizontal bg-content4 h-auto w-auto justify-center rounded-full p-3 shadow-md`
-              )}
-            >
-              <ShieldCheckIcon className={clsx(`fill-warning h-12 w-12`)} aria-hidden={true} />
+            <div className={clsx(`horizontal bg-content4 justify-center rounded-full p-1 shadow-md`)}>
+              <span className={clsx(`horizontal h-auto w-auto`)}>
+                <i className={clsx(`bxr bxs-plus-shield`, `text-warning text-7xl`)} />
+              </span>
             </div>
           </div>
-        </div>
+        </BadgePulse>
         <div className={clsx(`horizontal h-auto w-full justify-between`)}>
           <div className={clsx(`vertical gap-y-2.5`)}>
             <h3
               className={clsx(
                 `text-default-900 text-[1.3125rem] font-bold text-shadow-md`,
-                `3xl:text-[1.4375rem] 4xl:text-2xl xl:text-[1.3125rem] 2xl:text-[1.4375rem]`
+                `3xl:text-[1.4375rem] 4xl:text-[1.6875rem] xl:text-[1.3125rem] 2xl:text-[1.4375rem]`
               )}
             >
               {trustBadge.slogan}
@@ -65,12 +57,16 @@ export default function TrustBadge(props: {
           </div>
           <div className={clsx(`hidden`, `4xl:mb-2 4xl:h-auto 4xl:w-auto 4xl:pr-3.5 4xl:flex 4xl:flex-row`)}>
             <Button
-              className={clsx(`bg-content7 shadow-small h-10`)}
+              className={clsx(`bg-content7 shadow-small h-10 gap-x-0 pr-0`)}
               startContent={
-                <SparklesIcon className={clsx(`fill-warning-500 h-10 w-10`)} aria-hidden={true} />
+                <span className={clsx(`horizontal h-auto w-auto`)}>
+                  <i className={clsx(`bxl bx-trustpilot`, `text-content10 text-3xl`)} />
+                </span>
               }
               endContent={
-                <ChevronRightIcon className={clsx(`fill-warning-500 h-7 w-7`)} aria-hidden={true} />
+                <span className={clsx(`horizontal h-auto w-auto`)}>
+                  <i className={clsx(`bxr bxs-chevron-right`, `text-content10 text-[2.375rem]`)} />
+                </span>
               }
               variant={`flat`}
               radius={`full`}
@@ -78,7 +74,7 @@ export default function TrustBadge(props: {
               aria-label={trustBadge.buttonTrustPilot[0]}
               title={trustBadge.buttonTrustPilot[0]}
             >
-              <span className={clsx(`text-large text-default-700 h-auto w-auto`)}>
+              <span className={clsx(`text-large text-default-700 ml-2`)}>
                 {trustBadge.buttonTrustPilot[0]}
               </span>
             </Button>
@@ -88,15 +84,17 @@ export default function TrustBadge(props: {
       <CardBody className={clsx(`horizontal justify-between`)}>
         <div className={clsx(`horizontal h-auto w-auto`, `4xl:pl-3`)}>
           <Button
-            className={clsx(`bg-content7 shadow-small`, `4xl:h-10`)}
+            className={clsx(`bg-content7 shadow-small gap-x-1 pr-3 pl-2.5`, `3xl:h-9 4xl:h-10`)}
             startContent={
-              <BoltIcon
-                className={clsx(
-                  `fill-warning-500 h-4 w-4`,
-                  `3xl:w-5 3xl:h-5 4xl:h-5.5 4xl:w-5.5 2xl:h-[1.0625rem] 2xl:w-[1.0625rem]`
-                )}
-                aria-hidden={true}
-              />
+              <span className={clsx(`horizontal h-auto w-auto`)}>
+                <i
+                  className={clsx(
+                    `bxr bxs-bolt`,
+                    `text-warning-500 text-2xl`,
+                    `3xl:text-[1.75rem] 4xl:text-[2rem] 2xl:text-[1.5625rem]`
+                  )}
+                />
+              </span>
             }
             variant={`flat`}
             radius={`full`}
@@ -121,3 +119,24 @@ export default function TrustBadge(props: {
     </Card>
   )
 }
+/**
+ * <div className={clsx(`relative hidden items-center justify-center`, `4xl:flex`)}>
+          <span
+            className={clsx(
+              `bg-default-400 animate-slow-pulse absolute inline-flex h-12.5 w-12.5 rounded-full`
+            )}
+            style={{ animationDelay: '0s' }}
+          />
+          <span
+            className={clsx(
+              `bg-default-400 animate-slow-pulse absolute inline-flex h-12.5 w-12.5 rounded-full`
+            )}
+            style={{ animationDelay: '0.5s' }}
+          />
+          <span
+            className={clsx(
+              `bg-default-400 animate-slow-pulse absolute inline-flex h-12.5 w-12.5 rounded-full`
+            )}
+            style={{ animationDelay: '1.3s' }}
+          />
+ */

@@ -1,5 +1,4 @@
 import { Chip } from '@heroui/react'
-import { StarIcon } from '@heroicons/react/24/solid'
 import clsx from 'clsx'
 
 /**
@@ -13,7 +12,7 @@ export default function Ratings(props: { rating: number }) {
   return (
     <div
       className={clsx(`horizontal absolute top-1.5 right-1.5 z-50 justify-center`, `3xl:top-3 3xl:right-3`)}
-      aria-label={`Rating: ${rating} 5 stars`}
+      aria-label={`Rating: ${rating} stars`}
     >
       <Chip
         className={clsx(
@@ -21,13 +20,16 @@ export default function Ratings(props: { rating: number }) {
           `xl:text-medium 3xl:text-large 4xl:text-xl`
         )}
         endContent={
-          <StarIcon
-            className={clsx(
-              `fill-warning-500 h-5 w-5`,
-              `4xl:h-6.5 4xl:w-6.5 3xl:h-6 3xl:w-6 xl:h-5.5 xl:w-5.5`
-            )}
-            title={`Rating: ${rating} 5 stars`}
-          />
+          <span className={clsx(`horizontal h-auto w-auto`)}>
+            <i
+              title={`Rating: ${rating} stars`}
+              className={clsx(
+                `bxr bxs-star`,
+                `text-warning-500 text-[1.625rem]`,
+                `3xl:text-[1.75rem] 4xl:text-3xl xl:text-[1.6875rem]`
+              )}
+            />
+          </span>
         }
         variant={`shadow`}
         size={`md`}

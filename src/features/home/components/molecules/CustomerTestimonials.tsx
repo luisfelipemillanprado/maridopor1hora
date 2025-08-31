@@ -2,7 +2,6 @@
 import { useRef } from 'react'
 import Testimonial from '@/features/home/components/atoms/Testimonial'
 import { Button } from '@heroui/react'
-import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/24/solid'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import type { Swiper as SwiperType } from 'swiper'
 import 'swiper/css'
@@ -65,7 +64,7 @@ export default function CustomerTestimonials(props: {
           size={`lg`}
           aria-label={`See previous testimony`}
         >
-          <ChevronLeftIcon className={clsx(`fill-warning-500 h-12 w-12`)} />
+          <i className={clsx(`bxr bxs-chevron-left`, `text-warning-500 text-[4.75rem]`)} />
         </Button>
         <Button
           isIconOnly
@@ -76,7 +75,7 @@ export default function CustomerTestimonials(props: {
           size={`lg`}
           aria-label={`See next testimony`}
         >
-          <ChevronRightIcon className={clsx(`fill-warning-500 h-12 w-12`)} />
+          <i className={clsx(`bxr bxs-chevron-right`, `text-warning-500 text-[4.75rem]`)} />
         </Button>
       </Swiper>
     </div>

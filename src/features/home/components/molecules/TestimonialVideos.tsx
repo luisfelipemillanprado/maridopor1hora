@@ -2,8 +2,9 @@
 import TestimonialVideo from '@/features/home/components/atoms/TestimonialVideo'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/scrollbar'
+import 'swiper/css/effect-cube'
+import 'swiper/css/pagination'
+import { EffectCube, Pagination } from 'swiper/modules'
 import clsx from 'clsx'
 
 /**
@@ -20,23 +21,33 @@ export default function TestimonialVideos(props: {
 }) {
   const { videoTestimonials } = props
   return (
-    <Swiper
-      slidesPerView={`auto`}
-      loop={true}
-      className={clsx(`h-auto w-full !py-2.5 !pl-1.5`)}
-      aria-label={`Video testimonials`}
-    >
-      {videoTestimonials.map((item) => (
-        <SwiperSlide key={item.key} className={clsx(`mr-5 !h-auto !w-auto`, `3xl:mr-6 4xl:mr-7`)}>
-          <TestimonialVideo
-            {...{
-              videoUrl: item.videoUrl,
-              imageUrl: item.imageUrl,
-              durationTime: item.durationTime,
-            }}
-          />
-        </SwiperSlide>
-      ))}
-    </Swiper>
+    <div>
+      <Swiper
+        effect={'cube'}
+        grabCursor={true}
+        cubeEffect={{
+          shadow: true,
+          slideShadows: true,
+          shadowOffset: 1,
+          shadowScale: 0,
+        }}
+        pagination={true}
+        modules={[EffectCube, Pagination]}
+        className={clsx(`h-auto w-full !bg-transparent`, `3xl:w-[18.75rem] 3xl:mx-0 4xl:w-[21.25rem]`)}
+        aria-label={`Video testimonials`}
+      >
+        {videoTestimonials.map((item) => (
+          <SwiperSlide key={item.key} className={clsx(``)}>
+            <TestimonialVideo
+              {...{
+                videoUrl: item.videoUrl,
+                imageUrl: item.imageUrl,
+                durationTime: item.durationTime,
+              }}
+            />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
   )
 }

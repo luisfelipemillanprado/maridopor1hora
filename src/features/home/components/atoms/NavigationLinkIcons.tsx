@@ -1,4 +1,3 @@
-import { ArrowUpRightIcon, PlusIcon } from '@heroicons/react/24/solid'
 import clsx from 'clsx'
 
 /**
@@ -21,13 +20,15 @@ const iconSwitch = (icon: string) => {
   switch (icon) {
     case NavigationIcon.ARROWUPRIGHT:
       return (
-        <ArrowUpRightIcon
+        <i
           aria-label={`arrow-up-right`}
-          className={clsx(`fill-default-900 h-4 w-4`, `h-5.5 w-5.5`)}
+          className={clsx(
+            `bxr bxs-arrow-up-right-stroke bx-tada`,
+            `text-default-900 text-[2.3125rem]`,
+            `3xl:text-[2.4375rem] 4xl:text-[2.75rem]`
+          )}
         />
       )
-    case NavigationIcon.PLUS:
-      return <PlusIcon aria-label={`plus`} className={clsx(`fill-default-900 h-4 w-4`, `h-5.5 w-5.5`)} />
     default:
       return <span aria-label={`icon-none`}>?</span>
   }
@@ -44,7 +45,7 @@ export default function NavigationLinkIcons(props: { icon: string }) {
     <span
       className={clsx(
         `horizontal bg-content2 h-[2.125rem] w-[2.1875rem] justify-center rounded-full`,
-        `4xl:h-10 4xl:w-10`
+        `4xl:h-10 4xl:w-10 3xl:h-[2.3125rem] 3xl:w-[2.3125rem]`
       )}
     >
       {iconSwitch(icon)}

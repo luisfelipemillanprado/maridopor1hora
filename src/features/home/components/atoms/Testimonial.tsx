@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import { StarIcon } from '@heroicons/react/20/solid'
 import clsx from 'clsx'
 import blurEffects from '@/utils/blurs/Blurs'
 
@@ -48,13 +47,13 @@ export default function Testimonial(props: {
         <div className={clsx(`horizontal h-auto w-auto justify-between gap-1`)}>
           {score.map((item) => {
             return (
-              <span key={item.key} className={clsx(`horizontal h-auto w-auto justify-center`)}>
-                <StarIcon
+              <span key={item.key} className={clsx(`horizontal h-auto w-auto`)}>
+                <i
                   className={clsx(
-                    `fill-warning-500 h-[1.125rem] w-[1.125rem]`,
-                    `4xl:h-[1.4375rem] 4xl:w-[1.4375rem] xl:h-[1.1875rem] xl:w-[1.1875rem]`
+                    `bxr bxs-star`,
+                    `text-warning-500 text-[1.625rem]`,
+                    `3xl:text-[1.75rem] 4xl:text-3xl xl:text-[1.6875rem]`
                   )}
-                  aria-hidden="true"
                 />
               </span>
             )
@@ -79,3 +78,10 @@ export default function Testimonial(props: {
     </div>
   )
 }
+/** <StarIcon
+                  className={clsx(
+                    `fill-warning-500 h-[1.125rem] w-[1.125rem]`,
+                    `4xl:h-[1.4375rem] 4xl:w-[1.4375rem] xl:h-[1.1875rem] xl:w-[1.1875rem]`
+                  )}
+                  aria-hidden="true"
+                /> */

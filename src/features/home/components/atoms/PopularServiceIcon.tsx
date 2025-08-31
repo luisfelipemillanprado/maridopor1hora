@@ -1,4 +1,3 @@
-import { ClearIcon, ChipIcon, WaterDropIcon, AirConditionerIcon, CabinetIcon } from '@/utils/svgs/Svgs'
 import clsx from 'clsx'
 
 /**
@@ -16,6 +15,7 @@ export enum PopularServiceIconType {
   PLUMBING = 'plumbing',
   AIRCONDITIONER = 'airconditioner',
   FURNITURE = 'furniture',
+  MASONRY = 'masonry',
 }
 
 /**
@@ -26,15 +26,47 @@ export enum PopularServiceIconType {
 const iconSwitch = (icon: string) => {
   switch (icon) {
     case PopularServiceIconType.CLEAR:
-      return <ClearIcon aria-label={`clear`} className={clsx(`fill-content9 h-7 w-7`)} />
+      return (
+        <i
+          aria-label={`clear`}
+          className={clsx(`bxr bxs-spray-can`, `text-content9 text-3xl`, `4xl:text-[2.375rem]`)}
+        />
+      )
     case PopularServiceIconType.ELECTRICIAN:
-      return <ChipIcon aria-label={`electrician`} className={clsx(`fill-content9 h-7 w-7`)} />
+      return (
+        <i
+          aria-label={`electrician`}
+          className={clsx(`bxr bxs-light-bulb-alt`, `text-content9 text-3xl`, `4xl:text-[2.375rem]`)}
+        />
+      )
     case PopularServiceIconType.PLUMBING:
-      return <WaterDropIcon aria-label={`plumbing`} className={clsx(`fill-content9 h-7 w-7`)} />
+      return (
+        <i
+          aria-label={`plumbing`}
+          className={clsx(`bxr bxs-water-alt`, `text-content9 text-3xl`, `4xl:text-[2.375rem]`)}
+        />
+      )
     case PopularServiceIconType.AIRCONDITIONER:
-      return <AirConditionerIcon aria-label={`airconditioner`} className={clsx(`fill-content9 h-7 w-7`)} />
+      return (
+        <i
+          aria-label={`airconditioner`}
+          className={clsx(`bxr bxs-snowflake`, `text-content9 text-3xl`, `4xl:text-[2.375rem]`)}
+        />
+      )
     case PopularServiceIconType.FURNITURE:
-      return <CabinetIcon aria-label={`furniture`} className={clsx(`fill-content9 h-7 w-7`)} />
+      return (
+        <i
+          aria-label={`furniture`}
+          className={clsx(`bxr bxs-cabinet`, `text-content9 text-3xl`, `4xl:text-[2.375rem]`)}
+        />
+      )
+    case PopularServiceIconType.MASONRY:
+      return (
+        <i
+          aria-label={`masonry`}
+          className={clsx(`bxr bxs-wall`, `text-content9 text-3xl`, `4xl:text-[2.375rem]`)}
+        />
+      )
     default:
       return <span aria-label={`icon-none`}>?</span>
   }
@@ -47,5 +79,5 @@ const iconSwitch = (icon: string) => {
  */
 export default function PopularServiceIcon(props: { icon: string }) {
   const { icon } = props
-  return <span className={clsx(`h-auto w-auto`)}>{iconSwitch(icon)}</span>
+  return <span className={clsx(`horizontal h-auto w-auto`)}>{iconSwitch(icon)}</span>
 }

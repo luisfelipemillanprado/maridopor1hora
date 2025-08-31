@@ -1,4 +1,3 @@
-import { StarIcon } from '@heroicons/react/24/solid'
 import clsx from 'clsx'
 
 /**
@@ -19,27 +18,34 @@ export default function Rating(props: { rating: string; reviews: string }) {
           <span
             className={clsx(
               `text-medium text-default-900 font-bold`,
-              `2xl:text-large 4xl:text-[1.1875rem] xl:text-[1.0625rem]`
+              `2xl:text-large 3xl:text-[1.1875rem] 4xl:text-[1.4375rem] xl:text-[1.0625rem]`
             )}
           >
             {rating}
           </span>
         </div>
-        <div className={clsx(`horizontal relative h-auto w-auto gap-x-0.5`)}>
+        <div className={clsx(`horizontal relative mb-1 h-auto w-auto`, `4xl:mb-1.5`)}>
           {[1, 2, 3, 4, 5].map((item, index) => (
-            <span key={index} className={clsx(`bg-content1 h-auto w-auto`)}>
-              <StarIcon
+            <span key={index} className={clsx(`horizontal h-auto w-auto`)}>
+              <i
                 className={clsx(
-                  `fill-warning-500 h-[0.9375rem] w-[0.9375rem]`,
-                  `3xl:w-[1.125rem] 3xl:h-[1.125rem] 4xl:h-[1.1875rem] 4xl:w-[1.1875rem] 2xl:h-4 2xl:w-4`
+                  `bxr bxs-star bx-tada`,
+                  `text-warning-500 text-[1.3125rem]`,
+                  `3xl:text-[1.6875rem] 4xl:text-[2.0625rem] 2xl:text-2xl`
                 )}
+                aria-hidden={true}
               />
             </span>
           ))}
         </div>
       </div>
       <div className={clsx(`horizontal h-auto w-auto`)}>
-        <span className={clsx(`text-default-700 text-small`, `2xl:text-large xl:text-[0.9375rem]`)}>
+        <span
+          className={clsx(
+            `text-default-700 text-small`,
+            `2xl:text-large 4xl:text-[1.3125rem] xl:text-[0.9375rem]`
+          )}
+        >
           {reviews}
         </span>
       </div>

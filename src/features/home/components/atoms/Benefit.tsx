@@ -1,14 +1,4 @@
 import { Card, CardHeader, CardBody, CardFooter, Link, Button } from '@heroui/react'
-import {
-  TicketIcon,
-  BanknotesIcon,
-  ClockIcon,
-  GiftIcon,
-  ShieldCheckIcon,
-  ExclamationTriangleIcon,
-  WrenchScrewdriverIcon,
-  PercentBadgeIcon,
-} from '@heroicons/react/24/solid'
 import clsx from 'clsx'
 
 /**
@@ -44,73 +34,89 @@ const iconSwitch = (icon: string) => {
   switch (icon) {
     case BenefitIcon.DISCOUNT:
       return (
-        <TicketIcon
+        <i
+          aria-label={`discount`}
           className={clsx(
-            `fill-content2 h-7 w-7`,
-            `3xl:h-8 3xl:w-8 4xl:w-9 4xl:h-9 xl:h-7.5 xl:w-7.5 2xl:h-[1.9375rem] 2xl:w-[1.9375rem]`
+            `bxr bxs-ticket-star`,
+            `text-content2 text-[2.1875rem]`,
+            `3xl:text-[2.3125rem] 4xl:text-[2.4375rem] xl:text-4xl`
           )}
         />
       )
     case BenefitIcon.MONEY:
       return (
-        <BanknotesIcon
+        <i
+          aria-label={`money`}
           className={clsx(
-            `fill-content2 h-7 w-7`,
-            `3xl:h-8 3xl:w-8 4xl:w-9 4xl:h-9 xl:h-7.5 xl:w-7.5 2xl:h-[1.9375rem] 2xl:w-[1.9375rem]`
+            `bxr bxs-currency-note`,
+            `text-content2 text-[2.1875rem]`,
+            `3xl:text-[2.3125rem] 4xl:text-[2.4375rem] xl:text-4xl`
           )}
         />
       )
     case BenefitIcon.CLOCK:
       return (
-        <ClockIcon
+        <i
+          aria-label={`clock`}
           className={clsx(
-            `fill-content2 h-7 w-7`,
-            `3xl:h-8 3xl:w-8 4xl:w-9 4xl:h-9 xl:h-7.5 xl:w-7.5 2xl:h-[1.9375rem] 2xl:w-[1.9375rem]`
+            `bxr bxs-clock-5`,
+            `text-content2 text-[2.1875rem]`,
+            `3xl:text-[2.3125rem] 4xl:text-[2.4375rem] xl:text-4xl`
           )}
         />
       )
     case BenefitIcon.GIFT:
       return (
-        <GiftIcon
+        <i
+          aria-label={`gift`}
           className={clsx(
-            `fill-content2 h-7 w-7`,
-            `3xl:h-8 3xl:w-8 4xl:w-9 4xl:h-9 xl:h-7.5 xl:w-7.5 2xl:h-[1.9375rem] 2xl:w-[1.9375rem]`
+            `bxr bxs-gift`,
+            `text-content2 text-[2.1875rem]`,
+            `3xl:text-[2.3125rem] 4xl:text-[2.4375rem] xl:text-4xl`
           )}
         />
       )
     case BenefitIcon.SHIELD:
       return (
-        <ShieldCheckIcon
+        <i
+          aria-label={`shield`}
           className={clsx(
-            `fill-content2 h-7 w-7`,
-            `3xl:h-8 3xl:w-8 4xl:w-9 4xl:h-9 xl:h-7.5 xl:w-7.5 2xl:h-[1.9375rem] 2xl:w-[1.9375rem]`
+            `bxr bxs-like`,
+            `text-content2 text-[2.1875rem]`,
+            `3xl:text-[2.3125rem] 4xl:text-[2.4375rem] xl:text-4xl`
           )}
         />
       )
     case BenefitIcon.BADGE:
       return (
-        <PercentBadgeIcon
+        <i
+          aria-label={`badge`}
           className={clsx(
-            `fill-content2 h-7 w-7`,
-            `3xl:h-8 3xl:w-8 4xl:w-9 4xl:h-9 xl:h-7.5 xl:w-7.5 2xl:h-[1.9375rem] 2xl:w-[1.9375rem]`
+            `bxr bxs-star-square`,
+            `text-content2 text-[2.1875rem]`,
+            `3xl:text-[2.3125rem] 4xl:text-[2.4375rem] xl:text-4xl`
           )}
         />
       )
     case BenefitIcon.ALERT:
       return (
-        <ExclamationTriangleIcon
+        <i
+          aria-label={`alert`}
           className={clsx(
-            `fill-content2 h-7 w-7`,
-            `3xl:h-8 3xl:w-8 4xl:w-9 4xl:h-9 xl:h-7.5 xl:w-7.5 2xl:h-[1.9375rem] 2xl:w-[1.9375rem]`
+            `bxr bxs-alert-octagon`,
+            `text-content2 text-[2.1875rem]`,
+            `3xl:text-[2.3125rem] 4xl:text-[2.4375rem] xl:text-4xl`
           )}
         />
       )
     case BenefitIcon.WORK:
       return (
-        <WrenchScrewdriverIcon
+        <i
+          aria-label={`work`}
           className={clsx(
-            `fill-content2 h-7 w-7`,
-            `3xl:h-8 3xl:w-8 4xl:w-9 4xl:h-9 xl:h-7.5 xl:w-7.5 2xl:h-[1.9375rem] 2xl:w-[1.9375rem]`
+            `bxr bxs-gear`,
+            `text-content2 text-[2.1875rem]`,
+            `3xl:text-[2.3125rem] 4xl:text-[2.4375rem] xl:text-4xl`
           )}
         />
       )
@@ -138,8 +144,8 @@ export default function Benefit(props: {
   return (
     <Card
       className={clsx(
-        `bg-content3 border-content4 h-[19.375rem] w-80 border-1 p-3`,
-        `3xl:h-[20.9375rem] 3xl:w-[21.875rem] 4xl:w-[22.8125rem] 4xl:h-[21.875rem] xl:h-[19.5rem] xl:w-[20.9375rem]`
+        `bg-content3 border-content4 h-[19.5rem] w-80 border-1 p-3`,
+        `3xl:h-[21rem] 3xl:w-[21.875rem] 4xl:w-[22.8125rem] 4xl:h-[21.875rem] xl:h-[19.625rem] xl:w-[21.25rem]`
       )}
       shadow={`sm`}
     >
@@ -147,11 +153,11 @@ export default function Benefit(props: {
         <div className={clsx(`vertical h-auto w-full items-start gap-3.5`)}>
           <div
             className={clsx(
-              `bg-warning horizontal border-warning shadow-small justify-center rounded-full border-1 p-1.5`,
+              `bg-warning horizontal border-warning shadow-small justify-center rounded-full border-1 p-1`,
               `4xl:p-[0.4375rem]`
             )}
           >
-            <span className={clsx(`h-auto w-auto`)}>{iconSwitch(icon)}</span>
+            <span className={clsx(`horizontal h-auto w-auto`)}>{iconSwitch(icon)}</span>
           </div>
           <h3
             className={clsx(

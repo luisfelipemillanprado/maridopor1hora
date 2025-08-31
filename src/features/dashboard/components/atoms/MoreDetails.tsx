@@ -14,7 +14,6 @@ import {
   Chip,
   Link,
 } from '@heroui/react'
-import { DotsVerticalIcon } from '@/utils/svgs/Svgs'
 import clsx from 'clsx'
 
 /**
@@ -73,12 +72,14 @@ export default function MoreDetails(props: {
       <Button
         onPress={onOpen}
         isIconOnly
-        className={clsx(`bg-content5/35 h-7.5 min-h-7.5 w-7.5 min-w-7.5`)}
+        className={clsx(`bg-content5/35 h-8 w-8 min-w-8`)}
         aria-label={`More description of the service`}
         radius={`full`}
         variant={`shadow`}
       >
-        <DotsVerticalIcon className={clsx(`fill-default h-8 w-8`)} />
+        <span className={clsx(`horizontal h-auto w-auto`)}>
+          <i className={clsx(`bxr bxs-dots-vertical-rounded`, `text-default-50 text-3xl`)} />
+        </span>
       </Button>
       <Modal
         className={clsx(
@@ -166,7 +167,7 @@ export default function MoreDetails(props: {
               </div>
             </ModalBody>
             <ModalFooter className={clsx(`px-4 py-2`)}>
-              <div className={clsx(`horizontal w-auto`)}>
+              <div className={clsx(`horizontal`)}>
                 <Button
                   className={clsx(`bg-warning shadow-small px-4`)}
                   as={Link}

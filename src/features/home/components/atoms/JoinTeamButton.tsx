@@ -1,5 +1,6 @@
+'use client'
+import ButtonPulse from '@/common/gcomponents/pulse/ButtonPulse'
 import { Button, Link } from '@heroui/react'
-import { UserGroupIcon } from '@heroicons/react/24/solid'
 import clsx from 'clsx'
 
 /**
@@ -11,12 +12,22 @@ import clsx from 'clsx'
 export default function JoinTeamButton(props: { text: string; href: string }) {
   const { text, href } = props
   return (
-    <div className={clsx(`horizontal h-auto w-auto`)}>
+    <ButtonPulse type={`soft`} float colorChange={false} rounded={true} overlayMore={false}>
       <Button
         isExternal
         aria-label={`join-team`}
-        className={clsx(`bg-warning`, `4xl:h-11.5`)}
-        endContent={<UserGroupIcon className={clsx(`fill-content5 h-6.5 w-6.5`, `4xl:h-7.5 4xl:w-7.5`)} />}
+        className={clsx(`bg-warning z-50`, `3xl:h-[2.6875rem] 4xl:h-11.5`)}
+        endContent={
+          <span className={clsx(`horizontal h-auto w-auto`, `xl:pt-1`)}>
+            <i
+              className={clsx(
+                `bxr bxs-community bx-tada`,
+                `text-content5 text-[2.5rem]`,
+                `4xl:text-[2.875rem] 3xl:text-[2.625rem] xl:text-[2.5625rem]`
+              )}
+            />
+          </span>
+        }
         as={Link}
         href={href}
         variant={`shadow`}
@@ -27,6 +38,6 @@ export default function JoinTeamButton(props: { text: string; href: string }) {
           {text}
         </span>
       </Button>
-    </div>
+    </ButtonPulse>
   )
 }

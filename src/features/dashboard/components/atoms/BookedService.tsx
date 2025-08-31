@@ -12,7 +12,6 @@ import {
   ModalHeader,
   useDisclosure,
 } from '@heroui/react'
-import { DotsVerticalIcon } from '@/utils/svgs/Svgs'
 import clsx from 'clsx'
 
 /**
@@ -50,12 +49,14 @@ export default function BookedService(props: {
           <Button
             onPress={onOpen}
             isIconOnly
-            className={clsx(`bg-content5/35 h-7 min-h-7 w-7 min-w-7`)}
+            className={clsx(`bg-content5/35 h-8 w-8 min-w-8`)}
             aria-label={`More description of ${text}`}
             radius={`full`}
             variant={`shadow`}
           >
-            <DotsVerticalIcon className={clsx(`fill-default h-7.5 w-7.5`)} />
+            <span className={clsx(`horizontal h-auto w-auto`)}>
+              <i className={clsx(`bxr bxs-dots-vertical-rounded`, `text-default-50 text-3xl`)} />
+            </span>
           </Button>
           <Modal
             backdrop={`opaque`}

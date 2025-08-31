@@ -11,7 +11,6 @@ import {
   Button,
   useDisclosure,
 } from '@heroui/react'
-import { DotsVerticalIcon } from '@/utils/svgs/Svgs'
 import clsx from 'clsx'
 import blurEffects from '@/utils/blurs/Blurs'
 
@@ -46,8 +45,10 @@ export default function DetailService(props: { name: string; imageUrl: string })
           />
         </div>
         <div className={clsx(`absolute top-1 right-0`)}>
-          <Button onPress={onOpen} isIconOnly className={clsx(`bg-content2 h-9 min-h-9 w-9 min-w-9`)}>
-            <DotsVerticalIcon className={clsx(`fill-content5 h-7.5 w-7.5`)} />
+          <Button onPress={onOpen} isIconOnly className={clsx(`bg-content2 h-9 w-9 min-w-9`)}>
+            <span className={clsx(`horizontal h-auto w-auto`)}>
+              <i className={clsx(`bxr bxs-dots-vertical-rounded`, `text-content5 text-3xl`)} />
+            </span>
           </Button>
           <Modal
             backdrop={`opaque`}

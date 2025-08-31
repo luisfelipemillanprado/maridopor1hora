@@ -1,6 +1,7 @@
 'use client'
-import { Button, Link } from '@heroui/react'
+import ButtonPulse from '@/common/gcomponents/pulse/ButtonPulse'
 import NavigationLinkIcons from '@/features/home/components/atoms/NavigationLinkIcons'
+import { Button, Link } from '@heroui/react'
 import clsx from 'clsx'
 
 /**
@@ -13,9 +14,9 @@ import clsx from 'clsx'
 export default function NavigationLink(props: { text: string; href: string; icon: string }) {
   const { text, href, icon } = props
   return (
-    <div className={clsx(`horizontal h-auto w-auto`)}>
+    <ButtonPulse type={`soft`} float colorChange={false} rounded={true} overlayMore={false}>
       <Button
-        className={clsx(`bg-warning shadow-small pr-[0.1875rem]`, `4xl:h-11.5`)}
+        className={clsx(`bg-warning shadow-small z-50 pr-[0.1875rem]`, `3xl:h-[2.6875rem] 4xl:h-11.5`)}
         endContent={<NavigationLinkIcons {...{ icon }} />}
         as={Link}
         href={href}
@@ -29,6 +30,6 @@ export default function NavigationLink(props: { text: string; href: string; icon
           {text}
         </span>
       </Button>
-    </div>
+    </ButtonPulse>
   )
 }

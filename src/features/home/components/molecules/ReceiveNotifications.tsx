@@ -1,7 +1,6 @@
 'use client'
 import { useState, FormEvent } from 'react'
 import { Button, Form, Input } from '@heroui/react'
-import { EnvelopeIcon, UserIcon, ArrowTrendingUpIcon } from '@heroicons/react/24/solid'
 import clsx from 'clsx'
 
 /**
@@ -79,7 +78,11 @@ export default function ReceiveNotifications(props: {
           isRequired
           isClearable
           className={clsx(`border-content4 rounded-small border-1`, `3xl:w-1/3`)}
-          startContent={<UserIcon className={clsx(`fill-default-400 pointer-events-none h-5 w-5`)} />}
+          startContent={
+            <span className={clsx(`horizontal h-auto w-auto`)}>
+              <i className={clsx(`bxr bxs-user`, `text-default-400 text-[1.5625rem]`)} />
+            </span>
+          }
           validate={(value) => {
             if (value.length < 3) {
               return `El numbre debe de tener almenos 3 caracteres`
@@ -100,7 +103,11 @@ export default function ReceiveNotifications(props: {
           isRequired
           isClearable
           className={clsx(`border-content4 rounded-small border-1`, `3xl:w-1/3`)}
-          startContent={<EnvelopeIcon className={clsx(`fill-default-400 pointer-events-none h-5 w-5`)} />}
+          startContent={
+            <span className={clsx(`horizontal h-auto w-auto`)}>
+              <i className={clsx(`bxr bxs-envelope`, `text-default-400 text-[1.5625rem]`)} />
+            </span>
+          }
           errorMessage={({ validationDetails, validationErrors }) => {
             if (validationDetails.typeMismatch) {
               return `Please enter a valid email address`
@@ -118,7 +125,11 @@ export default function ReceiveNotifications(props: {
         <div className={clsx(`horizontal h-auto w-full justify-center`, `3xl:w-auto`)}>
           <Button
             className={clsx(`shadow-medium mt-2`, `3xl:h-12 3xl:mt-0 3xl:rounded-small`)}
-            endContent={<ArrowTrendingUpIcon className={clsx(`fill-default-50 h-5.5 w-5.5`)} />}
+            endContent={
+              <span className={clsx(`horizontal h-auto w-auto`)}>
+                <i className={clsx(`bxr bxs-trending-up bx-tada`, `text-default-50 text-[2.125rem]`)} />
+              </span>
+            }
             variant={`solid`}
             color={`warning`}
             type={`submit`}

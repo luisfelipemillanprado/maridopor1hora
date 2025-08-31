@@ -1,4 +1,3 @@
-'use client'
 import Member from '@/features/home/components/atoms/Member'
 import AboutTeam from '@/features/home/components/atoms/AboutTeam'
 import JoinTeamButton from '@/features/home/components/atoms/JoinTeamButton'
@@ -33,7 +32,7 @@ export default function JoinOurTeam(props: {
   return (
     <div
       className={clsx(
-        `vertical bg-content3 rounded-large border-content4 shadow-medium h-auto w-full gap-y-7 border-1 px-4 pt-4`,
+        `vertical bg-content3 rounded-large border-content4 shadow-medium mb-6 h-auto w-full gap-y-7 border-1 px-4 pt-4`,
         `4xl:gap-y-8`
       )}
     >
