@@ -1,5 +1,4 @@
 import { Link, Button } from '@heroui/react'
-import { EnvelopeIcon, PhoneIcon, MapIcon } from '@heroicons/react/24/solid'
 import clsx from 'clsx'
 
 /**
@@ -24,23 +23,23 @@ const iconSwitch = (icon: string) => {
   switch (icon) {
     case ContactIconType.EMAIL:
       return (
-        <EnvelopeIcon
-          className={clsx(`fill-warning h-[1.3125rem] w-[1.3125rem]`, `3xl:h-6 3xl:w-6 xl:h-5.5 xl:w-5.5`)}
+        <i
           aria-label={`email`}
+          className={clsx(`bxr bxs-envelope`, `text-warning text-[2rem]`, `3xl:text-[2.125rem] 4xl:text-4xl`)}
         />
       )
     case ContactIconType.PHONE:
       return (
-        <PhoneIcon
-          className={clsx(`fill-warning h-[1.3125rem] w-[1.3125rem]`, `3xl:h-6 3xl:w-6 xl:h-5.5 xl:w-5.5`)}
+        <i
           aria-label={`phone`}
+          className={clsx(`bxr bxs-phone`, `text-warning text-[2rem]`, `3xl:text-[2.125rem] 4xl:text-4xl`)}
         />
       )
     case ContactIconType.LOCATION:
       return (
-        <MapIcon
-          className={clsx(`fill-warning h-[1.3125rem] w-[1.3125rem]`, `3xl:h-6 3xl:w-6 xl:h-5.5 xl:w-5.5`)}
+        <i
           aria-label={`location`}
+          className={clsx(`bxr bxs-location`, `text-warning text-[2rem]`, `3xl:text-[2.125rem] 4xl:text-4xl`)}
         />
       )
     default:
@@ -61,7 +60,7 @@ export default function Contact(props: { icon: string; href: string; name: strin
     <Button
       isExternal
       as={Link}
-      startContent={iconSwitch(icon)}
+      startContent={<span className={clsx(`horizontal h-auto w-auto`)}>{iconSwitch(icon)}</span>}
       color={`default`}
       href={href}
       variant={`light`}

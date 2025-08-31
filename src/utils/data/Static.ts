@@ -57,6 +57,7 @@ const sd = {
       metrics: [
         {
           amount: `400`,
+          increase: `1.2%`,
           icon: `frequent`,
           text: `Clientes frecuentes`,
           description: `Garantía de excelencia avalada por familias.`,
@@ -65,6 +66,7 @@ const sd = {
         },
         {
           amount: `4.3`,
+          increase: `10.9%`,
           icon: `satisfied`,
           text: `Clientes satisfechos`,
           description: `Su felicidad en el hogar, es nuestra meta.`,
@@ -72,7 +74,8 @@ const sd = {
           key: Math.random(),
         },
         {
-          amount: `25`,
+          amount: `100`,
+          increase: `1.5%`,
           icon: `qualified`,
           text: `Expertos calificados`,
           description: `Soluciones expertas para cada hogar.`,
@@ -86,7 +89,8 @@ const sd = {
           { text: `Electricista`, icon: `electrician`, href: `#`, key: Math.random() },
           { text: `Fontanería`, icon: `plumbing`, href: `#`, key: Math.random() },
           { text: `Clima`, icon: `airconditioner`, href: `#`, key: Math.random() },
-          { text: `Muebles`, icon: `furniture`, href: `#`, key: Math.random() },
+          { text: `Carpintería`, icon: `furniture`, href: `#`, key: Math.random() },
+          { text: `Albañilería`, icon: `masonry`, href: `#`, key: Math.random() },
         ],
       },
     },
@@ -471,11 +475,11 @@ const sd = {
       },
       certifications: {
         imageUrls: [
-          { imageUrl: `/icon/certification01.svg`, key: Math.random() },
-          { imageUrl: `/icon/certification02.svg`, key: Math.random() },
-          { imageUrl: `/icon/certification03.svg`, key: Math.random() },
-          { imageUrl: `/icon/certification04.svg`, key: Math.random() },
-          { imageUrl: `/icon/certification05.svg`, key: Math.random() },
+          { imageUrl: `/svgs/certification01.svg`, key: Math.random() },
+          { imageUrl: `/svgs/certification02.svg`, key: Math.random() },
+          { imageUrl: `/svgs/certification03.svg`, key: Math.random() },
+          { imageUrl: `/svgs/certification04.svg`, key: Math.random() },
+          { imageUrl: `/svgs/certification05.svg`, key: Math.random() },
         ],
       },
     },
@@ -5977,7 +5981,7 @@ const sd = {
         },
       ],
     },
-    logo: { iconUrl: `/icon/logo.webp` },
+    logo: { iconUrl: `/images/logo/logo.webp` },
     signUpButton: { text: `Regístrate` },
     links: [
       { text: `Inicio`, href: `#`, key: Math.random() },
@@ -6081,9 +6085,15 @@ const sd = {
         key: Math.random(),
       },
     ],
+    allowedCards: [
+      { icon: `visa`, key: Math.random() },
+      { icon: `mastercard`, key: Math.random() },
+      { icon: `paypal`, key: Math.random() },
+    ],
     fourthTitle: [
       { text1: `Estamos para ti. Confía en nosotros.`, text2: `MaridoPor1Hora.` },
       { text1: `Nos puedes encontrar acá:`, text2: `Social Networks.` },
+      { text1: `Métodos de pago aceptados:`, text2: `Allowed Cards.` },
     ],
     otherLinks: {
       titles: [`Compañía`, `Clientes`, `Afiliados`],
@@ -6113,8 +6123,7 @@ const sd = {
     termsConditions: { text: `Copyright © 2025 Siatuweb. Todos los derechos reservados.` },
   },
   contactFloatButton: {
-    imageUrl: `/icon/whatsapp.webp`,
-    href: `https://api.whatsapp.com/send?phone=%2B34607088505&app=facebook&entry_point=page_cta&fbclid=IwY2xjawK6ZSRleHRuA2FlbQIxMABicmlkETFJZGpSY1NYUFRHVUpZcmJYAR6isiuK0Xkp5X60u0wiu0EAWwmEvor3lciKr9Os_Zy-FXA-fR86lamXzAn4gQ_aem_5yIeRp4q3qMelswNhf53MQ`,
+    href: `https://api.whatsapp.com/send?phone=34607088505`,
   },
 }
 export default sd

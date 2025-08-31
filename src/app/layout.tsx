@@ -1,6 +1,14 @@
-import './globals.css'
+import './styles/globals.css'
+/* boxicons-basics */
+import '@/app/styles/boxicons/basics/boxicons-rounded.min.css'
+import '@/app/styles/boxicons/basics/animations.min.css'
+import '@/app/styles/boxicons/basics/transformations.min.css'
+/* boxicons-brands */
+import '@/app/styles/boxicons/brands/boxicons-brands.css'
+import '@/app/styles/boxicons/brands/animations.css'
+import '@/app/styles/boxicons/brands/transformations.css'
+/* boxicons-styles-ends */
 import { Nunito_Sans } from 'next/font/google'
-// -- import SlowScrollClient from '@/app/SlowScrollClient'
 import Provider from '@/app/providers'
 import { Metadata } from 'next'
 import ContactFloatButton from '@/common/gcomponents/contactus/components/organisms/ContactFloatButton'

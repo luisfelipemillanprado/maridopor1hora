@@ -45,6 +45,7 @@ export default function Header(props: {
   }
   metrics: {
     amount: string
+    increase: string
     icon: string
     text: string
     description: string
@@ -61,13 +62,18 @@ export default function Header(props: {
       <div
         className={clsx(
           `relative h-[28.125rem] w-full overflow-hidden rounded-[1.25rem]`,
-          `3xl:h-[34.1875rem] 2xl:h-[28.3125rem]`
+          `3xl:h-[37.5rem] 4xl:h-[48.625rem] 2xl:h-[28.3125rem]`
         )}
       >
         <div className={clsx(`horizontal relative h-auto w-full`)}>
           <NavBar {...{ navbar }} />
         </div>
-        <div className={clsx(`horizontal relative h-auto w-full p-2`, `3xl:px-6 3xl:py-3 4xl:px-8 xl:px-3`)}>
+        <div
+          className={clsx(
+            `horizontal relative h-auto w-full p-2`,
+            `3xl:px-6 3xl:py-3 4xl:px-[3.75rem] xl:px-3`
+          )}
+        >
           <PeekServices {...{ peekServices }} />
           <MainTitle {...{ mainTitle }} />
           <LinksButtons {...{ linksButtons }} />

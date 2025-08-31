@@ -1,5 +1,4 @@
 import { Button, Link } from '@heroui/react'
-import { FacebookIcon, YouTubeIcon, InstagramIcon, TwitterIcon, WhatsappIcon } from '@/utils/svgs/Svgs'
 import clsx from 'clsx'
 
 /**
@@ -29,15 +28,23 @@ export enum SocialIcon {
 const iconSwitch = (icon: string) => {
   switch (icon) {
     case SocialIcon.FACEBOOK:
-      return <FacebookIcon aria-label={`facebook`} className={clsx(`h-9 w-9`)} />
+      return (
+        <i aria-label={`facebook`} className={clsx(`bxl bx-facebook-circle`, `text-default-900 text-4xl`)} />
+      )
     case SocialIcon.YOUTUBE:
-      return <YouTubeIcon aria-label={`youtube`} className={clsx(`h-9 w-9`)} />
+      return <i aria-label={`youtube`} className={clsx(`bxl bx-youtube`, `text-default-900 text-4xl`)} />
     case SocialIcon.INSTAGRAM:
-      return <InstagramIcon aria-label={`instagram`} className={clsx(`h-9 w-9`)} />
+      return (
+        <i aria-label={`instagram`} className={clsx(`bxl bx-instagram-alt`, `text-default-900 text-4xl`)} />
+      )
     case SocialIcon.WHATSAPP:
-      return <WhatsappIcon aria-label={`whatsapp`} className={clsx(`h-9 w-9`)} />
+      return (
+        <i aria-label={`whatsapp`} className={clsx(`bxl bx-whatsapp-square`, `text-default-900 text-4xl`)} />
+      )
     case SocialIcon.TWITTER:
-      return <TwitterIcon aria-label={`twitter`} className={clsx(`h-7 w-7`)} />
+      return (
+        <i aria-label={`twitter`} className={clsx(`bxl bx-twitter-x`, `text-default-900 text-[1.9375rem]`)} />
+      )
     default:
       return <span aria-label={`icon-none`}>?</span>
   }
@@ -56,7 +63,7 @@ export default function SocialNetwork(props: { icon: string; href: string }) {
     <Button
       isIconOnly
       isExternal
-      className={clsx(`bg-content3 h-9 w-9`)}
+      className={clsx(`bg-content7 h-9.5 w-9.5`)}
       aria-label={`social-network-${icon}`}
       as={Link}
       href={href}
@@ -65,7 +72,7 @@ export default function SocialNetwork(props: { icon: string; href: string }) {
       radius={`full`}
       size={`sm`}
     >
-      {iconSwitch(icon)}
+      <span className={clsx(`horizontal h-auto w-auto`)}>{iconSwitch(icon)}</span>
     </Button>
   )
 }

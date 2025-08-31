@@ -22,7 +22,7 @@ export default function FQAs(props: {
 }) {
   const { questions } = props
   return (
-    <Accordion disableAnimation className={clsx(`gap-0 gap-y-3 px-0`)} variant={`splitted`}>
+    <Accordion disableAnimation className={clsx(`gap-0 gap-y-3 px-0`, `4xl:gap-y-4`)} variant={`splitted`}>
       {questions.map((item, index) => (
         <AccordionItem
           key={item.key}

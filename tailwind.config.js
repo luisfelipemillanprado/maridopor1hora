@@ -27,6 +27,27 @@ const config = {
         '4xl': '64rem',
         // => @media (min-width: 1024px) { ... }
       },
+      keyframes: {
+        slowPulse: {
+          '0%': { transform: 'scale(0.8)', opacity: '1' },
+          '70%': { transform: 'scale(2.5)', opacity: '0' },
+          '100%': { opacity: '0' },
+        },
+        softPulse: {
+          '0%': { transform: 'scale(0.8)', opacity: '1' },
+          '70%': { transform: 'scale(1.12)', opacity: '0' },
+          '100%': { opacity: '0' },
+        },
+        floatY: {
+          '0%, 100%': { transform: 'translateY(0)' },
+          '50%': { transform: 'translateY(-6px)' }, // se mueve 6px hacia arriba
+        },
+      },
+      animation: {
+        'slow-pulse': 'slowPulse 2.7s ease-out infinite', // Aquí defines la duración
+        'soft-pulse': 'softPulse 2.9s ease-in-out infinite', // la nueva
+        'float-y': 'floatY 4s ease-in-out infinite',
+      },
     },
   },
   darkMode: 'class',
@@ -43,6 +64,7 @@ const config = {
             content7: `#fafbfd`,
             content8: `#fff8eb`,
             content9: `#ffe0a6`,
+            content10: `#00b67a`,
           },
         },
         dark: {

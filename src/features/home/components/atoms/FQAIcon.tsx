@@ -1,4 +1,3 @@
-import { InformationCircleIcon, EllipsisVerticalIcon } from '@heroicons/react/24/solid'
 import clsx from 'clsx'
 
 /**
@@ -20,13 +19,12 @@ export enum FQAIconType {
  */
 const iconSwitch = (icon: string) => {
   switch (icon) {
-    case FQAIconType.QUESTION:
-      return (
-        <InformationCircleIcon aria-label={`information`} className={clsx(`fill-warning h-[1.625rem] w-5`)} />
-      )
     case FQAIconType.MORE:
       return (
-        <EllipsisVerticalIcon aria-label={`ellipsis`} className={clsx(`fill-warning h-[1.625rem] w-5`)} />
+        <i
+          aria-label={`ellipsis`}
+          className={clsx(`bxr bxs-dots-vertical-rounded`, `text-warning text-2xl`, `3xl:text-[1.625rem]`)}
+        />
       )
     default:
       return <span aria-label={`icon-none`}>?</span>
@@ -40,5 +38,5 @@ const iconSwitch = (icon: string) => {
  */
 export default function FQAIcon(props: { icon: string }) {
   const { icon } = props
-  return <span className={clsx(`h-auto w-auto`)}>{iconSwitch(icon)}</span>
+  return <span className={clsx(`horizontal h-auto w-auto`)}>{iconSwitch(icon)}</span>
 }

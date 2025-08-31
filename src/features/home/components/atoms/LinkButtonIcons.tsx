@@ -1,5 +1,3 @@
-import { MapPinIcon, WrenchScrewdriverIcon, UserGroupIcon } from '@heroicons/react/24/solid'
-import { SearchIcon } from '@/utils/svgs/Svgs'
 import clsx from 'clsx'
 
 /**
@@ -27,28 +25,43 @@ const iconSwitch = (icon: string) => {
   switch (icon) {
     case LinkButtonIconType.LOCATION:
       return (
-        <MapPinIcon
+        <i
           aria-label={`location`}
-          className={clsx(`h-[1.125rem] w-[1.125rem]`, `3xl:h-6 3xl:w-6 xl:h-5 xl:w-5`)}
+          className={clsx(
+            `bxr bxs-location`,
+            `text-default-500 text-[1.75rem]`,
+            `3xl:text-[2rem] 4xl:text-[2.375rem] xl:text-[1.8125rem]`
+          )}
         />
       )
     case LinkButtonIconType.SERVICES:
       return (
-        <WrenchScrewdriverIcon
+        <i
           aria-label={`services`}
-          className={clsx(`h-[1.125rem] w-[1.125rem]`, `3xl:h-6 3xl:w-6 xl:h-5 xl:w-5`)}
+          className={clsx(
+            `bxr bxs-spanner bx-rotate-270`,
+            `text-default-500 text-[1.75rem]`,
+            `3xl:text-[2rem] 4xl:text-[2.375rem] xl:text-[1.8125rem]`
+          )}
         />
       )
     case LinkButtonIconType.SEARCH:
       return (
-        <SearchIcon
+        <i
           aria-label={`search`}
-          className={clsx(`h-6 w-6 fill-current`, `3xl:h-7 3xl:w-7 xl:h-5 xl:w-5`)}
+          className={clsx(
+            `bxr bxs-search-alt`,
+            `text-default-500 text-[1.75rem]`,
+            `3xl:text-[2rem] 4xl:text-[2.375rem] xl:text-[1.8125rem]`
+          )}
         />
       )
     case LinkButtonIconType.TEAM:
       return (
-        <UserGroupIcon aria-label={`team`} className={clsx(`h-[1.125rem] w-[1.125rem]`, `3xl:h-6 3xl:w-6`)} />
+        <i
+          aria-label={`team`}
+          className={clsx(`bxr bxs-group`, `text-default-500`, `3xl:text-[2rem] 4xl:text-[2.4375rem]`)}
+        />
       )
     default:
       return <span aria-label={`icon-none`}>?</span>
@@ -62,5 +75,5 @@ const iconSwitch = (icon: string) => {
  */
 export default function LinkButtonIcons(props: { icon: string }) {
   const { icon } = props
-  return <span className={clsx(`h-auto w-auto`)}>{iconSwitch(icon)}</span>
+  return <span className={clsx(`horizontal h-auto w-auto`)}>{iconSwitch(icon)}</span>
 }

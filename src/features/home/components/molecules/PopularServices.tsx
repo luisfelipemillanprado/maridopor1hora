@@ -16,16 +16,28 @@ export default function PopularServices(props: {
 }) {
   const { services } = props
   return (
-    <div className={clsx(`absolute top-[65%] right-0 left-0 z-10 hidden h-auto w-full`, `3xl:block`)}>
-      <div className={clsx(`horizontal justify-center gap-x-4`)}>
-        {services.map((item /*, index */) => (
-          <Link key={item.key} className={clsx(`h-auto w-auto`)} href={item.href} aria-label={item.text}>
+    <div
+      className={clsx(
+        `absolute top-[61%] right-0 left-0 z-10 hidden h-auto w-full`,
+        `3xl:block 4xl:top-[61%]`
+      )}
+    >
+      <div className={clsx(`horizontal justify-center gap-x-4`, `4xl:gap-x-8`)}>
+        {services.map((item, index) => (
+          <Link
+            key={item.key}
+            className={clsx(`h-auto w-auto`, index !== 5 ? `flex flex-row` : `4xl:flex hidden`)}
+            href={item.href}
+            aria-label={item.text}
+          >
             <Chip
-              className={clsx(`bg-content5/40 horizontal h-8.5 justify-center pl-2`)}
+              className={clsx(`bg-content5/40 horizontal h-9 justify-center pl-2`, `4xl:h-11`)}
               startContent={<PopularServiceIcon {...{ icon: item.icon }} />}
               variant={'shadow'}
             >
-              <span className={clsx(`text-default-50 text-[1.0625rem]`)}>{item.text}</span>
+              <span className={clsx(`text-default-50 text-[1.0625rem]`, `4xl:text-[1.1875rem]`)}>
+                {item.text}
+              </span>
             </Chip>
           </Link>
         ))}

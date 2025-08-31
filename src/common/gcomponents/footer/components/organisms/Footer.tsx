@@ -2,6 +2,7 @@ import CompanyInformation from '@/common/gcomponents/footer/components/molecules
 import OtherLinks from '@/common/gcomponents/footer/components/molecules/OtherLinks'
 import OurTeam from '@/common/gcomponents/footer/components/molecules/OurTeam'
 import SocialNetworks from '@/common/gcomponents/footer/components/molecules/SocialNetworks'
+import AllowedCards from '@/common/gcomponents/footer/components/molecules/AllowedCards'
 import SecondaryDescription from '@/common/gcomponents/footer/components/molecules/SecondaryDescription'
 import ContactUs from '@/common/gcomponents/footer/components/molecules/ContactUs'
 import TermsConditions from '@/common/gcomponents/footer/components/molecules/TermsConditions'
@@ -27,6 +28,7 @@ export default function Footer(props: {
   companyInformation: { links: { href: string; text: string; key: number }[] }
   ourTeam: { members: { imageUrl: string; name: string; key: number }[] }
   socialNetworks: { url: string; icon: string; name: string; key: number }[]
+  allowedCards: { icon: string; key: number }[]
   fourthTitle: { text1: string; text2: string }[]
   secondaryDescription: string[]
   contactUs: { icon: string; name: string; href: string; key: number }[]
@@ -41,6 +43,7 @@ export default function Footer(props: {
     ourTeam,
     fourthTitle,
     socialNetworks,
+    allowedCards,
     secondaryDescription,
     contactUs,
     termsConditions,
@@ -70,6 +73,12 @@ export default function Footer(props: {
             className={clsx(`horizontal h-auto w-full justify-center px-4`, `3xl:w-auto 3xl:px-0 3xl:pl-4`)}
           >
             <SocialNetworks {...{ socialNetworks, text1: fourthTitle[1].text1 }} />
+          </section>
+          <section
+            aria-label={`company-allowed-cards`}
+            className={clsx(`hidden w-full justify-center px-4`, `3xl:w-auto 3xl:px-0 3xl:pl-4`)}
+          >
+            <AllowedCards {...{ allowedCards, text1: fourthTitle[2].text1 }} />
           </section>
         </div>
       </div>

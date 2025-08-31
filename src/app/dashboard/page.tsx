@@ -1,6 +1,6 @@
 import NavBar from '@/common/gcomponents/navbar/components/organisms/NavBar'
 import Main from '@/features/dashboard/components/organisms/Main'
-import Footer from '@/features/dashboard/components/organisms/Footer'
+import Footer from '@/common/gcomponents/footer/components/organisms/Footer'
 import clsx from 'clsx'
 import sd from '@/utils/data/Static'
 
@@ -28,6 +28,7 @@ export default function MainDashboard() {
             companyInformation: sd.footer.companyInformation,
             ourTeam: sd.footer.ourTeam,
             socialNetworks: sd.footer.socialNetworks,
+            allowedCards: sd.footer.allowedCards,
             fourthTitle: sd.footer.fourthTitle,
             secondaryDescription: sd.footer.secondaryDescription,
             contactUs: sd.footer.contactUs,

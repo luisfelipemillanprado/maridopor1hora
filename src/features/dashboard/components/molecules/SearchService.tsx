@@ -1,7 +1,5 @@
 'use client'
 import { Button, Input, Select, SelectItem } from '@heroui/react'
-import { MagnifyingGlassIcon } from '@heroicons/react/24/solid'
-// import { SearchIcon } from '@/utils/svgs/Svgs'
 import clsx from 'clsx'
 
 /**
@@ -42,7 +40,7 @@ export default function SearchService(props: {
           </SelectItem>
         ))}
       </Select>
-      <div className={clsx(`horizontal h-auto w-[78%] justify-between gap-x-2`)}>
+      <div className={clsx(`horizontal h-auto w-[79%] justify-between gap-x-2`)}>
         <Input
           id={name[0]}
           name={name[0]}
@@ -52,7 +50,11 @@ export default function SearchService(props: {
           )}
           placeholder={placeholder[0]}
           aria-label={`Search service`}
-          startContent={<MagnifyingGlassIcon className={clsx(`fill-default-500 h-5.5 w-5.5`)} />}
+          startContent={
+            <span className={clsx(`horizontal h-auto w-auto`)}>
+              <i className={clsx(`bxr bxs-search-alt`, `text-default-500 text-[1.5625rem]`)} />
+            </span>
+          }
           type={type[0]}
           variant={`bordered`}
           radius={`sm`}
@@ -61,7 +63,11 @@ export default function SearchService(props: {
       <div className={clsx(`horizontal h-auto w-auto justify-center`)}>
         <Button
           className={clsx(`shadow-medium bg-content5 h-12 min-h-12 min-w-14`)}
-          endContent={<MagnifyingGlassIcon className={clsx(`fill-default-50 h-5.5 w-5.5`)} />}
+          endContent={
+            <span className={clsx(`horizontal h-auto w-auto`)}>
+              <i className={clsx(`bxr bxs-search-alt`, `text-default-50 text-[1.75rem]`)} />
+            </span>
+          }
           variant={`shadow`}
           type={`button`}
           size={`sm`}

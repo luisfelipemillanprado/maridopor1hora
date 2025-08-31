@@ -10,7 +10,6 @@ import {
   Spinner,
   Chip,
 } from '@heroui/react'
-import { PlayIcon } from '@/utils/svgs/Svgs'
 import clsx from 'clsx'
 
 /**
@@ -70,19 +69,11 @@ export default function TestimonialVideo(props: {
   return (
     <Card
       as={`div`}
-      className={clsx(
-        `horizontal border-default-50 relative max-w-[13.75rem] border-6`,
-        `3xl:max-w-[18.75rem] 4xl:max-w-[23.5rem] xl:max-w-64 2xl:max-w-72`
-      )}
+      className={clsx(`horizontal border-default-50 relative w-full border-6`)}
       radius={`lg`}
-      shadow={`sm`}
+      shadow={`md`}
     >
-      <div
-        className={clsx(
-          `horizontal rounded-large h-[12.5rem] w-full`,
-          `3xl:h-56 4xl:h-80 xl:h-52 2xl:h-[13.125rem]`
-        )}
-      >
+      <div className={clsx(`horizontal rounded-large h-52 w-full`, `3xl:h-72 4xl:h-[19.375rem] xl:h-56`)}>
         <Image
           removeWrapper
           className={clsx(`h-full w-full object-cover`)}
@@ -92,15 +83,15 @@ export default function TestimonialVideo(props: {
           itemProp={`image`}
         />
       </div>
-      <div className={clsx(`horizontal absolute right-2 bottom-2 z-50 justify-center gap-1`)}>
+      <div className={clsx(`horizontal absolute right-2.5 bottom-2 z-50 justify-center`)}>
         <Chip
           className={clsx(
-            `text-default-50 bg-content5/40 text-medium [&>span]:font-bold`,
+            `text-default-50 bg-content5/40 text-medium h-8 pt-0.5 [&>span]:font-bold`,
             `3xl:text-[1.0625rem]`
           )}
           variant={`shadow`}
           size={`md`}
-          radius={`full`}
+          radius={`sm`}
         >
           {durationTime}
         </Chip>
@@ -110,7 +101,7 @@ export default function TestimonialVideo(props: {
           isIconOnly
           onPress={onOpen}
           className={clsx(
-            `bg-content7/50 border-default-50 min-h-14 w-14 border-2 pl-1 shadow-lg`,
+            `bg-content7/50 border-default-50 h-16 w-16 border-2 pl-1 shadow-lg`,
             `4xl:h-[4.5rem] 4xl:w-[4.5rem]`
           )}
           radius={`full`}
@@ -118,7 +109,9 @@ export default function TestimonialVideo(props: {
           variant={`shadow`}
           aria-label={`Play testimonial video`}
         >
-          <PlayIcon className={clsx(`fill-warning h-11.5 w-11.5`, `4xl:h-16 4xl:w-16`)} />
+          <span className={clsx(`horizontal h-auto w-auto`)}>
+            <i className={clsx(`bxr bxs-video-plus`, `text-warning text-5xl`)} />
+          </span>
         </Button>
         <Modal
           backdrop={`opaque`}
@@ -170,3 +163,4 @@ export default function TestimonialVideo(props: {
     </Card>
   )
 }
+/** <PlayIcon className={clsx(`fill-warning h-11.5 w-11.5`, `4xl:h-16 4xl:w-16`)} /> */

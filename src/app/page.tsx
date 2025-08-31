@@ -1,6 +1,6 @@
 import Header from '@/features/home/components/organisms/Header'
 import Main from '@/features/home/components/organisms/Main'
-import Footer from '@/features/home/components/organisms/Footer'
+import Footer from '@/common/gcomponents/footer/components/organisms/Footer'
 import clsx from 'clsx'
 import sd from '@/utils/data/Static'
 
@@ -48,12 +48,13 @@ export default function Home() {
           }}
         />
       </main>
-      <footer className={clsx(`relative mt-8 w-full`, `4xl:mt-0`)}>
+      <footer className={clsx(`relative w-full`)}>
         <Footer
           {...{
             companyInformation: sd.footer.companyInformation,
             ourTeam: sd.footer.ourTeam,
             socialNetworks: sd.footer.socialNetworks,
+            allowedCards: sd.footer.allowedCards,
             fourthTitle: sd.footer.fourthTitle,
             secondaryDescription: sd.footer.secondaryDescription,
             contactUs: sd.footer.contactUs,

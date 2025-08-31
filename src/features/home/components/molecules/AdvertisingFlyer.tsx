@@ -1,7 +1,6 @@
 'use client'
 import { Card, CardHeader, CardBody, Button, Link } from '@heroui/react'
 import Image from 'next/image'
-import { PaperAirplaneIcon } from '@heroicons/react/24/solid'
 import blurEffects from '@/utils/blurs/Blurs'
 import clsx from 'clsx'
 
@@ -34,7 +33,7 @@ export default function AdvertisingFlyer(props: {
       <CardHeader
         className={clsx(
           `flex flex-col items-center gap-y-2.5 px-0 py-0`,
-          `3xl:w-1/2 3xl:items-start 3xl:pt-1 4xl:gap-y-5`
+          `3xl:w-1/2 3xl:items-start 3xl:pt-1 3xl:gap-y-4 4xl:gap-y-5`
         )}
       >
         <h3
@@ -58,7 +57,11 @@ export default function AdvertisingFlyer(props: {
           as={Link}
           href={href}
           className={clsx(`bg-content5 mt-2`, `3xl:mt-2 3xl:h-11 3xl:mb-[1.625rem]`)}
-          endContent={<PaperAirplaneIcon className={clsx(`fill-default-50 h-5.5 w-5.5`)} />}
+          endContent={
+            <span className={clsx(`horizontal h-auto w-auto`)}>
+              <i className={clsx(`bxr bxs-send bx-tada`, `text-default-50 text-[2rem]`)} />
+            </span>
+          }
           variant={`shadow`}
           size={`md`}
           aria-label={`Service Reservation`}
@@ -69,7 +72,7 @@ export default function AdvertisingFlyer(props: {
       <CardBody
         className={clsx(
           `flex flex-row justify-center px-0 pt-2 pb-0`,
-          `3xl:w-1/2 3xl:h-[13.875rem] 3xl:justify-start 4xl:h-72 4xl:pt-0`
+          `3xl:w-1/2 3xl:h-60 3xl:pt-0 3xl:justify-start 4xl:h-72 4xl:pt-0`
         )}
       >
         <Image

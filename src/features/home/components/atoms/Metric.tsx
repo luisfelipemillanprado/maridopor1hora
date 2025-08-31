@@ -1,7 +1,6 @@
 'use client'
-import { Card, CardHeader, CardBody } from '@heroui/react'
-import { PlusIcon } from '@heroicons/react/24/solid'
-import { MedalStarIcon, CalendarCheckIcon, BadgeCheckIcon } from '@/utils/svgs/Svgs'
+import { Card, CardHeader, CardBody, Chip } from '@heroui/react'
+import { GraphicsIcon } from '@/public/svgs/Svgs'
 import clsx from 'clsx'
 
 /**
@@ -12,9 +11,9 @@ import clsx from 'clsx'
  * @property {string} CALIFICADOS - Icon for "calificados" (rated users or actions).
  */
 export enum MetricIcon {
-  FRECUENTES = 'frequent',
-  SATISFECHOS = 'satisfied',
-  CALIFICADOS = 'qualified',
+  FRECUENTES = `frequent`,
+  SATISFECHOS = `satisfied`,
+  CALIFICADOS = `qualified`,
 }
 
 /**
@@ -26,23 +25,35 @@ const iconSwitch = (icon: string) => {
   switch (icon) {
     case MetricIcon.FRECUENTES:
       return (
-        <CalendarCheckIcon
+        <i
           aria-label={`frequent`}
-          className={clsx('fill-default-500 h-[2.0625rem] w-[2.0625rem]')}
+          className={clsx(
+            `bxr bxs-calendar-detail`,
+            `text-default-500 text-4xl`,
+            `3xl:text-[2.375rem] 4xl:text-[2.6875rem]`
+          )}
         />
       )
     case MetricIcon.SATISFECHOS:
       return (
-        <MedalStarIcon
+        <i
           aria-label={`satisfied`}
-          className={clsx('fill-default-500 h-[2.3125rem] w-[2.3125rem]')}
+          className={clsx(
+            `bxr bxs-medal-star-alt-2`,
+            `text-default-500 text-4xl`,
+            `3xl:text-[2.4375rem] 4xl:text-[2.75rem]`
+          )}
         />
       )
     case MetricIcon.CALIFICADOS:
       return (
-        <BadgeCheckIcon
+        <i
           aria-label={`qualified`}
-          className={clsx('fill-default-500 h-[2.3125rem] w-[2.3125rem]')}
+          className={clsx(
+            `bxr bxs-hard-hat`,
+            `text-default-500 text-4xl`,
+            `3xl:text-[2.375rem] 4xl:text-[2.75rem]`
+          )}
         />
       )
     default:
@@ -62,53 +73,86 @@ const iconSwitch = (icon: string) => {
  * @returns A styled card component presenting the metric information.
  */
 export default function Metric(props: {
-  metric: { amount: string; icon: string; text: string; description: string; change: boolean }
+  metric: {
+    amount: string
+    increase: string
+    icon: string
+    text: string
+    description: string
+    change: boolean
+  }
 }) {
   const { metric } = props
   const changeElement = metric.change ? (
-    <span className={clsx(`text-warning text-large font-semibold`, `3xl:text-xl 2xl:text-[1.1875rem]`)}>
-      k
-    </span>
+    <span className={clsx(`text-warning text-large`, `3xl:text-[1.375rem] 2xl:text-[1.1875rem]`)}>K</span>
   ) : (
-    <PlusIcon
-      className={clsx(`h-[1.1875rem] w-[1.1875rem]`, `3xl:h-[1.375rem] 3xl:w-[1.375rem] 2xl:h-5 2xl:w-5`)}
-    />
+    <span className={clsx(`horizontal h-auto w-auto`)}>
+      <i
+        className={clsx(
+          `bxr bxs-plus`,
+          `text-warning text-large`,
+          `3xl:text-2xl 4xl:text-3xl 2xl:text-[1.3125rem]`
+        )}
+        aria-label={`plus`}
+      />
+    </span>
   )
   return (
     <Card
       isPressable
       className={clsx(
         `outline-warning-200 bg-content7 w-[6.125rem] gap-y-0.5 outline-1 outline-solid`,
-        `3xl:w-auto ${metric.change ? 'shadow-md' : '3xl:shadow-medium'} xl:w-[6.375rem]`
+        `${metric.change ? 'shadow-lg' : 'shadow-medium'}`,
+        `3xl:w-52 4xl:w-auto 4xl:gap-y-2.5 xl:w-[6.375rem]`
       )}
       shadow={`sm`}
     >
       <CardHeader
         className={clsx(
           `horizontal justify-center gap-x-0.5 px-1 pt-2 pb-0`,
-          `3xl:px-4 3xl:pt-4 3xl:pb-1.5 3xl:justify-between`
+          `3xl:px-3.5 3xl:pt-3 3xl:pb-1.5 3xl:justify-between`
         )}
       >
         <span className={clsx(`hidden h-auto w-auto`, `3xl:flex`)}>{iconSwitch(metric.icon)}</span>
         <div className={clsx(`horizontal h-auto w-auto`, `3xl:pr-4.5`)}>
-          <span className={clsx(`text-warning text-[1.1875rem] font-semibold`, `xl:text-xl`)}>
+          <span
+            className={clsx(
+              `text-warning text-[1.1875rem] font-semibold`,
+              `3xl:text-[1.375rem] 4xl:text-[1.625rem] xl:text-xl`
+            )}
+          >
             {metric.amount}
           </span>
-          <span className={clsx(`text-warning text-[1.0625rem]`)}>{changeElement}</span>
+          {changeElement}
         </div>
       </CardHeader>
-      <CardBody
-        className={clsx(`vertical !scrollbar-hide px-1.5 pt-0 pb-2.5`, `3xl:px-5 3xl:pb-5 3xl:gap-y-1.5`)}
-      >
-        <span
-          className={clsx(
-            `text-center text-[0.9375rem]`,
-            `2xl:text-medium 3xl:text-large 3xl:text-start xl:text-medium`
-          )}
-        >
-          {metric.text}
+      <CardBody className={clsx(`vertical !scrollbar-hide px-0 pt-0 pb-2.5`, `3xl:pb-0 3xl:gap-y-1.5`)}>
+        <div className={clsx(`horizontal w-full justify-start px-1.5`, `3xl:px-5 4xl:gap-x-2`)}>
+          <span
+            className={clsx(
+              `text-center text-[0.9375rem]`,
+              `3xl:text-large xl:text-medium 4xl:text-[1.1875rem] 3xl:font-semibold`
+            )}
+          >
+            {metric.text}
+          </span>
+          <Chip
+            className={clsx(`[&>span]:text-warning-700 hidden [&>span]:pl-0`, `4xl:flex`)}
+            color={`warning`}
+            startContent={
+              <span className={clsx(`horizontal h-auto w-auto`)}>
+                <i className={clsx(`bxr bxs-arrow-up-right text-3xl`)} />
+              </span>
+            }
+            variant={`flat`}
+            radius={`sm`}
+          >
+            {metric.increase}
+          </Chip>
+        </div>
+        <span className={clsx(`hidden`, `3xl:flex`)}>
+          <GraphicsIcon className={clsx(``)} />
         </span>
-        <p className={clsx(`text-default-700 text-medium hidden`)}>{metric.description}</p>
       </CardBody>
     </Card>
   )

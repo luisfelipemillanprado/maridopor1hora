@@ -1,7 +1,7 @@
 'use client'
-import Image from 'next/image'
-import clsx from 'clsx'
+import ButtonPulse from '@/common/gcomponents/pulse/ButtonPulse'
 import { Button, Link } from '@heroui/react'
+import clsx from 'clsx'
 
 /**
  * @description - Renders a contact button with an image, wrapped in a styled Button component.
@@ -9,25 +9,33 @@ import { Button, Link } from '@heroui/react'
  * @param props.imageUrl - The URL of the image to display inside the button.
  * @param props.href - The hyperlink reference for the button.
  */
-export default function ContactButton(props: { imageUrl: string; href: string }) {
-  const { imageUrl, href } = props
+export default function ContactButton(props: { href: string }) {
+  const { href } = props
   return (
-    <Button
-      isExternal
-      className={clsx(`horizontal h-auto w-auto min-w-[3.1875rem] justify-center px-0.5 py-1`)}
-      as={Link}
-      href={href}
-      color={`success`}
-      variant={`shadow`}
-      radius={`lg`}
-    >
-      <Image
-        className={clsx(`h-10 w-10`)}
-        src={imageUrl}
-        width={40}
-        height={40}
-        alt={`Image's contact`}
-      />
-    </Button>
+    <ButtonPulse type={`soft`} float colorChange rounded={false} overlayMore>
+      <Button
+        isExternal
+        className={clsx(
+          `horizontal z-50 h-12.5 w-13 min-w-13 justify-center`,
+          `3xl:w-13.5 3xl:h-13 4xl:w-15 4xl:h-14.5`
+        )}
+        as={Link}
+        href={href}
+        color={`success`}
+        variant={`shadow`}
+        radius={`lg`}
+        size={`sm`}
+      >
+        <span className={clsx(`horizontal h-auto w-auto`)}>
+          <i
+            className={clsx(
+              `bxl bx-whatsapp bx-tada`,
+              `text-content1 text-[2.875rem]`,
+              `3xl:text-5xl 4xl:text-[3.5rem]`
+            )}
+          />
+        </span>
+      </Button>
+    </ButtonPulse>
   )
 }

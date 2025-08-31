@@ -34,7 +34,7 @@ export default function PeekServices(props: { peekServices: { imageUrl: string; 
       className={clsx(
         `h-80 w-full rounded-tl-[1.25rem] rounded-tr-[1.25rem] rounded-br-[1.25rem] rounded-bl-[1.25rem]`,
         `outline-warning-200 shadow-md outline-1`,
-        `3xl:h-[25rem]`
+        `3xl:h-[26.5625rem] 4xl:h-[35.625rem]`
       )}
       aria-label={`Carousel of featured services`}
     >
@@ -43,7 +43,7 @@ export default function PeekServices(props: { peekServices: { imageUrl: string; 
           <Image
             width={312}
             height={310}
-            className={clsx(`block h-full w-full object-cover brightness-75`)}
+            className={clsx(`block h-full w-full object-cover brightness-50`)}
             src={item.imageUrl}
             alt={`Service ${index + 1}`}
             priority

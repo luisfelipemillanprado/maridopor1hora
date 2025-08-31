@@ -149,7 +149,7 @@ export default function Main(props: {
     <div className={clsx(`vertical h-auto w-full`)}>
       <section
         aria-label={`trust-badge-card`}
-        className={clsx(`mb-6 w-full px-4.5`, `3xl:px-10 4xl:px-28 4xl:mb-12.5`)}
+        className={clsx(`mb-6 w-full px-4.5`, `3xl:px-10 4xl:px-[5.625rem] 4xl:mb-12.5`)}
       >
         <div className={clsx(`horizontal h-auto w-full justify-start`)}>
           <TrustBadge {...{ trustBadge }} />
@@ -159,7 +159,7 @@ export default function Main(props: {
         aria-label={`featured-completed-works`}
         className={clsx(
           `vertical mb-6 w-full gap-y-3.5 px-4.5`,
-          `3xl:px-10 4xl:px-28 4xl:gap-y-4.5 4xl:mb-12.5`
+          `3xl:px-10 4xl:px-[5.625rem] 4xl:gap-y-4.5 4xl:mb-12.5`
         )}
       >
         <div className={clsx(`horizontal w-full justify-center`)}>
@@ -171,7 +171,7 @@ export default function Main(props: {
         aria-label={`all-our-services`}
         className={clsx(
           `vertical mb-6 w-full gap-y-3.5 px-4.5`,
-          `3xl:px-10 4xl:px-28 4xl:gap-y-4.5 4xl:mb-10`
+          `3xl:px-10 4xl:px-[5.625rem] 4xl:gap-y-4.5 4xl:mb-10`
         )}
       >
         <div className={clsx(`horizontal w-full justify-center`)}>
@@ -192,7 +192,7 @@ export default function Main(props: {
         aria-label={`here-are-your-answers`}
         className={clsx(
           `vertical mb-6 w-full gap-y-3.5 px-4.5`,
-          `3xl:px-10 4xl:px-28 4xl:gap-y-4.5 4xl:mb-12.5`
+          `3xl:px-10 4xl:px-[5.625rem] 4xl:gap-y-4.5 4xl:mb-12.5`
         )}
       >
         <div className={clsx(`horizontal w-full justify-center`)}>
@@ -204,7 +204,7 @@ export default function Main(props: {
         aria-label={`why-choose-us`}
         className={clsx(
           `vertical mb-3.5 w-full gap-y-1.5 pl-4.5`,
-          `3xl:pl-9 4xl:pl-[6.625rem] 4xl:pr-28 4xl:gap-y-3 4xl:mb-11`
+          `3xl:pl-9 4xl:pl-[5.25rem] 4xl:pr-[5.25rem] 4xl:gap-y-3 4xl:mb-11`
         )}
       >
         <div className={clsx(`horizontal w-full justify-center`)}>
@@ -215,8 +215,8 @@ export default function Main(props: {
       <section
         aria-label={`join-our-team`}
         className={clsx(
-          `vertical mb-6 w-full gap-y-3.5 overflow-hidden px-4.5`,
-          `3xl:px-10 4xl:px-28 4xl:gap-y-4.5 4xl:mb-12.5`
+          `vertical mb-0.5 w-full gap-y-3.5 overflow-hidden px-4.5`,
+          `3xl:px-10 4xl:px-[5.625rem] 4xl:gap-y-4.5 4xl:mb-[1.625rem]`
         )}
       >
         <div className={clsx(`horizontal w-full justify-center`)}>
@@ -228,7 +228,7 @@ export default function Main(props: {
         aria-label={`customer-testimonials`}
         className={clsx(
           `vertical mb-5 w-full gap-y-3.5 px-4.5`,
-          `3xl:px-10 4xl:px-28 3xl:gap-y-4.5 4xl:gap-y-4.5 4xl:mb-11`
+          `3xl:px-10 3xl:mb-8 4xl:px-[5.625rem] 3xl:gap-y-4.5 4xl:gap-y-4.5 4xl:mb-18`
         )}
       >
         <div className={clsx(`vertical h-auto w-auto gap-y-2.5`)}>
@@ -239,21 +239,25 @@ export default function Main(props: {
             <Introduction {...{ text: introduction.text[0] }} />
           </div>
         </div>
-        <CustomerTestimonials
-          {...{
-            testimonials: customerTestimonials.testimonials,
-            score: customerTestimonials.score,
-          }}
-        />
+        <div
+          className={clsx(`horizontal w-full justify-center`, `3xl:gap-x-24.5 4xl:justify-evenly 4xl:mt-5`)}
+        >
+          <CustomerTestimonials
+            {...{
+              testimonials: customerTestimonials.testimonials,
+              score: customerTestimonials.score,
+            }}
+          />
+          <div className={clsx(`mb-2 hidden`, `3xl:flex 4xl:mb-0`)}>
+            <TestimonialVideos {...{ videoTestimonials }} />
+          </div>
+        </div>
       </section>
       <section
         aria-label={`some-featured-videos`}
-        className={clsx(
-          `vertical mb-6 w-full gap-y-1.5 pl-4.5`,
-          `3xl:pl-9 4xl:pl-[6.625rem] 4xl:pr-28 4xl:gap-y-3 4xl:mb-18`
-        )}
+        className={clsx(`mb-8 flex w-full flex-col gap-y-1.5 px-4.5`, `3xl:hidden`)}
       >
-        <div className={clsx(`horizontal w-full justify-center`)}>
+        <div className={clsx(`horizontal mb-2.5 w-full justify-center`)}>
           <SecondaryTitle {...{ title: secondaryTitles.title[6] }} />
         </div>
         <TestimonialVideos {...{ videoTestimonials }} />
@@ -262,7 +266,7 @@ export default function Main(props: {
         aria-label={`receive-notifications`}
         className={clsx(
           `mb-8 flex w-full flex-col gap-y-8.5 px-6`,
-          `3xl:px-10 4xl:flex-row 4xl:gap-x-9 4xl:px-28 4xl:mb-18 xl:px-6.5`
+          `3xl:px-10 4xl:flex-row 4xl:gap-x-9 4xl:px-[5.625rem] 4xl:mb-18 xl:px-6.5`
         )}
       >
         <AdvertisingFlyer
@@ -287,7 +291,7 @@ export default function Main(props: {
       </section>
       <section
         aria-label={`certifications-affiliations`}
-        className={clsx(`horizontal bg-content2 w-full justify-center px-6`, `3xl:px-28 4xl:mb-18 4xl:px-44`)}
+        className={clsx(`horizontal bg-content2 w-full justify-center px-6`, `3xl:px-28 4xl:px-52`)}
       >
         <Certifications {...{ imageUrls: certifications.imageUrls }} />
       </section>
