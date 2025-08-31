@@ -291,7 +291,7 @@ export default function Main(props: {
       </section>
       <section
         aria-label={`certifications-affiliations`}
-        className={clsx(`horizontal bg-content2 w-full justify-center px-6`, `3xl:px-28 4xl:px-52`)}
+        className={clsx(`horizontal bg-content2 w-full justify-center px-6`, `3xl:px-28 4xl:px-72`)}
       >
         <Certifications {...{ imageUrls: certifications.imageUrls }} />
       </section>

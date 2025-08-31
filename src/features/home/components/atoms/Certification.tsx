@@ -25,19 +25,19 @@ export default function Certification(props: { href: string; index: number }) {
         blurDataURL={blurEffects.blurUrl}
         className={clsx(
           `${index == 0 ? 'h-14 w-14' : ''}`,
-          `${index == 0 ? '3xl:h-[4.75rem] 3xl:w-[4.75rem] 4xl:h-24 4xl:w-24 xl:h-16 xl:w-16 2xl:h-[4.375rem] 2xl:w-[4.375rem]' : ''}`,
+          `${index == 0 ? '3xl:h-[4.75rem] 3xl:w-[4.75rem] 4xl:h-22 4xl:w-22 xl:h-16 xl:w-16 2xl:h-[4.375rem] 2xl:w-[4.375rem]' : ''}`,
           // --
           `${index == 1 ? 'h-12 w-12' : ''}`,
-          `${index == 1 ? '3xl:h-16 3xl:w-16 4xl:h-20 4xl:w-20 xl:h-[3.3125rem] xl:w-[3.3125rem] 2xl:h-14 2xl:w-14' : ''}`,
+          `${index == 1 ? '3xl:h-16 3xl:w-16 4xl:h-19 4xl:w-19 xl:h-[3.3125rem] xl:w-[3.3125rem] 2xl:h-14 2xl:w-14' : ''}`,
           // --
           `${index == 2 ? 'h-[4.1875rem] w-[4.1875rem]' : ''}`,
           `${index == 2 ? '3xl:h-[5.625rem] 3xl:w-[5.625rem] 4xl:h-26 4xl:w-26 xl:h-20 xl:w-20 2xl:h-[5.625rem] 2xl:w-[5.625rem]' : ''}`,
           // --
           `${index == 3 ? 'hidden h-16 w-16' : ''}`,
-          `${index == 3 ? '3xl:flex 3xl:flex-row 4xl:h-20 4xl:w-20' : ''}`,
+          `${index == 3 ? '3xl:flex 3xl:flex-row 4xl:h-18 4xl:w-18' : ''}`,
           // --
           `${index == 4 ? 'h-8 w-24' : ''}`,
-          `${index == 4 ? '3xl:h-10 3xl:w-32 4xl:h-15 4xl:w-48 xl:h-9 xl:w-[6.5625rem] 2xl:h-10 2xl:w-[7.5rem]' : ''}`
+          `${index == 4 ? '3xl:h-10 3xl:w-32 4xl:h-12 4xl:w-44 xl:h-9 xl:w-[6.5625rem] 2xl:h-10 2xl:w-[7.5rem]' : ''}`
         )}
         alt={`Certification ${index + 1}`}
       />
