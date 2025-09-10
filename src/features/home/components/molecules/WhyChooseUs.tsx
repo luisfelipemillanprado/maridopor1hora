@@ -29,6 +29,13 @@ export default function WhyChooseUs(props: {
   }[]
 }) {
   const { benefits } = props
+  const swiperClasses = {
+    base: 'h-auto w-full !py-2.5 !pl-1.5',
+  }
+  const swiperSlideClasses = {
+    base: 'mr-5 !h-auto !w-auto',
+    breakpoints: '3xl:mr-6 4xl:mr-7',
+  }
   return (
     <Swiper
       slidesPerView={`auto`}
@@ -38,11 +45,11 @@ export default function WhyChooseUs(props: {
         disableOnInteraction: false,
       }}
       modules={[Autoplay]}
-      className={clsx(`h-auto w-full !py-2.5 !pl-1.5`)}
+      className={clsx(swiperClasses.base)}
       aria-label={`Highlighted benefits`}
     >
       {benefits.map((item) => (
-        <SwiperSlide key={item.key} className={clsx(`mr-5 !h-auto !w-auto`, `3xl:mr-6 4xl:mr-7`)}>
+        <SwiperSlide key={item.key} className={clsx(swiperSlideClasses.base, swiperSlideClasses.breakpoints)}>
           <Benefit
             {...{
               title: item.title,

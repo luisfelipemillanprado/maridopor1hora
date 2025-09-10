@@ -1,4 +1,3 @@
-'use client'
 import FinishedWork from '@/features/home/components/atoms/FinishedWork'
 import clsx from 'clsx'
 
@@ -22,10 +21,12 @@ export default function FinishedWorks(props: {
   }
 }) {
   const { finishedWorks } = props
+  const contentClasses = {
+    base: 'grid w-full grid-cols-12 grid-rows-3 gap-3',
+    breakpoints: '3xl:gap-5 4xl:grid-rows-2 4xl:gap-7',
+  }
   return (
-    <div
-      className={clsx(`grid w-full grid-cols-12 grid-rows-3 gap-3`, `3xl:gap-5 4xl:grid-rows-2 4xl:gap-7`)}
-    >
+    <div className={clsx(contentClasses.base, contentClasses.breakpoints)}>
       {finishedWorks.imageUrls.map((item, index) => (
         <FinishedWork
           key={item.key}

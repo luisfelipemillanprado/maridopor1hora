@@ -21,6 +21,26 @@ export enum LinkButtonIconType {
  * @returns The appropriate icon React component for the given type, or a fallback span if the type
  * is unrecognized.
  */
+const locationIconClasses = {
+  default: 'bxr bxs-location',
+  base: 'text-default-500 text-[1.75rem]',
+  breakpoints: '3xl:text-[2rem] 4xl:text-[2.375rem] xl:text-[1.8125rem]',
+}
+const servicesIconClasses = {
+  default: 'bxr bxs-spanner bx-rotate-270',
+  base: 'text-default-500 text-[1.75rem]',
+  breakpoints: '3xl:text-[2rem] 4xl:text-[2.375rem] xl:text-[1.8125rem]',
+}
+const searchIconClasses = {
+  default: 'bxr bxs-search-alt',
+  base: 'text-default-500 text-[1.75rem]',
+  breakpoints: '3xl:text-[2rem] 4xl:text-[2.375rem] xl:text-[1.8125rem]',
+}
+const teamIconClasses = {
+  default: 'bxr bxs-group',
+  base: 'text-default-500',
+  breakpoints: '3xl:text-[2.125rem] 4xl:text-[2.4375rem]',
+}
 const iconSwitch = (icon: string) => {
   switch (icon) {
     case LinkButtonIconType.LOCATION:
@@ -28,9 +48,9 @@ const iconSwitch = (icon: string) => {
         <i
           aria-label={`location`}
           className={clsx(
-            `bxr bxs-location`,
-            `text-default-500 text-[1.75rem]`,
-            `3xl:text-[2rem] 4xl:text-[2.375rem] xl:text-[1.8125rem]`
+            locationIconClasses.default,
+            locationIconClasses.base,
+            locationIconClasses.breakpoints
           )}
         />
       )
@@ -39,9 +59,9 @@ const iconSwitch = (icon: string) => {
         <i
           aria-label={`services`}
           className={clsx(
-            `bxr bxs-spanner bx-rotate-270`,
-            `text-default-500 text-[1.75rem]`,
-            `3xl:text-[2rem] 4xl:text-[2.375rem] xl:text-[1.8125rem]`
+            servicesIconClasses.default,
+            servicesIconClasses.base,
+            servicesIconClasses.breakpoints
           )}
         />
       )
@@ -49,18 +69,14 @@ const iconSwitch = (icon: string) => {
       return (
         <i
           aria-label={`search`}
-          className={clsx(
-            `bxr bxs-search-alt`,
-            `text-default-500 text-[1.75rem]`,
-            `3xl:text-[2rem] 4xl:text-[2.375rem] xl:text-[1.8125rem]`
-          )}
+          className={clsx(searchIconClasses.default, searchIconClasses.base, searchIconClasses.breakpoints)}
         />
       )
     case LinkButtonIconType.TEAM:
       return (
         <i
           aria-label={`team`}
-          className={clsx(`bxr bxs-group`, `text-default-500`, `3xl:text-[2rem] 4xl:text-[2.4375rem]`)}
+          className={clsx(teamIconClasses.default, teamIconClasses.base, teamIconClasses.breakpoints)}
         />
       )
     default:
@@ -75,5 +91,8 @@ const iconSwitch = (icon: string) => {
  */
 export default function LinkButtonIcons(props: { icon: string }) {
   const { icon } = props
-  return <span className={clsx(`horizontal h-auto w-auto`)}>{iconSwitch(icon)}</span>
+  const iconWrapperClasses = {
+    base: 'horizontal h-auto w-auto',
+  }
+  return <span className={clsx(iconWrapperClasses.base)}>{iconSwitch(icon)}</span>
 }

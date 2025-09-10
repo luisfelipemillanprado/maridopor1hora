@@ -76,7 +76,7 @@ export default function TestimonialVideo(props: {
       <div className={clsx(`horizontal rounded-large h-52 w-full`, `3xl:h-72 4xl:h-[19.375rem] xl:h-56`)}>
         <Image
           removeWrapper
-          className={clsx(`h-full w-full object-cover`)}
+          className={clsx(`z-10 h-full w-full object-cover`)}
           width={220}
           src={imageUrl}
           alt={`Satisfied customer testimonial`}
@@ -101,7 +101,7 @@ export default function TestimonialVideo(props: {
           isIconOnly
           onPress={onOpen}
           className={clsx(
-            `bg-content7/50 border-default-50 h-16 w-16 border-2 pl-1 shadow-lg`,
+            `bg-content7/50 border-default-50 z-50 h-16 w-16 border-2 pl-1 shadow-lg`,
             `4xl:h-[4.5rem] 4xl:w-[4.5rem]`
           )}
           radius={`full`}
@@ -163,4 +163,3 @@ export default function TestimonialVideo(props: {
     </Card>
   )
 }
-/** <PlayIcon className={clsx(`fill-warning h-11.5 w-11.5`, `4xl:h-16 4xl:w-16`)} /> */

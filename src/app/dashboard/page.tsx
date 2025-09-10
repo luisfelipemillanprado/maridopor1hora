@@ -1,6 +1,6 @@
-import NavBar from '@/common/gcomponents/navbar/components/organisms/NavBar'
+import NavBar from '@/common/navbar/components/organisms/NavBar'
 import Main from '@/features/dashboard/components/organisms/Main'
-import Footer from '@/common/gcomponents/footer/components/organisms/Footer'
+import Footer from '@/common/footer/components/organisms/Footer'
 import clsx from 'clsx'
 import sd from '@/utils/data/Static'
 

@@ -1,4 +1,4 @@
-import CardAllowed from '@/common/gcomponents/footer/components/atoms/CardAllowed'
+import CardAllowed from '@/common/footer/components/atoms/CardAllowed'
 import clsx from 'clsx'
 
 export default function AllowedCards(props: {

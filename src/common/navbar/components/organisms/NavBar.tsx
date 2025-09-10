@@ -1,9 +1,9 @@
 'use client'
 import { Navbar, NavbarBrand, NavbarContent } from '@heroui/react'
-import Logo from '@/common/gcomponents/logo/Logo'
-import Avatars from '@/common/gcomponents/navbar/components/molecules/Avatar'
-import SignUpButton from '@/common/gcomponents/navbar/components/molecules/SignUpButton'
-import NavLink from '@/common/gcomponents/navbar/components/atoms/NavLink'
+import Logo from '@/common/logo/Logo'
+import Avatars from '@/common/navbar/components/molecules/Avatar'
+import SignUpButton from '@/common/navbar/components/molecules/SignUpButton'
+import NavLink from '@/common/navbar/components/atoms/NavLink'
 import clsx from 'clsx'
 
 /**
@@ -29,21 +29,33 @@ export default function NavBar(props: {
   }
 }) {
   const { navbar } = props
+  const contentClasses = {
+    base: 'h-16 bg-inherit pt-1.5 backdrop-blur-none [&>header]:px-4',
+    breakpoints: '3xl:[&>header]:px-8',
+  }
+  const brandClasses = {
+    base: 'mr-10',
+  }
+  const linksContainerClasses = {
+    base: 'hidden gap-x-8',
+    breakpoints: 'sm:flex',
+  }
+  const wrapperClasses = {
+    base: 'items-center',
+  }
   return (
-    <Navbar
-      className={clsx(`h-16 bg-inherit pt-1.5 backdrop-blur-none [&>header]:px-4`, `3xl:[&>header]:px-8`)}
-    >
-      <NavbarContent className={clsx(``)} justify={`start`}>
-        <NavbarBrand className={clsx(`mr-10`)}>
+    <Navbar className={clsx(contentClasses.base, contentClasses.breakpoints)}>
+      <NavbarContent justify={`start`}>
+        <NavbarBrand className={clsx(brandClasses.base)}>
           <Logo {...{ iconUrl: navbar.logo.iconUrl }} />
         </NavbarBrand>
-        <NavbarContent className={clsx(`hidden gap-x-8 sm:flex`)}>
-          {navbar.links.map((item /*, index*/) => (
+        <NavbarContent className={clsx(linksContainerClasses.base, linksContainerClasses.breakpoints)}>
+          {navbar.links.map((item) => (
             <NavLink key={item.key} {...{ text: item.text, href: item.href }} />
           ))}
         </NavbarContent>
       </NavbarContent>
-      <NavbarContent as={`div`} className={clsx(`items-center`)} justify={`end`}>
+      <NavbarContent as={`div`} className={clsx(wrapperClasses.base)} justify={`end`}>
         <SignUpButton {...{ text: navbar.signUpButton.text }} />
         <Avatars
           {...{

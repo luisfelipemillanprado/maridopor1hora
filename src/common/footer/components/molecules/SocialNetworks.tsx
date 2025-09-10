@@ -1,5 +1,5 @@
 'use client'
-import SocialNetwork from '@/common/gcomponents/footer/components/atoms/SocialNetwork'
+import SocialNetwork from '@/common/footer/components/atoms/SocialNetwork'
 import clsx from 'clsx'
 
 /**

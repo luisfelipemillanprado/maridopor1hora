@@ -22,6 +22,65 @@ export default function ReceiveNotifications(props: {
   name: string[]
 }) {
   const { title, text, buttonText, placeholder, type, name } = props
+  const formClasses = {
+    base: 'vertical rounded-large border-content3 shadow-small h-auto w-full gap-y-2.5 border-1 p-6 from-content8 via-content9/30 to-content9/70 bg-gradient-to-br from-25% via-30% to-80%',
+    breakpoints: '4xl:w-[50%] 4xl:gap-y-3',
+  }
+  const titleContainerClasses = {
+    base: 'horizontal h-auto w-full justify-center',
+    breakpoints: '3xl:justify-start',
+  }
+  const titleClasses = {
+    base: 'text-default-900 text-[1.3125rem] font-extrabold text-shadow-sm',
+    breakpoints: '3xl:text-[1.4375rem] 4xl:text-[1.5625rem] xl:text-[1.375rem]',
+  }
+  const textContainerClasses = {
+    base: 'vertical h-auto w-full justify-center gap-y-2',
+    breakpoints: '3xl:justify-start',
+  }
+  const textClasses = {
+    base: 'text-default-800 text-medium text-center',
+    breakpoints: '3xl:text-start 2xl:text-large xl:text-[1.0625rem]',
+  }
+  const textSecondaryClasses = {
+    base: 'text-default-800 text-medium hidden text-center',
+    breakpoints: '3xl:text-start 2xl:text-large 2xl:flex',
+  }
+  const inputContainerClasses = {
+    base: 'mt-2 flex h-auto w-full flex-col justify-center gap-y-4.5',
+    breakpoints: '3xl:flex-nowrap 3xl:flex-row 3xl:gap-x-4 3xl:justify-start',
+  }
+  const inputClasses = {
+    base: 'border-content4 rounded-small border-1',
+    breakpoints: '3xl:w-1/3',
+  }
+  const buttonContainerClasses = {
+    base: 'horizontal h-auto w-full justify-center',
+    breakpoints: '3xl:w-auto',
+  }
+  const buttonClasses = {
+    base: 'shadow-medium mt-2',
+    breakpoints: '3xl:h-12 3xl:mt-0 3xl:rounded-small',
+  }
+  const buttonTextClasses = {
+    base: 'text-default-50 text-[1.0625rem]',
+    breakpoints: '2xl:text-large',
+  }
+  const iconWrapperClasses = {
+    base: 'horizontal h-auto w-auto',
+  }
+  const iconUserClasses = {
+    default: 'bxr bxs-user',
+    base: 'text-default-400 text-[1.5625rem]',
+  }
+  const iconEnvelopeClasses = {
+    default: 'bxr bxs-envelope',
+    base: 'text-default-400 text-[1.5625rem]',
+  }
+  const iconTrendingUpClasses = {
+    default: 'bxr bxs-trending-up bx-tada',
+    base: 'text-default-50 text-[2.125rem]',
+  }
   const [submitted, setSubmitted] = useState<{ [k: string]: FormDataEntryValue } | null>(null)
   const onSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
@@ -30,57 +89,27 @@ export default function ReceiveNotifications(props: {
   }
   return (
     <Form
-      className={clsx(
-        `vertical rounded-large border-content3 shadow-small h-auto w-full gap-y-2.5 border-1 p-6`,
-        `from-content8 via-content9/30 to-content9/70 bg-gradient-to-br from-25% via-30% to-80%`,
-        `4xl:w-[50%] 4xl:gap-y-3`
-      )}
+      className={clsx(formClasses.base, formClasses.breakpoints)}
       onSubmit={onSubmit}
       aria-label={`Form to receive notifications`}
     >
-      <div className={clsx(`horizontal h-auto w-full justify-center`, `3xl:justify-start`)}>
-        <h3
-          className={clsx(
-            `text-default-900 text-[1.3125rem] font-extrabold text-shadow-sm`,
-            `3xl:text-[1.4375rem] 4xl:text-[1.5625rem] xl:text-[1.375rem]`
-          )}
-        >
-          {title}
-        </h3>
+      <div className={clsx(titleContainerClasses.base, titleContainerClasses.breakpoints)}>
+        <h3 className={clsx(titleClasses.base, titleClasses.breakpoints)}>{title}</h3>
       </div>
-      <div className={clsx(`vertical h-auto w-full justify-center gap-y-2`, `3xl:justify-start`)}>
-        <p
-          className={clsx(
-            `text-default-800 text-medium text-center`,
-            `3xl:text-start 2xl:text-large xl:text-[1.0625rem]`
-          )}
-        >
-          {text[0]}
-        </p>
-        <p
-          className={clsx(
-            `text-default-800 text-medium hidden text-center`,
-            `3xl:text-start 2xl:text-large 2xl:flex`
-          )}
-        >
-          {text[1]}
-        </p>
+      <div className={clsx(textContainerClasses.base, textContainerClasses.breakpoints)}>
+        <p className={clsx(textClasses.base, textClasses.breakpoints)}>{text[0]}</p>
+        <p className={clsx(textSecondaryClasses.base, textSecondaryClasses.breakpoints)}>{text[1]}</p>
       </div>
-      <div
-        className={clsx(
-          `mt-2 flex h-auto w-full flex-col justify-center gap-y-4.5`,
-          `3xl:flex-nowrap 3xl:flex-row 3xl:gap-x-4 3xl:justify-start`
-        )}
-      >
+      <div className={clsx(inputContainerClasses.base, inputContainerClasses.breakpoints)}>
         <Input
           id={name[0]}
           aria-label={name[0]}
           isRequired
           isClearable
-          className={clsx(`border-content4 rounded-small border-1`, `3xl:w-1/3`)}
+          className={clsx(inputClasses.base, inputClasses.breakpoints)}
           startContent={
-            <span className={clsx(`horizontal h-auto w-auto`)}>
-              <i className={clsx(`bxr bxs-user`, `text-default-400 text-[1.5625rem]`)} />
+            <span className={clsx(iconWrapperClasses.base)}>
+              <i className={clsx(iconUserClasses.default, iconUserClasses.base)} />
             </span>
           }
           validate={(value) => {
@@ -102,10 +131,10 @@ export default function ReceiveNotifications(props: {
           aria-label={name[1]}
           isRequired
           isClearable
-          className={clsx(`border-content4 rounded-small border-1`, `3xl:w-1/3`)}
+          className={clsx(inputClasses.base, inputClasses.breakpoints)}
           startContent={
-            <span className={clsx(`horizontal h-auto w-auto`)}>
-              <i className={clsx(`bxr bxs-envelope`, `text-default-400 text-[1.5625rem]`)} />
+            <span className={clsx(iconWrapperClasses.base)}>
+              <i className={clsx(iconEnvelopeClasses.default, iconEnvelopeClasses.base)} />
             </span>
           }
           errorMessage={({ validationDetails, validationErrors }) => {
@@ -122,12 +151,12 @@ export default function ReceiveNotifications(props: {
           size={`lg`}
           radius={`sm`}
         />
-        <div className={clsx(`horizontal h-auto w-full justify-center`, `3xl:w-auto`)}>
+        <div className={clsx(buttonContainerClasses.base, buttonContainerClasses.breakpoints)}>
           <Button
-            className={clsx(`shadow-medium mt-2`, `3xl:h-12 3xl:mt-0 3xl:rounded-small`)}
+            className={clsx(buttonClasses.base, buttonClasses.breakpoints)}
             endContent={
-              <span className={clsx(`horizontal h-auto w-auto`)}>
-                <i className={clsx(`bxr bxs-trending-up bx-tada`, `text-default-50 text-[2.125rem]`)} />
+              <span className={clsx(iconWrapperClasses.base)}>
+                <i className={clsx(iconTrendingUpClasses.default, iconTrendingUpClasses.base)} />
               </span>
             }
             variant={`solid`}
@@ -136,7 +165,7 @@ export default function ReceiveNotifications(props: {
             size={`md`}
             aria-label={`Send notification form`}
           >
-            <span className={clsx(`text-default-50 text-[1.0625rem]`, `2xl:text-large`)}>{buttonText}</span>
+            <span className={clsx(buttonTextClasses.base, buttonTextClasses.breakpoints)}>{buttonText}</span>
           </Button>
         </div>
       </div>

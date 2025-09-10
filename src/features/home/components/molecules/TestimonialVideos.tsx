@@ -2,9 +2,10 @@
 import TestimonialVideo from '@/features/home/components/atoms/TestimonialVideo'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
-import 'swiper/css/effect-cube'
+import 'swiper/css/effect-flip'
 import 'swiper/css/pagination'
-import { EffectCube, Pagination } from 'swiper/modules'
+import 'swiper/css/navigation'
+import { EffectFlip, Pagination } from 'swiper/modules'
 import clsx from 'clsx'
 
 /**
@@ -21,18 +22,13 @@ export default function TestimonialVideos(props: {
 }) {
   const { videoTestimonials } = props
   return (
-    <div>
+    <div className={clsx(`mt-2.5`)}>
       <Swiper
-        effect={'cube'}
+        effect={'flip'}
         grabCursor={true}
-        cubeEffect={{
-          shadow: true,
-          slideShadows: true,
-          shadowOffset: 1,
-          shadowScale: 0,
-        }}
         pagination={true}
-        modules={[EffectCube, Pagination]}
+        navigation={false}
+        modules={[EffectFlip, Pagination]}
         className={clsx(`h-auto w-full !bg-transparent`, `3xl:w-[18.75rem] 3xl:mx-0 4xl:w-[21.25rem]`)}
         aria-label={`Video testimonials`}
       >

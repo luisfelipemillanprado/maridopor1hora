@@ -16,6 +16,11 @@ export enum NavigationIcon {
  * @param icon - The string identifier for the desired icon, typically from the `NavigationIcon` enum.
  * @returns The matching icon React component, or a fallback span if the icon type is unrecognized.
  */
+const arrowUpRightIconClasses = {
+  default: 'bxr bxs-arrow-up-right-stroke bx-tada',
+  base: 'text-default-900 text-[2.3125rem]',
+  breakpoints: '3xl:text-[2.4375rem] 4xl:text-[2.75rem]',
+}
 const iconSwitch = (icon: string) => {
   switch (icon) {
     case NavigationIcon.ARROWUPRIGHT:
@@ -23,9 +28,9 @@ const iconSwitch = (icon: string) => {
         <i
           aria-label={`arrow-up-right`}
           className={clsx(
-            `bxr bxs-arrow-up-right-stroke bx-tada`,
-            `text-default-900 text-[2.3125rem]`,
-            `3xl:text-[2.4375rem] 4xl:text-[2.75rem]`
+            arrowUpRightIconClasses.default,
+            arrowUpRightIconClasses.base,
+            arrowUpRightIconClasses.breakpoints
           )}
         />
       )
@@ -41,14 +46,11 @@ const iconSwitch = (icon: string) => {
  */
 export default function NavigationLinkIcons(props: { icon: string }) {
   const { icon } = props
+  const iconWrapperClasses = {
+    base: 'horizontal bg-content2 h-[2.125rem] w-[2.1875rem] justify-center rounded-full',
+    breakpoints: '4xl:h-10 4xl:w-10 3xl:h-[2.3125rem] 3xl:w-[2.3125rem]',
+  }
   return (
-    <span
-      className={clsx(
-        `horizontal bg-content2 h-[2.125rem] w-[2.1875rem] justify-center rounded-full`,
-        `4xl:h-10 4xl:w-10 3xl:h-[2.3125rem] 3xl:w-[2.3125rem]`
-      )}
-    >
-      {iconSwitch(icon)}
-    </span>
+    <span className={clsx(iconWrapperClasses.base, iconWrapperClasses.breakpoints)}>{iconSwitch(icon)}</span>
   )
 }

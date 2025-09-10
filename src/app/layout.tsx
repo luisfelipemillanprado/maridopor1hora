@@ -11,7 +11,7 @@ import '@/app/styles/boxicons/brands/transformations.css'
 import { Nunito_Sans } from 'next/font/google'
 import Provider from '@/app/providers'
 import { Metadata } from 'next'
-import ContactFloatButton from '@/common/gcomponents/contactus/components/organisms/ContactFloatButton'
+import ContactFloatButton from '@/common/contactus/components/organisms/ContactFloatButton'
 import sd from '@/utils/data/Static'
 import clsx from 'clsx'
 
@@ -56,8 +56,25 @@ export default function RootLayout({
     <html
       suppressHydrationWarning
       className={clsx(`${nunito_sans.className} scroll-smooth antialiased`)}
-      lang="es-ES"
+      lang='es-ES'
     >
+      <head>
+        {/* Preload Boxicons woff2 fonts to improve LCP and avoid fallback fonts on slow networks */}
+        <link
+          rel={'preload'}
+          href={'/boxicons/brands/fonts/boxicons-brands.woff2'}
+          as={'font'}
+          type={'font/woff2'}
+          crossOrigin={'anonymous'}
+        />
+        <link
+          rel={'preload'}
+          href={'/boxicons/basics/fonts/rounded/200/boxicons-rounded.woff2'}
+          as={'font'}
+          type={'font/woff2'}
+          crossOrigin={'anonymous'}
+        />
+      </head>
       <body className={clsx(`bg-content7`)}>
         <div className={clsx(`no-scrollbar h-screen overflow-auto`)}>
           <Provider

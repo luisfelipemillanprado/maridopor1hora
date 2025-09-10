@@ -6,11 +6,15 @@ coverage
 **/node_modules
 **/package-lock.json
 
-#images
+# Optional build outputs
+dist
+
+# VCS / misc
 **/.git
-**/.svn
-**/.hg
-**/public/
+**/.vscode
+
+# Public — ignore binary assets only so Prettier can still format code (tsx, svg) there
+public/**/*.{png,jpg,jpeg,webp,gif,avif,ico,ttf,woff,woff2,mp4,webm}
 
 # next.js
 **/.next/
@@ -18,3 +22,15 @@ coverage
 
 # husky
 **/.husky/
+
+# lockfiles (add common ones)
+pnpm-lock.yaml
+yarn.lock
+
+# Env files
+.env
+.env.local
+.env.*.local
+
+# Logs
+*.log

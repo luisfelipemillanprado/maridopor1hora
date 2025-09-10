@@ -8,7 +8,7 @@ import {
   DropdownItem,
   Button,
 } from '@heroui/react'
-import MenuIcons from '@/common/gcomponents/navbar/components/atoms/MenuIcons'
+import MenuIcons from '@/common/navbar/components/atoms/MenuIcons'
 import clsx from 'clsx'
 
 /**

@@ -1,4 +1,4 @@
-import ContactButton from '@/common/gcomponents/contactus/components/molecules/ContactButton'
+import ContactButton from '@/common/contactus/components/molecules/ContactButton'
 import clsx from 'clsx'
 
 /**

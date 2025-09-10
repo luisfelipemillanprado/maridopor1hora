@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Este repositorio contiene una aplicación web creada con Next.js (app router) y configurada para TypeScript y Tailwind CSS.
 
-## Getting Started
+## Inicio rápido
 
-First, run the development server:
+Requisitos: Node.js 18+ y un gestor de paquetes (npm, pnpm o yarn).
+
+Instala dependencias y arranca el servidor de desarrollo:
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abre http://localhost:3000 en tu navegador para ver la aplicación en ejecución.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Qué puedes editar
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- La entrada principal está en `src/app/page.tsx` (página raíz).
+- Componentes y características viven en `src/common` y `src/features`.
+- Activos públicos (imágenes, fuentes, vídeos) están en `public/`.
+- Configuraciones importantes: `next.config.ts`, `tailwind.config.js`, `tsconfig.json` y `server.ts`.
 
-## Learn More
+## Scripts útiles
 
-To learn more about Next.js, take a look at the following resources:
+- `npm run dev` — inicia el servidor de desarrollo (hot-reload).
+- `npm run build` — crea la versión de producción.
+- `npm run start` — arranca la app en modo producción (después de `build`).
+- `npm run lint` — corre ESLint (si está configurado).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Estructura relevante del proyecto
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- `app/` (Next.js app router) — rutas y layout.
+- `src/` — código fuente (componentes, hooks, utilidades y estilos).
+- `public/` — assets estáticos (imágenes, fuentes, vídeos).
+- `server.ts` — archivo de servidor personalizado (si estás usando configuración personalizada).
 
-## Deploy on Vercel
+## Despliegue
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+La forma más directa de desplegar esta app es con Vercel. También funciona en otras plataformas que soporten Node.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Pasos básicos para Vercel:
+
+1. Conecta el repositorio en https://vercel.com.
+2. Asegúrate de que la versión de Node es >=18 en la configuración del proyecto.
+3. Vercel detectará Next.js y configurará los comandos de build automáticamente (`npm run build` / `npm run start`).
+
+## Contribuir
+
+Si quieres ayudar o proponer cambios:
+
+1. Crea un fork y una rama nueva para tu feature/fix.
+2. Asegúrate de seguir las reglas de lint y formato del proyecto.
+3. Envía un pull request con una descripción clara del cambio.
+
+## Licencia
+
+Consulta el archivo `LICENSE` para ver la licencia del proyecto.
+
+---
