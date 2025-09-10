@@ -1,5 +1,5 @@
 'use client'
-import { useState, FormEvent } from 'react'
+// import { useState, FormEvent } from 'react'
 import { Button, Form, Input } from '@heroui/react'
 import clsx from 'clsx'
 
@@ -81,16 +81,16 @@ export default function ReceiveNotifications(props: {
     default: 'bxr bxs-trending-up bx-tada',
     base: 'text-default-50 text-[2.125rem]',
   }
-  const [submitted, setSubmitted] = useState<{ [k: string]: FormDataEntryValue } | null>(null)
+  /* const [submitted, setSubmitted] = useState<{ [k: string]: FormDataEntryValue } | null>(null)
   const onSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     const data = Object.fromEntries(new FormData(event.currentTarget))
     setSubmitted(data)
-  }
+  }*/
   return (
     <Form
       className={clsx(formClasses.base, formClasses.breakpoints)}
-      onSubmit={onSubmit}
+      /* onSubmit={onSubmit} */
       aria-label={`Form to receive notifications`}
     >
       <div className={clsx(titleContainerClasses.base, titleContainerClasses.breakpoints)}>
