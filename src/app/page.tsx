@@ -1,6 +1,6 @@
 import Header from '@/features/home/components/organisms/Header'
 import Main from '@/features/home/components/organisms/Main'
-import Footer from '@/common/gcomponents/footer/components/organisms/Footer'
+import Footer from '@/common/footer/components/organisms/Footer'
 import clsx from 'clsx'
 import sd from '@/utils/data/Static'
 

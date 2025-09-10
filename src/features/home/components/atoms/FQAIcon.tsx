@@ -17,13 +17,18 @@ export enum FQAIconType {
  * @param icon - The type of icon to render. Should be a value from `FQAIconType`.
  * @returns The corresponding icon React element, or `undefined` if the icon type is not recognized.
  */
+const moreIconClasses = {
+  default: 'bxr bxs-dots-vertical-rounded',
+  base: 'text-warning text-2xl',
+  breakpoints: '3xl:text-[1.625rem]',
+}
 const iconSwitch = (icon: string) => {
   switch (icon) {
     case FQAIconType.MORE:
       return (
         <i
           aria-label={`ellipsis`}
-          className={clsx(`bxr bxs-dots-vertical-rounded`, `text-warning text-2xl`, `3xl:text-[1.625rem]`)}
+          className={clsx(moreIconClasses.default, moreIconClasses.base, moreIconClasses.breakpoints)}
         />
       )
     default:
@@ -38,5 +43,8 @@ const iconSwitch = (icon: string) => {
  */
 export default function FQAIcon(props: { icon: string }) {
   const { icon } = props
-  return <span className={clsx(`horizontal h-auto w-auto`)}>{iconSwitch(icon)}</span>
+  const iconWrapperClasses = {
+    base: 'horizontal h-auto w-auto',
+  }
+  return <span className={clsx(iconWrapperClasses.base)}>{iconSwitch(icon)}</span>
 }

@@ -61,7 +61,7 @@ export default function DetailService(props: { name: string; imageUrl: string })
             <ModalContent>
               {(onClose) => (
                 <>
-                  <ModalHeader className="flex flex-col gap-1">Modal Title</ModalHeader>
+                  <ModalHeader className='flex flex-col gap-1'>Modal Title</ModalHeader>
                   <ModalBody>
                     <p>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non risus
@@ -80,10 +80,10 @@ export default function DetailService(props: { name: string; imageUrl: string })
                     </p>
                   </ModalBody>
                   <ModalFooter>
-                    <Button color="danger" variant="light" onPress={onClose}>
+                    <Button color='danger' variant='light' onPress={onClose}>
                       Close
                     </Button>
-                    <Button color="primary" onPress={onClose}>
+                    <Button color='primary' onPress={onClose}>
                       Action
                     </Button>
                   </ModalFooter>

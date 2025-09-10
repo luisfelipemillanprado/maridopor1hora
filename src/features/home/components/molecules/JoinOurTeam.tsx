@@ -29,15 +29,25 @@ export default function JoinOurTeam(props: {
   }
 }) {
   const { joinOurTeam } = props
+  const contentClasses = {
+    base: 'vertical bg-content3 rounded-large border-content4 shadow-medium mb-6 h-auto w-full gap-y-7 border-1 px-4 pt-4',
+    breakpoints: '4xl:gap-y-8',
+  }
+  const joinTeamButtonContainerClasses = {
+    base: 'horizontal mb-1 h-auto w-full justify-center',
+    breakpoints: '4xl:mb-2.5',
+  }
+  const wrapperClasses = {
+    base: 'horizontal ml-5 h-auto w-full justify-center',
+    breakpoints: '3xl:ml-7',
+  }
+  const containerClasses = {
+    base: 'grid w-auto grid-cols-12 grid-rows-2 gap-3',
+  }
   return (
-    <div
-      className={clsx(
-        `vertical bg-content3 rounded-large border-content4 shadow-medium mb-6 h-auto w-full gap-y-7 border-1 px-4 pt-4`,
-        `4xl:gap-y-8`
-      )}
-    >
+    <div className={clsx(contentClasses.base, contentClasses.breakpoints)}>
       <AboutTeam {...{ firstText: joinOurTeam.firstText, secondText: joinOurTeam.secondText }} />
-      <div className={clsx(`horizontal mb-1 h-auto w-full justify-center`, `4xl:mb-2.5`)}>
+      <div className={clsx(joinTeamButtonContainerClasses.base, joinTeamButtonContainerClasses.breakpoints)}>
         <JoinTeamButton
           {...{
             text: joinOurTeam.joinOurTeamButton.text,
@@ -45,8 +55,8 @@ export default function JoinOurTeam(props: {
           }}
         />
       </div>
-      <div className={clsx(`horizontal ml-5 h-auto w-full justify-center`, `3xl:ml-7`)}>
-        <div className={clsx(`grid w-auto grid-cols-12 grid-rows-2 gap-3`)}>
+      <div className={clsx(wrapperClasses.base, wrapperClasses.breakpoints)}>
+        <div className={clsx(containerClasses.base)}>
           {joinOurTeam.team.map((item, index) => (
             <Member key={item.key} {...{ imageUrl: item.imageUrl, index }} />
           ))}

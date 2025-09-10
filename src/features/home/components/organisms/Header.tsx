@@ -1,7 +1,7 @@
 import PeekServices from '@/features/home/components/molecules/PeekServices'
 import MainTitle from '@/features/home/components/atoms/MainTitle'
 import LinksButtons from '@/features/home/components/molecules/LinksButtons'
-import NavBar from '@/common/gcomponents/navbar/components/organisms/NavBar'
+import NavBar from '@/common/navbar/components/organisms/NavBar'
 import Metrics from '@/features/home/components/molecules/Metrics'
 import PopularServices from '@/features/home/components/molecules/PopularServices'
 import clsx from 'clsx'
@@ -57,23 +57,27 @@ export default function Header(props: {
   }
 }) {
   const { peekServices, mainTitle, linksButtons, navbar, metrics, popularServices } = props
+  const sectionClasses = {
+    base: 'horizontal h-auto w-full',
+  }
+  const containerClasses = {
+    base: 'relative h-[28.125rem] w-full overflow-hidden rounded-[1.25rem]',
+    breakpoints: '3xl:h-[37.5rem] 4xl:h-[48.625rem] 2xl:h-[28.3125rem]',
+  }
+  const containerNavbarClasses = {
+    base: 'horizontal relative h-auto w-full',
+  }
+  const contentClasses = {
+    base: 'horizontal relative h-auto w-full p-2',
+    breakpoints: '3xl:px-6 3xl:py-3 4xl:px-[3.75rem] xl:px-3',
+  }
   return (
-    <section aria-label={`peek-services`} className={clsx(`horizontal h-auto w-full`)}>
-      <div
-        className={clsx(
-          `relative h-[28.125rem] w-full overflow-hidden rounded-[1.25rem]`,
-          `3xl:h-[37.5rem] 4xl:h-[48.625rem] 2xl:h-[28.3125rem]`
-        )}
-      >
-        <div className={clsx(`horizontal relative h-auto w-full`)}>
+    <section aria-label={`peek-services`} className={clsx(sectionClasses.base)}>
+      <div className={clsx(containerClasses.base, containerClasses.breakpoints)}>
+        <div className={clsx(containerNavbarClasses.base)}>
           <NavBar {...{ navbar }} />
         </div>
-        <div
-          className={clsx(
-            `horizontal relative h-auto w-full p-2`,
-            `3xl:px-6 3xl:py-3 4xl:px-[3.75rem] xl:px-3`
-          )}
-        >
+        <div className={clsx(contentClasses.base, contentClasses.breakpoints)}>
           <PeekServices {...{ peekServices }} />
           <MainTitle {...{ mainTitle }} />
           <LinksButtons {...{ linksButtons }} />

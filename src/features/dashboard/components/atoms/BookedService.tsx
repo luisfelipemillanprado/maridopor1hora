@@ -1,4 +1,4 @@
-import Ratings from '@/common/gcomponents/ratings/Ratings'
+import Ratings from '@/common/ratings/Ratings'
 import {
   Button,
   Card,
@@ -69,7 +69,7 @@ export default function BookedService(props: {
             <ModalContent>
               {(onClose) => (
                 <>
-                  <ModalHeader className="flex flex-col gap-1">Modal Title</ModalHeader>
+                  <ModalHeader className='flex flex-col gap-1'>Modal Title</ModalHeader>
                   <ModalBody>
                     <p>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non risus
@@ -88,7 +88,7 @@ export default function BookedService(props: {
                     </p>
                   </ModalBody>
                   <ModalFooter>
-                    <Button color="danger" variant="light" onPress={onClose}>
+                    <Button color='danger' variant='light' onPress={onClose}>
                       Close
                     </Button>
                   </ModalFooter>

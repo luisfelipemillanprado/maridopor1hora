@@ -6,6 +6,8 @@ const compat = new FlatCompat({
 })
 
 const eslintConfig = [
+  // ignore build/artifact folders (migrated from .eslintignore)
+  { ignores: ['.next/**', 'node_modules/**', 'dist/**', 'public/**', '.env*', '*.config.js'] },
   ...compat.config({
     extends: ['next/core-web-vitals', 'next/typescript', 'prettier'],
   }),

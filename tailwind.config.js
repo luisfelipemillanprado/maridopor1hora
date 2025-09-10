@@ -12,13 +12,13 @@ const config = {
   theme: {
     extend: {
       screens: {
-        xs: '20rem',
+        'xs': '20rem',
         // => @media (min-width: 320px) { ... }
-        md: '22.5rem',
+        'md': '22.5rem',
         // => @media (min-width: 360px) { ... }
-        lg: '23.4375rem',
+        'lg': '23.4375rem',
         // => @media (min-width: 375px) { ... }
-        xl: '24.375rem',
+        'xl': '24.375rem',
         // => @media (min-width: 390px) { ... }
         '2xl': '30.625rem',
         // => @media (min-width: 490px) { ... }

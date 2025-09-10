@@ -21,6 +21,22 @@ export enum MetricIcon {
  * @param icon - The string identifier for the icon type, expected to match a value from `MetricIcon`.
  * @returns A React element representing the selected icon, or a fallback span if no match is found.
  */
+
+const frecuentesIconClasses = {
+  default: 'bxr bxs-calendar-detail',
+  base: 'text-default-500 text-4xl',
+  breakpoints: '3xl:text-[2.375rem] 4xl:text-[2.6875rem]',
+}
+const satisfechosIconClasses = {
+  default: 'bxr bxs-medal-star-alt-2',
+  base: 'text-default-500 text-4xl',
+  breakpoints: '3xl:text-[2.4375rem] 4xl:text-[2.75rem]',
+}
+const calificadosIconClasses = {
+  default: 'bxr bxs-hard-hat',
+  base: 'text-default-500 text-4xl',
+  breakpoints: '3xl:text-[2.375rem] 4xl:text-[2.75rem]',
+}
 const iconSwitch = (icon: string) => {
   switch (icon) {
     case MetricIcon.FRECUENTES:
@@ -28,9 +44,9 @@ const iconSwitch = (icon: string) => {
         <i
           aria-label={`frequent`}
           className={clsx(
-            `bxr bxs-calendar-detail`,
-            `text-default-500 text-4xl`,
-            `3xl:text-[2.375rem] 4xl:text-[2.6875rem]`
+            frecuentesIconClasses.default,
+            frecuentesIconClasses.base,
+            frecuentesIconClasses.breakpoints
           )}
         />
       )
@@ -39,9 +55,9 @@ const iconSwitch = (icon: string) => {
         <i
           aria-label={`satisfied`}
           className={clsx(
-            `bxr bxs-medal-star-alt-2`,
-            `text-default-500 text-4xl`,
-            `3xl:text-[2.4375rem] 4xl:text-[2.75rem]`
+            satisfechosIconClasses.default,
+            satisfechosIconClasses.base,
+            satisfechosIconClasses.breakpoints
           )}
         />
       )
@@ -50,9 +66,9 @@ const iconSwitch = (icon: string) => {
         <i
           aria-label={`qualified`}
           className={clsx(
-            `bxr bxs-hard-hat`,
-            `text-default-500 text-4xl`,
-            `3xl:text-[2.375rem] 4xl:text-[2.75rem]`
+            calificadosIconClasses.default,
+            calificadosIconClasses.base,
+            calificadosIconClasses.breakpoints
           )}
         />
       )
@@ -83,16 +99,67 @@ export default function Metric(props: {
   }
 }) {
   const { metric } = props
+  const kletterClasses = {
+    base: 'text-warning text-large',
+    breakpoints: '3xl:text-[1.375rem] 2xl:text-[1.1875rem]',
+  }
+  const iconWrapperClasses = {
+    base: 'horizontal h-auto w-auto',
+    otherBase: 'hidden h-auto w-auto',
+    breakpoints: '3xl:flex',
+  }
+  const plusIconClasses = {
+    default: 'bxr bxs-plus',
+    base: 'text-warning text-large',
+    breakpoints: '3xl:text-2xl 4xl:text-3xl 2xl:text-[1.3125rem]',
+  }
+  const cardClasses = {
+    base: 'outline-warning-200 bg-content7 w-[6.125rem] gap-y-0.5 outline-1 outline-solid',
+    conditions: { first: 'shadow-lg', second: 'shadow-medium' },
+    breakpoints: '3xl:w-52 4xl:w-auto 4xl:gap-y-2.5 xl:w-[6.375rem]',
+  }
+  const cardHeaderClasses = {
+    base: 'horizontal justify-center gap-x-0.5 px-1 pt-2 pb-0',
+    breakpoints: '3xl:px-3.5 3xl:pt-3 3xl:pb-1.5 3xl:justify-between',
+  }
+  const amountContainerClasses = {
+    base: 'horizontal h-auto w-auto',
+    breakpoints: '3xl:pr-4.5',
+  }
+  const amountClasses = {
+    base: 'text-warning text-[1.1875rem] font-semibold',
+    breakpoints: '3xl:text-[1.375rem] 4xl:text-[1.625rem] xl:text-xl',
+  }
+  const CardBodyClasses = {
+    base: 'vertical !scrollbar-hide px-0 pt-0 pb-2.5',
+    breakpoints: '3xl:pb-0 3xl:gap-y-1.5',
+  }
+  const metricTextContainerClasses = {
+    base: 'horizontal w-full justify-start px-1.5',
+    breakpoints: '3xl:px-5 4xl:gap-x-2',
+  }
+  const metricTextClasses = {
+    base: 'text-center text-[0.9375rem]',
+    breakpoints: '3xl:text-large xl:text-medium 4xl:text-[1.1875rem] 3xl:font-semibold',
+  }
+  const chipClasses = {
+    base: '[&>span]:text-warning-700 hidden [&>span]:pl-0',
+    breakpoints: '4xl:flex',
+  }
+  const arrowUpRightIconClasses = {
+    default: 'bxr bxs-arrow-up-right',
+    base: 'text-3xl',
+  }
+  const graphicsIconClasses = {
+    base: 'hidden',
+    breakpoints: '3xl:flex',
+  }
   const changeElement = metric.change ? (
-    <span className={clsx(`text-warning text-large`, `3xl:text-[1.375rem] 2xl:text-[1.1875rem]`)}>K</span>
+    <span className={clsx(kletterClasses.base, kletterClasses.breakpoints)}>K</span>
   ) : (
-    <span className={clsx(`horizontal h-auto w-auto`)}>
+    <span className={clsx(iconWrapperClasses.base)}>
       <i
-        className={clsx(
-          `bxr bxs-plus`,
-          `text-warning text-large`,
-          `3xl:text-2xl 4xl:text-3xl 2xl:text-[1.3125rem]`
-        )}
+        className={clsx(plusIconClasses.default, plusIconClasses.base, plusIconClasses.breakpoints)}
         aria-label={`plus`}
       />
     </span>
@@ -101,47 +168,29 @@ export default function Metric(props: {
     <Card
       isPressable
       className={clsx(
-        `outline-warning-200 bg-content7 w-[6.125rem] gap-y-0.5 outline-1 outline-solid`,
-        `${metric.change ? 'shadow-lg' : 'shadow-medium'}`,
-        `3xl:w-52 4xl:w-auto 4xl:gap-y-2.5 xl:w-[6.375rem]`
+        cardClasses.base,
+        metric.change ? cardClasses.conditions.first : cardClasses.conditions.second,
+        cardClasses.breakpoints
       )}
-      shadow={`sm`}
     >
-      <CardHeader
-        className={clsx(
-          `horizontal justify-center gap-x-0.5 px-1 pt-2 pb-0`,
-          `3xl:px-3.5 3xl:pt-3 3xl:pb-1.5 3xl:justify-between`
-        )}
-      >
-        <span className={clsx(`hidden h-auto w-auto`, `3xl:flex`)}>{iconSwitch(metric.icon)}</span>
-        <div className={clsx(`horizontal h-auto w-auto`, `3xl:pr-4.5`)}>
-          <span
-            className={clsx(
-              `text-warning text-[1.1875rem] font-semibold`,
-              `3xl:text-[1.375rem] 4xl:text-[1.625rem] xl:text-xl`
-            )}
-          >
-            {metric.amount}
-          </span>
+      <CardHeader className={clsx(cardHeaderClasses.base, cardHeaderClasses.breakpoints)}>
+        <span className={clsx(iconWrapperClasses.otherBase, iconWrapperClasses.breakpoints)}>
+          {iconSwitch(metric.icon)}
+        </span>
+        <div className={clsx(amountContainerClasses.base, amountContainerClasses.breakpoints)}>
+          <span className={clsx(amountClasses.base, amountClasses.breakpoints)}>{metric.amount}</span>
           {changeElement}
         </div>
       </CardHeader>
-      <CardBody className={clsx(`vertical !scrollbar-hide px-0 pt-0 pb-2.5`, `3xl:pb-0 3xl:gap-y-1.5`)}>
-        <div className={clsx(`horizontal w-full justify-start px-1.5`, `3xl:px-5 4xl:gap-x-2`)}>
-          <span
-            className={clsx(
-              `text-center text-[0.9375rem]`,
-              `3xl:text-large xl:text-medium 4xl:text-[1.1875rem] 3xl:font-semibold`
-            )}
-          >
-            {metric.text}
-          </span>
+      <CardBody className={clsx(CardBodyClasses.base, CardBodyClasses.breakpoints)}>
+        <div className={clsx(metricTextContainerClasses.base, metricTextContainerClasses.breakpoints)}>
+          <span className={clsx(metricTextClasses.base, metricTextClasses.breakpoints)}>{metric.text}</span>
           <Chip
-            className={clsx(`[&>span]:text-warning-700 hidden [&>span]:pl-0`, `4xl:flex`)}
+            className={clsx(chipClasses.base, chipClasses.breakpoints)}
             color={`warning`}
             startContent={
-              <span className={clsx(`horizontal h-auto w-auto`)}>
-                <i className={clsx(`bxr bxs-arrow-up-right text-3xl`)} />
+              <span className={clsx(iconWrapperClasses.base)}>
+                <i className={clsx(arrowUpRightIconClasses.default, arrowUpRightIconClasses.base)} />
               </span>
             }
             variant={`flat`}
@@ -150,8 +199,8 @@ export default function Metric(props: {
             {metric.increase}
           </Chip>
         </div>
-        <span className={clsx(`hidden`, `3xl:flex`)}>
-          <GraphicsIcon className={clsx(``)} />
+        <span className={clsx(graphicsIconClasses.base, graphicsIconClasses.breakpoints)}>
+          <GraphicsIcon />
         </span>
       </CardBody>
     </Card>

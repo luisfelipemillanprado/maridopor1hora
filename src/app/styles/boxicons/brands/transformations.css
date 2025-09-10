@@ -1,108 +1,93 @@
-.bx-rotate-90
-{
-    transform: rotate(90deg);
+.bx-rotate-90 {
+  transform: rotate(90deg);
 
-    -ms-filter: 'progid:DXImageTransform.Microsoft.BasicImage(rotation=1)';
+  -ms-filter: 'progid:DXImageTransform.Microsoft.BasicImage(rotation=1)';
 }
-.bx-rotate-180
-{
-    transform: rotate(180deg);
+.bx-rotate-180 {
+  transform: rotate(180deg);
 
-    -ms-filter: 'progid:DXImageTransform.Microsoft.BasicImage(rotation=2)';
+  -ms-filter: 'progid:DXImageTransform.Microsoft.BasicImage(rotation=2)';
 }
-.bx-rotate-270
-{
-    transform: rotate(270deg);
+.bx-rotate-270 {
+  transform: rotate(270deg);
 
-    -ms-filter: 'progid:DXImageTransform.Microsoft.BasicImage(rotation=3)';
+  -ms-filter: 'progid:DXImageTransform.Microsoft.BasicImage(rotation=3)';
 }
-.bx-flip-horizontal
-{
-    transform: scaleX(-1);
+.bx-flip-horizontal {
+  transform: scaleX(-1);
 
-    -ms-filter: 'progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)';
+  -ms-filter: 'progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)';
 }
-.bx-flip-vertical
-{
-    transform: scaleY(-1);
+.bx-flip-vertical {
+  transform: scaleY(-1);
 
-    -ms-filter: 'progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)';
+  -ms-filter: 'progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)';
 }
-.bx-xs
-{
-    font-size: 1rem!important;
+.bx-xs {
+  font-size: 1rem !important;
 }
-.bx-sm
-{
-    font-size: 1.55rem!important;
+.bx-sm {
+  font-size: 1.55rem !important;
 }
-.bx-md
-{
-    font-size: 2.25rem!important;
+.bx-md {
+  font-size: 2.25rem !important;
 }
-.bx-lg
-{
-    font-size: 3.0rem!important;
+.bx-lg {
+  font-size: 3rem !important;
 }
-.bx-fw
-{
-    font-size: 1.2857142857em;
-    line-height: .8em;
+.bx-fw {
+  font-size: 1.2857142857em;
+  line-height: 0.8em;
 
-    width: 1.2857142857em;
-    height: .8em;
-    margin-top: -.2em!important;
+  width: 1.2857142857em;
+  height: 0.8em;
+  margin-top: -0.2em !important;
 
-    vertical-align: middle;
+  vertical-align: middle;
 }
-.bx-pull-left
-{
-    float: left;
+.bx-pull-left {
+  float: left;
 
-    margin-right: .3em!important;
+  margin-right: 0.3em !important;
 }
-.bx-pull-right
-{
-    float: right;
+.bx-pull-right {
+  float: right;
 
-    margin-left: .3em!important;
+  margin-left: 0.3em !important;
 }
 
-.bx-border
-{
-    padding: .25em;
+.bx-border {
+  padding: 0.25em;
 
-    border: .07em solid rgba(0,0,0,.1);
-    border-radius: .25em;
+  border: 0.07em solid rgba(0, 0, 0, 0.1);
+  border-radius: 0.25em;
 }
-.bx-border-circle
-{
-    padding: .25em;
+.bx-border-circle {
+  padding: 0.25em;
 
-    border: .07em solid rgba(0,0,0,.1);
-    border-radius: 50%;
+  border: 0.07em solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
 }
-.bx-ul
-{
-    margin-left: 2em;
-    padding-left: 0;
+.bx-ul {
+  margin-left: 2em;
+  padding-left: 0;
 
-    list-style: none;
+  list-style: none;
 }
-.bx-ul > li
-{
-    position: relative;
+.bx-ul > li {
+  position: relative;
 }
 
-.bx-ul .bx,.bx-ul .bxr,.bx-ul .bxs
-{
-    font-size: inherit;
-    line-height: inherit;
+.bx-ul .bx,
+.bx-ul .bxr,
+.bx-ul .bxs {
+  font-size: inherit;
+  line-height: inherit;
 
-    position: absolute;
-    left: -2em;
+  position: absolute;
+  left: -2em;
 
-    width: 2em;
+  width: 2em;
 
-    text-align: center;
+  text-align: center;
 }

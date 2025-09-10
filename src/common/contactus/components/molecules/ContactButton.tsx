@@ -1,5 +1,5 @@
 'use client'
-import ButtonPulse from '@/common/gcomponents/pulse/ButtonPulse'
+import ButtonPulse from '@/common/pulse/ButtonPulse'
 import { Button, Link } from '@heroui/react'
 import clsx from 'clsx'
 

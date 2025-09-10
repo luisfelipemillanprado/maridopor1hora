@@ -145,40 +145,104 @@ export default function Main(props: {
     certifications,
     videoTestimonials,
   } = props
+  const containerSectionsClasses = {
+    base: 'vertical h-auto w-full',
+  }
+  const containerTitleClasses = {
+    base: 'horizontal w-full justify-center',
+  }
+  const trustBadgeCardSectionClasses = {
+    base: 'mb-6 w-full px-4.5',
+    breakpoints: '3xl:px-10 4xl:px-[5.625rem] 4xl:mb-12.5',
+  }
+  const trustBadgeCardContentClasses = {
+    base: 'horizontal h-auto w-full justify-start',
+  }
+  const featuredCompletedWorksSectionClasses = {
+    base: 'vertical mb-6 w-full gap-y-3.5 px-4.5',
+    breakpoints: '3xl:px-10 4xl:px-[5.625rem] 4xl:gap-y-4.5 4xl:mb-12.5',
+  }
+  const allOurServicesSectionClasses = {
+    base: 'vertical mb-6 w-full gap-y-3.5 px-4.5',
+    breakpoints: '3xl:px-10 4xl:px-[5.625rem] 4xl:gap-y-4.5 4xl:mb-10',
+  }
+  const allOurServicesContentClasses = {
+    base: 'horizontal mt-3 mb-0.5 h-auto w-full justify-center',
+    breakpoints: '3xl:mt-3.5 4xl:mt-7',
+  }
+  const hereAreYourAnswersSectionClasses = {
+    base: 'vertical mb-6 w-full gap-y-3.5 px-4.5',
+    breakpoints: '3xl:px-10 4xl:px-[5.625rem] 4xl:gap-y-4.5 4xl:mb-12.5',
+  }
+  const whyChooseUsSectionClasses = {
+    base: 'vertical mb-3.5 w-full gap-y-1.5 pl-4.5',
+    breakpoints: '3xl:pl-9 4xl:pl-[5.25rem] 4xl:pr-[5.25rem] 4xl:gap-y-3 4xl:mb-11',
+  }
+  const joinOurTeamSectionClasses = {
+    base: 'vertical mb-0.5 w-full gap-y-3.5 overflow-hidden px-4.5',
+    breakpoints: '3xl:px-10 4xl:px-[5.625rem] 4xl:gap-y-4.5 4xl:mb-[1.625rem]',
+  }
+  const customerTestimonialsSectionClasses = {
+    base: 'vertical mb-5 w-full gap-y-3.5 px-4.5',
+    breakpoints: '3xl:px-10 3xl:mb-8 4xl:px-[5.625rem] 3xl:gap-y-4.5 4xl:gap-y-4.5 4xl:mb-18',
+  }
+  const customerTestimonialsWrapperClasses = {
+    base: 'vertical h-auto w-auto gap-y-2.5',
+  }
+  const customerTestimonialsIntroductionClasses = {
+    base: 'horizontal mb-2.5 h-auto w-auto justify-center',
+  }
+  const customerTestimonialsContentClasses = {
+    base: 'horizontal w-full justify-center',
+    breakpoints: '3xl:gap-x-24.5 4xl:justify-evenly 4xl:mt-5',
+  }
+  const customerTestimonialsVideosClasses = {
+    base: 'mb-2 hidden',
+    breakpoints: '3xl:flex 4xl:mb-0',
+  }
+  const someFeaturedVideosSectionClasses = {
+    base: 'mb-8 flex w-full flex-col gap-y-1.5 px-4.5',
+    breakpoints: '3xl:hidden',
+  }
+  const receiveNotificationsSectionClasses = {
+    base: 'mb-8 flex w-full flex-col gap-y-8.5 px-6',
+    breakpoints: '3xl:px-10 4xl:flex-row 4xl:gap-x-9 4xl:px-[5.625rem] 4xl:mb-18 xl:px-6.5',
+  }
+  const certificationsAffiliationsSectionClasses = {
+    base: 'horizontal bg-content2 w-full justify-center px-6',
+    breakpoints: '3xl:px-28 4xl:px-72',
+  }
   return (
-    <div className={clsx(`vertical h-auto w-full`)}>
+    <div className={clsx(containerSectionsClasses.base)}>
       <section
         aria-label={`trust-badge-card`}
-        className={clsx(`mb-6 w-full px-4.5`, `3xl:px-10 4xl:px-[5.625rem] 4xl:mb-12.5`)}
+        className={clsx(trustBadgeCardSectionClasses.base, trustBadgeCardSectionClasses.breakpoints)}
       >
-        <div className={clsx(`horizontal h-auto w-full justify-start`)}>
+        <div className={clsx(trustBadgeCardContentClasses.base)}>
           <TrustBadge {...{ trustBadge }} />
         </div>
       </section>
       <section
         aria-label={`featured-completed-works`}
         className={clsx(
-          `vertical mb-6 w-full gap-y-3.5 px-4.5`,
-          `3xl:px-10 4xl:px-[5.625rem] 4xl:gap-y-4.5 4xl:mb-12.5`
+          featuredCompletedWorksSectionClasses.base,
+          featuredCompletedWorksSectionClasses.breakpoints
         )}
       >
-        <div className={clsx(`horizontal w-full justify-center`)}>
+        <div className={clsx(containerTitleClasses.base)}>
           <SecondaryTitle {...{ title: secondaryTitles.title[0] }} />
         </div>
         <FinishedWorks {...{ finishedWorks }} />
       </section>
       <section
         aria-label={`all-our-services`}
-        className={clsx(
-          `vertical mb-6 w-full gap-y-3.5 px-4.5`,
-          `3xl:px-10 4xl:px-[5.625rem] 4xl:gap-y-4.5 4xl:mb-10`
-        )}
+        className={clsx(allOurServicesSectionClasses.base, allOurServicesSectionClasses.breakpoints)}
       >
-        <div className={clsx(`horizontal w-full justify-center`)}>
+        <div className={clsx(containerTitleClasses.base)}>
           <SecondaryTitle {...{ title: secondaryTitles.title[1] }} />
         </div>
         <AllOurServices {...{ allOurServices }} />
-        <div className={clsx(`horizontal mt-3 mb-0.5 h-auto w-full justify-center`, `3xl:mt-3.5 4xl:mt-7`)}>
+        <div className={clsx(allOurServicesContentClasses.base, allOurServicesContentClasses.breakpoints)}>
           <NavigationLink
             {...{
               text: navigationLinks.text[0],
@@ -190,36 +254,27 @@ export default function Main(props: {
       </section>
       <section
         aria-label={`here-are-your-answers`}
-        className={clsx(
-          `vertical mb-6 w-full gap-y-3.5 px-4.5`,
-          `3xl:px-10 4xl:px-[5.625rem] 4xl:gap-y-4.5 4xl:mb-12.5`
-        )}
+        className={clsx(hereAreYourAnswersSectionClasses.base, hereAreYourAnswersSectionClasses.breakpoints)}
       >
-        <div className={clsx(`horizontal w-full justify-center`)}>
+        <div className={clsx(containerTitleClasses.base)}>
           <SecondaryTitle {...{ title: secondaryTitles.title[2] }} />
         </div>
         <FQAs {...{ questions: frequentlyAskedQuestions.questions }} />
       </section>
       <section
         aria-label={`why-choose-us`}
-        className={clsx(
-          `vertical mb-3.5 w-full gap-y-1.5 pl-4.5`,
-          `3xl:pl-9 4xl:pl-[5.25rem] 4xl:pr-[5.25rem] 4xl:gap-y-3 4xl:mb-11`
-        )}
+        className={clsx(whyChooseUsSectionClasses.base, whyChooseUsSectionClasses.breakpoints)}
       >
-        <div className={clsx(`horizontal w-full justify-center`)}>
+        <div className={clsx(containerTitleClasses.base)}>
           <SecondaryTitle {...{ title: secondaryTitles.title[3] }} />
         </div>
         <WhyChooseUs {...{ benefits }} />
       </section>
       <section
         aria-label={`join-our-team`}
-        className={clsx(
-          `vertical mb-0.5 w-full gap-y-3.5 overflow-hidden px-4.5`,
-          `3xl:px-10 4xl:px-[5.625rem] 4xl:gap-y-4.5 4xl:mb-[1.625rem]`
-        )}
+        className={clsx(joinOurTeamSectionClasses.base, joinOurTeamSectionClasses.breakpoints)}
       >
-        <div className={clsx(`horizontal w-full justify-center`)}>
+        <div className={clsx(containerTitleClasses.base)}>
           <SecondaryTitle {...{ title: secondaryTitles.title[4] }} />
         </div>
         <JoinOurTeam {...{ joinOurTeam }} />
@@ -227,20 +282,23 @@ export default function Main(props: {
       <section
         aria-label={`customer-testimonials`}
         className={clsx(
-          `vertical mb-5 w-full gap-y-3.5 px-4.5`,
-          `3xl:px-10 3xl:mb-8 4xl:px-[5.625rem] 3xl:gap-y-4.5 4xl:gap-y-4.5 4xl:mb-18`
+          customerTestimonialsSectionClasses.base,
+          customerTestimonialsSectionClasses.breakpoints
         )}
       >
-        <div className={clsx(`vertical h-auto w-auto gap-y-2.5`)}>
-          <div className={clsx(`horizontal w-full justify-center`)}>
+        <div className={clsx(customerTestimonialsWrapperClasses.base)}>
+          <div className={clsx(containerTitleClasses.base)}>
             <SecondaryTitle {...{ title: secondaryTitles.title[5] }} />
           </div>
-          <div className={clsx(`horizontal mb-2.5 h-auto w-auto justify-center`)}>
+          <div className={clsx(customerTestimonialsIntroductionClasses.base)}>
             <Introduction {...{ text: introduction.text[0] }} />
           </div>
         </div>
         <div
-          className={clsx(`horizontal w-full justify-center`, `3xl:gap-x-24.5 4xl:justify-evenly 4xl:mt-5`)}
+          className={clsx(
+            customerTestimonialsContentClasses.base,
+            customerTestimonialsContentClasses.breakpoints
+          )}
         >
           <CustomerTestimonials
             {...{
@@ -248,16 +306,21 @@ export default function Main(props: {
               score: customerTestimonials.score,
             }}
           />
-          <div className={clsx(`mb-2 hidden`, `3xl:flex 4xl:mb-0`)}>
+          <div
+            className={clsx(
+              customerTestimonialsVideosClasses.base,
+              customerTestimonialsVideosClasses.breakpoints
+            )}
+          >
             <TestimonialVideos {...{ videoTestimonials }} />
           </div>
         </div>
       </section>
       <section
         aria-label={`some-featured-videos`}
-        className={clsx(`mb-8 flex w-full flex-col gap-y-1.5 px-4.5`, `3xl:hidden`)}
+        className={clsx(someFeaturedVideosSectionClasses.base, someFeaturedVideosSectionClasses.breakpoints)}
       >
-        <div className={clsx(`horizontal mb-2.5 w-full justify-center`)}>
+        <div className={clsx(containerTitleClasses.base)}>
           <SecondaryTitle {...{ title: secondaryTitles.title[6] }} />
         </div>
         <TestimonialVideos {...{ videoTestimonials }} />
@@ -265,8 +328,8 @@ export default function Main(props: {
       <section
         aria-label={`receive-notifications`}
         className={clsx(
-          `mb-8 flex w-full flex-col gap-y-8.5 px-6`,
-          `3xl:px-10 4xl:flex-row 4xl:gap-x-9 4xl:px-[5.625rem] 4xl:mb-18 xl:px-6.5`
+          receiveNotificationsSectionClasses.base,
+          receiveNotificationsSectionClasses.breakpoints
         )}
       >
         <AdvertisingFlyer
@@ -291,7 +354,10 @@ export default function Main(props: {
       </section>
       <section
         aria-label={`certifications-affiliations`}
-        className={clsx(`horizontal bg-content2 w-full justify-center px-6`, `3xl:px-28 4xl:px-72`)}
+        className={clsx(
+          certificationsAffiliationsSectionClasses.base,
+          certificationsAffiliationsSectionClasses.breakpoints
+        )}
       >
         <Certifications {...{ imageUrls: certifications.imageUrls }} />
       </section>

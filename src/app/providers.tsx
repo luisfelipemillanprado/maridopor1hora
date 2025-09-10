@@ -22,7 +22,7 @@ export interface ProvidersProps {
  */
 export default function Providers({ children, themeProps }: ProvidersProps) {
   return (
-    <HeroUIProvider locale="es-ES">
+    <HeroUIProvider locale='es-ES'>
       <NextThemesProvider {...themeProps}>{children}</NextThemesProvider>
     </HeroUIProvider>
   )

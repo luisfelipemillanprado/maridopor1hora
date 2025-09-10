@@ -1,5 +1,5 @@
 'use client'
-import InformationLink from '@/common/gcomponents/footer/components/atoms/InformationLink'
+import InformationLink from '@/common/footer/components/atoms/InformationLink'
 import clsx from 'clsx'
 
 /**

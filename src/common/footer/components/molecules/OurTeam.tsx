@@ -1,6 +1,6 @@
 'use client'
 import { AvatarGroup } from '@heroui/react'
-import TeamMember from '@/common/gcomponents/footer/components/atoms/TeamMember'
+import TeamMember from '@/common/footer/components/atoms/TeamMember'
 import clsx from 'clsx'
 
 /**

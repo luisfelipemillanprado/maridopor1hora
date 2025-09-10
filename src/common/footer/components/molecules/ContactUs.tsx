@@ -1,5 +1,5 @@
 'use client'
-import Contact from '@/common/gcomponents/footer/components/atoms/Contact'
+import Contact from '@/common/footer/components/atoms/Contact'
 import clsx from 'clsx'
 
 /**
@@ -23,10 +23,7 @@ export default function ContactUs(props: {
       )}
     >
       {contactUs.map((contact) => (
-        <Contact
-          key={contact.key}
-          {...{ icon: contact.icon, href: contact.href, name: contact.name }}
-        />
+        <Contact key={contact.key} {...{ icon: contact.icon, href: contact.href, name: contact.name }} />
       ))}
     </div>
   )

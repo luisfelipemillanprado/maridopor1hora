@@ -18,6 +18,13 @@ import clsx from 'clsx'
  */
 export default function PeekServices(props: { peekServices: { imageUrl: string; key: number }[] }) {
   const { peekServices } = props
+  const swiperClasses = {
+    base: 'h-80 w-full rounded-tl-[1.25rem] rounded-tr-[1.25rem] rounded-br-[1.25rem] rounded-bl-[1.25rem] outline-warning-200 shadow-md outline-1',
+    breakpoints: '3xl:h-[26.5625rem] 4xl:h-[35.625rem]',
+  }
+  const imageClasses = {
+    base: 'block h-full w-full object-cover brightness-50',
+  }
   return (
     <Swiper
       slidesPerView={1}
@@ -31,11 +38,7 @@ export default function PeekServices(props: { peekServices: { imageUrl: string; 
         hide: true,
       }}
       modules={[Scrollbar, Autoplay, Pagination, EffectFade]}
-      className={clsx(
-        `h-80 w-full rounded-tl-[1.25rem] rounded-tr-[1.25rem] rounded-br-[1.25rem] rounded-bl-[1.25rem]`,
-        `outline-warning-200 shadow-md outline-1`,
-        `3xl:h-[26.5625rem] 4xl:h-[35.625rem]`
-      )}
+      className={clsx(swiperClasses.base, swiperClasses.breakpoints)}
       aria-label={`Carousel of featured services`}
     >
       {peekServices.map((item, index) => (
@@ -43,7 +46,7 @@ export default function PeekServices(props: { peekServices: { imageUrl: string; 
           <Image
             width={312}
             height={310}
-            className={clsx(`block h-full w-full object-cover brightness-50`)}
+            className={clsx(imageClasses.base)}
             src={item.imageUrl}
             alt={`Service ${index + 1}`}
             priority

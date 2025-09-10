@@ -22,61 +22,69 @@ export default function AdvertisingFlyer(props: {
   href: string
 }) {
   const { title, text, buttonText, imageUrl, href } = props
+  const cardClasses = {
+    base: 'gap-y-4.5 bg-gradient-to-br pt-6 pr-[1.375rem] pl-6 from-content9 via-content9 to-warning from-25% via-30% to-80%',
+    breakpoints: '3xl:flex 3xl:flex-row 3xl:flex-nowrap 3xl:gap-x-9 4xl:w-[50%]',
+  }
+  const cardHeaderClasses = {
+    base: 'flex flex-col items-center gap-y-2.5 px-0 py-0',
+    breakpoints: '3xl:w-1/2 3xl:items-start 3xl:pt-1 3xl:gap-y-4 4xl:gap-y-5',
+  }
+  const titleClasses = {
+    base: 'text-default-900 text-[1.3125rem] font-extrabold text-shadow-sm',
+    breakpoints: '3xl:text-[1.4375rem] 4xl:text-[1.5625rem] xl:text-[1.375rem]',
+  }
+  const textClasses = {
+    base: 'text-default-800 text-medium text-center',
+    breakpoints: '3xl:text-start 2xl:text-large xl:text-[1.0625rem]',
+  }
+  const buttonClasses = {
+    base: 'bg-content5 mt-2',
+    breakpoints: '3xl:mt-2 3xl:h-11 3xl:mb-[1.625rem]',
+  }
+  const iconWrapperClasses = {
+    base: 'horizontal h-auto w-auto',
+  }
+  const iconSendClasses = {
+    default: 'bxr bxs-send bx-tada',
+    base: 'text-default-50 text-[2rem]',
+  }
+  const buttonTextClasses = {
+    base: 'text-default-50 text-[1.0625rem]',
+    breakpoints: '2xl:text-large',
+  }
+  const cardBodyClasses = {
+    base: 'flex flex-row justify-center px-0 pt-2 pb-0',
+    breakpoints: '3xl:w-1/2 3xl:h-60 3xl:pt-0 3xl:justify-start 4xl:h-72 4xl:pt-0',
+  }
+  const imageClasses = {
+    base: 'h-full w-full rounded-t-2xl rounded-b-none object-cover',
+  }
   return (
-    <Card
-      className={clsx(
-        `pr- gap-y-4.5 bg-gradient-to-br pt-6 pr-[1.375rem] pl-6`,
-        `from-content9 via-content9 to-warning from-25% via-30% to-80%`,
-        `3xl:flex 3xl:flex-row 3xl:flex-nowrap 3xl:gap-x-9 4xl:w-[50%]`
-      )}
-    >
-      <CardHeader
-        className={clsx(
-          `flex flex-col items-center gap-y-2.5 px-0 py-0`,
-          `3xl:w-1/2 3xl:items-start 3xl:pt-1 3xl:gap-y-4 4xl:gap-y-5`
-        )}
-      >
-        <h3
-          className={clsx(
-            `text-default-900 text-[1.3125rem] font-extrabold text-shadow-sm`,
-            `3xl:text-[1.4375rem] 4xl:text-[1.5625rem] xl:text-[1.375rem]`
-          )}
-        >
-          {title}
-        </h3>
-        <p
-          className={clsx(
-            `text-default-800 text-medium text-center`,
-            `3xl:text-start 2xl:text-large xl:text-[1.0625rem]`
-          )}
-        >
-          {text}
-        </p>
+    <Card className={clsx(cardClasses.base, cardClasses.breakpoints)}>
+      <CardHeader className={clsx(cardHeaderClasses.base, cardHeaderClasses.breakpoints)}>
+        <h3 className={clsx(titleClasses.base, titleClasses.breakpoints)}>{title}</h3>
+        <p className={clsx(textClasses.base, textClasses.breakpoints)}>{text}</p>
         <Button
           isExternal
           as={Link}
           href={href}
-          className={clsx(`bg-content5 mt-2`, `3xl:mt-2 3xl:h-11 3xl:mb-[1.625rem]`)}
+          className={clsx(buttonClasses.base, buttonClasses.breakpoints)}
           endContent={
-            <span className={clsx(`horizontal h-auto w-auto`)}>
-              <i className={clsx(`bxr bxs-send bx-tada`, `text-default-50 text-[2rem]`)} />
+            <span className={clsx(iconWrapperClasses.base)}>
+              <i className={clsx(iconSendClasses.default, iconSendClasses.base)} />
             </span>
           }
           variant={`shadow`}
           size={`md`}
           aria-label={`Service Reservation`}
         >
-          <span className={clsx(`text-default-50 text-[1.0625rem]`, `2xl:text-large`)}>{buttonText}</span>
+          <span className={clsx(buttonTextClasses.base, buttonTextClasses.breakpoints)}>{buttonText}</span>
         </Button>
       </CardHeader>
-      <CardBody
-        className={clsx(
-          `flex flex-row justify-center px-0 pt-2 pb-0`,
-          `3xl:w-1/2 3xl:h-60 3xl:pt-0 3xl:justify-start 4xl:h-72 4xl:pt-0`
-        )}
-      >
+      <CardBody className={clsx(cardBodyClasses.base, cardBodyClasses.breakpoints)}>
         <Image
-          className={clsx(`h-full w-full rounded-t-2xl rounded-b-none object-cover`)}
+          className={clsx(imageClasses.base)}
           src={imageUrl}
           width={260}
           height={260}

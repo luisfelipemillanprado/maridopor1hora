@@ -17,11 +17,11 @@ video:focus {
 /* utility classes en Tailwind v4 */
 @layer utilities {
   .horizontal {
-    @apply flex items-center flex-nowrap flex-row;
+    @apply flex flex-row flex-nowrap items-center;
   }
 
   .vertical {
-    @apply flex justify-center flex-nowrap flex-col;
+    @apply flex flex-col flex-nowrap justify-center;
   }
 
   .no-scrollbar {

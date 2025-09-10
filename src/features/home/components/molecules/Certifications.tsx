@@ -8,8 +8,9 @@ import clsx from 'clsx'
  */
 export default function Certifications(props: { imageUrls: { imageUrl: string; key: number }[] }) {
   const { imageUrls } = props
+  const contentClasses = { base: 'horizontal h-auto w-full justify-between py-8', breakpoints: '3xl:py-5' }
   return (
-    <div className={clsx(`horizontal h-auto w-full justify-between py-8`, `3xl:py-5`)}>
+    <div className={clsx(contentClasses.base, contentClasses.breakpoints)}>
       {imageUrls.map((item, index) => (
         <Certification key={item.key} {...{ href: item.imageUrl, index }} />
       ))}

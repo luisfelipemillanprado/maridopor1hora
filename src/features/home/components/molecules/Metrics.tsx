@@ -23,20 +23,18 @@ export default function Metrics(props: {
   }[]
 }) {
   const { metrics } = props
+  const wrapperClasses = {
+    base: 'absolute right-0 -bottom-8.5 left-0 z-20',
+    breakpoints: '3xl:-bottom-[3.4375rem] 4xl:-bottom-[4.5rem] 2xl:-bottom-9',
+  }
+  const containerClasses = {
+    base: 'horizontal h-auto w-full justify-center gap-x-3',
+    breakpoints: '3xl:gap-x-5 4xl:gap-x-12 2xl:gap-x-4',
+  }
   return (
-    <div
-      className={clsx(
-        `absolute right-0 -bottom-8.5 left-0 z-20`,
-        `3xl:-bottom-[3.4375rem] 4xl:-bottom-[4.5rem] 2xl:-bottom-9`
-      )}
-    >
-      <div
-        className={clsx(
-          `horizontal h-auto w-full justify-center gap-x-3`,
-          `3xl:gap-x-5 4xl:gap-x-12 2xl:gap-x-4`
-        )}
-      >
-        {metrics.map((item /*, index*/) => (
+    <div className={clsx(wrapperClasses.base, wrapperClasses.breakpoints)}>
+      <div className={clsx(containerClasses.base, containerClasses.breakpoints)}>
+        {metrics.map((item) => (
           <Metric key={item.key} {...{ metric: item }} />
         ))}
       </div>
